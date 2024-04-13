@@ -1,6 +1,6 @@
 
 import './App.css';
-import IssueForm from './componets/IssueForm';
+import IssueForm from './componets/forms/IssueForm';
 
 
 function App() {
