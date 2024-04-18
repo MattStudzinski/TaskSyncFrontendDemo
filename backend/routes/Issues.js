@@ -3,7 +3,9 @@ const express = require('express')
 const {
     createIssue,
     getAllIssues,
-    getIssue
+    getIssue,
+    updateIssue,
+    deleteIssue
 } = require("../controllers/issueController")
 
 const router = express.Router()
@@ -23,14 +25,10 @@ router.post('/', createIssue)
 
 
 // delete issue
-router.delete('/:id', (req, res) => {
-    res.json({mssg: "DELETE an issue"})
-})
+router.delete('/:id', deleteIssue)
 
 
 // update issue
-router.patch('/:id', (req, res) => {
-    res.json({mssg: "UPDATE a issue"})
-})
+router.patch('/:id', updateIssue)
 
 module.exports = router

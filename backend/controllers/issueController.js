@@ -14,7 +14,7 @@ const getAllIssues = async (req,res) => {
 // get 1 issue
 const getIssue = async (req, res) => {
     const {id} = req.params
-    
+
 if(!mongoose.Types.ObjectId.isValid(id)){
     return res.status(404).json({error:"no such workout"})
 }
@@ -41,9 +41,39 @@ const createIssue = async (req, res) => {
 }
 
 // delete issue
+const deleteIssue = async (req,res) => {
+    const {id} = req.params
+    if(!mongoose.Types.ObjectId.isValid(id)){
+        return res.status(404).json({error:"No issue to delete"})
+    }
+
+    const issue = await Issue.findOneAndDelete({_id: id})
+
+    if(!issue){
+        return res.status(404).json({error: "no such issue"})
+    }
+    res.status(200).json(issue)
+}
 
 // update issue
+const updateIssue = async (req, res) => {
+
+    const {id} = req.params
+    if(!mongoose.Types.ObjectId.isValid(id)){
+        return res.status(404).json({error:"No issue to delete"})
+    }
+
+    const issue = await Issue.findByIdAndUpdate({_id: id}, {
+        ...req.body
+    })
+
+    if(!issue){
+        return res.status(404).json({error: "no such issue"})
+    }
+
+    res.status(200).json(issue)
+}
 
 
 
-module.exports = {createIssue, getAllIssues, getIssue}
+module.exports = {createIssue, getAllIssues, getIssue, deleteIssue, updateIssue}
