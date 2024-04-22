@@ -1,8 +1,11 @@
 import React from 'react';
+import { useState } from 'react';
 
 const IssueForm = () => {
 
-    const handleSubmit = (event) => {
+    const[error, setError] = useState('')
+
+    const handleSubmit = async (event) => {
         event.preventDefault()
 
         const formData = new FormData(event.target)
@@ -12,7 +15,33 @@ const IssueForm = () => {
         data.route = routeChannel
         data.driver = driverChannel
         console.log(data)
-    }
+        try {
+            const response = await fetch('/api/issues', {
+                method: 'POST',
+                body: JSON.stringify(data),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+
+            if (!response.ok) {
+                const errorMessage = await response.text();
+                setError(errorMessage || 'Failed to submit the form.');
+                return;
+            }
+
+            setError(null);
+            const json = await response.json();
+            console.log('New issue added', json);
+
+            // Reset the form
+            event.target.reset();
+        } catch (error) {
+            setError('Failed to submit the form. Please try again later.');
+            console.error('Error submitting form data:', error);
+        }
+    };
+    
 
     return (
         <form onSubmit={handleSubmit}>
@@ -80,7 +109,7 @@ const IssueForm = () => {
             want to hard code all that */}
             <label>
                 Par Room
-                <select name='par room' multiple>
+                <select name='room' multiple>
                 {/* will want to map through a list of par rooms */}
                 <option value="DRMP1" >DRMP1</option>
                 <option value="PN-P1" >PN-P1</option>
@@ -112,13 +141,13 @@ const IssueForm = () => {
                 <label>Group assignment</label>
                 <input
                 type='checkbox'
-                name='group assignment'
+                name='groupassignment'
                 value='drivers'/>
                 <label htmlFor='drivers'>Drivers</label>
 
                 <input
                 type='checkbox'
-                name='group assignment'
+                name='groupassignment'
                 value="warehouse"/>
                 <label htmlFor='warehouse'>Warehouse</label>
             </div>

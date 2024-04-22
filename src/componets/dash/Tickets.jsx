@@ -1,5 +1,5 @@
 import React from 'react';
-import IssueDetails from './Details'
+import IssueDetails from './issueDetails'
 import { useEffect, useState } from 'react';
 
 

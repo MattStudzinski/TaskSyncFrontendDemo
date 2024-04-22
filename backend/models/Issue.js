@@ -15,7 +15,7 @@ const issueSchema = new Schema({
         type: String,
         required: true
     },
-    assignment: {
+    driver: {
         type: Array,
         required: false
     },
