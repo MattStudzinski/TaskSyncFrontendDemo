@@ -163,10 +163,7 @@ const IssueForm = () => {
 
             
             <button type='submit'>Submit issue</button>
-
-
-
-            
+            {error && <div className='error'>{error}</div>}
         </form>
     );
 };

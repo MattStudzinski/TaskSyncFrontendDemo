@@ -1,13 +1,13 @@
 const IssueDetails = ({issue}) => {
-    const {assignment, route, room } = issue
+    const {driver, route, room } = issue
     return (
         <div className="issue-details">
             <h4>{issue.title}</h4>
             <p><strong>Date</strong>{issue.createdAt}</p>
             <p><strong>description</strong>{issue.description}</p>
             <ul>
-                {assignment.map((assignment,index) => (
-                    <li key={index}>{assignment}</li>
+                {driver.map((driver,index) => (
+                    <li key={index}>{driver}</li>
                     
                     
                 ))}
