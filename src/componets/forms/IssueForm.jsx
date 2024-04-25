@@ -1,7 +1,10 @@
 import React from 'react';
 import { useState } from 'react';
+import { useIssuesContext } from '../../hooks/useIssuesContext';
 
 const IssueForm = () => {
+
+    const {dispatch} = useIssuesContext()
 
     const[error, setError] = useState('')
 
@@ -33,9 +36,10 @@ const IssueForm = () => {
             setError(null);
             const json = await response.json();
             console.log('New issue added', json);
-
             // Reset the form
             event.target.reset();
+            dispatch({type:"CREATE_ISSUE", payload: json})
+            // the payload is what i just created
         } catch (error) {
             setError('Failed to submit the form. Please try again later.');
             console.error('Error submitting form data:', error);

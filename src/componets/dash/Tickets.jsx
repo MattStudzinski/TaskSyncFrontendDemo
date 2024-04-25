@@ -1,10 +1,12 @@
 import React from 'react';
 import IssueDetails from './issueDetails'
-import { useEffect, useState } from 'react';
+import { useIssuesContext } from '../../hooks/useIssuesContext';
+import { useEffect } from 'react';
 
 
 const Tickets = () => {
-const [issues, setIssues] = useState(null)
+    const {issues, dispatch} = useIssuesContext()
+
 
     useEffect(() => {
         const fetchIssues = async () => {
@@ -12,7 +14,7 @@ const [issues, setIssues] = useState(null)
             const json = await response.json()
 
             if(response.ok) {
-                setIssues(json)
+                dispatch({type:"SET_ISSUES", payload: json})
                 
             }
         }
@@ -20,7 +22,7 @@ const [issues, setIssues] = useState(null)
         fetchIssues()
         
     }, [])
-console.log(issues)
+
     return (
         <div className='tickets'>
             <div className='issues'>
