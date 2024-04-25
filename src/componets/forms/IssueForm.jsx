@@ -7,6 +7,7 @@ const IssueForm = () => {
     const {dispatch} = useIssuesContext()
 
     const[error, setError] = useState('')
+    const [emptyFields, setEmptyFields] = useState([])
 
     const handleSubmit = async (event) => {
         event.preventDefault()
@@ -27,19 +28,22 @@ const IssueForm = () => {
                 }
             });
 
-            if (!response.ok) {
-                const errorMessage = await response.text();
-                setError(errorMessage || 'Failed to submit the form.');
-                return;
-            }
-
-            setError(null);
             const json = await response.json();
-            console.log('New issue added', json);
+
+            if(!response.ok){
+                setError(json.error)
+                setEmptyFields(json.emptyFields)
+            }
+            
             // Reset the form
+            if(response.ok){
+            setError(null)
             event.target.reset();
+            setEmptyFields([])
+            console.log("new issue added", json)
             dispatch({type:"CREATE_ISSUE", payload: json})
-            // the payload is what i just created
+            }// the payload is what i just created
+            
         } catch (error) {
             setError('Failed to submit the form. Please try again later.');
             console.error('Error submitting form data:', error);
@@ -52,7 +56,10 @@ const IssueForm = () => {
             
             <label>
                 Name:
-                <input type='text' name='name'/>
+                <input 
+                type='text' 
+                name='name'
+                className={emptyFields.includes('name') ? 'error' : ''}/>
             </label>
 
             <label>
@@ -62,7 +69,11 @@ const IssueForm = () => {
             
             <label>
                 Description
-                <input type='text' name='description'/>
+                <input 
+                type='text' 
+                name='description'
+                className={emptyFields.includes('description') ? 'error' : ''}
+                />
             </label>
             
             <div>

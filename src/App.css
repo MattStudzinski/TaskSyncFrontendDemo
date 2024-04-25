@@ -67,3 +67,7 @@ div.issue-details {
   border: 3px solid;
   border-radius: 4px;
 }
+
+input.error {
+  border: 1px solid var(--error);
+}

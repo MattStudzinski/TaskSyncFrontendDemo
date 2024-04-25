@@ -30,7 +30,18 @@ res.status(200).json(issue)
 
 // create new issue
 const createIssue = async (req, res) => {
-    
+    const {name, description} = req.body
+    let emptyFields = []
+
+    if(!name) {
+        emptyFields.push('name')
+    }
+    if(!description) {
+        emptyFields.push('description')
+    }
+    if(emptyFields.length > 0) {
+        return res.status(400).json({error: "Please fill in all fields", emptyFields})
+    }
 
     try{
         const issue = await Issue.create(req.body)

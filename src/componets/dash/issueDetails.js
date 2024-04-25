@@ -2,7 +2,7 @@ import { useIssuesContext } from "../../hooks/useIssuesContext"
 
 const IssueDetails = ({issue}) => {
     const {dispatch} = useIssuesContext()
-    const {driver, route, room } = issue
+    const { driver = [], route = [], room = [] } = issue
 
     const handleClick = async () => {
         const response = await fetch('/api/issues/' + issue._id, {
