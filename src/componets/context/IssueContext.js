@@ -12,6 +12,12 @@ switch (action.type) {
             return{
                 issues: [action.payload, ...state.issues]
             }
+        case "DELETE_ISSUE":
+            console.log("Payload in DELETE_ISSUE action:", action.payload);
+            return{
+                issues: state.issues.filter((i) => i._id !== action.payload._id)
+            }
+            
             default: 
             return state
 }

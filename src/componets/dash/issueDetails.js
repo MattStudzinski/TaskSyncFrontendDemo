@@ -1,5 +1,19 @@
+import { useIssuesContext } from "../../hooks/useIssuesContext"
+
 const IssueDetails = ({issue}) => {
+    const {dispatch} = useIssuesContext()
     const {driver, route, room } = issue
+
+    const handleClick = async () => {
+        const response = await fetch('/api/issues/' + issue._id, {
+            method: "DELETE"
+        })
+        const json = await response.json()
+
+        if(response.ok) {
+            dispatch({type:'DELETE_ISSUE', payload: json})
+        }
+    }
     return (
         <div className="issue-details">
             <h4>{issue.title}</h4>
@@ -27,7 +41,7 @@ const IssueDetails = ({issue}) => {
             <p><strong>Priority</strong>{issue.priority}</p>
             <p><strong>Group Assigned</strong>{issue.groupassignment}</p>
             <p><strong>Category</strong>{issue.category}</p>
-            
+            <span onClick={handleClick}>Delete</span>
         </div>
     )
 }
