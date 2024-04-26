@@ -21,7 +21,7 @@ const Tickets = () => {
 
         fetchIssues()
         
-    }, [])
+    }, [dispatch])
 
     return (
         <div className='tickets'>
