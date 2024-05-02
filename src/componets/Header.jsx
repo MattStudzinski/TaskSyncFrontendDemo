@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useLogout } from '../hooks/useLogout';
 
 const Header = () => {
-    const {logout} = useLogout
+    const {logout} = useLogout()
     const handleClick = () => {
         logout()
     }
