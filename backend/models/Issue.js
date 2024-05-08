@@ -38,7 +38,12 @@ const issueSchema = new Schema({
     category: {
         type: String,
         required: false
+    },
+    user_id: {
+        type: String,
+        required: true
     }
+    
 }, { timestamps: true })
 
 module.exports = mongoose.model("Issue", issueSchema)

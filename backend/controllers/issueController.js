@@ -4,8 +4,8 @@ const mongoose = require("mongoose")
 
 // get all issues
 const getAllIssues = async (req,res) => {
-
-        const issues = await Issue.find({}).sort({createdAt: -1})
+    const user_id = req.user._id
+        const issues = await Issue.find({ user_id }).sort({createdAt: -1})
         
         res.status(200).json(issues)
 }
@@ -44,7 +44,8 @@ const createIssue = async (req, res) => {
     }
 
     try{
-        const issue = await Issue.create(req.body)
+        const user_id = req.user._id
+        const issue = await Issue.create({...req.body, user_id})
         res.status(200).json(issue)
         } catch (error) {
             res.status(400).json({error: error.message})

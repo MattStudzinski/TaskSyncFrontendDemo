@@ -1,5 +1,6 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import './App.css';
+import { useAuthContext } from './hooks/useAuthContext';
 import IssueForm from './componets/forms/IssueForm';
 import Dashboard from './componets/dash/Dashboard';
 import Header from './componets/Header';
@@ -8,6 +9,8 @@ import Signup from './componets/forms/Signup';
 
 
 function App() {
+
+  const {user} = useAuthContext()
   return (
     <>
     <BrowserRouter>
@@ -17,15 +20,15 @@ function App() {
       <Routes>
         <Route
         path="/"
-        element={<Dashboard />}
+        element={user ? <Dashboard /> : <Navigate to="/login"/>}
         />
         <Route
         path="/login"
-        element={<LoginForm />}
+        element={!user ? <LoginForm /> : <Navigate to="/"/>}
         />
         <Route
         path="/signup"
-        element={<Signup />}
+        element={!user ? <Signup /> : <Navigate to="/"/>}
         />
       </Routes>
     {/* <IssueForm /> */}
