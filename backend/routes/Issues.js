@@ -8,8 +8,12 @@ const {
     deleteIssue
 } = require("../controllers/issueController")
 
+const requireAuth = require('../middleware/requireAuth')
+
 const router = express.Router()
 
+// require auth for all routes
+router.use(requireAuth)
 
 
 // get all issues

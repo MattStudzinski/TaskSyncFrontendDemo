@@ -2,15 +2,19 @@ import React from 'react';
 import IssueDetails from './issueDetails'
 import { useIssuesContext } from '../../hooks/useIssuesContext';
 import { useEffect } from 'react';
-
+import { useAuthContext } from '../../hooks/useAuthContext';
 
 const Tickets = () => {
     const {issues, dispatch} = useIssuesContext()
-
+    const {user} = useAuthContext()
 
     useEffect(() => {
         const fetchIssues = async () => {
-            const response = await fetch('/api/issues/')
+            const response = await fetch('/api/issues/', {
+                headers: {
+                    'Authorization': `Bearer ${user.token}`
+                }
+            })
             const json = await response.json()
 
             if(response.ok) {
@@ -19,9 +23,10 @@ const Tickets = () => {
             }
         }
 
+        if(user){
         fetchIssues()
-        
-    }, [dispatch])
+        }
+    }, [dispatch, user])
 
     return (
         <div className='tickets'>

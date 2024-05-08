@@ -1,16 +1,22 @@
 import React from 'react';
 import { useState } from 'react';
 import { useIssuesContext } from '../../hooks/useIssuesContext';
+import { useAuthContext } from '../../hooks/useAuthContext';
 
 const IssueForm = () => {
 
     const {dispatch} = useIssuesContext()
-
+    const {user} = useAuthContext()
     const[error, setError] = useState('')
     const [emptyFields, setEmptyFields] = useState([])
 
     const handleSubmit = async (event) => {
         event.preventDefault()
+
+        if(!user){
+            setError('You must be logged in')
+            return
+        }
 
         const formData = new FormData(event.target)
         const routeChannel = formData.getAll("route")
@@ -24,7 +30,8 @@ const IssueForm = () => {
                 method: 'POST',
                 body: JSON.stringify(data),
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${user.token}`
                 }
             });
 
