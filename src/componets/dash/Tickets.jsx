@@ -37,6 +37,8 @@ const Tickets = () => {
             </div>
             
         </div>
+        
+        
     );
 }
 

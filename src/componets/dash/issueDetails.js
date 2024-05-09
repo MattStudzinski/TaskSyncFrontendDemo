@@ -2,9 +2,8 @@ import { useIssuesContext } from "../../hooks/useIssuesContext"
 import { useAuthContext } from "../../hooks/useAuthContext"
 const IssueDetails = ({issue}) => {
     const {dispatch} = useIssuesContext()
-    const {user} = useAuthContext()
     const { driver = [], route = [], room = [] } = issue
-    
+    const {user} = useAuthContext()
     const handleClick = async () => {
         if (!user){
             return

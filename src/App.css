@@ -5,11 +5,11 @@
 }
 
 body {
-  background: #f1f1f1;
+  background: #dfdfdf;
   margin: 0;
 }
 header{
-  background: #fff;
+  background: #cdcbc5;
 }
 
 header .container{
@@ -66,6 +66,7 @@ div.error {
 div.issue-details {
   border: 3px solid;
   border-radius: 4px;
+  background-color: #fc8241;
 }
 
 input.error {
