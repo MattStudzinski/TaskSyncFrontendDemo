@@ -1,6 +1,7 @@
-import { useIssuesContext } from "../../hooks/useIssuesContext"
-import { useAuthContext } from "../../hooks/useAuthContext"
-const IssueDetails = ({issue}) => {
+import React from 'react';
+import { useAuthContext } from '../../hooks/useAuthContext';
+import { useIssuesContext } from '../../hooks/useIssuesContext';
+const IssueInfo = ({issue}) => {
     const {dispatch} = useIssuesContext()
     const { driver = [], route = [], room = [] } = issue
     const {user} = useAuthContext()
@@ -23,9 +24,8 @@ const IssueDetails = ({issue}) => {
     }
     return (
         <div className="issue-details">
-            <h4>{issue.title}</h4>
+            <h4>{issue.name}</h4>
             <p><strong>Date</strong>{issue.createdAt}</p>
-            <p><strong>description</strong>{issue.description}</p>
             <ul>
                 {driver.map((driver,index) => (
                     <li key={index}>{driver}</li>
@@ -33,23 +33,11 @@ const IssueDetails = ({issue}) => {
                     
                 ))}
             </ul>
-            <ul>
-                {route.map((route,index) => (
-                    <li key={index}>{route}</li>
-                    
-                    
-                ))}
-            </ul>
-            <ul>
-                    {room.map((room, index) => (
-                        <li key={index}>{room}</li>
-                    ))}
-            </ul>
             <p><strong>Priority</strong>{issue.priority}</p>
-            <p><strong>Group Assigned</strong>{issue.groupassignment}</p>
             <p><strong>Category</strong>{issue.category}</p>
             <span onClick={handleClick}>Delete</span>
         </div>
     )
 }
-export default IssueDetails
+
+export default IssueInfo;

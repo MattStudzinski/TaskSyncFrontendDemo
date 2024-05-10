@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
 import IssueDetails from './issueDetails';
-import { useIssuesContext } from '../../hooks/useIssuesContext';
-import { useAuthContext } from '../../hooks/useAuthContext'; // Import useAuthContext
-import fetchIssues from '../../fetchIssues';
+import { useIssuesContext } from '../hooks/useIssuesContext';
+import { useAuthContext } from '../hooks/useAuthContext'; 
+import fetchIssues from '../fetchIssues';
 
 const Tickets = () => {
     const { issues, dispatch } = useIssuesContext();
@@ -10,11 +10,10 @@ const Tickets = () => {
 
     useEffect(() => {
         if (user) {
-            fetchIssues(dispatch, user.token); // Pass user.token directly
+            fetchIssues(dispatch, user.token); 
         }
     }, [dispatch, user]);
 
-    // Your component code...
 
     return (
         <div className='tickets'>
