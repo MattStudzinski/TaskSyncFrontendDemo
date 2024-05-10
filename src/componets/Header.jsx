@@ -20,7 +20,7 @@ const Header = () => {
                     <div>
                         <Link to="/login">Login</Link>
                         <Link to="/signup">Signup</Link>
-                        <Link to="/details">Details</Link>
+                        <Link to="/alltickets">View Tasks</Link>
                     </div>
                 </nav>
             </div>

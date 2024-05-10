@@ -6,6 +6,7 @@ import Dashboard from './componets/dash/Dashboard';
 import Header from './componets/Header';
 import LoginForm from './componets/forms/LoginForm';
 import Signup from './componets/forms/Signup';
+import AllTickets from './allTickets/AllTickets';
 
 
 function App() {
@@ -29,6 +30,10 @@ function App() {
         <Route
         path="/signup"
         element={!user ? <Signup /> : <Navigate to="/"/>}
+        />
+        <Route
+        path='/alltickets'
+        element={user ? <AllTickets /> : <Navigate to= "/login"/>}
         />
       </Routes>
     {/* <IssueForm /> */}

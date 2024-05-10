@@ -4,7 +4,7 @@ import { useIssuesContext } from '../hooks/useIssuesContext';
 import { useAuthContext } from '../hooks/useAuthContext'; 
 import fetchIssues from '../fetchIssues';
 
-const Tickets = () => {
+const AllTickets = () => {
     const { issues, dispatch } = useIssuesContext();
     const { user } = useAuthContext();
 
@@ -31,4 +31,4 @@ const Tickets = () => {
 
 
 
-export default Tickets;
+export default AllTickets;
