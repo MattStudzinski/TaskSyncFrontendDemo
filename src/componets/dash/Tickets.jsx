@@ -1,32 +1,20 @@
-import React from 'react';
-import IssueDetails from './issueDetails'
+import React, { useEffect } from 'react';
+import IssueDetails from './issueDetails';
 import { useIssuesContext } from '../../hooks/useIssuesContext';
-import { useEffect } from 'react';
-import { useAuthContext } from '../../hooks/useAuthContext';
+import { useAuthContext } from '../../hooks/useAuthContext'; // Import useAuthContext
+import fetchIssues from '../../fetchIssues';
 
 const Tickets = () => {
-    const {issues, dispatch} = useIssuesContext()
-    const {user} = useAuthContext()
+    const { issues, dispatch } = useIssuesContext();
+    const { user } = useAuthContext();
 
     useEffect(() => {
-        const fetchIssues = async () => {
-            const response = await fetch('/api/issues/', {
-                headers: {
-                    'Authorization': `Bearer ${user.token}`
-                }
-            })
-            const json = await response.json()
-
-            if(response.ok) {
-                dispatch({type:"SET_ISSUES", payload: json})
-                
-            }
+        if (user) {
+            fetchIssues(dispatch, user.token); // Pass user.token directly
         }
+    }, [dispatch, user]);
 
-        if(user){
-        fetchIssues()
-        }
-    }, [dispatch, user])
+    // Your component code...
 
     return (
         <div className='tickets'>
