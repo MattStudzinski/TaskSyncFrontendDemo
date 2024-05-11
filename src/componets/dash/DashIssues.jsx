@@ -15,7 +15,7 @@ const DashIssues = () => {
     }, [dispatch, user])
 
     return (
-        <div className="mini-issue">
+        <div className="minicard">
             {issues && issues.map((issue) => (
                 <IssueInfo key = {issue._id} issue= {issue}/>
             ))}

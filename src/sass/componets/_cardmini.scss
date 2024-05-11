@@ -1,0 +1,16 @@
+.card-mini{
+    width: 80%;
+
+    &__container{
+        margin: 10px;
+        height: 6rem;
+        border-radius: 4px;
+        background: linear-gradient(
+        to left bottom,
+            rgba($color-primary-light,0.8),
+            rgba($color-primary-dark,0.8));
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+  }

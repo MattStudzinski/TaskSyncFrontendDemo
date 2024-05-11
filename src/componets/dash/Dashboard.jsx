@@ -2,12 +2,13 @@ import React from 'react';
 // import Tickets from '../../issuedetails/Tickets';
 import IssueForm from '../forms/IssueForm';
 import DashIssues from './DashIssues';
+import Analytics from './Analytics';
 
 
 const Dashboard = () => {
     return (
         <div className='dashboard'>
-            <h2>Home</h2>
+            <Analytics />
             <DashIssues />
             <IssueForm />
         </div>

@@ -23,19 +23,22 @@ const IssueInfo = ({issue}) => {
         }
     }
     return (
-        <div className="issue-details">
-            <h4>{issue.name}</h4>
-            <p><strong>Date</strong>{issue.createdAt}</p>
-            <ul>
+        <div className='card-mini'>
+        <div className="card-mini__container">
+        <p className='card-mini__category'><strong>Category</strong>{issue.category}</p>
+            <h4 className='card-mini__name'>{issue.name}</h4>
+            <p className='card-mini__date'><strong>Date</strong>{issue.createdAt}</p>
+            <ul className='card-mini__driver-list'>
                 {driver.map((driver,index) => (
-                    <li key={index}>{driver}</li>
+                    <li className='card-mini__drivers' key={index}>{driver}</li>
                     
                     
                 ))}
             </ul>
-            <p><strong>Priority</strong>{issue.priority}</p>
-            <p><strong>Category</strong>{issue.category}</p>
-            <span onClick={handleClick}>Delete</span>
+            <p className='card-mini__priority'><strong>Priority</strong>{issue.priority}</p>
+            
+            <span className='card-mini__delete' onClick={handleClick}>Delete</span>
+        </div>
         </div>
     )
 }

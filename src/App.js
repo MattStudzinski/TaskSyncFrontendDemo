@@ -1,7 +1,6 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
-import './App.css';
+import './styles/styles.css'
 import { useAuthContext } from './hooks/useAuthContext';
-import IssueForm from './componets/forms/IssueForm';
 import Dashboard from './componets/dash/Dashboard';
 import Header from './componets/Header';
 import LoginForm from './componets/forms/LoginForm';
