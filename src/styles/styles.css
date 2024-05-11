@@ -22,6 +22,10 @@ code {
   margin: 0 auto;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 .card-mini {
   width: 80%;
 }
@@ -50,6 +54,12 @@ header .container {
 
 header a {
   text-decoration: none;
+}
+
+.row {
+  max-width: 114rem;
+  background-color: aqua;
+  margin: 0 auto;
 }
 
 label, input {
