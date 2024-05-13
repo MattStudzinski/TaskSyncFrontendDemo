@@ -1,0 +1,18 @@
+.section-analytics {
+
+    display: flex;
+    justify-content: space-around;
+    max-width: 80%;
+    background-color: red;
+    height: 400px;
+
+    &__box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: green;
+        height: 400px;
+        width: 200px;
+        
+    }
+}
