@@ -1,18 +1,123 @@
-/* Error: expected "{".
- *    ,
- * 24 |   .
- *    |    ^
- *    '
- *   src/sass/layout/_layout.scss 24:4  @import
- *   src/sass/main.scss 12:9            root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: 'Error: expected "{".\a    \2577 \a 24 \2502    .\a    \2502     ^\a    \2575 \a   src/sass/layout/_layout.scss 24:4  @import\a   src/sass/main.scss 12:9            root stylesheet';
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  line-height: 1.6;
+  background: linear-gradient(to right bottom, #c9d6ff, #e2e2e2);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
 }
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+:root {
+  --primary: $color-correct;
+  --error: $color-error;
+}
+
+.pages {
+  max-width: 1400px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+.section-analytics {
+  display: flex;
+  justify-content: space-around;
+  max-width: 80%;
+}
+.section-analytics__box {
+  width: 20%;
+  height: 10rem;
+  display: block;
+  background-color: rgb(54, 118, 118);
+  border-radius: 10px;
+}
+
+.card-mini {
+  width: 80%;
+}
+.card-mini__container {
+  margin: 10px;
+  height: 6rem;
+  border-radius: 4px;
+  background: linear-gradient(to left bottom, rgba(255, 255, 255, 0.8), rgba(211, 211, 211, 0.8));
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+header {
+  background: #ffffff;
+}
+
+header .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header a {
+  text-decoration: none;
+}
+
+label, input {
+  display: block;
+}
+
+input {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+form button {
+  background: var(--primary);
+  border: 0;
+  color: #fff;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+div.error {
+  padding: 10px;
+  background: #ffefef;
+  border: 1px solid var(--error);
+  color: var(--error);
+  border-radius: 4px;
+  margin: 20px 0;
+}
+
+input.error {
+  border: 1px solid var(--error);
+}
+
+/*# sourceMappingURL=styles.css.map */
