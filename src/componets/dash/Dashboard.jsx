@@ -8,12 +8,10 @@ import Calendar from './Calendar';
 
 const Dashboard = () => {
     return (
-        <div className='dashboard-content'>
-            
-        <main className='dashboard-view'>
+        <div className='content'>
             <Sidebar />
+        <main className='dashboard-view'>
             <Analytics />
-            <Calendar />
             <nav className='Dash-nav'>
                 <div>
                     title
@@ -36,6 +34,7 @@ const Dashboard = () => {
 
             <DashIssues />
             </main>
+            <Calendar />
             {/* <IssueForm /> */}
         </div>
     );

@@ -15,14 +15,7 @@ code {
 }
 
 :root {
-  --primary: $color-correct;
-  --error: $color-error;
-}
-
-.pages {
-  max-width: 1400px;
-  padding: 20px;
-  margin: 0 auto;
+  --shadow-dark: 0 2rem 6rem rgba(0,0,0,.3);
 }
 
 * {
@@ -67,8 +60,18 @@ html {
   align-items: center;
 }
 
+.container {
+  max-width: 140rem;
+  margin: 8rem auto;
+  background-color: rgb(166, 166, 166);
+  box-shadow: var(--shadow-dark);
+  min-height: 50rem;
+}
+
 header {
-  background: #ffffff;
+  height: 7rem;
+  background-color: #fff;
+  border-bottom: lightgrey;
 }
 
 header .container {
@@ -82,6 +85,24 @@ header .container {
 
 header a {
   text-decoration: none;
+}
+
+.sidebar {
+  background-color: rgb(87, 87, 87);
+  flex: 0 0 18%;
+}
+
+.content {
+  display: flex;
+}
+
+.dashboard-view {
+  background-color: rgb(142, 142, 142);
+  flex: 1;
+}
+
+.calendar {
+  flex: 0 0 23%;
 }
 
 label, input {

@@ -22,14 +22,7 @@ body {
   }
   
   :root {
-    --primary: $color-correct;
-    --error: $color-error;
-    
-  }
-  .pages{
-    max-width: 1400px;
-    padding: 20px;
-    margin: 0 auto;
+    --shadow-dark: 0 2rem 6rem rgba(0,0,0,.3);
   }
 
   *{

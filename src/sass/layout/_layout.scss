@@ -1,10 +1,16 @@
 .container {
-
+max-width: 140rem;
+margin: 8rem auto;
+background-color: rgb(166, 166, 166);
+box-shadow: var(--shadow-dark);
+min-height: 50rem;
 }
 
 
 header{
-    background: $color-header;
+    height: 7rem;
+    background-color: #fff;
+    border-bottom: lightgrey;
   }
   
   header .container{
@@ -21,4 +27,22 @@ header{
   text-decoration: none;
   }
 
-  
+  .sidebar{
+    background-color: rgb(87, 87, 87);
+    flex: 0 0 18%;
+  }
+
+
+  .content {
+    display: flex;
+
+  }
+
+  .dashboard-view {
+background-color: rgb(142, 142, 142);
+flex: 1;
+  }
+
+  .calendar{
+    flex: 0 0 23%;
+  }
