@@ -1,11 +1,14 @@
 .search{
 
     &__input{
-
+        width: 20px;
 
     }
     &__button{
 
     }
-    &__svg
+    &__svg{
+        height: 2rem;
+        width: 2rem;
+    }
 }

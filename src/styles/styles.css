@@ -60,6 +60,22 @@ html {
   align-items: center;
 }
 
+.search__input {
+  width: 20px;
+}
+.search__svg {
+  height: 2rem;
+  width: 2rem;
+}
+
+.user-nav__icon {
+  height: 2.25rem;
+  width: 2.25rem;
+}
+.user-nav__user-picture {
+  height: 2.25rem;
+  width: 2.25rem;
+}
 .container {
   max-width: 140rem;
   margin: 8rem auto;
