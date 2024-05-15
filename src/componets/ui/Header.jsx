@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useLogout } from '../../hooks/useLogout';
-import add from "../../svgs/add-circle-svgrepo-com.svg"
+import add from "../../svgs/add-circle-svgrepo-com.svg";
+import logo from "../../svgs/logo.png";
 
 const Header = () => {
     const {logout} = useLogout()
@@ -11,7 +12,7 @@ const Header = () => {
     return (
         <header className='header'>
                 <Link to="/">
-                    <h1 className='logo'>Task Trove</h1>
+                    <img className='logo' src={logo} alt='Logo' />
                 </Link>
                 
                     <form action= "#"className='search'>

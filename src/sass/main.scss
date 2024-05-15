@@ -10,6 +10,7 @@
 @import "componets/cardmini";
 @import "componets/searchbox";
 @import "componets/usernav";
+@import "componets/logo";
 @import "layout/layout";
 
 
@@ -18,21 +19,11 @@
     display: block;
   }
   
-  input {
-    padding: 10px;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    width: 100%;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-sizing: border-box;
-  }
   form button {
     background: var(--primary);
     border: 0;
     color: #fff;
-    padding: 10px;
-    border-radius: 4px;
+    
     cursor: pointer;
   }
   
