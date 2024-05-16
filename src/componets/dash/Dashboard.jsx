@@ -35,7 +35,7 @@ const Dashboard = () => {
             <DashIssues />
             </main>
             <Calendar />
-            {/* <IssueForm /> */}
+            <IssueForm />
         </div>
     );
 };

@@ -177,4 +177,9 @@ input.error {
   border: 1px solid var(--error);
 }
 
+.plus {
+  width: 2rem;
+  height: 2rem;
+}
+
 /*# sourceMappingURL=styles.css.map */

@@ -4,7 +4,7 @@ const mongoose = require("mongoose")
 
 // get all issues
 const getAllIssues = async (req,res) => {
-    const user_id = req.user._id
+    const user_id = req.driver_ids
         const issues = await Issue.find({ user_id }).sort({createdAt: -1})
         
         res.status(200).json(issues)
@@ -16,7 +16,7 @@ const getIssue = async (req, res) => {
     const {id} = req.params
 
 if(!mongoose.Types.ObjectId.isValid(id)){
-    return res.status(404).json({error:"no such workout"})
+    return res.status(404).json({error:"no such Issue"})
 }
 const issue = await Issue.findById(id)
 
@@ -30,28 +30,26 @@ res.status(200).json(issue)
 
 // create new issue
 const createIssue = async (req, res) => {
-    const {name, description} = req.body
-    let emptyFields = []
+    const { name, description, driver_ids } = req.body; // Assuming driver_ids is an array of driver IDs
+    let emptyFields = [];
 
-    if(!name) {
-        emptyFields.push('name')
+    if (!name) {
+        emptyFields.push('name');
     }
-    if(!description) {
-        emptyFields.push('description')
+    if (!description) {
+        emptyFields.push('description');
     }
-    if(emptyFields.length > 0) {
-        return res.status(400).json({error: "Please fill in all fields", emptyFields})
+    if (emptyFields.length > 0) {
+        return res.status(400).json({ error: "Please fill in all fields", emptyFields });
     }
 
-    try{
-        const user_id = req.user._id
-        const issue = await Issue.create({...req.body, user_id})
-        res.status(200).json(issue)
-        } catch (error) {
-            res.status(400).json({error: error.message})
+    try {
+        const issue = await Issue.create({ ...req.body, driver_ids }); // Store an array of driver_ids
+        res.status(200).json(issue);
+    } catch (error) {
+        res.status(400).json({ error: error.message });
     }
 }
-
 // delete issue
 const deleteIssue = async (req,res) => {
     const {id} = req.params

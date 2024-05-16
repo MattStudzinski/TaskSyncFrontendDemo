@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useLogout } from '../../hooks/useLogout';
 import add from "../../svgs/add-circle-svgrepo-com.svg";
 import logo from "../../svgs/logo.png";
+import Icon from '../../svgs/Icon'
 
 const Header = () => {
     const {logout} = useLogout()
@@ -18,7 +19,7 @@ const Header = () => {
                     <form action= "#"className='search'>
                         <input type='text' className='search__input' placeholder='Search Issues'/>
                         <button className='search__button'>
-                        <img src={add} alt="Add" className="search__svg" />
+                        <Icon />
                         </button>
                     </form>
                     <nav className='user-nav'>
