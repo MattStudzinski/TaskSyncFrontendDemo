@@ -20,11 +20,13 @@ const IssueForm = () => {
 
         const formData = new FormData(event.target)
         const routeChannel = formData.getAll("route")
-        const driverChannel = formData.getAll("driver")
+        const driverChannel = formData.getAll("drivers")
         const data = Object.fromEntries(formData.entries())
         data.route = routeChannel
-        data.driver = driverChannel
+        data.drivers = driverChannel
         console.log(data)
+
+        console.log(emptyFields, 'empty')
         try {
             const response = await fetch('/api/issues', {
                 method: 'POST',
@@ -34,6 +36,8 @@ const IssueForm = () => {
                     'Authorization': `Bearer ${user.token}`
                 }
             });
+
+            console.log("request data", data)
 
             const json = await response.json();
 
@@ -88,19 +92,19 @@ const IssueForm = () => {
             <label>Assignment</label>
                 <input 
                 type='checkbox' 
-                name='driver'
+                name='drivers'
                 value="Mathew"/>
                 <label htmlFor='Mathew'>Mathew</label>
             
                 <input 
                 type='checkbox' 
-                name='driver'
+                name='drivers'
                 value="Brock"/>
                 <label htmlFor='Brock'>Brock</label>
             
                 <input 
                 type='checkbox'
-                name='driver'
+                name='drivers'
                 value="Kate"/>
                 <label htmlFor='Kate'>Kate</label>
 

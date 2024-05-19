@@ -1,3 +1,4 @@
+const User = require("../models/user")
 const Issue = require("../models/Issue")
 const mongoose = require("mongoose")
 
@@ -30,11 +31,13 @@ res.status(200).json(issue)
 
 // create new issue
 const createIssue = async (req, res) => {
-    const {name, description} = req.body
+    
+    console.log(req.body)
+    const {name, description, drivers: driverNames} = req.body
     let emptyFields = []
 
     if(!name) {
-        emptyFields.push('name')
+        emptyFields.push('issuename')
     }
     if(!description) {
         emptyFields.push('description')
@@ -45,10 +48,22 @@ const createIssue = async (req, res) => {
 
     try{
         const user_id = req.user._id
-        const issue = await Issue.create({...req.body, user_id})
-        res.status(200).json(issue)
-        } catch (error) {
-            res.status(400).json({error: error.message})
+
+        const driverIds = await Promise.all(driverNames.map(async (name) => {
+            const user = await User.findOne({ name: name }); // Assuming User is your Mongoose model
+            console.log(user)
+            if (user) {
+                return user._id; // Return user's _id if found
+            } else {
+                // Handle case where user with given name is not found
+                throw new Error(`User '${name}' not found`);
+            }
+        }));
+        
+        const issue = await Issue.create({ ...req.body, drivers: driverIds, user_id });
+        res.status(200).json(issue);
+    } catch (error) {
+        res.status(400).json({ error: error.message });
     }
 }
 

@@ -16,8 +16,9 @@ const issueSchema = new Schema({
         type: String,
         required: true
     },
-    driver: [{
-        type: mongoose.Schema.Types.ObjectId, ref: "User"   
+    drivers: [{
+        type: Schema.Types.ObjectId,
+        ref: "User"
     }],
     route: {
         type: Array,
