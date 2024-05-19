@@ -13,23 +13,25 @@
         border-radius: 100px;
         width: 90%;
         transition: all .2s;
-        margin-right: -3.25rem;
+        margin-right: -3rem;
 
         &:focus {
             outline: none;
             width: 100%;
-            background-color: rgb(155, 155, 155);
+            background-color: rgb(222, 222, 222);
+        }
+
+        &::-webkit-input-placeholder{
+            font-weight: 100;
+            color: rgb(66, 66, 66);
         }
         
     }
 
-    &__input:focus + &__button{
-        background-color: rgb(155, 155, 155)
-    }
 
     &__button{
         border: none;
-        background-color:rgb(198, 198, 198);
+        display: flex;
 
         &:focus{
             outline:none
@@ -38,8 +40,6 @@
             transform: translateY(2px)
         }
     }
-    &__svg{
-        height: 2rem;
-        width: 2rem;
-    }
+    
 }
+

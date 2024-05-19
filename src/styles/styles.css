@@ -76,19 +76,20 @@ html {
   border-radius: 100px;
   width: 90%;
   transition: all 0.2s;
-  margin-right: -3.25rem;
+  margin-right: -3rem;
 }
 .search__input:focus {
   outline: none;
   width: 100%;
-  background-color: rgb(155, 155, 155);
+  background-color: rgb(222, 222, 222);
 }
-.search__input:focus + .search__button {
-  background-color: rgb(155, 155, 155);
+.search__input::-webkit-input-placeholder {
+  font-weight: 100;
+  color: rgb(66, 66, 66);
 }
 .search__button {
   border: none;
-  background-color: rgb(198, 198, 198);
+  display: flex;
 }
 .search__button:focus {
   outline: none;
@@ -96,26 +97,50 @@ html {
 .search__button:active {
   transform: translateY(2px);
 }
-.search__svg {
-  height: 2rem;
-  width: 2rem;
-}
 
 .user-nav {
-  background-color: wheat;
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+  justify-content: space-between;
+  width: 800px;
+}
+.user-nav > * {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  height: 100%;
+}
+.user-nav > *:hover {
+  background-color: rgb(164, 122, 122);
+}
+.user-nav__box {
+  width: 100%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+.user-nav__link {
+  width: 100%;
 }
 .user-nav__icon {
   height: 2.25rem;
   width: 2.25rem;
 }
-.user-nav__user-picture {
-  height: 2.25rem;
-  width: 2.25rem;
-}
+
 .logo {
   height: 4.5rem;
   border-radius: 5px;
   margin-left: 3rem;
+}
+
+.side-nav__icon {
+  width: 2.2rem;
+}
+
+.remove-icon {
+  fill: green;
 }
 
 .container {
@@ -128,11 +153,12 @@ html {
 
 header {
   height: 7rem;
-  background-color: #fff;
+  background-color: #f1f1f1;
   border-bottom: lightgrey;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: 1.4rem;
 }
 
 .sidebar {

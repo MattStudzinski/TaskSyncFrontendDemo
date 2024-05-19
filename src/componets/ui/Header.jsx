@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useLogout } from '../../hooks/useLogout';
-import add from "../../svgs/add-circle-svgrepo-com.svg";
+
 import logo from "../../svgs/logo.png";
-import Icon from '../../svgs/Icon'
+import HeaderIcon from '../../svgs/HeaderIcon'
 
 const Header = () => {
     const {logout} = useLogout()
@@ -19,30 +19,29 @@ const Header = () => {
                     <form action= "#"className='search'>
                         <input type='text' className='search__input' placeholder='Search Issues'/>
                         <button className='search__button'>
-                        <Icon />
+                        <HeaderIcon className="search__icon" />
                         </button>
                     </form>
-                    <nav className='user-nav'>
+                <nav className='user-nav'>
 
-                    <div className='user-nav__logout-box'>
-                        <button onClick={handleClick}>Log out</button>
-                    </div>
+                    
+                    <button className='user-nav__box' onClick={handleClick}>Log out</button>
+                    
+                    <Link to="/login" className='user-nav__box'>
+                        <HeaderIcon  />
+                    </Link>
 
-                    <div className='user-nav__login-box'>
-                        <Link to="/login"><img src={add} alt="Add" className="user-nav__icon" /></Link>
-                    </div>
+                    <Link to="/signup" className='user-nav__box'>
+                    <HeaderIcon  />
+                    </Link>
 
-                    <div className='user-nav__signup-box'>
-                        <Link to="/signup"><img src={add} alt="Add" className="user-nav__icon" /></Link>
-                    </div>
-
-                    <div className='user-nav__alltickets-box'>
-                        <Link to="/alltickets"><img src={add} alt="Add" className="user-nav__icon" /></Link>
+                    <Link to="/alltickets" className='user-nav__box'>
+                        <HeaderIcon  />   
                         <span className='user-nav__notification'>3</span>
-                    </div>
+                    </Link>
 
-                    <div className='user-nav__user'>
-                        <img src={add} alt='user profile' className='user-nav__user-picture'/>
+                    <div className='user-nav__box'>
+                        <HeaderIcon alt='user profile' className='user-nav__user-picture'/>
                         <span className='user-nav__username'>TEC002009740</span>
                     </div>
                 </nav>
