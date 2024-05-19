@@ -41,8 +41,9 @@ const issueSchema = new Schema({
         required: false
     },
     user_id: {
-        type: String,
-        required: true
+        type: Schema.Types.ObjectId,
+        required: true,
+        ref: "User"
     }
     
 }, { timestamps: true })

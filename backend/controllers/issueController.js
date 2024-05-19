@@ -6,9 +6,17 @@ const mongoose = require("mongoose")
 // get all issues
 const getAllIssues = async (req,res) => {
     const user_id = req.user._id
-        const issues = await Issue.find({ user_id }).sort({createdAt: -1})
-        
-        res.status(200).json(issues)
+
+        try {
+        // Fetch issues where the logged-in user is either the creator or one of the drivers
+        const issues = await Issue.find({
+            drivers: { $in: [user_id] }
+        }).sort({ createdAt: -1 });
+
+        res.status(200).json(issues);
+    } catch (error) {
+        res.status(400).json({ error: error.message });
+    }
 }
 
 
@@ -50,17 +58,24 @@ const createIssue = async (req, res) => {
         const user_id = req.user._id
 
         const driverIds = await Promise.all(driverNames.map(async (name) => {
-            const user = await User.findOne({ name: name }); // Assuming User is your Mongoose model
+            const user = await User.findOne({ name }); // Assuming User is your Mongoose model
             console.log(user)
-            if (user) {
-                return user._id; // Return user's _id if found
-            } else {
-                // Handle case where user with given name is not found
-                throw new Error(`User '${name}' not found`);
+            if (!user) {
+                throw new Error (`user with name ${name} is not found`)
             }
+            return user._id
         }));
         
         const issue = await Issue.create({ ...req.body, drivers: driverIds, user_id });
+
+        const selectedDrivers = await User.find({ _id: { $in: driverIds}})
+        selectedDrivers.forEach(async (driver) => {
+            if (!driver.assignedIssues) {
+                driver.assignedIssues = []
+            }
+            driver.assignedIssues.push(issue._id)
+            await driver.save()
+        })
         res.status(200).json(issue);
     } catch (error) {
         res.status(400).json({ error: error.message });
@@ -79,6 +94,11 @@ const deleteIssue = async (req,res) => {
     if(!issue){
         return res.status(404).json({error: "no such issue"})
     }
+
+    await User.updateMany(
+        {assignedIssues:issue._id},
+        {$pull: {assignedIssues: issue._id} }
+    )
     res.status(200).json(issue)
 }
 

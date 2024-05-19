@@ -25,7 +25,7 @@ switch (action.type) {
 
 export const IssueContextProvider = ({ children }) => {
     const [state, dispatch] = useReducer(issuesReducer, {
-        issues: null
+        issues: []
     })
 
     // dispatch({type: 'SET_WORKOUTS', payload: [{}, {}]})
