@@ -3,6 +3,7 @@ const express = require('express')
 const {
     createIssue,
     getAllIssues,
+    // getAdminIssues,
     getIssue,
     updateIssue,
     deleteIssue
@@ -18,6 +19,11 @@ router.use(requireAuth)
 
 // get all issues
 router.get('/', getAllIssues)
+
+// get all admin issues
+// router
+//     .route('/admin')
+//     .get(requireAuth.protect, requireAuth.restrictTo('admin'), getAdminIssues)
 
 
 // get issue by id

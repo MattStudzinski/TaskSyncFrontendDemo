@@ -15,6 +15,11 @@ const userSchema = new Schema ({
         type: String,
         required: true
     },
+    role: {
+        type: String,
+        Enum: ['user', 'admin'],
+        default: 'user',
+    },
     assignedIssues: [{
         type: Schema.Types.ObjectId,
         ref: "Issue"

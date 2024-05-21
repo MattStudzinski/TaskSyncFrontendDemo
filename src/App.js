@@ -35,6 +35,10 @@ function App() {
         path='/alltickets'
         element={user ? <AllTickets /> : <Navigate to= "/login"/>}
         />
+        {/* <Route 
+        path='/admin'
+        element={!admin ? <Dashboard /> : <Navigate to= "/admin"/>}
+        />  */}
       </Routes>
     {/* <IssueForm /> */}
     </div>
