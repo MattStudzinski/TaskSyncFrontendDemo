@@ -6,6 +6,7 @@ import Header from './componets/ui/Header';
 import LoginForm from './componets/forms/LoginForm';
 import Signup from './componets/forms/Signup';
 import AllTickets from './allTickets/AllTickets';
+import AdminDash from './componets/admin/AdminDash';
 
 
 function App() {
@@ -35,10 +36,10 @@ function App() {
         path='/alltickets'
         element={user ? <AllTickets /> : <Navigate to= "/login"/>}
         />
-        {/* <Route 
+        <Route 
         path='/admin'
-        element={!admin ? <Dashboard /> : <Navigate to= "/admin"/>}
-        />  */}
+        element={<AdminDash />}
+        /> 
       </Routes>
     {/* <IssueForm /> */}
     </div>

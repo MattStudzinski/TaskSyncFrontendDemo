@@ -13,11 +13,35 @@ const getAllIssues = async (req,res) => {
             drivers: { $in: [user_id] }
         }).sort({ createdAt: -1 });
 
+        console.log("Fetched issues:", issues); // Log the fetched issues
         res.status(200).json(issues);
     } catch (error) {
+        console.log("Error fetching issues:", error); // Log any error that occurs
         res.status(400).json({ error: error.message });
     }
 }
+
+
+// admin issues
+const getAdminIssues = async (req, res) => {
+
+    try {
+        // Fetch issues where there are any drivers assigned
+        const issues = await Issue.find({ drivers: { $exists: true, $not: { $size: 0 } } }).sort({ createdAt: -1 });
+
+        console.log("Fetched issues:", issues); // Log the fetched issues
+        res.status(200).json(issues);
+    } catch (error) {
+        console.log("Error fetching issues:", error); // Log any error that occurs
+        res.status(400).json({ error: error.message });
+    }
+
+}
+
+
+
+
+
 
 
 // get 1 issue
@@ -45,7 +69,7 @@ const createIssue = async (req, res) => {
     let emptyFields = []
 
     if(!name) {
-        emptyFields.push('issuename')
+        emptyFields.push('name')
     }
     if(!description) {
         emptyFields.push('description')
@@ -123,4 +147,5 @@ const updateIssue = async (req, res) => {
 
 
 
-module.exports = {createIssue, getAllIssues, getIssue, deleteIssue, updateIssue}
+
+module.exports = {createIssue, getAllIssues, getIssue, deleteIssue, updateIssue, getAdminIssues}

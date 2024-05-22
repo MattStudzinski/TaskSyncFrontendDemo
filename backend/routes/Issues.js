@@ -1,12 +1,14 @@
+
 const express = require('express')
+
 
 const {
     createIssue,
     getAllIssues,
-    // getAdminIssues,
     getIssue,
     updateIssue,
-    deleteIssue
+    deleteIssue,
+    getAdminIssues
 } = require("../controllers/issueController")
 
 const requireAuth = require('../middleware/requireAuth')
@@ -21,10 +23,8 @@ router.use(requireAuth)
 router.get('/', getAllIssues)
 
 // get all admin issues
-// router
-//     .route('/admin')
-//     .get(requireAuth.protect, requireAuth.restrictTo('admin'), getAdminIssues)
 
+router.get('/admin', getAdminIssues)
 
 // get issue by id
 router.get('/:id', getIssue)
