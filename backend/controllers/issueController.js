@@ -25,15 +25,11 @@ const getAllIssues = async (req,res) => {
 // admin issues
 const getAdminIssues = async (req, res) => {
 
-    try {
-        // Fetch issues where there are any drivers assigned
-        const issues = await Issue.find({ drivers: { $exists: true, $not: { $size: 0 } } }).sort({ createdAt: -1 });
-
-        console.log("Fetched issues:", issues); // Log the fetched issues
-        res.status(200).json(issues);
-    } catch (error) {
-        console.log("Error fetching issues:", error); // Log any error that occurs
-        res.status(400).json({ error: error.message });
+    try{
+        const issues = await Issue.find().sort({ createdAt: -1 })
+        res.status(200).json(issues)
+    }catch (error){
+        res.status(400).json({error: error.message})
     }
 
 }

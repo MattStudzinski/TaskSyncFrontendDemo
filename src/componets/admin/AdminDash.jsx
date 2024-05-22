@@ -1,34 +1,26 @@
-import React, { useEffect } from 'react';
-import AdminPageIssues from './AdminPageIssues';
-import { useIssuesContext } from '../../hooks/useIssuesContext';
-import { useAuthContext } from '../../hooks/useAuthContext'; 
-import fetchIssues from '../../fetchIssues';
+import { useEffect } from "react";
+import { useIssuesContext } from "../../hooks/useIssuesContext";
+import { useAuthContext } from "../../hooks/useAuthContext";
+import AdminPageIssues from "./AdminPageIssues";
+import fetchIssues from "../../fetchIssues";
 
 const AdminDash = () => {
-    const { issues, dispatch } = useIssuesContext();
-    const { user } = useAuthContext();
+    const { issues, dispatch} = useIssuesContext()
+    const { user } = useAuthContext()
 
     useEffect(() => {
-        if (user) {
-            fetchIssues(dispatch, user.token); 
+        if (user){
+            fetchIssues(dispatch, user.token)
         }
-    }, [dispatch, user]);
-
+    }, [dispatch, user])
 
     return (
-        <div className='tickets'>
-            <div className='issues'>
-                {issues && issues.map((issue) => (
-                    <AdminPageIssues key={issue._id} issue={issue} />
-                ))}
-            </div>
-            
+        <div className="minicard">
+            {issues && issues.map((issue) => (
+                <AdminPageIssues key = {issue._id} issue= {issue}/>
+            ))}
         </div>
-        
-        
     );
-}
-
-
+};
 
 export default AdminDash;

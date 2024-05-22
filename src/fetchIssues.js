@@ -10,6 +10,7 @@ const fetchIssues = async (dispatch, token) => {
 
     if(response.ok) {
         dispatch({ type: "SET_ISSUES", payload: json });
+        console.log(json, "from fetch")
     }
 };
 

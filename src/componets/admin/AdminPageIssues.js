@@ -1,11 +1,10 @@
-import { useIssuesContext } from "../../hooks/useIssuesContext"
-import { useAuthContext } from "../../hooks/useAuthContext"
+import React from 'react';
+import { useAuthContext } from '../../hooks/useAuthContext';
+import { useIssuesContext } from '../../hooks/useIssuesContext';
 const AdminPageIssues = ({issue}) => {
     const {dispatch} = useIssuesContext()
     const { driver = [], route = [], room = [] } = issue
     const {user} = useAuthContext()
-    
-    
     const handleClick = async () => {
         if (!user){
             return
@@ -22,37 +21,26 @@ const AdminPageIssues = ({issue}) => {
         if(response.ok) {
             dispatch({type:'DELETE_ISSUE', payload: json})
         }
-
     }
     return (
-        <div className="issue-details">
-            <h4>{issue.title}</h4>
-            <p><strong>Date</strong>{issue.createdAt}</p>
-            <p><strong>description</strong>{issue.description}</p>
-            <ul>
+        <div className='card-mini'>
+        <div className="card-mini__container">
+        <p className='card-mini__category'><strong>Category</strong>{issue.category}</p>
+            <h4 className='card-mini__name'>{issue.name}</h4>
+            <p className='card-mini__date'><strong>Date</strong>{issue.createdAt}</p>
+            <ul className='card-mini__driver-list'>
                 {driver.map((driver,index) => (
-                    <li key={index}>{driver}</li>
+                    <li className='card-mini__drivers' key={index}>{driver}</li>
                     
                     
                 ))}
             </ul>
-            <ul>
-                {route.map((route,index) => (
-                    <li key={index}>{route}</li>
-                    
-                    
-                ))}
-            </ul>
-            <ul>
-                    {room.map((room, index) => (
-                        <li key={index}>{room}</li>
-                    ))}
-            </ul>
-            <p><strong>Priority</strong>{issue.priority}</p>
-            <p><strong>Group Assigned</strong>{issue.groupassignment}</p>
-            <p><strong>Category</strong>{issue.category}</p>
-            <span onClick={handleClick}>Delete</span>
+            <p className='card-mini__priority'><strong>Priority</strong>{issue.priority}</p>
+            
+            <span className='card-mini__delete' onClick={handleClick}>Delete</span>
+        </div>
         </div>
     )
 }
-export default AdminPageIssues
+
+export default AdminPageIssues;
