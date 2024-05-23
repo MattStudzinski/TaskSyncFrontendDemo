@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import IssueDetails from './issueDetails';
 import { useIssuesContext } from '../hooks/useIssuesContext';
 import { useAuthContext } from '../hooks/useAuthContext'; 
-import fetchIssues from '../fetchIssues';
+import fetchIssues from '../fetch/fetchIssues';
 
 const AllTickets = () => {
     const { issues, dispatch } = useIssuesContext();

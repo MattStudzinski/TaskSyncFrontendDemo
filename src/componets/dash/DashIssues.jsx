@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useIssuesContext } from "../../hooks/useIssuesContext";
 import { useAuthContext } from "../../hooks/useAuthContext";
 import IssueInfo from './issueInfo'
-import fetchIssues from "../../fetchIssues";
+import fetchIssues from "../../fetch/fetchIssues";
 
 const DashIssues = () => {
     const { issues, dispatch} = useIssuesContext()

@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useIssuesContext } from "../../hooks/useIssuesContext";
 import { useAuthContext } from "../../hooks/useAuthContext";
 import AdminPageIssues from "./AdminPageIssues";
-import fetchIssues from "../../fetchIssues";
+import fetchAdminIssues from "../../fetch/fetchAdminIssues";
 
 const AdminDash = () => {
     const { issues, dispatch} = useIssuesContext()
@@ -10,7 +10,7 @@ const AdminDash = () => {
 
     useEffect(() => {
         if (user){
-            fetchIssues(dispatch, user.token)
+            fetchAdminIssues(dispatch, user.token)
         }
     }, [dispatch, user])
 

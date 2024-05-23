@@ -12,7 +12,7 @@ const Header = () => {
     }
     return (
         <header className='header'>
-                <Link to="/dashboard">
+                <Link to="/">
                     <img className='logo' src={logo} alt='Logo' />
                 </Link>
                 
