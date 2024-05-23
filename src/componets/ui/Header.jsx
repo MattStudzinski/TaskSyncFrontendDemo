@@ -35,7 +35,7 @@ const Header = () => {
                     <HeaderIcon  />
                     </Link>
 
-                    <Link to="/alltickets" className='user-nav__box'>
+                    <Link to="/admin" className='user-nav__box'>
                         <HeaderIcon  />   
                         <span className='user-nav__notification'>3</span>
                     </Link>

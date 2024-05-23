@@ -5,7 +5,6 @@ import Dashboard from './componets/dash/Dashboard';
 import Header from './componets/ui/Header';
 import LoginForm from './componets/forms/LoginForm';
 import Signup from './componets/forms/Signup';
-import AllTickets from './allTickets/AllTickets';
 import AdminDash from './componets/admin/AdminDash';
 
 
@@ -32,13 +31,9 @@ function App() {
         path="/signup"
         element={!user ? <Signup /> : <Navigate to="/"/>}
         />
-        <Route
-        path='/alltickets'
-        element={user ? <AllTickets /> : <Navigate to= "/login"/>}
-        />
         <Route 
         path='/admin'
-        element={<AdminDash />}
+        element={user && user.role === 'admin' ? <AdminDash /> : <Navigate to="/" />}
         /> 
       </Routes>
     {/* <IssueForm /> */}

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useAuthContext } from "./useAuthContext";
+import { jwtDecode } from "jwt-decode";
 
 export const useLogin = () => {
 
@@ -24,11 +25,12 @@ export const useLogin = () => {
             setError(json.error)
         }
         if(response.ok) {
+            const decodedToken = jwtDecode(json.token);
+            const userWithRole = { ...json, role: decodedToken.role };
             // save user to local storage which is jwt and email
-            localStorage.setItem('user', JSON.stringify(json))
-
+            localStorage.setItem('user', JSON.stringify(userWithRole))
             // update auth context
-            dispatch({type: 'LOGIN', payload: json})
+            dispatch({type: 'LOGIN', payload: userWithRole})
             setIsLoading(false)
         }
     }

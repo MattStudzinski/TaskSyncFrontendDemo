@@ -1,5 +1,6 @@
 import { createContext, useReducer } from "react";
 import { useEffect } from "react";
+import { jwtDecode } from 'jwt-decode'
 
 export const AuthContext = createContext()
 
@@ -23,9 +24,12 @@ const [state, dispatch] = useReducer(authReducer,{
 useEffect(() => {
     const user = JSON.parse(localStorage.getItem('user'))
 
-    if(user) {
-        dispatch({type: 'LOGIN',payload: user})
-}
+    if (user) {
+        const decodedToken = jwtDecode(user.token);
+        console.log('Decoded Token:', decodedToken); // Log the decoded token
+        const userWithRole = { ...user, role: decodedToken.role };
+        dispatch({ type: 'LOGIN', payload: userWithRole });
+    }
 }, [])
 
 

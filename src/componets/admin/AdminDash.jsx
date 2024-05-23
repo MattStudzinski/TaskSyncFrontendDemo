@@ -9,7 +9,7 @@ const AdminDash = () => {
     const { user } = useAuthContext()
 
     useEffect(() => {
-        if (user){
+        if (user && user.role === 'admin'){
             fetchAdminIssues(dispatch, user.token)
         }
     }, [dispatch, user])
