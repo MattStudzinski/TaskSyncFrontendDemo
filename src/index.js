@@ -4,6 +4,7 @@ import './styles/styles.css';
 import App from './App';
 import { IssueContextProvider } from './componets/context/IssueContext';
 import { AuthContextProvider } from './componets/context/AuthContext';
+import { IssueFilterProvider } from './componets/context/FilterContext';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -11,7 +12,9 @@ root.render(
   <React.StrictMode>
     <AuthContextProvider>
       <IssueContextProvider>
+        <IssueFilterProvider>
         <App />
+        </IssueFilterProvider>
       </IssueContextProvider>
     </AuthContextProvider>
   </React.StrictMode>

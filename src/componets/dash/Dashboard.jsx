@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 // import Tickets from '../../issuedetails/Tickets';
 import IssueForm from '../forms/IssueForm';
 import DashIssues from './DashIssues';
 import Analytics from './Analytics';
 import Sidebar from '../ui/Sidebar';
 import Calendar from './Calendar';
+import { IssueFilterContext } from '../context/FilterContext';
 
 const Dashboard = () => {
+    const {setFilter} = useContext(IssueFilterContext)
+
     return (
         <div className='content'>
             <Sidebar />
@@ -20,10 +23,10 @@ const Dashboard = () => {
                     add task
                 </div>
                 <nav>
-                    <div>
+                    <div onClick={() => setFilter('date')}>
                         new issues
                     </div>
-                    <div>
+                    <div onClick={() => setFilter('priority')}>
                         issues by priority
                     </div>
                     <div>
