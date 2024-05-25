@@ -4,7 +4,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
   line-height: 1.6;
-  background: linear-gradient(to right bottom, #c9d6ff, #e2e2e2);
+  background: linear-gradient(to right bottom, #d5d4ff, #c5eafc);
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100vh;
@@ -170,7 +170,7 @@ html {
   top: 35%;
   position: absolute;
   transform: translate(-50%, -35%);
-  background-color: rgba(28, 28, 28, 0.434);
+  background-color: #ffd7a9;
   width: 70rem;
   height: 40rem;
   border-radius: 15px;
@@ -180,7 +180,8 @@ html {
 .login-form__form {
   display: flex;
   flex-direction: column;
-  background-color: khaki;
+  background-color: rgb(255, 255, 255);
+  box-shadow: var(--shadow-dark);
   border-radius: 10px;
   width: 50%;
   margin: 3rem;
@@ -191,6 +192,34 @@ html {
 .login-form__title {
   font-size: 1.8rem;
 }
+.login-form__name {
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+.login-form__name-input {
+  border-radius: 5px;
+  height: 40px;
+  margin-bottom: 3rem;
+}
+.login-form__password {
+  font-size: 1.2rem;
+}
+.login-form__password-input {
+  border-radius: 5px;
+  height: 40px;
+}
+.login-form__button {
+  background-color: green;
+  margin-top: 4rem;
+  left: 20%;
+  position: absolute;
+  transform: translate(-20%);
+}
+.login-form__illistration {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
 .container {
   max-width: 140rem;
   margin: 8rem auto;

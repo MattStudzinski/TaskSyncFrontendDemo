@@ -4,7 +4,7 @@
     top: 35%;
     position: absolute;
     transform: translate(-50%, -35%);
-    background-color: rgba(28, 28, 28, 0.434);
+    background-color: #ffd7a9;
     width: 70rem;
     height: 40rem;
     border-radius: 15px;
@@ -16,7 +16,8 @@
     &__form{
         display: flex;
         flex-direction: column;
-        background-color: khaki;
+        background-color: rgb(255, 255, 255);
+        box-shadow: var(--shadow-dark);
         border-radius: 10px;
         width: 50%;
         margin: 3rem;
@@ -30,32 +31,52 @@
         font-size: 1.8rem;
     }
 
-    &__name {
+    &__quesiton{
 
+    }
+
+    &__link {
+
+    }
+
+    &__name {
+        font-size: 1.2rem;
+        margin-top: 2rem;
     }
 
     &__name-input {
+        border-radius: 5px;
+        height: 40px;
+        margin-bottom: 3rem;
 
+        &::placeholder {
+            
+        }
     }
 
     &__password{
-
+        font-size: 1.2rem;
     }
 
-    &__pasword-input{
+    &__password-input{
+        border-radius: 5px;
+        height: 40px;
 
+        &::placeholder{
+            
+        }
     }
     
-
-
-
-
-
-
-
-
+    &__button {
+        background-color: green;
+        margin-top: 4rem;
+        left: 20%;
+        position: absolute;
+        transform: translate(-20%);
+    }
 
     &__illistration{
-        
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
     }
 }
