@@ -15,25 +15,27 @@ const Dashboard = () => {
             <Sidebar />
         <main className='dashboard-view'>
             <Analytics />
-            <nav className='Dash-nav'>
-                <div>
-                    title
-                </div>
-                <div>
-                    add task
-                </div>
-                <nav>
-                    <div onClick={() => setFilter('date')}>
-                        new issues
+            <div className='dash-nav'>
+                <div className='dash-nav__header'>
+                    <h2 className='dash-nav__title'>
+                        My Tasks
+                    </h2>
+                    <div className='dash-nav__addbutton'>
+                        Add Task
                     </div>
-                    <div onClick={() => setFilter('priority')}>
-                        issues by priority
+                </div>
+                <nav className='dash-nav__filters'>
+                    <div className='dash-nav__filters-new-assigned'onClick={() => setFilter('date')}>
+                        New Assigned
                     </div>
-                    <div>
-                        completed issues
+                    <div className='dash-nav__filters-priority' onClick={() => setFilter('priority')}>
+                        Priority
+                    </div>
+                    <div className='dash-nav__filters-completed'>
+                        completed
                     </div>
                 </nav>
-            </nav>
+            </div>
 
             <DashIssues />
             </main>

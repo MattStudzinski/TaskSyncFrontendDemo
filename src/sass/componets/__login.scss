@@ -1,0 +1,61 @@
+
+.login-form{
+    left: 50%;
+    top: 35%;
+    position: absolute;
+    transform: translate(-50%, -35%);
+    background-color: rgba(28, 28, 28, 0.434);
+    width: 70rem;
+    height: 40rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow-dark);
+    display: flex;
+
+    
+
+    &__form{
+        display: flex;
+        flex-direction: column;
+        background-color: khaki;
+        border-radius: 10px;
+        width: 50%;
+        margin: 3rem;
+    }
+
+    &__input-container{
+        margin: 2rem;
+    }
+
+    &__title{
+        font-size: 1.8rem;
+    }
+
+    &__name {
+
+    }
+
+    &__name-input {
+
+    }
+
+    &__password{
+
+    }
+
+    &__pasword-input{
+
+    }
+    
+
+
+
+
+
+
+
+
+
+    &__illistration{
+        
+    }
+}

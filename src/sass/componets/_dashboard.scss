@@ -1,0 +1,28 @@
+.dash-nav{
+    background-color: darkcyan;
+
+    &__header{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__title{
+
+    }
+    &addbutton{
+
+    }
+    &__filters{
+        width: 40%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    &__filters-new-assigned{
+        cursor: pointer;
+    }
+    &__filters-priority{
+        cursor: pointer;
+    }
+    &__filters-completed{
+        cursor: pointer;
+    }
+}

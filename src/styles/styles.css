@@ -143,6 +143,54 @@ html {
   fill: green;
 }
 
+.dash-nav {
+  background-color: darkcyan;
+}
+.dash-nav__header {
+  display: flex;
+  justify-content: space-between;
+}
+.dash-nav__filters {
+  width: 40%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.dash-nav__filters-new-assigned {
+  cursor: pointer;
+}
+.dash-nav__filters-priority {
+  cursor: pointer;
+}
+.dash-nav__filters-completed {
+  cursor: pointer;
+}
+
+.login-form {
+  left: 50%;
+  top: 35%;
+  position: absolute;
+  transform: translate(-50%, -35%);
+  background-color: rgba(28, 28, 28, 0.434);
+  width: 70rem;
+  height: 40rem;
+  border-radius: 15px;
+  box-shadow: var(--shadow-dark);
+  display: flex;
+}
+.login-form__form {
+  display: flex;
+  flex-direction: column;
+  background-color: khaki;
+  border-radius: 10px;
+  width: 50%;
+  margin: 3rem;
+}
+.login-form__input-container {
+  margin: 2rem;
+}
+.login-form__title {
+  font-size: 1.8rem;
+}
 .container {
   max-width: 140rem;
   margin: 8rem auto;
@@ -153,7 +201,7 @@ html {
 
 header {
   height: 7rem;
-  background-color: #f1f1f1;
+  background-color: #ececec;
   border-bottom: lightgrey;
   display: flex;
   justify-content: space-between;

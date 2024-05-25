@@ -17,7 +17,6 @@ const DashIssues = () => {
     }, [dispatch, user])
 
     const filterIssues = (issues) => {
-        console.log(issues)
         switch (filter) {
             case 'priority':
                 return issues.sort((a, b) => {
@@ -28,7 +27,6 @@ const DashIssues = () => {
                 return issues.sort((a, b) => {
                     const dateA = new Date(a.createdAt)
                     const dateB = new Date(b.createdAt)
-                    console.log(dateA)
                     return dateA - dateB
                     
                 })
