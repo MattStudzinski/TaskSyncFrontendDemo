@@ -22,28 +22,32 @@ await login(name, password)
                 <div className='login-form__input-container'>
                 <h3 className='login-form__title'>Login</h3>
                 <div className='login-form__question'>Don't have an account yet?<Link className='login-form__link' to='/signup'> Sign Up</Link></div>
-                <label className='login-form__name'>Name</label>
+                
                 <input  className='login-form__name-input'
-                type='name'
+                type='name' required
                 onChange={(e) => setName(e.target.value)}
                 value={name}
-                placeholder='Richard'
                 />
+                <label className='login-form__name'>Name</label>
 
-                <label className='login-form__password'>Password</label>
+                
                 <input className='login-form__password-input'
-                type='password'
+                type='password' required
                 onChange={(e) => setPassword(e.target.value)}
                 value={password}
-                placeholder='Richard34#'
                 />
-
+                <label className='login-form__password'>Password</label>
+                
+                <div className='login-form__button-container'>
+                {error && <div className='login-form__error'>{error}</div>}
+                
                 <button 
                 className='login-form__button'
                 disabled={isLoading}
                 >Login</button>
                 </div>
-                {error && <div className='error'>{error}</div>}
+                </div>
+                
             </form>
             <img className='login-form__illistration' src={illistration} alt='Login Drawing'></img>
         </div>
