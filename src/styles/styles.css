@@ -193,6 +193,10 @@ html {
   flex-direction: column;
   position: relative;
 }
+.login-form__input-group {
+  position: relative;
+  margin-top: 1.5rem;
+}
 .login-form__title {
   font-size: 2.2rem;
 }
@@ -201,14 +205,15 @@ html {
 }
 .login-form__name {
   position: absolute;
-  top: 10.7rem; /* Adjust as necessary */
-  left: 1.9rem; /* Adjust as necessary */
+  top: 5rem; /* Adjust as necessary */
+  left: 1.2rem; /* Adjust as necessary */
   color: grey;
   pointer-events: none;
   transition: transform 0.3s, font-size 0.3s; /* Smooth transition */
 }
 .login-form__name-input {
   margin-top: 3rem;
+  background: transparent;
   width: 100%;
   border: none;
   font-size: 1.7rem;
@@ -218,8 +223,32 @@ html {
 .login-form__name-input:focus {
   outline: none; /* Remove default outline */
 }
-.login-form__name-input:focus + .login-form__name, .login-form__name-input:not(:placeholder-shown) + .login-form__name {
-  transform: translateY(-1rem); /* Move label up */
+.login-form__name-input:focus + .login-form__name, .login-form__name-input:focus + .login-form__password, .login-form__name-input:not(:placeholder-shown) + .login-form__name, .login-form__name-input:not(:placeholder-shown) + .login-form__password {
+  transform: translateY(-2.7rem); /* Move label up */
+  font-size: 1.2rem; /* Reduce font size */
+}
+.login-form__password {
+  position: absolute;
+  top: 5rem;
+  left: 1.2rem;
+  color: grey;
+  pointer-events: none;
+  transition: transform 0.3s, font-size 0.3s;
+}
+.login-form__password-input {
+  margin-top: 3rem;
+  background: transparent;
+  width: 100%;
+  border: none;
+  font-size: 1.7rem;
+  border-bottom: 2px solid silver;
+  padding: 1rem; /* Add padding to avoid overlap with label */
+}
+.login-form__password-input:focus {
+  outline: none; /* Remove default outline */
+}
+.login-form__password-input:focus + .login-form__name, .login-form__password-input:focus + .login-form__password, .login-form__password-input:not(:placeholder-shown) + .login-form__name, .login-form__password-input:not(:placeholder-shown) + .login-form__password {
+  transform: translateY(-2.7rem); /* Move label up */
   font-size: 1.2rem; /* Reduce font size */
 }
 .login-form__button-container {
@@ -243,7 +272,7 @@ html {
   cursor: pointer;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transform-origin: center;
-  margin-top: 6.2rem;
+  margin-top: 1.2rem;
   transition-duration: 0.3s;
   transition-property: box-shadow, transform;
 }
@@ -256,10 +285,6 @@ html {
   border-bottom-right-radius: 10px;
 }
 .login-form__error {
-  position: absolute;
-  left: 50%;
-  top: 79%;
-  transform: translate(-50%, -79%);
   padding: 10px;
   background: #ffbaba;
   border: 1px solid var(--error);
