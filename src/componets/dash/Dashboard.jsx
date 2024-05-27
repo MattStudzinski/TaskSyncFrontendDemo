@@ -39,8 +39,10 @@ const Dashboard = () => {
                 <DashIssues />
             </div>
             </div>
-            
-
+            <div className='dash-view__calendar-container'>
+            <Calendar />
+            <div className='somethingelse'>something else here</div>
+            </div>
             </main>
             
         </div>

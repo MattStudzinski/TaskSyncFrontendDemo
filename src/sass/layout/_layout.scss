@@ -1,7 +1,7 @@
 .container {
 max-width: 140rem;
 margin: 8rem auto;
-
+background-color: $color-app-primary;
 box-shadow: var(--shadow-dark);
 min-height: 50rem;
 border-radius: 10px;
@@ -32,18 +32,23 @@ header{
 
   .content {
     background-color: $color-app-primary;
-
     display: flex;
-    border-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
   }
 
   .dash-view {
 background-color: $color-app-secondary;
 border-radius: 1rem;
+display: flex;
+justify-content: space-between;
 flex: 1;
 padding: 2rem;
 margin-bottom: 3rem;
 margin-right: 3rem;
+
+
+
   }
 
   

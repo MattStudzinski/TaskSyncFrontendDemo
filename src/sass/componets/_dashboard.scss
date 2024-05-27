@@ -1,11 +1,24 @@
 
+.dash-view{
 
-.dash-view__analytics-container{
+
+&__analytics-container{
     display: flex;
+    flex: 1;
     flex-direction: column;
     max-width: 70%;
-    margin-bottom: 2rem;
     justify-content: space-between;
+    margin-right: 2rem;
+}
+
+&__calendar-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    max-width: 30%;
+}
+
 }
 
 

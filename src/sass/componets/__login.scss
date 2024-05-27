@@ -4,7 +4,7 @@
     top: 35%;
     position: absolute;
     transform: translate(-50%, -35%);
-    background-color: rgba(216,222,232,255);
+    background-color: rgb(255, 255, 255);
     width: 70rem;
     height: 40rem;
     border-radius: 15px;
@@ -16,7 +16,7 @@
     &__form{
         display: flex;
         flex-direction: column;
-        background-color: rgba(216,222,232,255);
+        background-color: rgb(255, 255, 255);
         box-shadow: var(--shadow-dark);
         border-radius: 10px;
         width: 50%;
@@ -115,14 +115,14 @@
         text-transform: uppercase;
         color: #fff;
         cursor: pointer;
-        box-shadow: 0 0 10px rgba(0,0,0, 0.1);
+        box-shadow: 0 0 10px rgba(0,0,0, 0.2);
         transform-origin: center;
         margin-top: 9rem;
         transition-duration: .3s;
         transition-property: box-shadow, transform;
 
         &:hover, &:focus, &:active {
-            box-shadow: 0 0 20px rgba(0,0,0,0.5);
+            box-shadow: 0 0 20px $color-app-accent1;
             transform: scale(1.1);
             
         }

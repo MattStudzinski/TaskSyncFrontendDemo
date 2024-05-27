@@ -3,11 +3,11 @@
     padding: 1rem;
     display: flex;
     justify-content: space-around;
-    max-width: 100%
+    max-width: 100%;
 
     &__open-issues {
         width: 30%;
-        height: 10rem;
+        height: 13rem;
         display: block;
         background: rgb(186,152,255);
         background: linear-gradient(133deg, rgba(186,152,255,1) 24%, rgba(179,137,255,1) 36%, rgba(161,117,242,1) 59%);
@@ -16,7 +16,7 @@
 
     &__new-issues{
         width: 30%;
-        height: 10rem;
+        height: 13rem;
         display: block;
         background: rgb(254,210,117);
 background: linear-gradient(94deg, rgba(254,210,117,1) 24%, rgba(250,199,90,1) 36%, rgba(255,196,68,1) 59%);
@@ -25,7 +25,7 @@ background: linear-gradient(94deg, rgba(254,210,117,1) 24%, rgba(250,199,90,1) 3
 
     &__priority-issues{
         width: 30%;
-        height: 10rem;
+        height: 13rem;
         display: block;
         background: rgb(249,153,200);
 background: linear-gradient(94deg, rgba(249,153,200,1) 24%, rgba(249,126,186,1) 36%, rgba(252,114,182,1) 59%);
