@@ -40,7 +40,8 @@ html {
 }
 
 .analytics {
-  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
   display: flex;
   justify-content: space-around;
   max-width: 80%;
@@ -166,6 +167,17 @@ html {
   fill: green;
 }
 
+.dash-view__analytics-container {
+  display: flex;
+  margin-bottom: 2rem;
+  justify-content: space-between;
+}
+
+.dash-nav {
+  border-radius: 1rem;
+  background-color: rgb(216, 222, 232);
+  padding: 10px;
+}
 .dash-nav__header {
   display: flex;
   justify-content: space-between;
@@ -332,6 +344,10 @@ html {
   width: 100%;
 }
 
+.calendar {
+  background-color: rgb(216, 222, 232);
+}
+
 .container {
   max-width: 140rem;
   margin: 8rem auto;
@@ -350,12 +366,11 @@ header {
   font-size: 1.4rem;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
-  border-bottom: 0.5px solid rgb(187, 192, 200);
   padding: 1rem;
 }
 
 .sidebar {
-  background-color: rgb(187, 192, 200);
+  background-color: rgb(216, 222, 232);
   flex: 0 0 18%;
   border-bottom-left-radius: 1rem;
   padding: 2rem;
@@ -367,16 +382,12 @@ header {
   border-radius: 1rem;
 }
 
-.dashboard-view {
-  background-color: rgb(216, 222, 232);
+.dash-view {
+  background-color: rgb(187, 192, 200);
+  border-radius: 1rem;
   flex: 1;
   padding: 2rem;
-}
-
-.calendar {
-  flex: 0 0 23%;
-  background-color: rgb(216, 222, 232);
-  border-bottom-right-radius: 1rem;
+  margin-bottom: 3rem;
 }
 
 label, input {

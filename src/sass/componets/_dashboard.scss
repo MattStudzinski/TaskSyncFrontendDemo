@@ -1,5 +1,17 @@
+
+
+.dash-view__analytics-container{
+    display: flex;
+    margin-bottom: 2rem;
+    justify-content: space-between;
+}
+
+
 .dash-nav{
 
+    border-radius: 1rem;
+    background-color: $color-app-primary;
+    padding: 10px;
     &__header{
         display: flex;
         justify-content: space-between;
@@ -10,6 +22,7 @@
     &addbutton{
 
     }
+
     &__filters{
         width: 40%;
         display: flex;
