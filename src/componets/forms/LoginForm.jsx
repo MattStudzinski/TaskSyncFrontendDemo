@@ -17,47 +17,47 @@ await login(name, password)
 }
 
     return (
-        <div className='login-form'>
-            <form className='login-form__form' onSubmit={handleSubmit}>
-                <div className='login-form__input-container'>
-                <h3 className='login-form__title'>Login</h3>
-                <div className='login-form__question'>Don't have an account yet?<Link className='login-form__link' to='/signup'> Sign Up</Link></div>
+        <div className='form'>
+            <form className='form__form' onSubmit={handleSubmit}>
+                <div className='form__input-container'>
+                <h3 className='form__title'>Login</h3>
+                <p className='form__question'>Don't have an account yet? <Link className='login-form__link' to='/signup'>Sign Up</Link></p>
                 
-                <div className='login-form__input-group'>
-                <input  className='login-form__name-input'
-                type='name' required
+                <div className='form__input-group'>
+                <input  className='form__input'
+                type='name' 
                 onChange={(e) => setName(e.target.value)}
                 value={name}
                 placeholder=' '
                 />
 
-                <label className='login-form__name'>Name</label>
+                <label className='form__label'>Name</label>
                 </div>
 
-                <div className='login-form__input-group'>
+                <div className='form__input-group'>
                 <input 
-                className='login-form__password-input'
-                type='password' required
+                className='form__input'
+                type='password' 
                 onChange={(e) => setPassword(e.target.value)}
                 value={password}
                 placeholder=' '
                 />
                 
-                <label className='login-form__password'>Password</label>
+                <label className='form__label'>Password</label>
                 </div>
                 
-                <div className='login-form__button-container'>
-                {error && <div className='login-form__error'>{error}</div>}
+                <div className='form__button-container'>
+                {error && <div className='form__error'>{error}</div>}
                 
                 <button 
-                className='login-form__button'
+                className='form__button'
                 disabled={isLoading}
                 >Login</button>
                 </div>
                 </div>
                 
             </form>
-            <img className='login-form__illistration' src={illistration} alt='Login Drawing'></img>
+            <img className='form__illistration' src={illistration} alt='Login Drawing'></img>
         </div>
     );
 };

@@ -16,8 +16,6 @@ const Dashboard = () => {
         <main className='dash-view'>
             <div className='dash-view__analytics-container'>
             <Analytics />
-            <Calendar />
-            </div>
             <div className='dash-nav'>
                 <div className='dash-nav__header'>
                     <h2 className='dash-nav__title'>
@@ -40,6 +38,8 @@ const Dashboard = () => {
                 </nav>
                 <DashIssues />
             </div>
+            </div>
+            
 
             </main>
             

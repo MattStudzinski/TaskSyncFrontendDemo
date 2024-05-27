@@ -1,5 +1,5 @@
 
-.login-form{
+.form{
     left: 50%;
     top: 35%;
     position: absolute;
@@ -47,7 +47,7 @@
 
     }
 
-    &__name {
+    &__label {
         position: absolute;
         font-size: 1.3rem;
         top: 4.3rem; /* Adjust as necessary */
@@ -57,7 +57,7 @@
         transition: transform 0.3s, font-size 0.3s; /* Smooth transition */
     }
 
-    &__name-input {
+    &__input {
         margin-top: 3rem;
         background: transparent;
         width: 100%;
@@ -70,47 +70,14 @@
             outline: none; /* Remove default outline */
         }
 
-        &:focus + .login-form__name, &:focus + .login-form__password,
-        &:not(:placeholder-shown) + .login-form__name, &:not(:placeholder-shown) + .login-form__password {
+        &:focus + .form__label,
+        &:not(:placeholder-shown) + .form__label {
             transform: translateY(-2.9rem); /* Move label up */
             font-size: 1.2rem; /* Reduce font size */
             color: rgba(161,117,242,255);
         }
     }
 
-    &__password{
-        position: absolute;
-        font-size: 1.3rem;
-        top: 4.3rem; /* Adjust as necessary */
-        left: .8rem; /* Adjust as necessary */
-        color: grey;
-        pointer-events: none;
-        transition: transform 0.3s, font-size 0.3s;
-
-    }
-
-    &__password-input{
-        margin-top: 3rem;
-        background: transparent;
-        width: 100%;
-        border: none;
-        font-size: 1.7rem;
-        border-bottom: 2px solid silver;
-        padding: .5rem;
-        
-
-        &:focus {
-            outline: none; /* Remove default outline */
-        }
-
-        &:focus + .login-form__name, &:focus + .login-form__password,
-        &:not(:placeholder-shown) + .login-form__name, &:not(:placeholder-shown) + .login-form__password {
-            transform: translateY(-2.9rem); /* Move label up */
-            font-size: 1.2rem; /* Reduce font size */
-            color: rgba(161,117,242,255);
-        }
-        
-    }
 
     &__underline {
         position: absolute;

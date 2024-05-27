@@ -2,6 +2,8 @@
 
 .dash-view__analytics-container{
     display: flex;
+    flex-direction: column;
+    max-width: 70%;
     margin-bottom: 2rem;
     justify-content: space-between;
 }
@@ -11,6 +13,7 @@
 
     border-radius: 1rem;
     background-color: $color-app-primary;
+    max-width: 100%;
     padding: 10px;
     &__header{
         display: flex;
