@@ -1,39 +1,50 @@
 .container {
 max-width: 140rem;
 margin: 8rem auto;
-background-color: rgb(166, 166, 166);
+
 box-shadow: var(--shadow-dark);
 min-height: 50rem;
+border-radius: 10px;
 }
 
 
 header{
     height: 7rem;
-    background-color: #ececec;
+    background-color: $color-app-primary;
     border-bottom: lightgrey;
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 1.4rem;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    border-bottom: .5px solid $color-app-secondary;
+    padding: 1rem;
   }
   
 
   .sidebar{
-    background-color: rgb(87, 87, 87);
+    background-color: $color-app-secondary ;
     flex: 0 0 18%;
+    border-bottom-left-radius: 1rem;
+    padding: 2rem;
   }
 
 
   .content {
+    background-color: $color-app-primary;
     display: flex;
-
+    border-radius: 1rem;
   }
 
   .dashboard-view {
-background-color: rgb(142, 142, 142);
+background-color: $color-app-primary;
 flex: 1;
+padding: 2rem;
   }
 
   .calendar{
     flex: 0 0 23%;
+    background-color: $color-app-primary;
+    border-bottom-right-radius: 1rem;
   }

@@ -4,7 +4,7 @@
     top: 35%;
     position: absolute;
     transform: translate(-50%, -35%);
-    background-color: #ffd7a9ab;
+    background-color: rgba(216,222,232,255);
     width: 70rem;
     height: 40rem;
     border-radius: 15px;
@@ -16,7 +16,7 @@
     &__form{
         display: flex;
         flex-direction: column;
-        background-color: rgb(210, 210, 210);
+        background-color: rgba(216,222,232,255);
         box-shadow: var(--shadow-dark);
         border-radius: 10px;
         width: 50%;
@@ -33,7 +33,6 @@
 
     &__input-group{
         position: relative;
-        margin-top: 1.5rem;
     }
 
     &__title{
@@ -50,8 +49,9 @@
 
     &__name {
         position: absolute;
-        top: 5rem; /* Adjust as necessary */
-        left: 1.2rem; /* Adjust as necessary */
+        font-size: 1.3rem;
+        top: 4.3rem; /* Adjust as necessary */
+        left: .8rem; /* Adjust as necessary */
         color: grey;
         pointer-events: none;
         transition: transform 0.3s, font-size 0.3s; /* Smooth transition */
@@ -64,7 +64,7 @@
         border: none;
         font-size: 1.7rem;
         border-bottom: 2px solid silver;
-        padding: 1rem; /* Add padding to avoid overlap with label */
+        padding: .5rem; /* Add padding to avoid overlap with label */
 
         &:focus {
             outline: none; /* Remove default outline */
@@ -72,15 +72,17 @@
 
         &:focus + .login-form__name, &:focus + .login-form__password,
         &:not(:placeholder-shown) + .login-form__name, &:not(:placeholder-shown) + .login-form__password {
-            transform: translateY(-2.7rem); /* Move label up */
+            transform: translateY(-2.9rem); /* Move label up */
             font-size: 1.2rem; /* Reduce font size */
+            color: rgba(161,117,242,255);
         }
     }
 
     &__password{
         position: absolute;
-        top: 5rem;
-        left: 1.2rem;
+        font-size: 1.3rem;
+        top: 4.3rem; /* Adjust as necessary */
+        left: .8rem; /* Adjust as necessary */
         color: grey;
         pointer-events: none;
         transition: transform 0.3s, font-size 0.3s;
@@ -94,7 +96,8 @@
         border: none;
         font-size: 1.7rem;
         border-bottom: 2px solid silver;
-        padding: 1rem; /* Add padding to avoid overlap with label */
+        padding: .5rem;
+        
 
         &:focus {
             outline: none; /* Remove default outline */
@@ -102,8 +105,26 @@
 
         &:focus + .login-form__name, &:focus + .login-form__password,
         &:not(:placeholder-shown) + .login-form__name, &:not(:placeholder-shown) + .login-form__password {
-            transform: translateY(-2.7rem); /* Move label up */
+            transform: translateY(-2.9rem); /* Move label up */
             font-size: 1.2rem; /* Reduce font size */
+            color: rgba(161,117,242,255);
+        }
+        
+    }
+
+    &__underline {
+        position: absolute;
+        bottom: 0rem;
+        height: .2rem;
+        width: 100%;
+
+        &:before{
+            position: absolute;
+            content: '';
+            height:100%;
+            width: 100%;
+            background: red;
+            transform: scaleX(0);
         }
 
     }
@@ -112,12 +133,11 @@
         display: flex;
         justify-content: center; /* Center horizontally */
         align-items: center; /* Center vertically */
-        margin-top: 2rem;
         flex-direction: column;
     }
     
     &__button {
-        background-color: rgb(0, 149, 255);
+        background-color:rgba(255,196,68,255);
         width: 18rem;
         height: 3.8rem;
         border-radius: 8px;
@@ -130,7 +150,7 @@
         cursor: pointer;
         box-shadow: 0 0 10px rgba(0,0,0, 0.1);
         transform-origin: center;
-        margin-top: 1.2rem;
+        margin-top: 9rem;
         transition-duration: .3s;
         transition-property: box-shadow, transform;
 
@@ -147,7 +167,9 @@
     }
 
     &__error {
-        
+        margin-top: 1.5rem;
+        position: absolute;
+        bottom: 6.5rem;
         padding: 10px;
         background: #ffbaba;
         border: 1px solid var(--error);

@@ -12,7 +12,10 @@ body {
          rgba($color-gradient2, 1));
     background-size: cover;
     background-repeat: no-repeat;
-
+    max-width: 90%;
+    justify-self: center;
+  border-radius: 10px;
+  
     min-height: 100vh;
   }
   
@@ -39,4 +42,6 @@ body {
   html {
     font-size: 62.5%;
     box-sizing: border-box;
+    display: flex;
+    justify-content: center;
   }

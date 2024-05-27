@@ -30,6 +30,7 @@ await login(name, password)
                 value={name}
                 placeholder=' '
                 />
+
                 <label className='login-form__name'>Name</label>
                 </div>
 
@@ -41,9 +42,10 @@ await login(name, password)
                 value={password}
                 placeholder=' '
                 />
+                
                 <label className='login-form__password'>Password</label>
                 </div>
-
+                
                 <div className='login-form__button-container'>
                 {error && <div className='login-form__error'>{error}</div>}
                 

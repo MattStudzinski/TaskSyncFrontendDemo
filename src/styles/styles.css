@@ -7,6 +7,9 @@ body {
   background: linear-gradient(to right bottom, #d5d4ff, #c5eafc);
   background-size: cover;
   background-repeat: no-repeat;
+  max-width: 90%;
+  justify-self: center;
+  border-radius: 10px;
   min-height: 100vh;
 }
 
@@ -32,18 +35,38 @@ code {
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+  display: flex;
+  justify-content: center;
 }
 
-.section-analytics {
+.analytics {
+  padding-bottom: 2rem;
   display: flex;
   justify-content: space-around;
   max-width: 80%;
 }
-.section-analytics__box {
-  width: 20%;
+.analytics__open-issues {
+  width: 30%;
   height: 10rem;
   display: block;
-  background-color: rgb(54, 118, 118);
+  background: rgb(186, 152, 255);
+  background: linear-gradient(133deg, rgb(186, 152, 255) 24%, rgb(179, 137, 255) 36%, rgb(161, 117, 242) 59%);
+  border-radius: 10px;
+}
+.analytics__new-issues {
+  width: 30%;
+  height: 10rem;
+  display: block;
+  background: rgb(254, 210, 117);
+  background: linear-gradient(94deg, rgb(254, 210, 117) 24%, rgb(250, 199, 90) 36%, rgb(255, 196, 68) 59%);
+  border-radius: 10px;
+}
+.analytics__priority-issues {
+  width: 30%;
+  height: 10rem;
+  display: block;
+  background: rgb(249, 153, 200);
+  background: linear-gradient(94deg, rgb(249, 153, 200) 24%, rgb(249, 126, 186) 36%, rgb(252, 114, 182) 59%);
   border-radius: 10px;
 }
 
@@ -130,9 +153,9 @@ html {
 }
 
 .logo {
-  height: 4.5rem;
+  height: 6rem;
   border-radius: 5px;
-  margin-left: 3rem;
+  margin-left: 2rem;
 }
 
 .side-nav__icon {
@@ -143,9 +166,6 @@ html {
   fill: green;
 }
 
-.dash-nav {
-  background-color: darkcyan;
-}
 .dash-nav__header {
   display: flex;
   justify-content: space-between;
@@ -170,7 +190,7 @@ html {
   top: 35%;
   position: absolute;
   transform: translate(-50%, -35%);
-  background-color: rgba(255, 215, 169, 0.6705882353);
+  background-color: rgb(216, 222, 232);
   width: 70rem;
   height: 40rem;
   border-radius: 15px;
@@ -180,7 +200,7 @@ html {
 .login-form__form {
   display: flex;
   flex-direction: column;
-  background-color: rgb(210, 210, 210);
+  background-color: rgb(216, 222, 232);
   box-shadow: var(--shadow-dark);
   border-radius: 10px;
   width: 50%;
@@ -195,7 +215,6 @@ html {
 }
 .login-form__input-group {
   position: relative;
-  margin-top: 1.5rem;
 }
 .login-form__title {
   font-size: 2.2rem;
@@ -205,8 +224,9 @@ html {
 }
 .login-form__name {
   position: absolute;
-  top: 5rem; /* Adjust as necessary */
-  left: 1.2rem; /* Adjust as necessary */
+  font-size: 1.3rem;
+  top: 4.3rem; /* Adjust as necessary */
+  left: 0.8rem; /* Adjust as necessary */
   color: grey;
   pointer-events: none;
   transition: transform 0.3s, font-size 0.3s; /* Smooth transition */
@@ -218,19 +238,21 @@ html {
   border: none;
   font-size: 1.7rem;
   border-bottom: 2px solid silver;
-  padding: 1rem; /* Add padding to avoid overlap with label */
+  padding: 0.5rem; /* Add padding to avoid overlap with label */
 }
 .login-form__name-input:focus {
   outline: none; /* Remove default outline */
 }
 .login-form__name-input:focus + .login-form__name, .login-form__name-input:focus + .login-form__password, .login-form__name-input:not(:placeholder-shown) + .login-form__name, .login-form__name-input:not(:placeholder-shown) + .login-form__password {
-  transform: translateY(-2.7rem); /* Move label up */
+  transform: translateY(-2.9rem); /* Move label up */
   font-size: 1.2rem; /* Reduce font size */
+  color: rgb(161, 117, 242);
 }
 .login-form__password {
   position: absolute;
-  top: 5rem;
-  left: 1.2rem;
+  font-size: 1.3rem;
+  top: 4.3rem; /* Adjust as necessary */
+  left: 0.8rem; /* Adjust as necessary */
   color: grey;
   pointer-events: none;
   transition: transform 0.3s, font-size 0.3s;
@@ -242,24 +264,38 @@ html {
   border: none;
   font-size: 1.7rem;
   border-bottom: 2px solid silver;
-  padding: 1rem; /* Add padding to avoid overlap with label */
+  padding: 0.5rem;
 }
 .login-form__password-input:focus {
   outline: none; /* Remove default outline */
 }
 .login-form__password-input:focus + .login-form__name, .login-form__password-input:focus + .login-form__password, .login-form__password-input:not(:placeholder-shown) + .login-form__name, .login-form__password-input:not(:placeholder-shown) + .login-form__password {
-  transform: translateY(-2.7rem); /* Move label up */
+  transform: translateY(-2.9rem); /* Move label up */
   font-size: 1.2rem; /* Reduce font size */
+  color: rgb(161, 117, 242);
+}
+.login-form__underline {
+  position: absolute;
+  bottom: 0rem;
+  height: 0.2rem;
+  width: 100%;
+}
+.login-form__underline:before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: red;
+  transform: scaleX(0);
 }
 .login-form__button-container {
   display: flex;
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
-  margin-top: 2rem;
   flex-direction: column;
 }
 .login-form__button {
-  background-color: rgb(0, 149, 255);
+  background-color: rgb(255, 196, 68);
   width: 18rem;
   height: 3.8rem;
   border-radius: 8px;
@@ -272,7 +308,7 @@ html {
   cursor: pointer;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   transform-origin: center;
-  margin-top: 1.2rem;
+  margin-top: 9rem;
   transition-duration: 0.3s;
   transition-property: box-shadow, transform;
 }
@@ -285,6 +321,9 @@ html {
   border-bottom-right-radius: 10px;
 }
 .login-form__error {
+  margin-top: 1.5rem;
+  position: absolute;
+  bottom: 6.5rem;
   padding: 10px;
   background: #ffbaba;
   border: 1px solid var(--error);
@@ -296,37 +335,48 @@ html {
 .container {
   max-width: 140rem;
   margin: 8rem auto;
-  background-color: rgb(166, 166, 166);
   box-shadow: var(--shadow-dark);
   min-height: 50rem;
+  border-radius: 10px;
 }
 
 header {
   height: 7rem;
-  background-color: #ececec;
+  background-color: rgb(216, 222, 232);
   border-bottom: lightgrey;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 1.4rem;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  border-bottom: 0.5px solid rgb(187, 192, 200);
+  padding: 1rem;
 }
 
 .sidebar {
-  background-color: rgb(87, 87, 87);
+  background-color: rgb(187, 192, 200);
   flex: 0 0 18%;
+  border-bottom-left-radius: 1rem;
+  padding: 2rem;
 }
 
 .content {
+  background-color: rgb(216, 222, 232);
   display: flex;
+  border-radius: 1rem;
 }
 
 .dashboard-view {
-  background-color: rgb(142, 142, 142);
+  background-color: rgb(216, 222, 232);
   flex: 1;
+  padding: 2rem;
 }
 
 .calendar {
   flex: 0 0 23%;
+  background-color: rgb(216, 222, 232);
+  border-bottom-right-radius: 1rem;
 }
 
 label, input {
