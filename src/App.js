@@ -30,7 +30,7 @@ function PrimaryRoutes () {
     <div className={showContainer ? 'container' : ''}>
     {showHeader && <Header />}
 
-<div className='pages'>
+<>
   <Routes>
     <Route
     path="/"
@@ -50,7 +50,7 @@ function PrimaryRoutes () {
     /> 
   </Routes>
 {/* <IssueForm /> */}
-</div>
+</>
     </div>
   )
 

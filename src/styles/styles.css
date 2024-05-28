@@ -7,7 +7,7 @@ body {
   background: linear-gradient(to right bottom, #d5d4ff, #c5eafc);
   background-size: cover;
   background-repeat: no-repeat;
-  width: 85%;
+  width: 90%;
   justify-self: center;
   border-radius: 10px;
   min-height: 100vh;
@@ -174,8 +174,10 @@ html {
   max-width: 70%;
   justify-content: space-between;
   margin-right: 2rem;
+  max-height: 100%;
 }
 .dash-view__calendar-container {
+  max-height: 60%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -187,6 +189,7 @@ html {
   border-radius: 1rem;
   background-color: rgb(255, 255, 255);
   max-width: 100%;
+  height: 100%;
   padding: 10px;
 }
 .dash-nav__header {
@@ -348,8 +351,10 @@ html {
   margin: 8rem auto;
   background-color: rgb(255, 255, 255);
   box-shadow: var(--shadow-dark);
-  min-height: 50rem;
+  min-height: 70rem;
+  max-height: 70rem;
   border-radius: 10px;
+  height: 75vh;
 }
 
 header {
@@ -377,6 +382,7 @@ header {
   display: flex;
   border-bottom-right-radius: 1rem;
   border-bottom-left-radius: 1rem;
+  min-height: 100%;
 }
 
 .dash-view {
@@ -388,6 +394,7 @@ header {
   padding: 2rem;
   margin-bottom: 3rem;
   margin-right: 3rem;
+  min-height: 100%;
 }
 
 label, input {

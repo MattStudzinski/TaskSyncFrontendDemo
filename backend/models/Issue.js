@@ -8,8 +8,12 @@ const issueSchema = new Schema({
         type: String,
         required: false
     },
-    date: {
+    dueDate: {
         type: Date,
+        required: false
+    },
+    completed: {
+        type: Array,
         required: false
     },
     description: {

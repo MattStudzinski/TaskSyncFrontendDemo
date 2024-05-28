@@ -74,8 +74,8 @@ const IssueForm = () => {
             </label>
 
             <label>
-                Date
-                <input type='date' name='date'/>
+                Due-Date
+                <input type='date' name='dueDate'/>
             </label>
             
             <label>

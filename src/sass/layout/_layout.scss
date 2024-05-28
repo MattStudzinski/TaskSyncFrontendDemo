@@ -3,8 +3,11 @@ max-width: 140rem;
 margin: 8rem auto;
 background-color: $color-app-primary;
 box-shadow: var(--shadow-dark);
-min-height: 50rem;
+min-height: 70rem;
+max-height: 70rem;
 border-radius: 10px;
+height: 75vh;
+
 }
 
 
@@ -35,6 +38,7 @@ header{
     display: flex;
     border-bottom-right-radius: 1rem;
     border-bottom-left-radius: 1rem;
+    min-height: 100%;
   }
 
   .dash-view {
@@ -46,6 +50,7 @@ flex: 1;
 padding: 2rem;
 margin-bottom: 3rem;
 margin-right: 3rem;
+min-height: 100%;
 
 
 
