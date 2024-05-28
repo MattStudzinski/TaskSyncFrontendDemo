@@ -3,8 +3,9 @@ import { useAuthContext } from '../../hooks/useAuthContext';
 import { useIssuesContext } from '../../hooks/useIssuesContext';
 const IssueInfo = ({issue}) => {
     const {dispatch} = useIssuesContext()
-    const { driver = [], route = [], room = [] } = issue
+    const { drivers = [], route = [], room = [] } = issue
     const {user} = useAuthContext()
+
     const handleClick = async () => {
         if (!user){
             return
@@ -29,8 +30,8 @@ const IssueInfo = ({issue}) => {
             <h4 className='card-mini__name'>{issue.name}</h4>
             <p className='card-mini__date'><strong>Date</strong>{issue.createdAt}</p>
             <ul className='card-mini__driver-list'>
-                {driver.map((driver,index) => (
-                    <li className='card-mini__drivers' key={index}>{driver}</li>
+                {drivers.map((driver,index) => (
+                    <li className='card-mini__drivers' key={index}>{driver.name}</li>
                     
                     
                 ))}

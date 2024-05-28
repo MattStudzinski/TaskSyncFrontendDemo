@@ -8,15 +8,17 @@ const getAllIssues = async (req,res) => {
     const user_id = req.user._id
 
         try {
-        // Fetch issues where the logged-in user is either the creator or one of the drivers
+        
         const issues = await Issue.find({
             drivers: { $in: [user_id] }
-        }).sort({ createdAt: -1 });
+        })
+        .sort({ createdAt: -1 })
+        .populate('drivers', "name");
 
-        console.log("Fetched issues:", issues); // Log the fetched issues
+        console.log("Fetched issues:", issues); 
         res.status(200).json(issues);
     } catch (error) {
-        console.log("Error fetching issues:", error); // Log any error that occurs
+        console.log("Error fetching issues:", error); 
         res.status(400).json({ error: error.message });
     }
 }
@@ -26,7 +28,9 @@ const getAllIssues = async (req,res) => {
 const getAdminIssues = async (req, res) => {
 
     try{
-        const issues = await Issue.find().sort({ createdAt: -1 })
+        const issues = await Issue.find()
+        .sort({ createdAt: -1 })
+        .populate('drivers', 'name')
 
         res.status(200).json(issues)
     }catch (error){

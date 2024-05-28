@@ -12,7 +12,7 @@ const issueSchema = new Schema({
         type: Date,
         required: false
     },
-    completed: {
+    status: {
         type: Array,
         required: false
     },
