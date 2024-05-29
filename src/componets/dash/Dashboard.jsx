@@ -26,13 +26,13 @@ const Dashboard = () => {
                     </div>
                 </div>
                 <nav className='dash-nav__filters'>
-                    <div className='dash-nav__filters-new-assigned'onClick={() => setFilter('date')}>
+                    <div className='dash-nav__filters-selector'onClick={() => setFilter('date')}>
                         New Assigned
                     </div>
-                    <div className='dash-nav__filters-priority' onClick={() => setFilter('priority')}>
+                    <div className='dash-nav__filters-selector' onClick={() => setFilter('priority')}>
                         Priority
                     </div>
-                    <div className='dash-nav__filters-completed'>
+                    <div className='dash-nav__filters-selector'>
                         completed
                     </div>
                 </nav>

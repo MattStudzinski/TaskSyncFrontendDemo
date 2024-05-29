@@ -12,10 +12,10 @@ const issueSchema = new Schema({
         type: Date,
         required: false
     },
-    status: {
-        type: Array,
-        required: false
-    },
+    completionStatus: [{
+        driver: {type: Schema.Types.ObjectId, ref: 'User'},
+        isComplete: {type: Boolean, default: false}
+    }],
     description: {
         type: String,
         required: true

@@ -8,7 +8,8 @@ const {
     getIssue,
     updateIssue,
     deleteIssue,
-    getAdminIssues
+    getAdminIssues,
+    updateCompletionStatus,
 } = require("../controllers/issueController")
 
 const requireAuth = require('../middleware/requireAuth')
@@ -40,5 +41,7 @@ router.delete('/:id', deleteIssue)
 
 // update issue
 router.patch('/:id', updateIssue)
+
+router.patch('/:issueId/drivers/:driverId/complete', updateCompletionStatus)
 
 module.exports = router

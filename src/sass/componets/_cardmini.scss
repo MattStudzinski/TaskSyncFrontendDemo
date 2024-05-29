@@ -2,15 +2,35 @@
     width: 80%;
 
     &__container{
-        margin: 10px;
-        height: 6rem;
-        border-radius: 4px;
-        background: linear-gradient(
-        to left bottom,
-            rgba($color-primary-light,0.8),
-            rgba($color-primary-dark,0.8));
+        margin: .7rem;
+        height: 7.3rem;
+        padding: 5px;
+        border-radius: 15px;
+        background-color: $color-app-primary;
+        box-shadow: var(--shadow-dark);
         display: flex;
         justify-content: space-evenly;
         align-items: center;
     }
+
+    &__category {
+
+    }
+
+    &__name {
+
+    }
+
+    &__date {
+
+    }
+
+    &__driver-list {
+
+    }
+
+    &__drivers {
+
+    }
+
   }

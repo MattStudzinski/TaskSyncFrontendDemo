@@ -17,6 +17,7 @@ const DashIssues = () => {
     }, [dispatch, user])
 
     const filterIssues = (issues) => {
+
         switch (filter) {
             case 'priority':
                 return issues.sort((a, b) => {
@@ -38,11 +39,11 @@ const DashIssues = () => {
     }
 
     return (
-        <div className="minicard">
+        <>
             {filterIssues(issues).map((issue) => (
                 <IssueInfo key = {issue._id} issue= {issue}/>
             ))}
-        </div>
+        </>
     );
 };
 

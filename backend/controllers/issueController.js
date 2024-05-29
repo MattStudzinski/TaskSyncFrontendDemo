@@ -31,7 +31,6 @@ const getAdminIssues = async (req, res) => {
         const issues = await Issue.find()
         .sort({ createdAt: -1 })
         .populate('drivers', 'name')
-
         res.status(200).json(issues)
     }catch (error){
         res.status(400).json({error: error.message})
@@ -146,7 +145,38 @@ const updateIssue = async (req, res) => {
     res.status(200).json(issue)
 }
 
+const updateCompletionStatus = async (req, res) => {
+    const { issueId, driverId } = req.params
+    const { isComplete } = req.body
+
+    if(!mongoose.Types.ObjectId.isValid(issueId) || !mongoose.Types.ObjectId.isValid(driverId)) {
+
+    }
+
+    const issue = await Issue.findById(issueId)
+
+    if(!issue) {
+        return res.status(400).json({error: "no such issue"})
+    }
+
+    const driverStatus = issue.completionStatus.find(status => status.driver.toString() === driverId)
+
+    if (driverStatus) {
+        driverStatus.isComplete = isComplete
+    } else {
+        issue.completionStatus.push({driver: driverId, isComplete})
+    }
+
+    await issue.save()
+
+        const allComplete = issue.completionStatus.every(status => status.isComplete)
+
+        if(allComplete) {
+            await Issue.findByIdAndDelete(issueId)
+            return res.status(200).json({message: "issue is completed and erased"})
+        }
+    res.status(200).json(issue)
+}
 
 
-
-module.exports = {createIssue, getAllIssues, getIssue, deleteIssue, updateIssue, getAdminIssues}
+module.exports = {createIssue, getAllIssues, getIssue, deleteIssue, updateIssue, getAdminIssues, updateCompletionStatus}
