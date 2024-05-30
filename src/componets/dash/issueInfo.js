@@ -37,11 +37,13 @@ const IssueInfo = ({issue}) => {
                     return (
                     <li className='card-mini__drivers' key={index}>
                         {driver.name}
+                        {driver.name === user.name && (
                         <input
                         type='checkbox'
                         checked={driverStatus.isComplete}
                         onChange={() => handleCompletionChange(driver._id, !driverStatus.isComplete)}></input>
-                    </li>
+                        )}
+                        </li>
                     )
                 })}
             </ul>
