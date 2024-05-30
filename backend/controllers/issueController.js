@@ -146,37 +146,41 @@ const updateIssue = async (req, res) => {
 }
 
 const updateCompletionStatus = async (req, res) => {
-    const { issueId, driverId } = req.params
-    const { isComplete } = req.body
+    const { issueId, driverId } = req.params;
+    const { isComplete } = req.body;
 
-    if(!mongoose.Types.ObjectId.isValid(issueId) || !mongoose.Types.ObjectId.isValid(driverId)) {
-
+    if (!mongoose.Types.ObjectId.isValid(issueId) || !mongoose.Types.ObjectId.isValid(driverId)) {
+        return res.status(404).json({ error: "Invalid issue or driver ID" });
     }
 
-    const issue = await Issue.findById(issueId)
+    const issue = await Issue.findById(issueId);
 
-    if(!issue) {
-        return res.status(400).json({error: "no such issue"})
+    if (!issue) {
+        return res.status(404).json({ error: "No such issue" });
     }
 
-    const driverStatus = issue.completionStatus.find(status => status.driver.toString() === driverId)
+    const driverStatus = issue.completionStatus.find(status => status.driver.toString() === driverId);
 
     if (driverStatus) {
-        driverStatus.isComplete = isComplete
+        driverStatus.isComplete = isComplete;
     } else {
-        issue.completionStatus.push({driver: driverId, isComplete})
+        issue.completionStatus.push({ driver: driverId, isComplete });
     }
 
-    await issue.save()
+    await issue.save();
 
-        const allComplete = issue.completionStatus.every(status => status.isComplete)
+    // Check if all drivers have marked the issue as complete
+    const allComplete = issue.completionStatus.every(status => status.isComplete) && 
+                        issue.completionStatus.length === issue.drivers.length;
 
-        if(allComplete) {
-            await Issue.findByIdAndDelete(issueId)
-            return res.status(200).json({message: "issue is completed and erased"})
-        }
-    res.status(200).json(issue)
-}
+    if (allComplete) {
+        await Issue.findByIdAndDelete(issueId);
+        return res.status(200).json({ message: "Issue completed and deleted" });
+    }
+
+    res.status(200).json(issue);
+};
+
 
 
 module.exports = {createIssue, getAllIssues, getIssue, deleteIssue, updateIssue, getAdminIssues, updateCompletionStatus}

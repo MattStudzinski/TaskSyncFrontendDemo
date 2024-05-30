@@ -17,13 +17,13 @@ switch (action.type) {
             return{
                 issues: state.issues.filter((i) => i._id !== action.payload._id)
             }
-        case "UPDATE_ISSUE":
-            console.log("Payload in UPDATE_ISSUE action:", action.payload)
-            return {
-                issues: state.issues.map((issue) => 
-                    issue._id === action.payload._id ? action.payload : issue
-                )
-            }
+            case "UPDATE_ISSUE":
+                console.log("Payload in UPDATE_ISSUE action:", action.payload);
+                return {
+                    issues: state.issues.map((issue) => 
+                        issue._id === action.payload._id ? action.payload : issue
+                    )
+                };
             
             default: 
             return state

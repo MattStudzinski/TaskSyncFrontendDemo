@@ -32,19 +32,20 @@ const IssueInfo = ({issue}) => {
             <h4 className='card-mini__name'>{issue.name}</h4>
             <p className='card-mini__date'><strong>Date</strong>{issue.createdAt}</p>
             <ul className='card-mini__driver-list'>
-                {drivers.map((driver,index) => {
-                    const driverStatus = completionStatus.find(status => status.driver.toString() === driver._id) || { isComplete: false }
+                {drivers.map((driver, index) => {
+                    const driverStatus = completionStatus.find(status => status.driver.toString() === driver._id) || { isComplete: false };
                     return (
-                    <li className='card-mini__drivers' key={index}>
-                        {driver.name}
-                        {driver.name === user.name && (
-                        <input
-                        type='checkbox'
-                        checked={driverStatus.isComplete}
-                        onChange={() => handleCompletionChange(driver._id, !driverStatus.isComplete)}></input>
-                        )}
+                        <li className='card-mini__drivers' key={index}>
+                            {driver.name}
+                            {driver.name === user.name && (
+                                <input
+                                    type='checkbox'
+                                    checked={driverStatus.isComplete}
+                                    onChange={() => handleCompletionChange(driver._id, !driverStatus.isComplete)}
+                                />
+                            )}
                         </li>
-                    )
+                    );
                 })}
             </ul>
             <p className='card-mini__priority'><strong>Priority</strong>{issue.priority}</p>
