@@ -23,6 +23,7 @@ const IssueInfo = ({issue}) => {
 
         if(response.ok) {
             dispatch({type:'UPDATE_ISSUE', payload: json})
+            window.location.reload()
         }
     }
     return (
