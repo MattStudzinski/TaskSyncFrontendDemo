@@ -16,13 +16,15 @@ const Analytics = () => {
 
         // Filter open issues for the logged-in user
         const userOpenIssues = issues.filter(issue => {
-            const isUserAssigned = issue.drivers.includes(user._id);
-            console.log(issue)
-            const isUserCompleted = issue.completionStatus.some(status => status.driver.toString() === user._id && status.isComplete);
+            const isUserAssigned = issue.drivers.some(driver => driver.name === user.name);
+            console.log(user)
+            console.log('Is User Assigned:', isUserAssigned);
+            const isUserCompleted = issue.completionStatus.some(status => status.driver === user._id && status.isComplete);
             return isUserAssigned && !isUserCompleted;
         });
 
         setOpenIssues(userOpenIssues.length);
+        
 
         const highPriorityIssues = issues.filter(issue => issue.priority === 'high')
         setHighPriority(highPriorityIssues.length)
