@@ -1,13 +1,29 @@
 import React, { useEffect, useState } from 'react';
 import { useIssuesContext } from '../../hooks/useIssuesContext';
+import { useAuthContext } from '../../hooks/useAuthContext';
 
 const Analytics = () => {
     const { issues } = useIssuesContext()
-    const [highPriority, setHighPriority] = useState(0)
-    const [newIssues, setNewIssues] = useState(0)
+    const { user } = useAuthContext()
+    const [ highPriority, setHighPriority ] = useState(0)
+    const [ newIssues, setNewIssues ] = useState(0)
+    const [ openIssues, setOpenIssues ] = useState(0)
 
 
     useEffect(() => {
+
+        if (!user || !issues) return;
+
+        // Filter open issues for the logged-in user
+        const userOpenIssues = issues.filter(issue => {
+            const isUserAssigned = issue.drivers.includes(user._id);
+            console.log(issue)
+            const isUserCompleted = issue.completionStatus.some(status => status.driver.toString() === user._id && status.isComplete);
+            return isUserAssigned && !isUserCompleted;
+        });
+
+        setOpenIssues(userOpenIssues.length);
+
         const highPriorityIssues = issues.filter(issue => issue.priority === 'high')
         setHighPriority(highPriorityIssues.length)
 
@@ -21,14 +37,14 @@ const Analytics = () => {
 
         setNewIssues(newIssues.length)
 
-    }, [issues])
+    }, [user, issues])
 
 
     return (
         <section className='analytics'>
             <div className='analytics__open-issues'>
                 <div >
-                    Open Issues
+                    Open Issues {openIssues}
                 </div>
                 <p className='analytics__box-text'>hello</p>
             </div>

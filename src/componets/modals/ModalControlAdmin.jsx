@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Modal from '../ui/Modal';
 import IssueForm from '../forms/IssueForm';
 
-const ModalControl = () => {
+const ModalControlAdmin = () => {
 
     const [isModalOpen, setIsModalOpen] = useState(false)
 
@@ -24,4 +24,4 @@ const ModalControl = () => {
     );
 };
 
-export default ModalControl;
+export default ModalControlAdmin;

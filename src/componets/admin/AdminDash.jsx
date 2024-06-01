@@ -3,8 +3,7 @@ import { useIssuesContext } from "../../hooks/useIssuesContext";
 import { useAuthContext } from "../../hooks/useAuthContext";
 import AdminPageIssues from "./AdminPageIssues";
 import fetchAdminIssues from "../../fetch/fetchAdminIssues";
-import Modal from "../ui/Modal";
-import ModalControl from "../context/ModalControl";
+import ModalControlAdmin from "../modals/ModalControlAdmin";
 
 const AdminDash = () => {
     const { issues, dispatch} = useIssuesContext()
@@ -18,8 +17,9 @@ const AdminDash = () => {
 
     return (
         <div>
-        <ModalControl />
+        
         <div className="minicard">
+        <ModalControlAdmin />
             {issues && issues.map((issue) => (
                 <AdminPageIssues key = {issue._id} issue= {issue}/>
             ))}

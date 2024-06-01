@@ -1,11 +1,12 @@
 import React, { useContext } from 'react';
 // import Tickets from '../../issuedetails/Tickets';
-import IssueForm from '../forms/IssueForm';
 import DashIssues from './DashIssues';
 import Analytics from './Analytics';
 import Sidebar from '../ui/Sidebar';
 import Calendar from './Calendar';
 import { IssueFilterContext } from '../context/FilterContext';
+import ModalControllerDash from '../modals/ModalControllerDash';
+
 
 const Dashboard = () => {
     const {setFilter} = useContext(IssueFilterContext)
@@ -22,7 +23,7 @@ const Dashboard = () => {
                         My Tasks
                     </h2>
                     <div className='dash-nav__addbutton'>
-                        Add Task
+                        <ModalControllerDash />
                     </div>
                 </div>
                 <nav className='dash-nav__filters'>

@@ -16,6 +16,10 @@ const issueSchema = new Schema({
         driver: {type: Schema.Types.ObjectId, ref: 'User'},
         isComplete: {type: Boolean, default: false}
     }],
+    completed: {
+        type: Boolean,
+
+    },
     description: {
         type: String,
         required: true
