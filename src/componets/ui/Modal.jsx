@@ -24,11 +24,15 @@ const Modal = ({children, open, onClose, className = ''}) => {
     }, [onClose])
 
     return createPortal(
+    
     <dialog ref={dialog} className={`modal ${className}`}>
         {children}
         <button onClick={onClose}>Close</button>
-    </dialog>,
+    </dialog>
+    ,
+    
     document.getElementById('modal'))
+    
 };
 
 export default Modal;

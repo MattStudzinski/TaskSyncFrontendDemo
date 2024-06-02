@@ -73,9 +73,9 @@ const DashIssueForm = () => {
     
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form className='issue-form' onSubmit={handleSubmit}>
             
-            <label>
+            <label className='issue-form__label'>
                 Name:
                 <input 
                 type='text' 
@@ -83,12 +83,12 @@ const DashIssueForm = () => {
                 className={emptyFields.includes('name') ? 'error' : ''}/>
             </label>
 
-            <label>
+            <label className='issue-form__label'>
                 Due-Date
-                <input type='date' name='dueDate'/>
+                <input className='issue-form__input' type='date' name='dueDate'/>
             </label>
             
-            <label>
+            <label className='issue-form__label'>
                 Description
                 <input 
                 type='text' 
@@ -97,10 +97,10 @@ const DashIssueForm = () => {
                 />
             </label>
             
-            <div>
+            <div className='issue-form__assignment-container'>
                 
-            <label>Assignment</label>
-                <input 
+            <label className='issue-form__label'>Assignment</label>
+                <input className='issue-form__input'
                 type='checkbox' 
                 name='drivers'
                 value="Mathew"/>

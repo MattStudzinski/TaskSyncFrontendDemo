@@ -348,6 +348,14 @@ html {
   max-width: 100%;
 }
 
+.modal {
+  margin: auto;
+  border: none;
+  border-radius: 5px;
+  padding: 1rem;
+  width: 55%;
+}
+
 .container {
   max-width: 140rem;
   margin: 8rem auto;
