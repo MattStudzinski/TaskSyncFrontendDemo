@@ -24,9 +24,8 @@ const DashIssueForm = () => {
         const data = Object.fromEntries(formData.entries())
         data.route = routeChannel
         data.drivers = driverChannel
-        console.log(data)
 
-        console.log(emptyFields, 'empty')
+        
         try {
             const response = await fetch('/api/issues', {
                 method: 'POST',
@@ -37,7 +36,7 @@ const DashIssueForm = () => {
                 }
             });
 
-            console.log("request data", data)
+            
 
             const json = await response.json();
 
@@ -52,8 +51,19 @@ const DashIssueForm = () => {
             event.target.reset();
             setEmptyFields([])
             console.log("new issue added", json)
-            dispatch({type:"CREATE_ISSUE", payload: json})
-            }// the payload is what i just created
+            
+            const issueResponse = await fetch ('api/issues', {
+                headers: {
+                    'Authorization' : `Bearer ${user.token}`
+                }
+            })
+            const updatedIssues = await issueResponse.json()
+            if(issueResponse.ok) {
+                dispatch({ type: 'SET_ISSUES', payload: updatedIssues})
+            } else {
+                console.error('failed to fetch updated issues', issueResponse)
+            }
+            }
             
         } catch (error) {
             setError('Failed to submit the form. Please try again later.');

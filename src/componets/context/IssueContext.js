@@ -6,10 +6,13 @@ export const issuesReducer = (state, action) => {
 switch (action.type) {
     case "SET_ISSUES":
         return{
+            ...state,
             issues: action.payload
         }
         case "CREATE_ISSUE":
+            console.log("create issue action payload", action.payload)
             return{
+                ...state,
                 issues: [action.payload, ...state.issues]
             }
         case "DELETE_ISSUE":

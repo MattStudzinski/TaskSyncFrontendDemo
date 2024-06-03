@@ -52,8 +52,18 @@ const IssueForm = () => {
             event.target.reset();
             setEmptyFields([])
             console.log("new issue added", json)
-            dispatch({type:"CREATE_ISSUE", payload: json})
-            }// the payload is what i just created
+            const issuesResponse = await fetch('api/issues', {
+                headers: {
+                    'Authorization': `Bearer ${user.token}`
+                }
+            })
+            const updatedIssues = await issuesResponse.json()
+            if(issuesResponse.ok) {
+                dispatch({ type: 'SET_ISSUES', payload: updatedIssues })
+            } else {
+                console.error('Failed to fetch updated issues', issuesResponse)
+            }
+            }
             
         } catch (error) {
             setError('Failed to submit the form. Please try again later.');

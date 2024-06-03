@@ -13,7 +13,7 @@ const getAllIssues = async (req,res) => {
             drivers: { $in: [user_id] }
         })
         .sort({ createdAt: -1 })
-        .populate('drivers', "name");
+        .populate('drivers', "_id name");
 
         console.log("Fetched issues:", issues); 
         res.status(200).json(issues);
@@ -30,7 +30,7 @@ const getAdminIssues = async (req, res) => {
     try{
         const issues = await Issue.find()
         .sort({ createdAt: -1 })
-        .populate('drivers', 'name')
+        .populate('drivers', '_id name')
         res.status(200).json(issues)
     }catch (error){
         res.status(400).json({error: error.message})
@@ -100,7 +100,9 @@ const createIssue = async (req, res) => {
             driver.assignedIssues.push(issue._id)
             await driver.save()
         })
-        res.status(200).json(issue);
+
+        const populatedIssue = await Issue.findById(issue._id).populate('drivers','_id name')
+        res.status(200).json(populatedIssue);
     } catch (error) {
         res.status(400).json({ error: error.message });
     }

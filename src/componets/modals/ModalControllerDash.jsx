@@ -5,7 +5,7 @@ import DashIssueForm from '../forms/DashIssueForm';
 const ModalControllerDash = () => {
 
 
-    const [ isOpen, setIsOpen] = useState(false)
+    const [ isOpen, setIsOpen ] = useState(false)
 
     const handleOpenModal = () => {
         setIsOpen(true)

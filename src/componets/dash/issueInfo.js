@@ -18,12 +18,13 @@ const IssueInfo = ({issue}) => {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({isComplete})
+            
         })
-        const json = await response.json()
 
         if(response.ok) {
-            dispatch({type:'UPDATE_ISSUE', payload: json})
-            window.location.reload()
+            const updatedIssue = await response.json()
+            dispatch({type:'UPDATE_ISSUE', payload: updatedIssue})
+            
         }
     }
     return (

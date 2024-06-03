@@ -9,7 +9,7 @@ const DashIssues = () => {
     const { issues, dispatch} = useIssuesContext()
     const {filter} = useContext(IssueFilterContext)
     const { user } = useAuthContext()
-
+    console.log(issues)
     useEffect(() => {
         if (user){
             fetchIssues(dispatch, user.token)
