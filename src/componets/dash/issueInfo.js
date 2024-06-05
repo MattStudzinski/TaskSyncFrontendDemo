@@ -10,23 +10,31 @@ const IssueInfo = ({issue}) => {
         if (!user){
             return
         }
-
+    try {
         const response = await fetch(`/api/issues/${issue._id}/drivers/${driverId}/complete`, {
             method: "PATCH",
+            body: JSON.stringify({isComplete}),
             headers: {
                 'Authorization': `Bearer ${user.token}`,
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({isComplete})
-            
         })
 
-        if(response.ok) {
-            const updatedIssue = await response.json()
-            dispatch({type:'UPDATE_ISSUE', payload: updatedIssue})
-            
+            const updatedIssue = await response.json();
+
+            if (!response.ok) {
+                console.error('Error updating issue completion:', updatedIssue.error);
+                return;
+            }
+
+            console.log('Issue completion updated', updatedIssue);
+
+            // Update the state with the updated issue
+            dispatch({ type: 'UPDATE_ISSUE', payload: updatedIssue });
+        } catch (error) {
+            console.error('Failed to update issue completion:', error);
         }
-    }
+    };
     return (
         
         <div className="card-mini__container">

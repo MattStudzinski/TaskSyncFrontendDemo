@@ -180,8 +180,10 @@ const updateCompletionStatus = async (req, res) => {
         return res.status(200).json({ message: "Issue completed and deleted" });
     }
 
-    res.status(200).json(issue);
-};
+    const updatedIssue = await Issue.findById(issueId).populate('drivers', '_id name')
+    res.status(200).json(updatedIssue)
+
+}
 
 
 
