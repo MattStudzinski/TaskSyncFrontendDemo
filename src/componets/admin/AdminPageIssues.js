@@ -28,12 +28,17 @@ const AdminPageIssues = ({issue}) => {
         <p className='card-mini__category'><strong>Category</strong>{issue.category}</p>
             <h4 className='card-mini__name'>{issue.name}</h4>
             <p className='card-mini__date'><strong>Date</strong>{issue.createdAt}</p>
-            <ul className='card-mini__driver-list'>
-                {driver.map((driver,index) => (
-                    <li className='card-mini__drivers' key={index}>{driver}</li>
-                    
-                    
-                ))}
+            <ul>
+                {issue.drivers.map(driver => 
+                
+                <li key = {driver._id}>
+                    {driver.name} : {
+                        issue.completionStatus.find(status => status.driver._id === driver._id)?.isComplete
+                            ? 'Complete'
+                            : "incomplete"
+                    }
+                </li>
+                )}
             </ul>
             <p className='card-mini__priority'><strong>Priority</strong>{issue.priority}</p>
             

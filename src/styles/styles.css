@@ -50,24 +50,24 @@ html {
   width: 30%;
   height: 13rem;
   display: block;
-  background: rgb(186, 152, 255);
-  background: linear-gradient(133deg, rgb(186, 152, 255) 24%, rgb(179, 137, 255) 36%, rgb(161, 117, 242) 59%);
+  background: rgb(161, 117, 242);
+  background: linear-gradient(373deg, rgb(161, 117, 242) 0%, rgb(190, 154, 255) 100%);
   border-radius: 10px;
 }
 .analytics__new-issues {
   width: 30%;
   height: 13rem;
   display: block;
-  background: rgb(254, 210, 117);
-  background: linear-gradient(94deg, rgb(254, 210, 117) 24%, rgb(250, 199, 90) 36%, rgb(255, 196, 68) 59%);
+  background: rgb(255, 196, 68);
+  background: linear-gradient(373deg, rgb(255, 196, 68) 0%, rgb(255, 215, 128) 100%);
   border-radius: 10px;
 }
 .analytics__priority-issues {
   width: 30%;
   height: 13rem;
   display: block;
-  background: rgb(249, 153, 200);
-  background: linear-gradient(94deg, rgb(249, 153, 200) 24%, rgb(249, 126, 186) 36%, rgb(252, 114, 182) 59%);
+  background: rgb(252, 114, 182);
+  background: linear-gradient(373deg, rgb(252, 114, 182) 0%, rgb(255, 180, 217) 100%);
   border-radius: 10px;
 }
 

@@ -31,8 +31,9 @@ const getAdminIssues = async (req, res) => {
         const issues = await Issue.find()
         .sort({ createdAt: -1 })
         .populate('drivers', '_id name')
+        .populate('completionStatus.driver', 'name')
         res.status(200).json(issues)
-    }catch (error){
+    }  catch (error){
         res.status(400).json({error: error.message})
     }
 
