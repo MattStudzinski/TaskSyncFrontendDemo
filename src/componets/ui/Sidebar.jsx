@@ -1,6 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import BoxRemove from '../../svgs/SVG/BoxRemove';
+import Dashboard from '../../svgs/SVG/DashboardIcon'
+import Completed from '../../svgs/SVG/CompletedTasks'
+import Priority from '../../svgs/SVG/Priority';
+import Stats from '../../svgs/SVG/Stats';
+import AddTask from '../../svgs/SVG/AddTask';
 
 const Sidebar = () => {
     return (
@@ -9,31 +13,32 @@ const Sidebar = () => {
             
                 <li className='side-nav__item'>
                     <Link to="/" className='side-nav__link' >
-                        <BoxRemove />
+                        <Dashboard /> 
+                        <p className='side-nav__link-title'>Dashboard</p>
                     </Link>
                 </li>
             
                 <li className='side-nav__item'>
                     <Link to="/" className='side-nav__link' >
-                        item 2
+                        <Completed /> <p className='side-nav__link-title'>Completed </p>
                     </Link>
                 </li>
             
                 <li className='side-nav__item'>
                     <Link to="/" className='side-nav__link' >
-                        item 3
+                        <Priority /> <p className='side-nav__link-title'>Priority Tasks</p>
                     </Link>
                 </li>
             
                 <li className='side-nav__item'>
                     <Link to="/" className='side-nav__link' >
-                        item 4
+                        <Stats /> <p className='side-nav__link-title'>Analytics</p>
                     </Link>
                 </li>
             
                 <li className='side-nav__item'>
                     <Link to="/" className='side-nav__link' >
-                        item 5
+                        <AddTask/> <p className='side-nav__link-title'>New Task</p>
                     </Link>
                 </li>
             </ul>

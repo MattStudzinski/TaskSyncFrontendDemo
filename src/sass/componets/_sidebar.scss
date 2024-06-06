@@ -1,18 +1,24 @@
 .side-nav{
 
+    list-style: none;
+    display: flex;
+    flex-direction: column;
     
 
     &__item{
-
+        
     }
     &__link{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        margin: 1.5rem;
+        margin-left: 1.5rem;
+        height: 3rem;
+    }
 
+    &__link-title {
+        margin-left: 2.5rem;
+        
     }
-    &__icon{
-        width: 2.2rem;
-    }
-}
-.remove-icon{
-    fill: green;
-    
 }

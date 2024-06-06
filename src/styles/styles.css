@@ -160,12 +160,28 @@ html {
   margin-left: 2rem;
 }
 
-.side-nav__icon {
-  width: 2.2rem;
+.sidenav-icon {
+  fill: rgb(161, 117, 242);
+  height: 2.4rem;
+  width: 2.4rem;
+  margin: 0.25rem;
 }
 
-.remove-icon {
-  fill: green;
+.side-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+.side-nav__link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  margin: 1.5rem;
+  margin-left: 1.5rem;
+  height: 3rem;
+}
+.side-nav__link-title {
+  margin-left: 2.5rem;
 }
 
 .dash-view__analytics-container {
@@ -358,7 +374,7 @@ html {
 
 .container {
   max-width: 140rem;
-  margin: 8rem auto;
+  margin: 5rem auto;
   background-color: rgb(255, 255, 255);
   box-shadow: var(--shadow-dark);
   min-height: 60rem;
@@ -368,7 +384,7 @@ html {
 header {
   height: 7rem;
   background-color: rgb(255, 255, 255);
-  border-bottom: lightgrey;
+  border-bottom: 1px solid rgb(161, 117, 242);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -383,6 +399,7 @@ header {
   flex: 0 0 18%;
   border-bottom-left-radius: 1rem;
   padding: 2rem;
+  margin-top: 3rem;
 }
 
 .content {
@@ -394,14 +411,13 @@ header {
 }
 
 .dash-view {
-  background-color: rgb(228, 231, 236);
-  border-radius: 1rem;
+  background-color: rgb(240, 242, 247);
+  border-bottom-right-radius: 1rem;
+  border-top-right-radius: 1rem;
   display: flex;
   justify-content: space-between;
   flex: 1;
   padding: 2rem;
-  margin-bottom: 3rem;
-  margin-right: 3rem;
 }
 
 label, input {
