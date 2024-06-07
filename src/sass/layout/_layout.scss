@@ -26,10 +26,16 @@ header{
 
   .sidebar{
     background-color: $color-app-primary;
-    flex: 0 0 18%;
+    flex: 0 0 5%;
     border-bottom-left-radius: 1rem;
-    padding: 2rem;
     margin-top: 3rem;
+    overflow: hidden;
+    transition: flex 0.3s linear;
+
+    &:hover {
+      flex: 0 0 19%
+    }
+
   }
 
 

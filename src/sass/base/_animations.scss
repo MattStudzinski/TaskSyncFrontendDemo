@@ -1,0 +1,19 @@
+@keyframes circle {
+    0% {
+        width: .1rem;
+        height: .1rem;
+        background: rgb(255, 226, 165);
+
+    }
+    80% {
+        width: 110rem;
+        height: 120rem;
+        background: $color-app-secondary;
+    }
+    100% {
+        width: 110rem;
+        height: 120rem;
+        background: $color-app-secondary;
+    }
+    
+}

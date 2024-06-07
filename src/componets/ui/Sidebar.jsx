@@ -8,41 +8,41 @@ import AddTask from '../../svgs/SVG/AddTask';
 
 const Sidebar = () => {
     return (
-        <div className='sidebar'>
+        <nav className='sidebar'>
             <ul className='side-nav'>
             
                 <li className='side-nav__item'>
-                    <Link to="/" className='side-nav__link' >
+                    <Link to="/admin" className='side-nav__link' >
                         <Dashboard /> 
-                        <p className='side-nav__link-title'>Dashboard</p>
+                        <span className='side-nav__link-title'>Dashboard</span>
                     </Link>
                 </li>
             
                 <li className='side-nav__item'>
                     <Link to="/" className='side-nav__link' >
-                        <Completed /> <p className='side-nav__link-title'>Completed </p>
+                        <Completed /> <span className='side-nav__link-title'>Completed tasks </span>
                     </Link>
                 </li>
             
                 <li className='side-nav__item'>
                     <Link to="/" className='side-nav__link' >
-                        <Priority /> <p className='side-nav__link-title'>Priority Tasks</p>
+                        <Priority /> <span className='side-nav__link-title'>Priority tasks</span>
                     </Link>
                 </li>
             
                 <li className='side-nav__item'>
                     <Link to="/" className='side-nav__link' >
-                        <Stats /> <p className='side-nav__link-title'>Analytics</p>
+                        <Stats /> <span className='side-nav__link-title'>Analytics</span>
                     </Link>
                 </li>
             
                 <li className='side-nav__item'>
                     <Link to="/" className='side-nav__link' >
-                        <AddTask/> <p className='side-nav__link-title'>New Task</p>
+                        <AddTask/> <span className='side-nav__link-title'>New Task</span>
                     </Link>
                 </li>
             </ul>
-        </div>
+        </nav>
     );
 };
 
