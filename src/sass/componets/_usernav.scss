@@ -26,6 +26,13 @@
         position: relative;
         
     }
+
+    &__logo-box {
+        border: none;
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
     
     &__link {
         

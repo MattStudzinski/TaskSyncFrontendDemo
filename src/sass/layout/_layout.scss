@@ -20,20 +20,21 @@ header{
     font-size: 1.4rem;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
-    padding: 1rem;
+    padding: 1rem 0;
   }
   
 
   .sidebar{
     background-color: $color-app-primary;
-    flex: 0 0 5%;
+    flex: 0 0 4rem;
+    min-width: 4rem;
     border-bottom-left-radius: 1rem;
-    margin-top: 3rem;
+    padding-top: 3rem;
     overflow: hidden;
     transition: flex 0.3s linear;
 
     &:hover {
-      flex: 0 0 19%
+      flex: 0 0 23rem
     }
 
   }

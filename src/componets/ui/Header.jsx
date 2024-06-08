@@ -12,7 +12,7 @@ const Header = () => {
     }
     return (
         <header className='header'>
-                <Link to="/">
+                <Link to="/" className='user-nav__logo-box'>
                     <img className='logo' src={logo} alt='Logo' />
                 </Link>
                 
@@ -27,13 +27,13 @@ const Header = () => {
                     
                     <button className='user-nav__box' onClick={handleClick}>Log out</button>
                     
-                    <Link to="/login" className='user-nav__box'>
+                    {/* <Link to="/login" className='user-nav__box'>
                         <HeaderIcon  />
-                    </Link>
+                    </Link> */}
 
-                    <Link to="/signup" className='user-nav__box'>
+                    {/* <Link to="/signup" className='user-nav__box'>
                     <HeaderIcon  />
-                    </Link>
+                    </Link> */}
 
                     <Link to="/admin" className='user-nav__box'>
                         <HeaderIcon  />   
