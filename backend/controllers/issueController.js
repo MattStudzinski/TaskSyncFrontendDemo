@@ -177,9 +177,9 @@ const updateCompletionStatus = async (req, res) => {
                         issue.completionStatus.length === issue.drivers.length;
 
     if (allComplete) {
-        await Issue.findByIdAndDelete(issueId);
-        return res.status(200).json({ message: "Issue completed and deleted" });
-    }
+        issue.complete = true
+        await issue.save()
+        }
 
     const updatedIssue = await Issue.findById(issueId).populate('drivers', '_id name')
     res.status(200).json(updatedIssue)

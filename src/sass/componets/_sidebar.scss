@@ -45,8 +45,10 @@
             animation: circle 2s ease-in forwards;
             
         }
-    }
 
+        
+    }
+   
 
 
     &__link-title {
@@ -54,8 +56,14 @@
         overflow: hidden;
         font-size: 1.4rem;
         opacity: 0;
-        transition: opacity 0.3s, margin-left 0.3s;
+        margin-left: 0;
+        transition: opacity 0.3s, padding-left 0.3s, transform 0.3s ease;
     }
+
+    &__link:hover .side-nav__link-title {
+        transform: scale(1.1);
+        padding-left: 1rem;
+ }
 
     .sidebar:hover &__link-title {
         opacity: 1;

@@ -33,7 +33,7 @@ const Dashboard = () => {
                     <div className='dash-nav__filters-selector' onClick={() => setFilter('priority')}>
                         Priority
                     </div>
-                    <div className='dash-nav__filters-selector'>
+                    <div className='dash-nav__filters-selector' onClick={() => setFilter('completed')}>
                         completed
                     </div>
                 </nav>

@@ -2,7 +2,7 @@ import React from 'react';
 import { useAuthContext } from '../../hooks/useAuthContext';
 import { useIssuesContext } from '../../hooks/useIssuesContext';
 const IssueInfo = ({issue}) => {
-    const {dispatch} = useIssuesContext()
+    const {issues,dispatch} = useIssuesContext()
     const { drivers = [], completionStatus = [] } = issue
     const {user} = useAuthContext()
 
@@ -18,9 +18,10 @@ const IssueInfo = ({issue}) => {
                 'Authorization': `Bearer ${user.token}`,
                 'Content-Type': 'application/json'
             },
+            
         })
-
             const updatedIssue = await response.json();
+            console.log(updatedIssue,"this is what the patch is grabbing")
 
             if (!response.ok) {
                 console.error('Error updating issue completion:', updatedIssue.error);
@@ -31,8 +32,9 @@ const IssueInfo = ({issue}) => {
 
             // Update the state with the updated issue
             dispatch({ type: 'UPDATE_ISSUE', payload: updatedIssue });
+            console.log("this is after the update state change", updatedIssue)
         } catch (error) {
-            console.error('Failed to update issue completion:', error);
+            console.error('Failed to update issue completion:', error)
         }
     };
     return (

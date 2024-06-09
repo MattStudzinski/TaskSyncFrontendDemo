@@ -5,6 +5,7 @@ export const IssueContext = createContext()
 export const issuesReducer = (state, action) => {
 switch (action.type) {
     case "SET_ISSUES":
+        console.log("set issue action payload", action.payload)
         return{
             ...state,
             issues: action.payload
