@@ -7,6 +7,9 @@ import LoginForm from './componets/forms/LoginForm';
 import Signup from './componets/forms/Signup';
 import AdminDash from './componets/admin/AdminDash';
 import {useLocation} from "react-router-dom"
+import HighPriority from './componets/pages/HighPriority';
+import NewIssues from './componets/pages/NewIssues';
+import OpenIssues from './componets/pages/OpenIssues';
 
 function App() {
 
@@ -35,6 +38,18 @@ function PrimaryRoutes () {
     <Route
     path="/"
     element={user ? <Dashboard /> : <Navigate to="/login"/>}
+    />
+    <Route
+    path="/allissues"
+    element={user ? <OpenIssues /> : <Navigate to="/login"/>}
+    />
+    <Route
+    path="/new"
+    element={user ? <NewIssues /> : <Navigate to="/login"/>}
+    />
+    <Route
+    path="/priority"
+    element={user ? <HighPriority /> : <Navigate to="/login"/>}
     />
     <Route
     path="/login"

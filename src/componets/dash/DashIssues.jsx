@@ -17,12 +17,12 @@ const DashIssues = () => {
     }, [dispatch, user])
 
     const filterIssues = (issues) => {
-        let completeIssues = issues
+        let filteredIssues = issues
 
         if (filter === 'completed') {
-            completeIssues = issues.filter(issue => issue.complete)
+            filteredIssues = issues.filter(issue => issue.complete)
         } else {
-            completeIssues = issues.filter(issue => !issue.complete)
+            filteredIssues = issues.filter(issue => !issue.complete)
         }
 
         
@@ -30,22 +30,20 @@ const DashIssues = () => {
 
         switch (filter) {
             case 'priority':
-                return completeIssues.sort((a, b) => {
+                return filteredIssues.sort((a, b) => {
                     const priorityOrder = {high: 1, medium: 2, low: 3}
                     return priorityOrder[a.priority] - priorityOrder[b.priority]
+                    
                 })
             case 'date':
-                return completeIssues.sort((a, b) => {
+                return filteredIssues.sort((a, b) => {
                     const dateA = new Date(a.createdAt)
                     const dateB = new Date(b.createdAt)
                     return dateB - dateA
                     
                 })
-            case "complete":
-                return completeIssues
-                
                 default:
-                    return completeIssues
+                    return filteredIssues
                     
         }
     }
