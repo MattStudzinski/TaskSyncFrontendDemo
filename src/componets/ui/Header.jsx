@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { useLogout } from '../../hooks/useLogout';
 
 import logo from "../../svgs/logo.png";
+import logo2 from '../../svgs/logo2.png'
 import HeaderIcon from '../../svgs/HeaderIcon'
 
 const Header = () => {
@@ -13,7 +14,7 @@ const Header = () => {
     return (
         <header className='header'>
                 <Link to="/" className='user-nav__logo-box'>
-                    <img className='logo' src={logo} alt='Logo' />
+                    <img className='logo' src={logo2} alt='Logo' />
                 </Link>
                 
                     <form action= "#"className='search'>

@@ -58,34 +58,67 @@ html {
 }
 .analytics {
   margin-bottom: 2rem;
-  padding: 1rem;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   max-width: 100%;
 }
-.analytics__open-issues {
+.analytics__link {
   width: 30%;
+  text-decoration: none;
+  box-shadow: var(--shadow-dark);
+  border-radius: 1rem;
+}
+.analytics__open-issues {
+  padding: 1rem;
   height: 13rem;
-  display: block;
   background: rgb(161, 117, 242);
   background: linear-gradient(373deg, rgb(161, 117, 242) 0%, rgb(190, 154, 255) 100%);
-  border-radius: 10px;
+  border-radius: 1rem;
 }
 .analytics__new-issues {
-  width: 30%;
+  padding: 1rem;
   height: 13rem;
-  display: block;
   background: rgb(255, 196, 68);
   background: linear-gradient(373deg, rgb(255, 196, 68) 0%, rgb(255, 215, 128) 100%);
   border-radius: 10px;
 }
 .analytics__priority-issues {
-  width: 30%;
+  padding: 1rem;
   height: 13rem;
-  display: block;
   background: rgb(252, 114, 182);
   background: linear-gradient(373deg, rgb(252, 114, 182) 0%, rgb(255, 180, 217) 100%);
   border-radius: 10px;
+}
+.analytics__header-container {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.5rem 0 0.5rem;
+  height: 5.3rem;
+}
+.analytics__header-logo {
+  display: flex;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.367);
+  border-radius: 1rem;
+}
+.analytics__header-title {
+  margin-left: 1rem;
+  color: white;
+}
+.analytics__info-box {
+  display: flex;
+  align-items: center;
+  padding-left: 0.5rem;
+  margin-top: 1rem;
+}
+.analytics__info {
+  color: white;
+  font-size: 3rem;
+}
+.analytics__info-string {
+  color: white;
+  font-size: 1.1rem;
+  margin-left: 1rem;
 }
 
 .card-mini {
@@ -188,6 +221,14 @@ html {
   width: 1.75rem;
   flex-shrink: 0;
   transition: margin-right 0.3s;
+}
+
+.analytics-icon {
+  fill: white;
+  border-radius: 1.2rem;
+  border: 0.6rem solid rgba(255, 255, 255, 0);
+  height: 95%;
+  width: 95%;
 }
 
 .side-nav {

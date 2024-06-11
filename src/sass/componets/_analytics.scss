@@ -1,34 +1,79 @@
 .analytics {
     margin-bottom: 2rem;
-    padding: 1rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     max-width: 100%;
 
-    &__open-issues {
+    &__link{
         width: 30%;
+        text-decoration: none;
+        box-shadow: var(--shadow-dark);
+        border-radius: 1rem;
+    }
+
+    &__open-issues {
+        padding: 1rem;
         height: 13rem;
-        display: block;
         background: rgb(161,117,242);
 background: linear-gradient(373deg, rgba(161,117,242,1) 0%, rgba(190,154,255,1) 100%);
-        border-radius: 10px;
+        border-radius: 1rem;
     }
 
     &__new-issues{
-        width: 30%;
+        padding: 1rem;
         height: 13rem;
-        display: block;
         background: rgb(255,196,68);
 background: linear-gradient(373deg, rgba(255,196,68,1) 0%, rgba(255,215,128,1) 100%);
         border-radius: 10px;
     }
 
     &__priority-issues{
-        width: 30%;
+        padding: 1rem;
         height: 13rem;
-        display: block;
         background: rgb(252,114,182);
 background: linear-gradient(373deg, rgba(252,114,182,1) 0%, rgba(255,180,217,1) 100%);
         border-radius: 10px;
+    }
+
+    &__header-container{
+        display: flex;
+        align-items: center;
+        padding: .5rem .5rem 0 .5rem;
+        height: 5.3rem;
+        
+        
+    }
+
+    &__header-logo {
+        display: flex;
+        justify-content: center;
+        background-color: rgba(255, 255, 255, 0.367);
+        border-radius: 1rem;
+        
+
+    }
+
+    &__header-title{
+        margin-left: 1rem;
+        color: white;
+    }
+
+    &__info-box {
+        display: flex;
+        align-items: center;
+        padding-left: .5rem;
+        margin-top: 1rem;
+    }
+
+    &__info {
+        color: white;
+        font-size: 3rem;
+        
+    }
+
+    &__info-string{
+        color: white;
+        font-size: 1.1rem;
+        margin-left: 1rem;
     }
 }
