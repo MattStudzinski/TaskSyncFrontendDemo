@@ -7,7 +7,12 @@ const HighPriority = () => {
     const {issues} = useIssuesContext()
 
     const filterIssues = (issues) => {
-        let filteredIssues
+        let filteredIssues = issues.filter(issue => !issue.complete)
+
+        return filteredIssues.sort((a, b) => {
+            const priorityOrder = {high:1, medium: 2, low: 3}
+            return priorityOrder[a.priority] - priorityOrder[b.priority]
+        })
     }
 
     

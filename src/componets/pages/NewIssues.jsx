@@ -7,13 +7,19 @@ const NewIssues = () => {
     const {issues} = useIssuesContext()
 
     const filterIssues = (issues) => {
-        let filteredIssues = issues.filter(issue => !issue.complete)
-            
-        return filteredIssues.sort((a, b) => {
-            const prioriryOrder = {high:1, medium:2, low:3}
-            return prioriryOrder[a.priority] - prioriryOrder[b.priority]
+        const now = new Date()
+        const oneDay = new Date(now.getTime() - 24 * 60 * 60 * 1000)
 
-            })
+        let filteredIssues = issues.filter(issue => {
+            const issueDate = new Date(issue.createdAt)
+            return !issue.complete && issueDate >= oneDay
+        })
+
+        return filteredIssues.sort((a, b) => {
+            const dateA = new Date(a.createdAt)
+            const dateB = new Date(b.createdAt)
+            return dateB - dateA
+        })
     }
 
     

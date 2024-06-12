@@ -76,7 +76,7 @@ const Analytics = () => {
                         <p className='analytics__info'>
                             {newIssues}
                         </p>
-                        <p className='analytics__info-string'>New Issues </p>
+                        <p className='analytics__info-string'>New In The Last Day </p>
                     </div>
             </article>
             </Link>
