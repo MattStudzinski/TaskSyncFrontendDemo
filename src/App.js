@@ -11,6 +11,7 @@ import {useLocation} from "react-router-dom"
 import HighPriority from './componets/pages/HighPriority';
 import NewIssues from './componets/pages/NewIssues';
 import OpenIssues from './componets/pages/OpenIssues';
+import Complete from './componets/pages/Complete';
 
 function App() {
 
@@ -54,6 +55,10 @@ function PrimaryRoutes () {
     <Route
     path="/priority"
     element={user ? <HighPriority /> : <Navigate to="/login"/>}
+    />
+    <Route 
+    path="/complete"
+    element={user ? <Complete /> : <Navigate to="/login"/>}
     />
     <Route
     path="/login"

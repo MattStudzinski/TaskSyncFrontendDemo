@@ -504,7 +504,7 @@ header {
   border-bottom-left-radius: 1rem;
   padding-top: 3rem;
   overflow: hidden;
-  transition: flex 0.7s linear;
+  transition: flex 0.5s linear;
 }
 .sidebar:hover {
   flex: 0 0 23rem;
