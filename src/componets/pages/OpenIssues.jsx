@@ -6,9 +6,15 @@ import IssueInfo from '../dash/issueInfo';
 const OpenIssues = () => {
 
     const { issues } = useIssuesContext()
+
+    const filteredIssues = (issues) => {
+        return issues.filter(issue => !issue.complete)
+    }
+
+
     return (
         <>
-            {issues.map((issue) => (
+            {filteredIssues(issues).map((issue) => (
                 <IssueInfo key={issue._id} issue= {issue} />
             ))}
         </>

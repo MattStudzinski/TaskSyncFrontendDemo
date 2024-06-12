@@ -1,23 +1,22 @@
 import React from 'react';
 import { useIssuesContext } from '../../hooks/useIssuesContext';
-import { useAuthContext } from '../../hooks/useAuthContext';
-import { useEffect, useState, useContext } from 'react';
-import fetchIssues from '../../fetch/fetchIssues';
+import IssueInfo from '../dash/issueInfo';
 
 const HighPriority = () => {
 
-    const { issues, dispatch} = useIssuesContext()
-    const { user } = useAuthContext()
-    console.log(issues)
-    useEffect(() => {
-        if (user){
-            fetchIssues(dispatch, user.token)
-        }
-    }, [dispatch, user])
+    const {issues} = useIssuesContext()
+
+    const filterIssues = (issues) => {
+        let filteredIssues
+    }
+
+    
     return (
-        <div>
-            High Priority
-        </div>
+        <>
+            {filterIssues(issues).map((issue) => (
+                <IssueInfo key={issue._id} issue={issue} />
+            ))}
+        </>
     );
 };
 
