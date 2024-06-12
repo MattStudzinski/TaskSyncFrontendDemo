@@ -499,11 +499,12 @@ header {
 .sidebar {
   background-color: rgb(255, 255, 255);
   flex: 0 0 4rem;
+  max-width: 20%;
   min-width: 4rem;
   border-bottom-left-radius: 1rem;
   padding-top: 3rem;
   overflow: hidden;
-  transition: flex 0.3s linear;
+  transition: flex 0.7s linear;
 }
 .sidebar:hover {
   flex: 0 0 23rem;
@@ -515,6 +516,7 @@ header {
   border-bottom-right-radius: 1rem;
   border-bottom-left-radius: 1rem;
   min-height: 70rem;
+  width: 100%;
 }
 
 .dash-view {
@@ -525,6 +527,14 @@ header {
   justify-content: space-between;
   flex: 1;
   padding: 2rem;
+}
+
+.main-content-container {
+  display: flex;
+}
+
+.main-content {
+  flex: 1;
 }
 
 label, input {

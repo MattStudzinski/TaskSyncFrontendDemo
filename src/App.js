@@ -3,6 +3,7 @@ import './styles/styles.css'
 import { useAuthContext } from './hooks/useAuthContext';
 import Dashboard from './componets/dash/Dashboard';
 import Header from './componets/ui/Header';
+import Sidebar from './componets/ui/Sidebar'
 import LoginForm from './componets/forms/LoginForm';
 import Signup from './componets/forms/Signup';
 import AdminDash from './componets/admin/AdminDash';
@@ -28,12 +29,15 @@ function PrimaryRoutes () {
   const location = useLocation()
 
   const showHeader = location.pathname !== '/login' && location.pathname !== '/signup'
+  const showSidebar = location.pathname !== '/login' && location.pathname !== '/signup'
   const showContainer = location.pathname !== '/login' && location.pathname !== '/signup'
   return (
     <div className={showContainer ? 'container' : ''}>
-    {showHeader && <Header />}
-
-<>
+    {showHeader && <Header /> }
+    
+<div className='main-content-container'>
+  {showSidebar && <Sidebar />}
+<div className='main-content'>
   <Routes>
     <Route
     path="/"
@@ -65,7 +69,8 @@ function PrimaryRoutes () {
     /> 
   </Routes>
 {/* <IssueForm /> */}
-</>
+</div>
+</div>
     </div>
   )
 

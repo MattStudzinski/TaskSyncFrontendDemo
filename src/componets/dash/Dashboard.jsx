@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 // import Tickets from '../../issuedetails/Tickets';
 import DashIssues from './DashIssues';
 import Analytics from './Analytics';
-import Sidebar from '../ui/Sidebar';
 import Calendar from './Calendar';
 import { IssueFilterContext } from '../context/FilterContext';
 import ModalControllerDash from '../modals/ModalControllerDash';
@@ -13,7 +12,7 @@ const Dashboard = () => {
 
     return (
         <div className='content'>
-            <Sidebar />
+            
         <main className='dash-view'>
             <div className='dash-view__analytics-container'>
             <Analytics />

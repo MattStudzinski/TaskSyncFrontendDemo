@@ -27,11 +27,12 @@ header{
   .sidebar{
     background-color: $color-app-primary;
     flex: 0 0 4rem;
+    max-width: 20%;
     min-width: 4rem;
     border-bottom-left-radius: 1rem;
     padding-top: 3rem;
     overflow: hidden;
-    transition: flex .3s linear;
+    transition: flex .7s linear;
 
     &:hover {
       flex: 0 0 23rem
@@ -46,6 +47,7 @@ header{
     border-bottom-right-radius: 1rem;
     border-bottom-left-radius: 1rem;
     min-height: 70rem;
+    width: 100%;
     
   }
 
@@ -60,4 +62,11 @@ padding: 2rem;
 
   }
 
-  
+  .main-content-container {
+    display: flex;
+    
+  }
+
+  .main-content {
+    flex: 1;
+  }
