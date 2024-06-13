@@ -474,6 +474,11 @@ html {
   width: 55%;
 }
 
+.issue-list__container {
+  background-color: rgb(240, 242, 247);
+  height: 100%;
+}
+
 .container {
   max-width: 140rem;
   margin: 5rem auto;
@@ -531,6 +536,7 @@ header {
 
 .main-content-container {
   display: flex;
+  height: 100%;
 }
 
 .main-content {

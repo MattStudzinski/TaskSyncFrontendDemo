@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useIssuesContext } from "../../hooks/useIssuesContext";
 import { useAuthContext } from "../../hooks/useAuthContext";
 import { IssueFilterContext } from "../context/FilterContext";
@@ -9,10 +9,11 @@ const DashIssues = () => {
     const { issues, dispatch} = useIssuesContext()
     const {filter} = useContext(IssueFilterContext)
     const { user } = useAuthContext()
+    const [loading, setLoading] = useState(true)
     console.log(issues)
     useEffect(() => {
         if (user){
-            fetchIssues(dispatch, user.token)
+            fetchIssues(dispatch, user.token).then(() => setLoading(false))
         }
     }, [dispatch, user])
 
@@ -47,12 +48,16 @@ const DashIssues = () => {
         }
     }
 
+    if(loading) {
+        return<div>Loading...</div>
+    }
+
     return (
-        <>
+        <ul>
             {filterIssues(issues).map((issue) => (
                 <IssueInfo key = {issue._id} issue= {issue}/>
             ))}
-        </>
+        </ul>
     );
 };
 

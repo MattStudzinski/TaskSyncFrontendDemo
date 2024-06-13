@@ -10,11 +10,15 @@ const Complete = () => {
         return issues.filter(issue => issue.complete)
     }
     return (
-        <div>
+        <section className="issue-list__container">
+        <ul className="issue-list__list">
             {filterIssues(issues).map((issue) => (
-                <IssueInfo key={issue._id} issue={issue} />
+            <li className="issue-list__list-item">
+                <IssueInfo key = {issue._id} issue= {issue}/>
+            </li>
             ))}
-        </div>
+        </ul>
+        </section>
     );
 };
 
