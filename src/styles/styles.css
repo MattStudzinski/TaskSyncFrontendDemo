@@ -231,6 +231,15 @@ html {
   width: 95%;
 }
 
+.category-icon {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-weight: bold;
+  text-align: center;
+  min-width: 50px;
+}
+
 .side-nav {
   list-style: none;
   display: flex;

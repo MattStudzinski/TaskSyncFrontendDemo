@@ -31,6 +31,14 @@ const AdminDash = () => {
         }
     }, [issues])
 
+
+    const handleUserChange = (selectedOption) => {
+        setSelectedUser(selectedOption)
+    }
+
+    const handlePriorityChange = (selectedOption) => {
+        setSelectedPriority(selectedOption)
+    }
     const filterByUser = (issues, user) => {
         if (!user) return issues
         return issues.filter(issue =>
@@ -43,13 +51,6 @@ const AdminDash = () => {
         return issues.filter(issue => issue.priority === priority)
     }   
 
-    const handleUserChange = (selectedOption) => {
-        setSelectedUser(selectedOption.value)
-    }
-
-    const handlePriorityChange = (selectedOption) => {
-        setSelectedPriority(selectedOption.value)
-    }
 
     const getFilteredIssues = () => {
         let filteredIssues = issues || []

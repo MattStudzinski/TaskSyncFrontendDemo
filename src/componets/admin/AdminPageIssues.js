@@ -1,4 +1,5 @@
 import React from 'react';
+import CategoryIcon from '../ui/CategoryIcon';
 import { useAuthContext } from '../../hooks/useAuthContext';
 import { useIssuesContext } from '../../hooks/useIssuesContext';
 const AdminPageIssues = ({issue}) => {
@@ -25,7 +26,7 @@ const AdminPageIssues = ({issue}) => {
     return (
         <div className='card-mini'>
         <div className="card-mini__container">
-        <p className='card-mini__category'><strong>Category</strong>{issue.category}</p>
+        <p className='card-mini__category'><CategoryIcon category={issue.category} /></p>
             <h4 className='card-mini__name'>{issue.name}</h4>
             <p className='card-mini__date'><strong>Date</strong>{issue.createdAt}</p>
             <ul>

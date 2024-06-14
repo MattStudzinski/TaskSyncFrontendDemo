@@ -1,6 +1,9 @@
 import React from 'react';
 import { useAuthContext } from '../../hooks/useAuthContext';
 import { useIssuesContext } from '../../hooks/useIssuesContext';
+import CategoryIcon from '../ui/CategoryIcon';
+
+
 const IssueInfo = ({issue}) => {
     const {issues,dispatch} = useIssuesContext()
     const { drivers = [], completionStatus = [] } = issue
@@ -40,7 +43,9 @@ const IssueInfo = ({issue}) => {
     return (
         
         <div className="card-mini__container">
-        <p className='card-mini__category'><strong>Category</strong>{issue.category}</p>
+        <p >
+            <CategoryIcon category={issue.category} />
+        </p>
             <h4 className='card-mini__name'>{issue.name}</h4>
             <p className='card-mini__date'><strong>Date</strong>{issue.createdAt}</p>
             <ul className='card-mini__driver-list'>
