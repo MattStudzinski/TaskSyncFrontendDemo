@@ -40,14 +40,22 @@ const IssueInfo = ({issue}) => {
             console.error('Failed to update issue completion:', error)
         }
     };
+
+    const formatDate = (dateString) => {
+        const date = new Date(dateString)
+        return date.toLocaleDateString()
+    }
     return (
         
         <div className="card-mini__container">
         <p >
             <CategoryIcon category={issue.category} />
         </p>
+        <div className='card-mini__title-container'>
             <h4 className='card-mini__name'>{issue.name}</h4>
-            <p className='card-mini__date'><strong>Date</strong>{issue.createdAt}</p>
+            <p>{issue.description}</p>
+            </div>
+            <p className='card-mini__date'><strong>Due:</strong>{formatDate(issue.dueDate)}</p>
             <ul className='card-mini__driver-list'>
                 {drivers.map((driver, index) => {
                     const driverStatus = completionStatus.find(status => status.driver.toString() === driver._id) || { isComplete: false };
