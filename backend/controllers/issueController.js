@@ -176,10 +176,8 @@ const updateCompletionStatus = async (req, res) => {
     const allComplete = issue.completionStatus.every(status => status.isComplete) && 
                         issue.completionStatus.length === issue.drivers.length;
 
-    if (allComplete) {
-        issue.complete = true
-        await issue.save()
-        }
+    issue.complete = allComplete
+    await issue.save()
 
     const updatedIssue = await Issue.findById(issueId).populate('drivers', '_id name')
     res.status(200).json(updatedIssue)

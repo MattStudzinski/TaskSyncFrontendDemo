@@ -4,7 +4,7 @@ import { useIssuesContext } from '../../hooks/useIssuesContext';
 import CategoryIcon from '../ui/CategoryIcon';
 
 
-const IssueInfo = ({issue}) => {
+const IssueInfo = ({issue, onClick}) => {
     const {issues,dispatch} = useIssuesContext()
     const { drivers = [], completionStatus = [] } = issue
     const {user} = useAuthContext()
@@ -33,6 +33,7 @@ const IssueInfo = ({issue}) => {
 
             console.log('Issue completion updated', updatedIssue);
 
+
             // Update the state with the updated issue
             dispatch({ type: 'UPDATE_ISSUE', payload: updatedIssue });
             console.log("this is after the update state change", updatedIssue)
@@ -41,13 +42,10 @@ const IssueInfo = ({issue}) => {
         }
     };
 
-    const formatDate = (dateString) => {
-        const date = new Date(dateString)
-        return date.toLocaleDateString()
-    }
+    
     return (
         
-        <div className="card-mini__container">
+        <div className="card-mini__container" >
         <p >
             <CategoryIcon category={issue.category} />
         </p>
@@ -55,10 +53,11 @@ const IssueInfo = ({issue}) => {
             <h4 className='card-mini__name'>{issue.name}</h4>
             <p>{issue.description}</p>
             </div>
-            <p className='card-mini__date'><strong>Due:</strong>{formatDate(issue.dueDate)}</p>
+            <p className='card-mini__date'><strong>Due:</strong>{(issue.dueDate)}</p>
             <ul className='card-mini__driver-list'>
                 {drivers.map((driver, index) => {
                     const driverStatus = completionStatus.find(status => status.driver.toString() === driver._id) || { isComplete: false };
+                    console.log(driverStatus,"this is driver status")
                     return (
                         <li className='card-mini__drivers' key={index}>
                             {driver.name}
@@ -73,7 +72,7 @@ const IssueInfo = ({issue}) => {
                     );
                 })}
             </ul>
-            <p className='card-mini__priority'><strong>Priority</strong>{issue.priority}</p>
+            <p className='card-mini__priority'>{issue.priority}</p>
             
         </div>
         

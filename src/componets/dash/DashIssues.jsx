@@ -4,12 +4,15 @@ import { useAuthContext } from "../../hooks/useAuthContext";
 import { IssueFilterContext } from "../context/FilterContext";
 import IssueInfo from './issueInfo'
 import fetchIssues from "../../fetch/fetchIssues";
+import ModalControlInfo from "../modals/ModalControlInfo";
 
 const DashIssues = () => {
     const { issues, dispatch} = useIssuesContext()
     const {filter} = useContext(IssueFilterContext)
     const { user } = useAuthContext()
     const [loading, setLoading] = useState(true)
+    const [selectedIssue, setSelectedIssue] = useState(null)
+
     console.log(issues)
     useEffect(() => {
         if (user){
@@ -48,17 +51,37 @@ const DashIssues = () => {
         }
     }
 
+    const handleIssueClick = (issue) => {
+        setSelectedIssue(issue)
+    }
+
+    const handleCloseModal = () => {
+        setSelectedIssue(null)
+    }
+
     if(loading) {
         return<div>Loading...</div>
     }
 
     return (
+        <>
         <ul>
             {filterIssues(issues).map((issue) => (
-                <IssueInfo key = {issue._id} issue= {issue}/>
+            
+                <IssueInfo key = {issue._id} issue= {issue} onClick={handleIssueClick}/>
+        
             ))}
         </ul>
+        {selectedIssue && (
+            <ModalControlInfo 
+            issue={selectedIssue} 
+            isOpen={true} 
+            onClose={handleCloseModal}
+        />
+        )}
+        </>
     );
 };
+
 
 export default DashIssues;
