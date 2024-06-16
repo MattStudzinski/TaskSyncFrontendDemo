@@ -149,6 +149,7 @@ const DashIssueForm = () => {
                 {/* will want to map through a list of par rooms */}
                 <option value="DRMP1" >DRMP1</option>
                 <option value="PN-P1" >PN-P1</option>
+                <option value="WICP1" >WICP1</option>
                 </select>
             </label>
             
@@ -193,6 +194,7 @@ const DashIssueForm = () => {
                 <select id="category" name="category">
                     <option value="stock">STOCK</option>
                     <option value="frx">FRX</option>
+                    <option value="rx">RX</option>
                     {/* need to make a file for pulling data */}
                 </select>
             </div>
