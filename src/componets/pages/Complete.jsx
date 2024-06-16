@@ -1,6 +1,6 @@
 import React from 'react';
 import { useIssuesContext } from '../../hooks/useIssuesContext';
-import IssueInfo from '../dash/issueInfo';
+import IssueInfo from '../dash/issueInfo'
 
 const Complete = () => {
 
@@ -19,7 +19,7 @@ const Complete = () => {
             ))}
         </ul>
         </section>
-    );
-};
+    )
+}
 
 export default Complete;

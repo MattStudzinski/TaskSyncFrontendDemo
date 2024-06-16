@@ -137,7 +137,7 @@ html {
 }
 .search {
   display: flex;
-  flex: 0 0 40%;
+  flex: 0 0 70%;
   justify-content: center;
   align-items: center;
 }
@@ -178,7 +178,7 @@ html {
   align-items: center;
   align-self: stretch;
   justify-content: space-between;
-  width: 800px;
+  width: 20rem;
 }
 .user-nav > * {
   display: flex;
@@ -208,6 +208,26 @@ html {
 .user-nav__icon {
   height: 2.25rem;
   width: 2.25rem;
+}
+
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background-color: white;
+  z-index: 1;
+}
+.dropdown-menu__item {
+  padding: 10px;
+  cursor: pointer;
+  display: block;
+  text-align: left;
+  width: 100%;
+  border: none;
+  background: none;
+}
+.dropdown-menu__item :hover {
+  background-color: #f1f1f1;
 }
 
 .logo {
