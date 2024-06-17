@@ -2,6 +2,7 @@ import React from 'react';
 import { useAuthContext } from '../../hooks/useAuthContext';
 import { useIssuesContext } from '../../hooks/useIssuesContext';
 import CategoryIcon from '../ui/CategoryIcon';
+import PriorityIcons from '../ui/PriorityIcons';
 
 
 const IssueInfo = ({issue, onClick}) => {
@@ -48,12 +49,12 @@ const IssueInfo = ({issue, onClick}) => {
     return (
         
         <div className="card-mini__container" onClick={() => onClick(issue)}>
-        <p >
-            <CategoryIcon category={issue.category} />
-        </p>
+            <p >
+                <CategoryIcon category={issue.category} />
+            </p>
         <div className='card-mini__title-container'>
             <h4 className='card-mini__name'>{issue.name}</h4>
-            <p>{issue.description}</p>
+            <p className='card-mini__description'>{issue.description}</p>
             </div>
             <p className='card-mini__date'><strong>Due:</strong>{formatDate(issue.dueDate)}</p>
             <ul className='card-mini__driver-list'>
@@ -74,8 +75,8 @@ const IssueInfo = ({issue, onClick}) => {
                     );
                 })}
             </ul>
-            <p className='card-mini__priority'>{issue.priority}</p>
             
+            <PriorityIcons priority={issue.priority} />
         </div>
         
     )

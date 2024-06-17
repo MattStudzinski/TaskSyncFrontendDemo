@@ -4,15 +4,15 @@ const CategoryIcon = ({category}) => {
 
     const categoryStyles = {
         frx: {
-            backgroundColor: 'lightblue',
+            background: 'linear-gradient(373deg, rgba(252,114,182,.7) 0%, rgba(255,180,217,1) 100%)',
             color: 'white',
         },
         stock: {
-            backgroundColor: 'green',
+            background: 'linear-gradient(373deg, rgba(255,196,68,.7) 0%, rgba(255,215,128,1) 100%)',
             color: 'white',
         },
         rx: {
-            backgroundColor: 'red',
+            background: 'linear-gradient(373deg, rgba(161,117,242,.7) 0%, rgba(190,154,255,1) 100%)',
             color: 'white',
         },
         asc: {
@@ -23,13 +23,15 @@ const CategoryIcon = ({category}) => {
 
 
     const style = categoryStyles[category] || {
-        backgroundColor: 'grey',
-        color: 'white',
+        
+        color: 'white'
     }
 
     return (
-        <div className='category-icon' style={style}>
-            {category.toUpperCase()}
+        <div className='card-mini__category-container' style={style}>
+            <div className='category-icon'>
+                {category.toUpperCase()}
+            </div>
         </div>
     );
 };

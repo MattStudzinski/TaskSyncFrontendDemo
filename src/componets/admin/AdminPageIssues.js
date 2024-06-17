@@ -26,7 +26,9 @@ const AdminPageIssues = ({issue}) => {
     return (
         <div className='card-mini'>
         <div className="card-mini__container">
+        <div className='card-mini__category-container'>
         <p className='card-mini__category'><CategoryIcon category={issue.category} /></p>
+        </div>
             <h4 className='card-mini__name'>{issue.name}</h4>
             <p className='card-mini__date'><strong>Date</strong>{issue.createdAt}</p>
             <ul>
