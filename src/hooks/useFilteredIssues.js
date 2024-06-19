@@ -1,7 +1,7 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 
-const useFilteredIssues = (issues, selectedUser, selectedPriority) => {
+const useFilteredIssues = (issues, selectedUser, selectedPriority, selectedCategory) => {
     const[filteredIssues, setFilteredIssues] = useState([])
 
     useEffect(() => {
@@ -13,12 +13,16 @@ const useFilteredIssues = (issues, selectedUser, selectedPriority) => {
             )
         }
 
+        if(selectedCategory) {
+            tempIssues = tempIssues.filter(issue => issue.category === selectedCategory)
+        }
+
         if (selectedPriority) {
             tempIssues = tempIssues.filter(issue => issue.priority === selectedPriority)
         }
 
         setFilteredIssues(tempIssues)
-    }, [issues, selectedPriority, selectedUser]
+    }, [issues, selectedPriority, selectedUser, selectedCategory]
 )
     return filteredIssues
         

@@ -12,8 +12,9 @@ const AdminDash = () => {
     const { user } = useAuthContext()
     const [selectedUser, setSelectedUser] = useState('')
     const [selectedPriority, setSelectedPriority] = useState('')
-    const { userOptions, priorityOptions } = useOptions(issues)
-    const filteredIssues = useFilteredIssues(issues, selectedUser, selectedPriority)
+    const [selectedCategory, setSelectedCategory] = useState('')
+    const { userOptions, priorityOptions, categoryOptions } = useOptions(issues)
+    const filteredIssues = useFilteredIssues(issues, selectedUser, selectedPriority, selectedCategory)
     const [currentPage, setCurrentPage] = useState(1)
     const issuesPerPage = 5
     
@@ -26,7 +27,10 @@ const AdminDash = () => {
     }, [dispatch, user])
 
     
-
+    const handleCategoryChange = (e) => {
+        setSelectedCategory(e.target.value)
+        setCurrentPage(1)
+    }
 
     const handleUserChange = (e) => {
         setSelectedUser(e.target.value)
@@ -56,6 +60,16 @@ const AdminDash = () => {
                     <select value={selectedUser} onChange={handleUserChange}>
                         <option value="">All Users</option>
                         {userOptions.map((option, index) => (
+                            <option key={index} value={option.value}>{option.label}</option>
+                        ))}
+                    </select>
+                </div>
+
+                <div>
+                    <label>Category: </label>
+                    <select value={selectedCategory} onChange={handleCategoryChange}>
+                        <option value="">All Categories</option>
+                        {categoryOptions.map((option, index) => (
                             <option key={index} value={option.value}>{option.label}</option>
                         ))}
                     </select>
