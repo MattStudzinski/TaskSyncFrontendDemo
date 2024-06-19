@@ -614,6 +614,20 @@ header {
   flex: 1;
 }
 
+.results-page {
+  background-color: rgb(240, 242, 247);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-bottom-right-radius: 10px;
+}
+.results-page__card {
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+}
+
 label, input {
   display: block;
 }

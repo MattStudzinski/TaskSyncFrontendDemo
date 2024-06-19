@@ -10,7 +10,8 @@ const Complete = () => {
         return issues.filter(issue => issue.complete)
     }
     return (
-        <section className="issue-list__container">
+        <div className='results-page'>
+        <section className="results-page__card">
         <ul className="issue-list__list">
             {filterIssues(issues).map((issue) => (
             <li className="issue-list__list-item">
@@ -19,6 +20,7 @@ const Complete = () => {
             ))}
         </ul>
         </section>
+        </div>
     )
 }
 

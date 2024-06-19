@@ -45,28 +45,32 @@ const AdminDash = () => {
     const paginate = (pageNumber) => setCurrentPage(pageNumber)
 
     return (
-       <div>
-            <div>
-                <label>User: </label>
-                <select value={selectedUser} onChange={handleUserChange}>
-                    <option value="">All Users</option>
-                    {userOptions.map((option, index) => (
-                        <option key={index} value={option.value}>{option.label}</option>
-                    ))}
-                </select>
-            </div>
+       <div className="results-page">
 
-            <div>
-                <label>Priority: </label>
-                <select value={selectedPriority} onChange={handlePriorityChange}>
-                    <option value="">All Priorities</option>
-                    {priorityOptions.map((option, index) => (
-                        <option key={index} value={option.value}>{option.label}</option>
-                    ))}
-                </select>
-            </div>
+            
 
-            <div className="minicard">
+            <div className="results-page__card">
+            <div className="admin-page__category-selectors">
+                <div>
+                    <label>User: </label>
+                    <select value={selectedUser} onChange={handleUserChange}>
+                        <option value="">All Users</option>
+                        {userOptions.map((option, index) => (
+                            <option key={index} value={option.value}>{option.label}</option>
+                        ))}
+                    </select>
+                </div>
+
+                <div>
+                    <label>Priority: </label>
+                    <select value={selectedPriority} onChange={handlePriorityChange}>
+                        <option value="">All Priorities</option>
+                        {priorityOptions.map((option, index) => (
+                            <option key={index} value={option.value}>{option.label}</option>
+                        ))}
+                    </select>
+                </div>
+            </div>
                 <ModalControlAdmin />
                 {currentIssues.map((issue) => (
                     <AdminPageIssues key={issue._id} issue={issue} />

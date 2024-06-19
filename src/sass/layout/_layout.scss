@@ -70,3 +70,20 @@ padding: 2rem;
   .main-content {
     flex: 1;
   }
+
+
+  .results-page{
+    background-color: $color-app-secondary;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom-right-radius: 10px;
+
+    &__card{
+        background-color: $color-app-primary;
+        border-radius: 10px;
+    
+    }
+  }
