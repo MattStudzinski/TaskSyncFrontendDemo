@@ -3,10 +3,12 @@ import { useIssuesContext } from '../../hooks/useIssuesContext';
 import IssueInfo from '../dash/issueInfo';
 import { useState } from 'react';
 import Pagination from '../ui/Pagination';
+import ModalControlInfo from '../modals/ModalControlInfo';
 
 const NewIssues = () => {
 
     const {issues} = useIssuesContext()
+    const [selectedIssue, setSelectedIssue] = useState(null)
     const [currentPage, setCurrentPage] = useState(1)
     const issuesPerPage = 5
 
@@ -26,6 +28,14 @@ const NewIssues = () => {
         })
     }
 
+    const handleIssueClick = (issue) => {
+        setSelectedIssue(issue)
+    }
+
+    const handleCloseModal = () => {
+        setSelectedIssue(null)
+    }
+
     const filteredAndSortedIssues = filterIssues(issues)
     const indexOfLastIssue = currentPage * issuesPerPage
     const indexOfFirstIssue = indexOfLastIssue - issuesPerPage
@@ -37,7 +47,7 @@ const NewIssues = () => {
     return (
         <>
             {currentIssues.map((issue) => (
-                <IssueInfo key={issue._id} issue={issue} />
+                <IssueInfo key={issue._id} issue={issue} onClick={handleIssueClick} />
             ))}
 
             <Pagination 
@@ -46,6 +56,14 @@ const NewIssues = () => {
             paginate={paginate}
             currentPage={currentPage}
             />
+
+            {selectedIssue && (
+                <ModalControlInfo
+                issue={selectedIssue}
+                isOpen={true}
+                onClose={handleCloseModal}
+                />
+            )}
         </>
     );
 };

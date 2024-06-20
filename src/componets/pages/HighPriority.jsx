@@ -39,7 +39,7 @@ const HighPriority = () => {
     return (
         <>
             {currentIssues.map((issue) => (
-                <IssueInfo key={issue._id} issue={issue} />
+                <IssueInfo key={issue._id} issue={issue} onClick={handleIssueClick}/>
             ))}
 
             <Pagination 
