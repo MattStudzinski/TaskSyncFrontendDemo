@@ -60,7 +60,10 @@ const IssueInfo = ({issue, onClick}) => {
             </p>
         <div className='card-mini__title-container'>
             <h4 className='card-mini__name'>{issue.name}</h4>
-            <p className='card-mini__description'>{issue.description}</p>
+            <p className='card-mini__description'>{issue.description.length > 20
+            ? `${issue.description.slice(0,70)}...`
+            : issue.description
+            }</p>
             </div>
             <p className='card-mini__date'><strong>Due:</strong>{formatDate(issue.dueDate)}</p>
             <ul className='card-mini__driver-list'>
