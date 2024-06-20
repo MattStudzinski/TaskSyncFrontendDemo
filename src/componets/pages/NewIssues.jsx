@@ -1,10 +1,14 @@
 import React from 'react';
 import { useIssuesContext } from '../../hooks/useIssuesContext';
 import IssueInfo from '../dash/issueInfo';
+import { useState } from 'react';
+import Pagination from '../ui/Pagination';
 
 const NewIssues = () => {
 
     const {issues} = useIssuesContext()
+    const [currentPage, setCurrentPage] = useState(1)
+    const issuesPerPage = 5
 
     const filterIssues = (issues) => {
         const now = new Date()
@@ -22,12 +26,26 @@ const NewIssues = () => {
         })
     }
 
+    const filteredAndSortedIssues = filterIssues(issues)
+    const indexOfLastIssue = currentPage * issuesPerPage
+    const indexOfFirstIssue = indexOfLastIssue - issuesPerPage
+    const currentIssues = filteredAndSortedIssues.slice(indexOfFirstIssue, indexOfLastIssue)
+
+    const paginate = (pageNumber) => setCurrentPage(pageNumber)
+
     
     return (
         <>
-            {filterIssues(issues).map((issue) => (
+            {currentIssues.map((issue) => (
                 <IssueInfo key={issue._id} issue={issue} />
             ))}
+
+            <Pagination 
+            itemsPerPage={issuesPerPage}
+            totalItems={filteredAndSortedIssues.length}
+            paginate={paginate}
+            currentPage={currentPage}
+            />
         </>
     );
 };

@@ -12,7 +12,7 @@ const Sidebar = () => {
             <ul className='side-nav'>
             
                 <li className='side-nav__item'>
-                    <Link to="/admin" className='side-nav__link' >
+                    <Link to="/" className='side-nav__link' >
                         <Dashboard /> 
                         <span className='side-nav__link-title'>Dashboard</span>
                     </Link>

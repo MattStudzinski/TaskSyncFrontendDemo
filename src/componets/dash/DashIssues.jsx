@@ -3,6 +3,7 @@ import { useIssuesContext } from "../../hooks/useIssuesContext";
 import { useAuthContext } from "../../hooks/useAuthContext";
 import { IssueFilterContext } from "../context/FilterContext";
 import IssueInfo from './issueInfo'
+import Pagination from "../ui/Pagination";
 import fetchIssues from "../../fetch/fetchIssues";
 import ModalControlInfo from "../modals/ModalControlInfo";
 
@@ -12,6 +13,8 @@ const DashIssues = () => {
     const { user } = useAuthContext()
     const [loading, setLoading] = useState(true)
     const [selectedIssue, setSelectedIssue] = useState(null)
+    const [currentPage, setCurrentPage] = useState(1)
+    const issuesPerPage = 4
 
     console.log(issues)
     useEffect(() => {
@@ -59,6 +62,13 @@ const DashIssues = () => {
         setSelectedIssue(null)
     }
 
+    const filteredAndSortedIssues = filterIssues(issues)
+    const indexOfLastIssue = currentPage * issuesPerPage
+    const indexOfFirstIssue = indexOfLastIssue - issuesPerPage
+    const currentIssues = filteredAndSortedIssues.slice(indexOfFirstIssue, indexOfLastIssue)
+
+    const paginate = (pageNumber) => setCurrentPage(pageNumber)
+
     if(loading) {
         return<div>Loading...</div>
     }
@@ -66,12 +76,18 @@ const DashIssues = () => {
     return (
         <>
         <ul>
-            {filterIssues(issues).map((issue) => (
+            {currentIssues.map((issue) => (
             
                 <IssueInfo key = {issue._id} issue= {issue} onClick={handleIssueClick}/>
         
             ))}
         </ul>
+        <Pagination
+        itemsPerPage={issuesPerPage}
+        totalItems={filteredAndSortedIssues.length}
+        paginate={paginate}
+        currentPage={currentPage}
+        />
         {selectedIssue && (
             <ModalControlInfo 
             issue={selectedIssue} 

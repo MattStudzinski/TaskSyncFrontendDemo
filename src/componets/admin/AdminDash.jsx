@@ -6,6 +6,7 @@ import fetchAdminIssues from "../../fetch/fetchAdminIssues";
 import ModalControlAdmin from "../modals/ModalControlAdmin";
 import useFilteredIssues from "../../hooks/useFilteredIssues";
 import useOptions from "../../hooks/useOptions";
+import Pagination from "../ui/Pagination";
 
 const AdminDash = () => {
     const { issues = [], dispatch} = useIssuesContext()
@@ -91,13 +92,12 @@ const AdminDash = () => {
                 ))}
             </div>
 
-            <div className="pagination">
-                {Array.from({ length: Math.ceil(filteredIssues.length / issuesPerPage) }, (_, i) => (
-                    <button key={i} onClick={() => paginate(i + 1)}>
-                        {i + 1}
-                    </button>
-                ))}
-            </div>
+            <Pagination
+            itemsPerPage={issuesPerPage}
+            totalItems={filteredIssues.length}
+            paginate={paginate}
+            currentPage={currentPage}
+            />
         </div>
     );
 };

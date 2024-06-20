@@ -1,14 +1,17 @@
 import React from 'react';
+import { useState } from 'react';
 import { useAuthContext } from '../../hooks/useAuthContext';
 import { useIssuesContext } from '../../hooks/useIssuesContext';
 import CategoryIcon from '../ui/CategoryIcon';
 import PriorityIcons from '../ui/PriorityIcons';
 
 
+
 const IssueInfo = ({issue, onClick}) => {
     const {issues,dispatch} = useIssuesContext()
     const { drivers = [], completionStatus = [] } = issue
     const {user} = useAuthContext()
+    
 
     const handleCompletionChange = async (driverId, isComplete) => {
         if (!user){
@@ -46,8 +49,11 @@ const IssueInfo = ({issue, onClick}) => {
         const date = new Date(dateString)
         return date.toLocaleDateString()
     }
+
+    
+    
     return (
-        
+        <>
         <div className="card-mini__container" onClick={() => onClick(issue)}>
             <p >
                 <CategoryIcon category={issue.category} />
@@ -79,6 +85,7 @@ const IssueInfo = ({issue, onClick}) => {
             <PriorityIcons priority={issue.priority} />
         </div>
         
+        </>
     )
 }
 
