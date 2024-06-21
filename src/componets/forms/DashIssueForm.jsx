@@ -34,7 +34,7 @@ const DashIssueForm = () => {
 
     const handleSubmit = async (event) => {
         event.preventDefault()
-
+        console.log('Selected Par Rooms:', selectedParRooms);
         if(!user){
             setError('You must be logged in')
             return
@@ -43,9 +43,11 @@ const DashIssueForm = () => {
         const formData = new FormData(event.target)
         const routeChannel = formData.getAll("route")
         const driverChannel = formData.getAll("drivers")
+        const roomChannel = formData.getAll("room")
         const data = Object.fromEntries(formData.entries())
         data.route = routeChannel
         data.drivers = driverChannel
+        data.room = roomChannel
 
         
         try {
@@ -72,6 +74,7 @@ const DashIssueForm = () => {
             setError(null)
             event.target.reset();
             setEmptyFields([])
+            setSelectedParRooms([])
             console.log("new issue added", json)
             
             const issueResponse = await fetch ('api/issues', {
