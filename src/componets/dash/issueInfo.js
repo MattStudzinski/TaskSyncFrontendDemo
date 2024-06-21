@@ -9,7 +9,7 @@ import PriorityIcons from '../ui/PriorityIcons';
 
 const IssueInfo = ({issue, onClick}) => {
     const {issues,dispatch} = useIssuesContext()
-    const { drivers = [], completionStatus = [] } = issue
+    const { drivers = [], completionStatus = [], room = [] } = issue
     const {user} = useAuthContext()
     
 
@@ -71,7 +71,7 @@ const IssueInfo = ({issue, onClick}) => {
                     const driverStatus = completionStatus.find(status => status.driver.toString() === driver._id) || { isComplete: false };
                     return (
                         <li className='card-mini__drivers' key={index}>
-                            {driver.name}
+                            
                             {driver.name === user.name && (
                                 <input
                                     type='checkbox'
@@ -84,6 +84,16 @@ const IssueInfo = ({issue, onClick}) => {
                     );
                 })}
             </ul>
+            <ul>
+            {room.map((room, index) => {
+                return (
+                    <li key={index}>
+                        {room}
+                    </li>
+                )
+            })}
+            </ul>
+
             
             <PriorityIcons priority={issue.priority} />
         </div>

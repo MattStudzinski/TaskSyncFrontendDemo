@@ -25,7 +25,7 @@ header{
   
 
   .sidebar{
-    background-color: $color-app-primary;
+    background-color: $color-app-light-green;
     flex: 0 0 4rem;
     max-width: 20%;
     min-width: 4rem;
@@ -54,11 +54,12 @@ header{
   .dash-view {
 background-color: $color-app-secondary;
 border-bottom-right-radius: 1rem;
-border-top-right-radius: 1rem;
+
 display: flex;
 justify-content: space-between;
 flex: 1;
 padding: 2rem;
+
 
   }
 

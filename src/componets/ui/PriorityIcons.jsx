@@ -1,30 +1,30 @@
 import React from 'react';
+import Filler from '../../svgs/SVG/Filler';
+import MiniPriority from '../../svgs/SVG/MiniPriority';
+
 
 const PriorityIcons = ({priority}) => {
 
-    const priorityStyles = {
+    const renderIcon = () => {
+        switch (priority.toLowerCase()) {
+            case "high":
+                return <MiniPriority />
 
-        high: {
-            backgroundColor:'red',
-            color:'rgba(0,0,0,0',
-        },
-        medium: {
-            backgroundColor:"orange",
-            color:'rgba(0,0,0,0',
-        },
-        low: {
-            backgroundColor:"green",
-            color:'green',
-        },
+            case 'medium':
+                return <Filler />
+
+            case 'low':
+                return <Filler />
+
+                default:
+                    return null
+        }
     }
 
-    const style = priorityStyles[priority] || {
-        backgroundColor: 'black',
-        color: 'black'
-    }
+    
     return (
         <div className='card-mini__prioriry-container' >
-            <p className='card-mini__priority' style={style} >{priority}</p>
+            <p className='card-mini__priority'  >{renderIcon()}</p>
         </div>
     );
 };

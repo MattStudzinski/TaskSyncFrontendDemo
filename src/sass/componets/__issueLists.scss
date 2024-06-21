@@ -1,4 +1,7 @@
-.issue-list__container {
-    background-color: $color-app-secondary;
-    height: 100%;
+.issue-form {
+
+    &__title-container {
+        display: flex;
+        justify-content: space-evenly;
+    }
 }

@@ -45,11 +45,15 @@ const NewIssues = () => {
 
     
     return (
-        <>
-            {currentIssues.map((issue) => (
-                <IssueInfo key={issue._id} issue={issue} onClick={handleIssueClick} />
-            ))}
-
+        <div className='results-page'>
+            <section className='results-page__card'>
+                <ul className='issue-list__list'>
+                    {currentIssues.map((issue) => (
+                        <li className='issue-list__list-issue'>
+                        <IssueInfo key={issue._id} issue={issue} onClick={handleIssueClick} />
+                        </li>
+                    ))}
+                </ul>
             <Pagination 
             itemsPerPage={issuesPerPage}
             totalItems={filteredAndSortedIssues.length}
@@ -64,7 +68,8 @@ const NewIssues = () => {
                 onClose={handleCloseModal}
                 />
             )}
-        </>
+            </section>
+        </div>
     );
 };
 

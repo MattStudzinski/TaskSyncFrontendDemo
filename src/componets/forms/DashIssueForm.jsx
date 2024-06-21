@@ -74,27 +74,29 @@ const DashIssueForm = () => {
 
     return (
         <form className='issue-form' onSubmit={handleSubmit}>
-            
-            <label className='issue-form__label'>
-                Name:
-                <input 
-                type='text' 
-                name='name'
-                className={emptyFields.includes('name') ? 'error' : ''}/>
-            </label>
+            <div className='issue-form__title-container'>
+                <label className='issue-form__label'>
+                    Name:
+                    <input  
+                    type='text' 
+                    name='name'
+                    className={emptyFields.includes('name') ? 'error' : ''}/>
+                </label>
 
+            
+            
+                <label className='issue-form__label'>
+                    Description
+                    <input 
+                    type='text' 
+                    name='description'
+                    className={emptyFields.includes('description') ? 'error' : ''}
+                    />
+                </label>
+            </div>
             <label className='issue-form__label'>
                 Due-Date
                 <input className='issue-form__input' type='date' name='dueDate'/>
-            </label>
-            
-            <label className='issue-form__label'>
-                Description
-                <input 
-                type='text' 
-                name='description'
-                className={emptyFields.includes('description') ? 'error' : ''}
-                />
             </label>
             
             <div className='issue-form__assignment-container'>
@@ -121,29 +123,29 @@ const DashIssueForm = () => {
             </div>
             
             <div>
-                <label>Route</label>
+                <label className='issue-form__label' >Route</label>
                 <input 
                 type='checkbox'
                 name='route'
                 value="1"/>
-                <label htmlFor='1'>1</label>
+                <label className='issue-form__label' htmlFor='1'>1</label>
 
                 <input
                 type='checkbox'
                 name='route'
                 value="2"/>
-                <label htmlFor='2'>2</label>
+                <label className='issue-form__label' htmlFor='2'>2</label>
 
                 <input 
                 type='checkbox'
                 name='route'
                 value="3"/>
-                <label htmlFor='3'>3</label>
+                <label className='issue-form__label' htmlFor='3'>3</label>
             </div>
             
             {/* par room is going to need to be pulled from something, i do not
             want to hard code all that */}
-            <label>
+            <label className='issue-form__label'>
                 Par Room
                 <select name='room' multiple>
                 {/* will want to map through a list of par rooms */}
@@ -154,47 +156,48 @@ const DashIssueForm = () => {
             </label>
             
             <div>
-                <label>Priority Status</label>
+                <label className='issue-form__label'>Priority Status</label>
                 <input
                 type='checkbox'
                 name='priority'
                 value="high"/>
-                <label htmlFor='high'>High</label>
+                <label className='issue-form__label' htmlFor='high'>High</label>
 
                 <input
                 type='checkbox'
                 name='priority'
                 value="medium"/>
-                <label htmlFor='medium'>Medium</label>
+                <label className='issue-form__label' htmlFor='medium'>Medium</label>
 
                 <input
                 type='checkbox'
                 name='priority'
                 value="low"/>
-                <label htmlFor='low'>Low</label>
+                <label className='issue-form__label' htmlFor='low'>Low</label>
             </div>
             
             <div>
-                <label>Group assignment</label>
+                <label className='issue-form__label'>Group assignment</label>
                 <input
                 type='checkbox'
                 name='groupassignment'
                 value='drivers'/>
-                <label htmlFor='drivers'>Drivers</label>
+                <label className='issue-form__label' htmlFor='drivers'>Drivers</label>
 
                 <input
                 type='checkbox'
                 name='groupassignment'
                 value="warehouse"/>
-                <label htmlFor='warehouse'>Warehouse</label>
+                <label className='issue-form__label' htmlFor='warehouse'>Warehouse</label>
             </div>
             
             <div className='issueForm'>
-                <label htmlFor='category'>What category does this issue fall under</label>
+                <label className='issue-form__label' htmlFor='category'>What category does this issue fall under</label>
                 <select id="category" name="category">
                     <option value="stock">STOCK</option>
                     <option value="frx">FRX</option>
                     <option value="rx">RX</option>
+                    <option value="asc">ASC</option>
                     {/* need to make a file for pulling data */}
                 </select>
             </div>

@@ -1,3 +1,4 @@
+
 .side-nav{
     list-style: none;
     display: flex;
@@ -15,8 +16,8 @@
         text-decoration: none;
         text-transform: uppercase;
         height: 4.5rem;
-        fill: $color-app-accent1;
-        color: $color-app-accent1;
+        fill: $color-app-text-black;
+        color: $color-app-text-black;
         transition: padding 0.3s; 
         padding-left: 1rem;
         position: relative;
@@ -38,11 +39,11 @@
             border-radius: 50%;
             background: transparent;
             z-index: -1;
+            
         }
 
         &:hover:after{
             animation: circle 2s ease-in forwards;
-            
         }
 
         

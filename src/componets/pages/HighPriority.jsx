@@ -37,11 +37,16 @@ const HighPriority = () => {
     const paginate = (pageNumber) => setCurrentPage(pageNumber)
 
     return (
-        <>
-            {currentIssues.map((issue) => (
-                <IssueInfo key={issue._id} issue={issue} onClick={handleIssueClick}/>
-            ))}
-
+        <div className='results-page'>
+            <section className='results-page__card'>
+                <ul className='issue-list_list'>
+                    {currentIssues.map((issue) => (
+                        <li className='issue-list_list-item'>
+                            <IssueInfo key={issue._id} issue={issue} onClick={handleIssueClick}/>
+                        </li>
+                    ))}
+                    
+                </ul>
             <Pagination 
             itemsPerPage={issuesPerPage}
             totalItems={filteredAndSortedIssues.length}
@@ -56,7 +61,8 @@ const HighPriority = () => {
                 onClose={handleCloseModal}
                 />
             )}
-        </>
+            </section>
+        </div>
     );
 };
 
