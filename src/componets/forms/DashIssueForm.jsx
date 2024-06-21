@@ -2,6 +2,23 @@ import React from 'react';
 import { useState } from 'react';
 import { useIssuesContext } from '../../hooks/useIssuesContext';
 import { useAuthContext } from '../../hooks/useAuthContext';
+import Select from 'react-select'
+
+const parRoomOptions = [
+    { value: 'DRMP1', label: 'DRMP1' },
+    { value: 'PN-P1', label: 'PN-P1' },
+    { value: 'WICP1', label: 'WICP1' },
+    { value: 'STP1', label: 'STP1' },
+    { value: 'LSP2', label: 'LSP2' },
+    { value: 'KSCP3', label: 'KSCP3' },
+    { value: 'EM-P4', label: 'EM-P4' },
+    { value: 'ESTP1', label: 'ESTP1' },
+    { value: 'ARLP2', label: 'ARLP2' },
+    { value: 'CCP2', label: 'CCP2' },
+    { value: 'SH-P1', label: 'SH-P1' },
+    { value: 'HPP1', label: 'HPP1' },
+];
+
 
 const DashIssueForm = () => {
 
@@ -9,6 +26,11 @@ const DashIssueForm = () => {
     const {user} = useAuthContext()
     const[error, setError] = useState('')
     const [emptyFields, setEmptyFields] = useState([])
+    const [selectedParRooms, setSelectedParRooms] = useState([]);
+
+    const handleParRoomChange = selectedOptions => {
+        setSelectedParRooms(selectedOptions);
+    };
 
     const handleSubmit = async (event) => {
         event.preventDefault()
@@ -71,6 +93,7 @@ const DashIssueForm = () => {
         }
     };
     
+    
 
     return (
         <form className='issue-form' onSubmit={handleSubmit}>
@@ -80,116 +103,124 @@ const DashIssueForm = () => {
                     <input  
                     type='text' 
                     name='name'
-                    className={emptyFields.includes('name') ? 'error' : ''}/>
+                    className={`${emptyFields.includes('name') ? 'error' : ''} issue-form__name`}/>
                 </label>
-
-            
-            
                 <label className='issue-form__label'>
-                    Description
-                    <input 
-                    type='text' 
-                    name='description'
-                    className={emptyFields.includes('description') ? 'error' : ''}
-                    />
-                </label>
-            </div>
-            <label className='issue-form__label'>
                 Due-Date
                 <input className='issue-form__input' type='date' name='dueDate'/>
             </label>
             
+            
+                
+            </div>
+            
+            <label className='issue-form__label'>
+                    Description
+                    <textarea 
+                    name='description'
+                    className={`${emptyFields.includes('description') ? 'error' : ''} issue-form__textarea`}
+                    />
+                </label>
+            
             <div className='issue-form__assignment-container'>
                 
             <label className='issue-form__label'>Assignment</label>
+
+                <div className='issue-form__driver-container'>
+                <label className='issue-form__label-secondary' htmlFor='Mathew'>Mathew</label>
                 <input className='issue-form__input'
                 type='checkbox' 
                 name='drivers'
                 value="Mathew"/>
-                <label htmlFor='Mathew'>Mathew</label>
-            
-                <input 
+                
+                
+                
+                <label className='issue-form__label-secondary' htmlFor='Brock'>Brock</label>
+                <input className='issue-form__input'
                 type='checkbox' 
                 name='drivers'
                 value="Brock"/>
-                <label htmlFor='Brock'>Brock</label>
-            
-                <input 
+                
+                
+                
+                <label className='issue-form__label-secondary' htmlFor='Kate'>Kate</label>
+                <input className='issue-form__input'
                 type='checkbox'
                 name='drivers'
                 value="Kate"/>
-                <label htmlFor='Kate'>Kate</label>
+                </div>
+                
 
             </div>
             
-            <div>
+            {/* <div>
                 <label className='issue-form__label' >Route</label>
-                <input 
+                <input className='issue-form__input'
                 type='checkbox'
                 name='route'
                 value="1"/>
                 <label className='issue-form__label' htmlFor='1'>1</label>
 
-                <input
+                <input className='issue-form__input'
                 type='checkbox'
                 name='route'
                 value="2"/>
                 <label className='issue-form__label' htmlFor='2'>2</label>
 
-                <input 
+                <input className='issue-form__input'
                 type='checkbox'
                 name='route'
                 value="3"/>
                 <label className='issue-form__label' htmlFor='3'>3</label>
-            </div>
+            </div> */}
             
-            {/* par room is going to need to be pulled from something, i do not
-            want to hard code all that */}
             <label className='issue-form__label'>
-                Par Room
-                <select name='room' multiple>
-                {/* will want to map through a list of par rooms */}
-                <option value="DRMP1" >DRMP1</option>
-                <option value="PN-P1" >PN-P1</option>
-                <option value="WICP1" >WICP1</option>
-                </select>
-            </label>
+                    Par Room:
+                    <Select
+                        name='room'
+                        options={parRoomOptions}
+                        value={selectedParRooms}
+                        onChange={handleParRoomChange}
+                        isMulti
+                        className='issue-form__select'
+                    />
+                </label>
             
             <div>
                 <label className='issue-form__label'>Priority Status</label>
-                <input
+                <input className='issue-form__input'
                 type='checkbox'
                 name='priority'
                 value="high"/>
                 <label className='issue-form__label' htmlFor='high'>High</label>
 
-                <input
+                <input className='issue-form__input'
                 type='checkbox'
                 name='priority'
                 value="medium"/>
                 <label className='issue-form__label' htmlFor='medium'>Medium</label>
 
-                <input
+                <input className='issue-form__input'
                 type='checkbox'
                 name='priority'
                 value="low"/>
                 <label className='issue-form__label' htmlFor='low'>Low</label>
             </div>
             
-            <div>
+            {/* <div>
                 <label className='issue-form__label'>Group assignment</label>
-                <input
+                <input className='issue-form__input'
                 type='checkbox'
                 name='groupassignment'
                 value='drivers'/>
                 <label className='issue-form__label' htmlFor='drivers'>Drivers</label>
 
-                <input
+                <input className='issue-form__input'
                 type='checkbox'
                 name='groupassignment'
                 value="warehouse"/>
                 <label className='issue-form__label' htmlFor='warehouse'>Warehouse</label>
-            </div>
+            </div> */}
             
             <div className='issueForm'>
                 <label className='issue-form__label' htmlFor='category'>What category does this issue fall under</label>

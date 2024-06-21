@@ -178,7 +178,7 @@ html {
   width: 5rem;
   display: flex;
   justify-content: center;
-  fill: #e7195a;
+  fill: rgb(255, 229, 81);
 }
 
 .search {
@@ -548,6 +548,23 @@ html {
 .issue-form__title-container {
   display: flex;
   justify-content: space-evenly;
+}
+.issue-form__label {
+  color: red;
+  display: flex;
+  flex-direction: column;
+}
+.issue-form__textarea {
+  width: 80%;
+  height: 6rem;
+  resize: none;
+}
+.issue-form__assignment-container {
+  display: flex;
+  flex-direction: column;
+}
+.issue-form__driver-container {
+  display: flex;
 }
 
 .container {

@@ -6,13 +6,13 @@ import MiniPriority from '../../svgs/SVG/MiniPriority';
 const PriorityIcons = ({priority}) => {
 
     const renderIcon = () => {
+        if (!priority) return null
         switch (priority.toLowerCase()) {
+            
             case "high":
                 return <MiniPriority />
 
             case 'medium':
-                return <Filler />
-
             case 'low':
                 return <Filler />
 
