@@ -16,7 +16,7 @@ const ModalControlAdmin = () => {
 
     return (
         <div>
-            <button onClick={handleOpenModal}>Add New Issue</button>
+            <button className='new-task__button' onClick={handleOpenModal}>Add New Issue</button>
             <Modal open={isModalOpen} onClose={handleCloseModal}>
                 <IssueForm />
             </Modal>

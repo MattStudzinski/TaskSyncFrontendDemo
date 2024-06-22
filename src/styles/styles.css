@@ -65,29 +65,29 @@ html {
 .analytics__link {
   width: 30%;
   text-decoration: none;
-  box-shadow: var(--shadow-dark);
   border-radius: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-position 0.3s ease;
+}
+.analytics__link:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+  background-position: right center;
+}
+.analytics__open-issues, .analytics__new-issues, .analytics__priority-issues {
+  padding: 1rem;
+  height: 13rem;
+  border-radius: 1rem;
+  background-size: 200% 200%;
+  transition: background-position 0.3s ease;
 }
 .analytics__open-issues {
-  padding: 1rem;
-  height: 13rem;
-  background: rgb(105, 126, 120);
   background: linear-gradient(273deg, rgb(105, 126, 120) 0%, rgb(44, 62, 56) 100%);
-  border-radius: 1rem;
 }
 .analytics__new-issues {
-  padding: 1rem;
-  height: 13rem;
-  background: rgb(122, 101, 103);
   background: linear-gradient(273deg, rgb(122, 101, 103) 0%, rgb(101, 76, 79) 100%);
-  border-radius: 10px;
 }
 .analytics__priority-issues {
-  padding: 1rem;
-  height: 13rem;
-  background: rgb(31, 49, 82);
   background: linear-gradient(273deg, rgb(31, 49, 82) 0%, rgb(14, 28, 54) 100%);
-  border-radius: 10px;
 }
 .analytics__header-container {
   display: flex;
@@ -133,6 +133,11 @@ html {
   box-shadow: var(--shadow-dark);
   display: flex;
   align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-mini__container:hover {
+  transform: scale(1.01);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
 }
 .card-mini__category-container {
   display: flex;
@@ -400,6 +405,46 @@ html {
 .dash-nav__filters-selector {
   cursor: pointer;
   margin-left: 1.5rem;
+}
+
+.new-task__button {
+  padding: 15px 30px;
+  border: 2px solid transparent;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 8px;
+  background: #0fa679;
+  font-size: 1.5rem;
+  transition: color 0.4s, background-color 0.4s, border-color 0.4s;
+}
+
+.new-task__button::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: linear-gradient(45deg, #0fa679, rgb(57, 77, 71), rgb(14, 28, 54), #66635b);
+  z-index: -1;
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 0.6s, transform 0.6s;
+  transform: scale(0.8);
+}
+
+.new-task__button:hover {
+  color: #ffffff;
+  background-color: #fff;
+  border-color: #0fa679;
+}
+
+.new-task__button:hover::before {
+  opacity: 1;
+  transform: scale(1);
 }
 
 .form {

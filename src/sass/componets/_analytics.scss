@@ -4,44 +4,46 @@
     justify-content: space-between;
     max-width: 100%;
 
-    &__link{
+    &__link {
         width: 30%;
         text-decoration: none;
-        box-shadow: var(--shadow-dark);
         border-radius: 1rem;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, background-position 0.3s ease;
+    }
+
+    &__link:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, .35);
+        background-position: right center;
+    }
+
+    &__open-issues,
+    &__new-issues,
+    &__priority-issues {
+        padding: 1rem;
+        height: 13rem;
+        border-radius: 1rem;
+        background-size: 200% 200%;
+        transition: background-position 0.3s ease;
     }
 
     &__open-issues {
-        padding: 1rem;
-        height: 13rem;
-        background: rgb(105,126,120);
-background: linear-gradient(273deg, rgba(105,126,120,1) 0%, rgba(44,62,56,1) 100%);
-        border-radius: 1rem;
+        background: linear-gradient(273deg, rgba(105,126,120,1) 0%, rgba(44,62,56,1) 100%);
     }
 
-    &__new-issues{
-        padding: 1rem;
-        height: 13rem;
-        background: rgb(122,101,103);
-background: linear-gradient(273deg, rgba(122,101,103,1) 0%, rgba(101,76,79,1) 100%);
-        border-radius: 10px;
+    &__new-issues {
+        background: linear-gradient(273deg, rgba(122,101,103,1) 0%, rgba(101,76,79,1) 100%);
     }
 
-    &__priority-issues{
-        padding: 1rem;
-        height: 13rem;
-        background: rgb(31,49,82);
+    &__priority-issues {
         background: linear-gradient(273deg, rgba(31,49,82,1) 0%, rgba(14,28,54,1) 100%);
-        border-radius: 10px;
     }
 
-    &__header-container{
+    &__header-container {
         display: flex;
         align-items: center;
-        padding: .5rem .5rem 0 .5rem;
+        padding: 0.5rem 0.5rem 0 0.5rem;
         height: 5.3rem;
-        
-        
     }
 
     &__header-logo {
@@ -49,11 +51,9 @@ background: linear-gradient(273deg, rgba(122,101,103,1) 0%, rgba(101,76,79,1) 10
         justify-content: center;
         background-color: rgba(255, 255, 255, 0.367);
         border-radius: 1rem;
-        
-
     }
 
-    &__header-title{
+    &__header-title {
         margin-left: 1rem;
         color: white;
     }
@@ -61,17 +61,16 @@ background: linear-gradient(273deg, rgba(122,101,103,1) 0%, rgba(101,76,79,1) 10
     &__info-box {
         display: flex;
         align-items: center;
-        padding-left: .5rem;
+        padding-left: 0.5rem;
         margin-top: 1rem;
     }
 
     &__info {
         color: white;
         font-size: 3rem;
-        
     }
 
-    &__info-string{
+    &__info-string {
         color: white;
         font-size: 1.1rem;
         margin-left: 1rem;

@@ -17,31 +17,33 @@ const Dashboard = () => {
             <div className='dash-view__analytics-container'>
             <Analytics />
             <div className='dash-nav'>
-                <div className='dash-nav__header'>
-                    <h2 className='dash-nav__title'>
-                        My Tasks
-                    </h2>
-                    <div className='dash-nav__addbutton'>
-                        <ModalControllerDash />
-                    </div>
-                </div>
-                <nav className='dash-nav__filters'>
-                    <div className='dash-nav__filters-selector'onClick={() => setFilter('date')}>
-                        New Assigned
-                    </div>
-                    <div className='dash-nav__filters-selector' onClick={() => setFilter('priority')}>
-                        Priority
-                    </div>
-                    <div className='dash-nav__filters-selector' onClick={() => setFilter('completed')}>
-                        completed
-                    </div>
-                </nav>
+    <div className='dash-nav__header'>
+        <h2 className='dash-nav__title'>
+            My Tasks
+        </h2>
+        <div className='dash-nav__addbutton'>
+            <ModalControllerDash />
+        </div>
+    </div>
+    <nav className='dash-nav__filters'>
+        <div className='dash-nav__filters-selector' onClick={() => setFilter('date')}>
+            New Assigned
+        </div>
+        <div className='dash-nav__filters-selector' onClick={() => setFilter('priority')}>
+            Priority
+        </div>
+        <div className='dash-nav__filters-selector' onClick={() => setFilter('completed')}>
+            Completed
+        </div>
+    </nav>
+
+
                 <DashIssues />
             </div>
             </div>
             <div className='dash-view__calendar-container'>
             <Calendar />
-            <div className='somethingelse'>something else here</div>
+            <div className='somethingelse'>daily tasks or an area for issues that are almost due or late!</div>
             </div>
             </main>
             

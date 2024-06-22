@@ -4,7 +4,7 @@ const MiniPriority = () => {
     return (
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
             <defs>
-                <linearGradient id="grad1" gradientTransform="rotate(0)">
+                <linearGradient id="grad1" gradientTransform="rotate(100)">
                     <stop offset="19%" style={{ stopColor: "rgba(255,0,0,1)", stopOpacity: 1 }} />
                     <stop offset="85%" style={{ stopColor: "rgba(255,134,0,1)", stopOpacity: 1 }} />
                 </linearGradient>
@@ -15,3 +15,5 @@ const MiniPriority = () => {
 };
 
 export default MiniPriority;
+
+
