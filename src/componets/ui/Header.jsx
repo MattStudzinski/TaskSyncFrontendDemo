@@ -20,7 +20,7 @@ const Header = () => {
     return (
         <header className='header'>
         <Link to="/" className='user-nav__logo-box'>
-            <img className='logo' src={logo2} alt='Logo' />
+            <img className='logo' src='' alt='Logo' />
         </Link>
 
         <form action="#" className='search'>

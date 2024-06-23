@@ -65,6 +65,66 @@
         justify-content: space-between;
         
     }
+
+    &__completion-input {
+        appearance: none;
+        width: 24px;
+        height: 24px;
+        position: relative;
+        cursor: pointer;
+        outline: none;
+        border: none;
+        background-color: transparent;
+        transition: transform 0.2s ease-in-out;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 24px;
+            height: 24px;
+            border-radius: 4px;
+            background-color: rgba(0, 0, 0, 0.1);
+            transition: background-color 0.2s ease-in-out;
+        }
+    
+        &:checked::before {
+            background: $color-app-accent4; // Replace with your accent color
+        }
+    
+        &:checked::after {
+            content: '\2713'; // Unicode checkmark character
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 16px;
+            color: white;
+            transition: opacity 0.2s ease-in-out;
+        }
+    
+        &:hover::before {
+            background: $color-app-accent7;
+            
+        }
+    
+        &:checked:hover::before {
+            background: $color-app-accent7; // Replace with a lighter/darker shade of your accent color
+        }
+    
+        &:checked:hover::after {
+            opacity: 1;
+            
+        }
+    
+        &:checked {
+            transform: scale(1.1); // Example of scaling effect on checkbox
+        }
+    }
+    
+    
+    
     &__prioriry-container{
         
         
@@ -79,7 +139,4 @@
        
     }
     
-
-  }
-
-  
+}

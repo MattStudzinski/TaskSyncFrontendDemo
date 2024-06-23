@@ -73,7 +73,7 @@ const IssueInfo = ({issue, onClick}) => {
                         <li className='card-mini__drivers' key={index}>
                             
                             {driver.name === user.name && (
-                                <input
+                                <input className='card-mini__completion-input'
                                     type='checkbox'
                                     checked={driverStatus.isComplete}
                                     onClick={(e) => e.stopPropagation()}
