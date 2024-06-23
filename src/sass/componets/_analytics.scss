@@ -8,13 +8,14 @@
         width: 30%;
         text-decoration: none;
         border-radius: 1rem;
-        transition: transform 0.3s ease, box-shadow 0.3s ease, background-position 0.3s ease;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        position: relative;
+        overflow: hidden;
     }
 
     &__link:hover {
         transform: scale(1.05);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, .35);
-        background-position: right center;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
     }
 
     &__open-issues,
@@ -24,7 +25,8 @@
         height: 13rem;
         border-radius: 1rem;
         background-size: 200% 200%;
-        transition: background-position 0.3s ease;
+        position: relative;
+        z-index: 1;
     }
 
     &__open-issues {
@@ -37,6 +39,24 @@
 
     &__priority-issues {
         background: linear-gradient(273deg, rgba(31,49,82,1) 0%, rgba(14,28,54,1) 100%);
+    }
+
+    &__link::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50%;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), transparent);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: 2;
+        pointer-events: none;
+    }
+
+    &__link:hover::after {
+        opacity: 1;
     }
 
     &__header-container {
