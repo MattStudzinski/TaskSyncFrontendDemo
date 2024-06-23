@@ -89,3 +89,48 @@ padding: 2rem;
     
     }
   }
+
+  
+    // Pagination.scss
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  
+  
+  
+
+  .page-item {
+    margin: .2rem;
+    transition: background-color 0.3s ease;
+
+    button {
+      color: $color-app-secondaryfont;
+      border: none;
+      margin-bottom: 1rem;
+      padding: .5rem .8rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      border-radius: 100px;
+
+      &:hover {
+        background: $color-app-accent2;
+        color: $color-app-text-black;
+
+      }
+    }
+
+    &.active button {
+      background: $color-app-light-green;
+      color: $color-app-text-black;
+
+      &:hover {
+        
+      
+      }
+    }
+  }
+}
+

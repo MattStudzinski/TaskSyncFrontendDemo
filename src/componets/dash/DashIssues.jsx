@@ -82,7 +82,7 @@ const DashIssues = () => {
         
             ))}
         </ul>
-        <Pagination
+        <Pagination className= "pagination"
         itemsPerPage={issuesPerPage}
         totalItems={filteredAndSortedIssues.length}
         paginate={paginate}

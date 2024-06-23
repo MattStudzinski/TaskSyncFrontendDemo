@@ -42,7 +42,7 @@
 
 
     &__title{
-        color: $color-app-secondaryfont;
+        color: $color-app-text-black;
     }
     &addbutton{
 
@@ -55,7 +55,7 @@
         align-items: center;
         justify-content: flex-start;
         margin: 1rem;
-        color: $color-app-secondaryfont;
+        color: $color-app-text-black;
     }
 
     &__filters-selector {
