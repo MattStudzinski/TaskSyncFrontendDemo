@@ -98,6 +98,28 @@ html {
   }
 }
 
+@keyframes fireAnimation {
+  0% {
+    stop-color: rgb(255, 0, 0); /* Red */
+  }
+  50% {
+    stop-color: rgb(255, 134, 0); /* Orange */
+  }
+  100% {
+    stop-color: rgb(255, 0, 0); /* Red */
+  }
+}
+.fire-animation .stop1 {
+  animation: fireAnimation 2s infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.fire-animation .stop2 {
+  animation: fireAnimation 2s infinite;
+  animation-timing-function: ease-in-out;
+  animation-delay: 1s; /* Delay to create staggered effect */
+}
+
 .analytics {
   margin-bottom: 2rem;
   display: flex;
@@ -300,7 +322,6 @@ html {
   width: 5rem;
   display: flex;
   justify-content: center;
-  fill: rgb(255, 229, 81);
 }
 
 .search {
