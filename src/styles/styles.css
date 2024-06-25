@@ -210,7 +210,7 @@ html {
 }
 .card-mini__title-container {
   margin-left: 0.5rem;
-  width: 50%;
+  width: 45%;
 }
 .card-mini__name {
   font-size: 1.3rem;
@@ -225,7 +225,7 @@ html {
   margin-left: 1rem;
 }
 .card-mini__driver-list {
-  width: 10%;
+  width: 5%;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -235,6 +235,7 @@ html {
 .card-mini__drivers {
   display: flex;
   justify-content: space-between;
+  width: 3rem;
 }
 .card-mini__completion-input {
   appearance: none;
@@ -272,10 +273,10 @@ html {
   transition: opacity 0.2s ease-in-out;
 }
 .card-mini__completion-input:hover::before {
-  background: linear-gradient(135deg, rgb(71, 106, 111), rgba(118, 151, 161, 0.8), rgb(71, 106, 111));
+  background: linear-gradient(135deg, rgb(7, 30, 34), rgba(43, 79, 86, 0.8), rgb(7, 30, 34));
 }
 .card-mini__completion-input:checked:hover::before {
-  background: linear-gradient(135deg, rgb(71, 106, 111), rgba(118, 151, 161, 0.8), rgb(71, 106, 111));
+  background: linear-gradient(135deg, #90b8c7, #78a3b8, #90b8c7, #d8e4eb);
 }
 .card-mini__completion-input:checked:hover::after {
   opacity: 1;
@@ -283,8 +284,17 @@ html {
 .card-mini__completion-input:checked {
   transform: scale(1.1);
 }
+.card-mini__parroom-list {
+  list-style: none;
+  width: 10%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
 .card-mini__prioriry-container {
-  width: 8%;
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
 }
 .card-mini__priority {
   width: 5rem;
@@ -579,6 +589,13 @@ html {
   transform: scale(1);
 }
 
+.issues-container {
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .form {
   left: 50%;
   top: 35%;
@@ -785,7 +802,7 @@ header {
   display: flex;
   border-bottom-right-radius: 1rem;
   border-bottom-left-radius: 1rem;
-  min-height: 73rem;
+  min-height: 74rem;
   width: 100%;
 }
 

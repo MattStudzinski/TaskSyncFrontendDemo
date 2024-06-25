@@ -74,7 +74,7 @@ const DashIssues = () => {
     }
 
     return (
-        <>
+        <section className="issues-container">
         <ul>
             {currentIssues.map((issue) => (
             
@@ -95,7 +95,7 @@ const DashIssues = () => {
             onClose={handleCloseModal}
         />
         )}
-        </>
+        </section>
     );
 };
 

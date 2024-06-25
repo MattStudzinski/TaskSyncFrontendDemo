@@ -33,7 +33,7 @@
 
     &__title-container {
         margin-left: .5rem;
-        width: 50%;
+        width: 45%;
     }
 
     &__name {
@@ -52,7 +52,7 @@
     }
 
     &__driver-list {
-        width: 10%;
+        width: 5%;
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -63,7 +63,7 @@
     &__drivers {
         display: flex;
         justify-content: space-between;
-        
+        width: 3rem;
     }
 
     &__completion-input {
@@ -105,12 +105,12 @@
         }
     
         &:hover::before {
-            background: $color-app-accent7;
+            background: $color-app-accent5;
             
         }
     
         &:checked:hover::before {
-            background: $color-app-accent7; // Replace with a lighter/darker shade of your accent color
+            background: $color-app-accent1; // Replace with a lighter/darker shade of your accent color
         }
     
         &:checked:hover::after {
@@ -123,12 +123,19 @@
         }
     }
     
-    
+    &__parroom-list{
+        list-style: none;
+        width: 10%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
     
     &__prioriry-container{
+        display: flex;
+        justify-content: flex-end;
         
-        
-        width: 8%;
+        flex: 1;
     }
     &__priority {
        width: 5rem;

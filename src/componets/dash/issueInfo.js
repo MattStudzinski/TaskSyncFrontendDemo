@@ -84,7 +84,7 @@ const IssueInfo = ({issue, onClick}) => {
                     );
                 })}
             </ul>
-            <ul>
+            <ul className='card-mini__parroom-list'>
             {room.map((room, index) => {
                 return (
                     <li key={index}>
