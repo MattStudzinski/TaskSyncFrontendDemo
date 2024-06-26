@@ -87,3 +87,15 @@
     animation-timing-function: ease-in-out;
     animation-delay: 1s; /* Delay to create staggered effect */
 }
+
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

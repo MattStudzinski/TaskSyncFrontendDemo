@@ -11,7 +11,7 @@ const OpenIssues = () => {
     const { issues } = useIssuesContext()
     const [selectedIssue, setSelectedIssue] = useState(null)
     const [currentPage, setCurrentPage] = useState(1)
-    const issuesPerPage = 5
+    const issuesPerPage = 7
 
     const filteredIssues = (issues) => {
         return issues.filter(issue => !issue.complete)
@@ -33,11 +33,13 @@ const currentIssues = filteredAndSortedIssues.slice(indexOfFirstIssue, indexOfLa
 const paginate = (pageNumber) => setCurrentPage(pageNumber)
 
     return (
-        <>
+        <div className='results-page'>
+            <section className='results-page__card'>
+                <ul className='results-page__ul' >
             {currentIssues.map((issue) => (
                 <IssueInfo key={issue._id} issue= {issue} onClick={handleIssueClick}/>
             ))}
-
+            </ul>
             <Pagination 
             itemsPerPage={issuesPerPage}
             totalItems={filteredAndSortedIssues.length}
@@ -52,7 +54,8 @@ const paginate = (pageNumber) => setCurrentPage(pageNumber)
                 onClose={handleCloseModal}
                 />
             )}
-        </>
+        </section>
+        </div>
     );
 };
 

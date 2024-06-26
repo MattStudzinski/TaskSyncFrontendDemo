@@ -10,7 +10,7 @@ const NewIssues = () => {
     const {issues} = useIssuesContext()
     const [selectedIssue, setSelectedIssue] = useState(null)
     const [currentPage, setCurrentPage] = useState(1)
-    const issuesPerPage = 5
+    const issuesPerPage = 7
 
     const filterIssues = (issues) => {
         const now = new Date()
@@ -47,11 +47,10 @@ const NewIssues = () => {
     return (
         <div className='results-page'>
             <section className='results-page__card'>
-                <ul className='issue-list__list'>
+                <ul className='results-page__ul'>
                     {currentIssues.map((issue) => (
-                        <li className='issue-list__list-issue'>
+                        
                         <IssueInfo key={issue._id} issue={issue} onClick={handleIssueClick} />
-                        </li>
                     ))}
                 </ul>
             <Pagination 
