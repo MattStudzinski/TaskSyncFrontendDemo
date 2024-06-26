@@ -207,7 +207,7 @@ html {
   width: 80%;
 }
 .card-mini__container {
-  margin: 1.6rem 1rem;
+  margin: 0 1rem 1rem 1rem;
   height: 8.3rem;
   padding: 5px;
   border-radius: 15px;
@@ -787,8 +787,10 @@ html {
   margin: 5rem auto;
   background-color: #e9e9e9;
   box-shadow: var(--shadow-dark);
-  min-height: 60rem;
+  min-height: 81rem;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 header {
@@ -838,19 +840,21 @@ header {
 
 .main-content-container {
   display: flex;
-  height: 100%;
+  flex-grow: 1;
 }
 
 .main-content {
   flex: 1;
+  min-height: 100%;
 }
 
 .results-page {
   background-color: #dadada;
   padding: 2rem;
   display: flex;
+  height: 100%;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   border-bottom-right-radius: 10px;
 }
@@ -858,6 +862,13 @@ header {
   background-color: #e9e9e9;
   border-radius: 10px;
   width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+.results-page__ul {
+  padding-top: 1rem;
 }
 
 .pagination {
@@ -873,7 +884,7 @@ header {
 .pagination .page-item button {
   color: #7a7a7a;
   border: none;
-  margin-bottom: 1rem;
+  margin-bottom: 0.7rem;
   padding: 0.5rem 0.8rem;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;

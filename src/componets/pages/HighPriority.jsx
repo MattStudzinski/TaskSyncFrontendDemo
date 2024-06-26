@@ -10,7 +10,7 @@ const HighPriority = () => {
     const {issues} = useIssuesContext()
     const [selectedIssue, setSelectedIssue] = useState(null)
     const [currentPage, setCurrentPage] = useState(1)
-    const issuesPerPage = 5
+    const issuesPerPage = 7
 
     const filterIssues = (issues) => {
         let filteredIssues = issues.filter(issue => !issue.complete)
@@ -39,11 +39,10 @@ const HighPriority = () => {
     return (
         <div className='results-page'>
             <section className='results-page__card'>
-                <ul className='issue-list_list'>
+                <ul className='results-page__ul' >
                     {currentIssues.map((issue) => (
-                        <li className='issue-list_list-item'>
+                        
                             <IssueInfo key={issue._id} issue={issue} onClick={handleIssueClick}/>
-                        </li>
                     ))}
                     
                 </ul>

@@ -2,7 +2,7 @@
     width: 80%;
 
     &__container{
-        margin: 1.6rem 1rem ;
+        margin: 0 1rem 1rem 1rem ;
         height: 8.3rem;
         padding: 5px;
         border-radius: 15px;
@@ -43,6 +43,7 @@
 
     &__description {
         color: $color-app-secondaryfont;
+        
     }
 
     &__date {

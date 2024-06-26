@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useLogout } from '../../hooks/useLogout';
 
-import logo from "../../svgs/logo.png";
-import logo2 from '../../svgs/logo2.png'
+import Logo from '../../svgs/SVG/Logo';
+
 import HeaderIcon from '../../svgs/HeaderIcon'
 
 const Header = () => {
@@ -20,7 +20,7 @@ const Header = () => {
     return (
         <header className='header'>
         <Link to="/" className='user-nav__logo-box'>
-            <img className='logo' src='' alt='Logo' />
+            <Logo />
         </Link>
 
         <form action="#" className='search'>
