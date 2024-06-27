@@ -85,7 +85,7 @@
 .fire-animation .stop2 {
     animation: fireAnimation 2s infinite;
     animation-timing-function: ease-in-out;
-    animation-delay: 1s; /* Delay to create staggered effect */
+    animation-delay: .5s; /* Delay to create staggered effect */
 }
 
 
