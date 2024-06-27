@@ -1,7 +1,7 @@
 import React from 'react';
 import { useIssuesContext } from '../../hooks/useIssuesContext';
 import IssueInfo from '../dash/issueInfo';
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Pagination from '../ui/Pagination';
 import ModalControlInfo from '../modals/ModalControlInfo';
 
@@ -11,6 +11,15 @@ const NewIssues = () => {
     const [selectedIssue, setSelectedIssue] = useState(null)
     const [currentPage, setCurrentPage] = useState(1)
     const issuesPerPage = 7
+
+    const listRef = useRef(null)
+
+    useEffect(() => {
+        const listItems = listRef.current.children;
+        Array.from(listItems).forEach((item, index) => {
+            item.style.setProperty('--index', index);
+        });
+    }, [issues]);
 
     const filterIssues = (issues) => {
         const now = new Date()
@@ -47,10 +56,11 @@ const NewIssues = () => {
     return (
         <div className='results-page'>
             <section className='results-page__card'>
-                <ul className='results-page__ul'>
+                <ul ref={listRef} className='results-page__ul'>
                     {currentIssues.map((issue) => (
-                        
-                        <IssueInfo key={issue._id} issue={issue} onClick={handleIssueClick} />
+                        <li key={issue.id} className='results-page__li'>
+                            <IssueInfo key={issue._id} issue={issue} onClick={handleIssueClick} />
+                        </li>
                     ))}
                 </ul>
             <Pagination 

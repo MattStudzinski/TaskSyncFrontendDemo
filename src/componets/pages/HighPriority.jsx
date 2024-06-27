@@ -1,6 +1,6 @@
 import React from 'react';
 import { useIssuesContext } from '../../hooks/useIssuesContext';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import IssueInfo from '../dash/issueInfo';
 import ModalControlInfo from '../modals/ModalControlInfo';
 import Pagination from '../ui/Pagination';
@@ -13,9 +13,14 @@ const HighPriority = () => {
     const [animate, setAnimate] = useState(false)
     const issuesPerPage = 7
 
+    const listRef = useRef(null)
+
     useEffect(() => {
-        setAnimate(true)
-    }, [])
+        const listItems = listRef.current.children
+        Array.from(listItems).forEach((item, index) => {
+        item.style.setProperty('--index', index)
+        })
+    }, [issues])
 
     const filterIssues = (issues) => {
         let filteredIssues = issues.filter(issue => !issue.complete)
@@ -44,9 +49,9 @@ const HighPriority = () => {
     return (
         <div className='results-page'>
             <section className='results-page__card'>
-                <ul className='results-page__ul' >
+                <ul ref={listRef} className='results-page__ul' >
                     {currentIssues.map((issue) => (
-                        <li key={issue._id} className={`results-page__li ${animate ? 'fade-in' : ''}`}>
+                        <li key={issue._id} className='results-page__li'>
                         <IssueInfo issue={issue} onClick={handleIssueClick}/>
                     </li>
                     ))}
