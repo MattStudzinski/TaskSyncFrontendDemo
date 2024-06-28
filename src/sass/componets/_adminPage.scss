@@ -1,4 +1,107 @@
 
 
+    .admin-page{ 
+        background-color: $color-app-secondary;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: 2rem;
+
+        &__navigation{
+            display: flex;
+            justify-content: space-between;
+            padding: 1.2rem;
+            border-radius: .8rem;
+            background-color: $color-app-primary;
+            align-items: center;
+        }
+
+        &__category-selectors {
+            display: flex;
+            width: 80%;
+            justify-content: space-evenly;
+        }
+    }
+    
+    .card-mini{
+
+&__title-container {
+    width: 40%;
+}
+
+&__drivers-admin-ul {
+    width: 20%;
+}
+
+&__drivers-admin-li {
+    list-style: none;
+    
+}
+    }
+
+.results-page-admin{
+
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background: $color-app-primary;
+    margin-top: 1rem;
+    border-radius: 1rem;
     
 
+    &__card-admin{
+        
+        
+        
+    }
+
+    
+}
+
+.filter-container {
+    display: flex;
+    
+    gap: 4rem;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.filter {
+    display: flex;
+    flex-direction: column;
+
+
+&__label {
+    font-weight: bold;
+    color: $color-app-text-black;
+    margin-bottom: 0.5rem;
+}
+
+.filter__select {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    padding-right: 2rem; // Add extra padding to the right
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+    appearance: none;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>');
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 1rem;
+
+  &:hover {
+    border-color: #007bff;
+    outline: none;
+  }
+}
+
+&__option {
+    padding: 0.5rem;
+}
+}

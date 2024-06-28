@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useIssuesContext } from "../../hooks/useIssuesContext";
 import { useAuthContext } from "../../hooks/useAuthContext";
 import AdminPageIssues from "./AdminPageIssues";
@@ -17,7 +17,9 @@ const AdminDash = () => {
     const { userOptions, priorityOptions, categoryOptions } = useOptions(issues)
     const filteredIssues = useFilteredIssues(issues, selectedUser, selectedPriority, selectedCategory)
     const [currentPage, setCurrentPage] = useState(1)
-    const issuesPerPage = 5
+    const issuesPerPage = 6
+
+    const listRef= useRef(null)
     
 
     useEffect(() => {
@@ -50,47 +52,56 @@ const AdminDash = () => {
     const paginate = (pageNumber) => setCurrentPage(pageNumber)
 
     return (
-       <div className="results-page">
+       
 
-            
+            <section className="admin-page">
+                <div className="admin-page__navigation">
+            <div className="filter-container">
 
-            <div className="results-page__card">
-            <div className="admin-page__category-selectors">
-                <div>
-                    <label>User: </label>
-                    <select value={selectedUser} onChange={handleUserChange}>
-                        <option value="">All Users</option>
+                <div className="filter">
+                    <label className="filter__label">User: </label>
+                    <select className="filter__select" value={selectedUser} onChange={handleUserChange}>
+                        <option className="filter__option" value="">All Users</option>
                         {userOptions.map((option, index) => (
                             <option key={index} value={option.value}>{option.label}</option>
                         ))}
                     </select>
                 </div>
 
-                <div>
-                    <label>Category: </label>
-                    <select value={selectedCategory} onChange={handleCategoryChange}>
-                        <option value="">All Categories</option>
+                <div className="filter">
+                    <label className="filter__label">Category: </label>
+                    <select className="filter__select" value={selectedCategory} onChange={handleCategoryChange}>
+                        <option className="filter__option" value="">All Categories</option>
                         {categoryOptions.map((option, index) => (
                             <option key={index} value={option.value}>{option.label}</option>
                         ))}
                     </select>
                 </div>
 
-                <div>
-                    <label>Priority: </label>
-                    <select value={selectedPriority} onChange={handlePriorityChange}>
-                        <option value="">All Priorities</option>
+                <div className="filter">
+                    <label className="filter__label">Priority: </label>
+                    <select className="filter__select" value={selectedPriority} onChange={handlePriorityChange}>
+                        <option className="filter__option" value="">All Priorities</option>
                         {priorityOptions.map((option, index) => (
                             <option key={index} value={option.value}>{option.label}</option>
                         ))}
                     </select>
                 </div>
+                
             </div>
                 <ModalControlAdmin />
-                {currentIssues.map((issue) => (
-                    <AdminPageIssues key={issue._id} issue={issue} />
-                ))}
             </div>
+            <div className="results-page-admin">
+                
+                <section className="results-page-admin__card-admin">
+                <ul ref={listRef} className='results-page__ul'>
+                    {currentIssues.map((issue) => (
+                        <li key={issue._id} className='results-page__li'>
+                            <AdminPageIssues key={issue._id} issue={issue} />
+                        </li>
+                ))}
+                </ul>
+            </section>
 
             <Pagination
             itemsPerPage={issuesPerPage}
@@ -99,6 +110,7 @@ const AdminDash = () => {
             currentPage={currentPage}
             />
         </div>
+        </section>
     );
 };
 

@@ -80,12 +80,14 @@
 .fire-animation .stop1 {
     animation: fireAnimation 2s infinite;
     animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
 }
 
 .fire-animation .stop2 {
     animation: fireAnimation 2s infinite;
     animation-timing-function: ease-in-out;
-    animation-delay: .5s; /* Delay to create staggered effect */
+    animation-delay: 1s; /* Delay to create staggered effect */
+    animation-fill-mode: forwards;
 }
 
 

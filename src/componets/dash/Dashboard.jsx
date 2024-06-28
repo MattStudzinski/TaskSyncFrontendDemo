@@ -5,6 +5,7 @@ import Analytics from './Analytics';
 import Calendar from './Calendar';
 import { IssueFilterContext } from '../context/FilterContext';
 import ModalControllerDash from '../modals/ModalControllerDash';
+import DueSoon from './DueSoon';
 
 
 const Dashboard = () => {
@@ -43,7 +44,7 @@ const Dashboard = () => {
             </div>
             <div className='dash-view__calendar-container'>
             <Calendar />
-            <div className='somethingelse'>daily tasks or an area for issues that are almost due or late!</div>
+            <DueSoon />
             </div>
             </main>
             

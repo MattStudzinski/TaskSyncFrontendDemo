@@ -49,7 +49,7 @@ const Complete = () => {
                         </li>
                     ))}
                 </ul>
-        </section>
+        
         <Pagination 
         itemsPerPage={issuesPerPage}
         totalItems={filteredAndSortedIssues.length}
@@ -64,6 +64,7 @@ const Complete = () => {
             onClose={handleCloseModal}
             />
         )}
+        </section>
         </div>
     )
 }

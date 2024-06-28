@@ -19,9 +19,9 @@ const parRoomOptions = [
     { value: 'HPP1', label: 'HPP1' },
 ];
 
+const drivers = ['Mathew', 'Brock', 'Kate']
 
-
-const DashIssueForm = () => {
+const AdminForm = () => {
 
     const {dispatch} = useIssuesContext()
     const {user} = useAuthContext()
@@ -128,22 +128,30 @@ const DashIssueForm = () => {
             
             <div className='issue-form__assignment-container'>
                 
-
             <label className='issue-form__label'>Assignment</label>
 
                 <div className='issue-form__driver-container'>
-              
-                   
-                    <label className='issue-form__label-secondary' htmlFor={user.name}>{user.name}</label>
-                    <input
-                        className='issue-form__input'
-                        type='checkbox'
-                        name='drivers'
-                        value={user.name}
-                        defaultChecked
-                    />
-               
+                <label className='issue-form__label-secondary' htmlFor='Mathew'>Mathew</label>
+                <input className='issue-form__input'
+                type='checkbox' 
+                name='drivers'
+                value="Mathew"/>
                 
+                
+                
+                <label className='issue-form__label-secondary' htmlFor='Brock'>Brock</label>
+                <input className='issue-form__input'
+                type='checkbox' 
+                name='drivers'
+                value="Brock"/>
+                
+                
+                
+                <label className='issue-form__label-secondary' htmlFor='Kate'>Kate</label>
+                <input className='issue-form__input'
+                type='checkbox'
+                name='drivers'
+                value="Kate"/>
                 </div>
                 
 
@@ -230,10 +238,10 @@ const DashIssueForm = () => {
             </div>
 
             
-            <button className='new-task__button' type='submit'>Submit issue</button>
+            <button type='submit'>Submit issue</button>
             {error && <div className='error'>{error}</div>}
         </form>
     );
 };
 
-export default DashIssueForm;
+export default AdminForm;
