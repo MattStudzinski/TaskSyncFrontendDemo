@@ -5,7 +5,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
   line-height: 1.6;
-  background: linear-gradient(to right bottom, #515151, #3c3c3c);
+  background: linear-gradient(to right bottom, #d8d8d8, #ebebeb);
   background-size: cover;
   background-repeat: no-repeat;
   width: 90%;
@@ -1060,6 +1060,13 @@ header {
   background: #c7ebf0;
   color: #323031;
 }
+.modal-issue__info {
+  height: 70%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+
 label, input {
   display: block;
 }

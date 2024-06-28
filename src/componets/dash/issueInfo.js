@@ -85,13 +85,16 @@ const IssueInfo = ({issue, onClick}) => {
                 })}
             </ul>
             <ul className='card-mini__parroom-list'>
-            {room.map((room, index) => {
+            {room.slice(0, 3).map((room, index) => {
                 return (
                     <li key={index}>
                         {room}
                     </li>
                 )
             })}
+            {room.length > 3 && (
+                <li className='card-mini__ellipsis'>...</li>
+            )}
             </ul>
 
             

@@ -23,12 +23,7 @@ const Header = () => {
             <Logo />
         </Link>
 
-        <form action="#" className='search'>
-            <input type='text' className='search__input' placeholder='Search Issues' />
-            <button className='search__button'>
-                <HeaderIcon className="search__icon" />
-            </button>
-        </form>
+        
 
         <nav className='user-nav'>
             <div className='user-nav__box' onClick={toggleDropdown}>

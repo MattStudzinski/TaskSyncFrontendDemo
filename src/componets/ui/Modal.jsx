@@ -23,9 +23,17 @@ const Modal = ({children, open, onClose, className = ''}) => {
         )
     }, [onClose])
 
+    const handleOutClick = (e) => {
+        console.log(e.target)
+        if(e.target == dialog.current) {
+            
+            onClose()
+        }
+    }
+
     return createPortal(
     
-    <dialog ref={dialog} className={`modal ${className}`}>
+    <dialog ref={dialog} className={`modal ${className}`} onClick={handleOutClick}>
         {children}
         <button onClick={onClose}>Close</button>
     </dialog>

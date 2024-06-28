@@ -9,9 +9,8 @@ const ModalControlInfo = ({issue, isOpen, onClose}) => {
     return (
         
             
-            <Modal open={isOpen} onClose={onClose}>
+            <Modal className='modal-issue__info' open={isOpen} onClose={onClose}>
                 <UserIssueInfo issue={issue} />
-                
             </Modal>
             
         
