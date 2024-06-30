@@ -6,19 +6,32 @@
     align-items: center;
     
 }
-
+// issues more info view
 .modal-card {
     padding: 1.5rem;
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
-    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+    .issue-form {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     
-    height: 80%;
-  
+    &__form-container {
+        width: 80%;
+        align-self: center;
+    }
+
     &__title-container {
       display: flex;
-      flex-direction: column;
+      justify-content: space-evenly;
       margin-bottom: 1rem;
     }
   
@@ -78,3 +91,4 @@
 
     
   }
+//   end issues more info

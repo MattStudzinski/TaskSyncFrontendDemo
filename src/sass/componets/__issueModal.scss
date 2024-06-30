@@ -2,7 +2,20 @@
     margin: auto;
     border: none;
     border-radius: 5px;
-    padding: 1rem;
-    width: 55%;
+    height: 60%;
+    width: 50%;
     
+}
+.modal-form {
+    margin: auto;
+    border: none;
+    border-radius: 5px;
+    height: 75%;
+    width: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+dialog:-internal-dialog-in-top-layer::backdrop {
+    
+    background: rgba(0, 0, 0, 0.2);
 }

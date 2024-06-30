@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Modal from '../ui/Modal';
 import AdminForm from '../forms/AdminForm'
 
-const ModalControlAdmin = () => {
+const ModalControlAdmin = ({issue, isOpen, onClose}) => {
 
     const [isModalOpen, setIsModalOpen] = useState(false)
 
@@ -17,7 +17,7 @@ const ModalControlAdmin = () => {
     return (
         <div>
             <button className='new-task__button' onClick={handleOpenModal}>Add New Issue</button>
-            <Modal open={isModalOpen} onClose={handleCloseModal}>
+            <Modal className='modal-form' open={isModalOpen} onClose={handleCloseModal}>
                 <AdminForm onClose={handleCloseModal} />
             </Modal>
         </div>

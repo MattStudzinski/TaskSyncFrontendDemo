@@ -139,6 +139,16 @@
     border-radius: 8px;
 }
 
+.task__close-button__issues {
+    width: 6rem;
+    height: 2rem;
+    color: rgba(0, 123, 255, 0.902);
+    background-color: white;
+    border: solid rgba(0, 123, 255, 0.902) .1rem;
+    border-radius: 8px;
+    
+}
+
 .issues-container {
     height: 85%;
     display: flex;

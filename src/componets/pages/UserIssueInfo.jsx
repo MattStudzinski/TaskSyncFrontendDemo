@@ -11,8 +11,8 @@ const UserIssueInfo = ({issue, handleCompletionChange, onClose}) => {
     return (
         <section className='modal-card'>
             <div className='modal-card__title-container'>
-            <h2 className='modal-card__title'>{issue.name}<p className='modal-card__priority'>{issue.priority}</p></h2>
-            <p className='modal-card__description'>{issue.description}</p>
+                <h2 className='modal-card__title'>{issue.name}<p className='modal-card__priority'>{issue.priority}</p></h2>
+                <p className='modal-card__description'>{issue.description}</p>
             </div>
             <p className='modal-card__due-date'>Issue Due By: {new Date(issue.dueDate).toLocaleDateString()}</p>
             <h4 className='modal-card__assigned-title'>Assigned To:</h4>
@@ -28,7 +28,7 @@ const UserIssueInfo = ({issue, handleCompletionChange, onClose}) => {
                     })}
                 </ul>
             <p className='modal-card__category'>{issue.category}</p>
-            <button type='button' onClick={onClose} className='task__close-button'>Close</button>
+            <button type='button' onClick={onClose} className='task__close-button__issues'>Close</button>
         </section>
     );
 };

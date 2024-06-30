@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Modal from '../ui/Modal';
 import DashIssueForm from '../forms/DashIssueForm';
 
-const ModalControllerDash = () => {
+const ModalControllerDash = ({onClose}) => {
 
 
     const [ isOpen, setIsOpen ] = useState(false)
@@ -17,7 +17,7 @@ const ModalControllerDash = () => {
     return (
         <div>
             <button className='new-task__button' onClick={handleOpenModal}>Create New Task</button>
-            <Modal open={isOpen} onClose={handleCloseModal}>
+            <Modal className='modal-form' open={isOpen} onClose={handleCloseModal}>
                 <DashIssueForm onClose={handleCloseModal} />
             </Modal>
         </div>

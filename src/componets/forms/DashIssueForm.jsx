@@ -95,6 +95,7 @@ const DashIssueForm = ({ onClose }) => {
 
     return (
         <form className='issue-form' onSubmit={handleSubmit}>
+            <div className='issue-form__form-container'>
             <div className='issue-form__title-container'>
                 <label className='issue-form__label'>
                     Name:
@@ -164,7 +165,7 @@ const DashIssueForm = ({ onClose }) => {
                     <option value="asc">ASC</option>
                 </select>
             </div>
-
+        </div>
             <div className='issue-form__button-container'>
                 <button className='new-task__button' type='submit'>Submit issue</button>
                 <button type='button' onClick={onClose} className='task__close-button'>Close</button>
