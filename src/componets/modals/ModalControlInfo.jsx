@@ -10,7 +10,7 @@ const ModalControlInfo = ({issue, isOpen, onClose}) => {
         
             
             <Modal className='modal-issue__info' open={isOpen} onClose={onClose}>
-                <UserIssueInfo issue={issue} />
+                <UserIssueInfo onClose={onClose} issue={issue} />
             </Modal>
             
         

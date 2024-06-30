@@ -3,7 +3,7 @@ import CategoryIcon from '../ui/CategoryIcon';
 import PriorityIcons from '../ui/PriorityIcons';
 import { useAuthContext } from '../../hooks/useAuthContext';
 import { useIssuesContext } from '../../hooks/useIssuesContext';
-const AdminPageIssues = ({issue}) => {
+const AdminPageIssues = ({issue, onClick}) => {
     const {dispatch} = useIssuesContext()
     const { driver = [], route = [], room = [] } = issue
     const {user} = useAuthContext()
@@ -32,7 +32,7 @@ const AdminPageIssues = ({issue}) => {
 
     return (
         
-            <div className="card-mini__container">
+            <div className="card-mini__container" onClick={() => onClick(issue)}>
 
             <div className='card-mini__category-container'>
                 <p className='card-mini__category'><CategoryIcon category={issue.category} /></p>

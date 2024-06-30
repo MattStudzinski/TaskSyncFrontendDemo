@@ -7,12 +7,14 @@ import ModalControlAdmin from "../modals/ModalControlAdmin";
 import useFilteredIssues from "../../hooks/useFilteredIssues";
 import useOptions from "../../hooks/useOptions";
 import Pagination from "../ui/Pagination";
+import ModalControlIssuesAdmin from "../modals/ModalControlIssuesAdmin";
 
 const AdminDash = () => {
     const { issues = [], dispatch} = useIssuesContext()
     const { user } = useAuthContext()
     const [selectedUser, setSelectedUser] = useState('')
     const [selectedPriority, setSelectedPriority] = useState('')
+    const [selectedIssue, setSelectedIssue] = useState(null)
     const [selectedCategory, setSelectedCategory] = useState('')
     const { userOptions, priorityOptions, categoryOptions } = useOptions(issues)
     const filteredIssues = useFilteredIssues(issues, selectedUser, selectedPriority, selectedCategory)
@@ -43,6 +45,14 @@ const AdminDash = () => {
     const handlePriorityChange = (e) => {
         setSelectedPriority(e.target.value)
         setCurrentPage(1)
+    }
+
+    const handleIssueClick = (issue) => {
+        setSelectedIssue(issue)
+    }
+
+    const handleCloseModal = () => {
+        setSelectedIssue(null)
     }
    
     const indexOfLastIssue = currentPage * issuesPerPage
@@ -97,7 +107,7 @@ const AdminDash = () => {
                 <ul ref={listRef} className='results-page__ul'>
                     {currentIssues.map((issue) => (
                         <li key={issue._id} className='results-page__li'>
-                            <AdminPageIssues key={issue._id} issue={issue} />
+                            <AdminPageIssues key={issue._id} issue={issue} onClick={handleIssueClick} />
                         </li>
                 ))}
                 </ul>
@@ -109,6 +119,14 @@ const AdminDash = () => {
             paginate={paginate}
             currentPage={currentPage}
             />
+
+                {selectedIssue && (
+                <ModalControlIssuesAdmin
+                issue={selectedIssue}
+                isOpen={true}
+                onClose={handleCloseModal}
+                />
+            )}
         </div>
         </section>
     );

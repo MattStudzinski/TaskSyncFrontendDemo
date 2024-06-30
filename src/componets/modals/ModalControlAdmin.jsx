@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Modal from '../ui/Modal';
-import IssueForm from '../forms/IssueForm';
+import AdminForm from '../forms/AdminForm'
 
 const ModalControlAdmin = () => {
 
@@ -18,7 +18,7 @@ const ModalControlAdmin = () => {
         <div>
             <button className='new-task__button' onClick={handleOpenModal}>Add New Issue</button>
             <Modal open={isModalOpen} onClose={handleCloseModal}>
-                <IssueForm />
+                <AdminForm onClose={handleCloseModal} />
             </Modal>
         </div>
     );
