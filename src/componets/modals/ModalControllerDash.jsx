@@ -18,7 +18,7 @@ const ModalControllerDash = () => {
         <div>
             <button className='new-task__button' onClick={handleOpenModal}>Create New Task</button>
             <Modal open={isOpen} onClose={handleCloseModal}>
-                <DashIssueForm />
+                <DashIssueForm onClose={handleCloseModal} />
             </Modal>
         </div>
     );

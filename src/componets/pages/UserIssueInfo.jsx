@@ -2,7 +2,7 @@ import React from 'react';
 import { useAuthContext } from '../../hooks/useAuthContext';
 
 
-const UserIssueInfo = ({issue, handleCompletionChange}) => {
+const UserIssueInfo = ({issue, handleCompletionChange, onClose}) => {
     const {user} = useAuthContext()
 
     if(!issue) return null
@@ -28,6 +28,7 @@ const UserIssueInfo = ({issue, handleCompletionChange}) => {
                     })}
                 </ul>
             <p className='modal-card__category'>{issue.category}</p>
+            
         </section>
     );
 };

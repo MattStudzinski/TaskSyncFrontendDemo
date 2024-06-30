@@ -130,7 +130,16 @@
     transform: scale(1);
 }
 
-
+.new-task__close-button {
+    margin-bottom: 1rem;
+    width: 6rem;
+    height: 2rem;
+    color: rgba(0, 123, 255, 0.902);
+    background-color: white;
+    border: solid rgba(0, 123, 255, 0.902) .1rem;
+    border-radius: 8px;
+    margin-left: 1rem;
+}
 
 .issues-container {
     height: 85%;
@@ -138,3 +147,5 @@
     flex-direction: column;
     justify-content: space-between;
 }
+
+

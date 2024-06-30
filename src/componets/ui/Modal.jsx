@@ -34,8 +34,9 @@ const Modal = ({children, open, onClose, className = ''}) => {
     return createPortal(
     
     <dialog ref={dialog} className={`modal ${className}`} onClick={handleOutClick}>
+        <div className='modal__container'>
         {children}
-        <button onClick={onClose}>Close</button>
+        </div>
     </dialog>
     ,
     

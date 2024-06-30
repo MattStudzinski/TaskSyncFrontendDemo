@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { useIssuesContext } from '../../hooks/useIssuesContext';
 import { useAuthContext } from '../../hooks/useAuthContext';
-import Select from 'react-select'
+import Select from 'react-select';
 
 const parRoomOptions = [
     { value: 'DRMP1', label: 'DRMP1' },
@@ -19,14 +19,11 @@ const parRoomOptions = [
     { value: 'HPP1', label: 'HPP1' },
 ];
 
-
-
-const DashIssueForm = () => {
-
-    const {dispatch} = useIssuesContext()
-    const {user} = useAuthContext()
-    const[error, setError] = useState('')
-    const [emptyFields, setEmptyFields] = useState([])
+const DashIssueForm = ({ onClose }) => {
+    const { dispatch } = useIssuesContext();
+    const { user } = useAuthContext();
+    const [error, setError] = useState('');
+    const [emptyFields, setEmptyFields] = useState([]);
     const [selectedParRooms, setSelectedParRooms] = useState([]);
 
     const handleParRoomChange = selectedOptions => {
@@ -34,23 +31,22 @@ const DashIssueForm = () => {
     };
 
     const handleSubmit = async (event) => {
-        event.preventDefault()
+        event.preventDefault();
         console.log('Selected Par Rooms:', selectedParRooms);
-        if(!user){
-            setError('You must be logged in')
-            return
+        if (!user) {
+            setError('You must be logged in');
+            return;
         }
 
-        const formData = new FormData(event.target)
-        const routeChannel = formData.getAll("route")
-        const driverChannel = formData.getAll("drivers")
-        const roomChannel = formData.getAll("room")
-        const data = Object.fromEntries(formData.entries())
-        data.route = routeChannel
-        data.drivers = driverChannel
-        data.room = roomChannel
+        const formData = new FormData(event.target);
+        const routeChannel = formData.getAll("route");
+        const driverChannel = formData.getAll("drivers");
+        const roomChannel = formData.getAll("room");
+        const data = Object.fromEntries(formData.entries());
+        data.route = routeChannel;
+        data.drivers = driverChannel;
+        data.room = roomChannel;
 
-        
         try {
             const response = await fetch('/api/issues', {
                 method: 'POST',
@@ -61,79 +57,69 @@ const DashIssueForm = () => {
                 }
             });
 
-            
-
             const json = await response.json();
 
-            if(!response.ok){
-                setError(json.error)
-                setEmptyFields(json.emptyFields || [])
+            if (!response.ok) {
+                setError(json.error);
+                setEmptyFields(json.emptyFields || []);
             }
-            
-            // Reset the form
-            if(response.ok){
-            setError(null)
-            event.target.reset();
-            setEmptyFields([])
-            setSelectedParRooms([])
-            console.log("new issue added", json)
-            
-            const issueResponse = await fetch ('api/issues', {
-                headers: {
-                    'Authorization' : `Bearer ${user.token}`
+
+            if (response.ok) {
+                setError(null);
+                event.target.reset();
+                setEmptyFields([]);
+                setSelectedParRooms([]);
+                console.log("new issue added", json);
+
+                const issueResponse = await fetch('api/issues', {
+                    headers: {
+                        'Authorization': `Bearer ${user.token}`
+                    }
+                });
+                const updatedIssues = await issueResponse.json();
+                if (issueResponse.ok) {
+                    dispatch({ type: 'SET_ISSUES', payload: updatedIssues });
+                } else {
+                    console.error('failed to fetch updated issues', issueResponse);
                 }
-            })
-            const updatedIssues = await issueResponse.json()
-            if(issueResponse.ok) {
-                dispatch({ type: 'SET_ISSUES', payload: updatedIssues})
-            } else {
-                console.error('failed to fetch updated issues', issueResponse)
+                if (typeof onClose === 'function') {
+                    onClose(); // Close modal after successful submission
+                }
             }
-            }
-            
+
         } catch (error) {
             setError('Failed to submit the form. Please try again later.');
             console.error('Error submitting form data:', error);
         }
     };
-    
-    
 
     return (
         <form className='issue-form' onSubmit={handleSubmit}>
             <div className='issue-form__title-container'>
                 <label className='issue-form__label'>
                     Name:
-                    <input  
-                    type='text' 
-                    name='name'
-                    className={`${emptyFields.includes('name') ? 'error' : ''} issue-form__name`}/>
+                    <input
+                        type='text'
+                        name='name'
+                        className={`${emptyFields.includes('name') ? 'error' : ''} issue-form__name`} />
                 </label>
                 <label className='issue-form__label'>
-                Due-Date
-                <input className='issue-form__input' type='date' name='dueDate'/>
-            </label>
-            
-            
-                
+                    Due-Date
+                    <input className='issue-form__input' type='date' name='dueDate' />
+                </label>
             </div>
-            
+
             <label className='issue-form__label'>
-                    Description
-                    <textarea 
+                Description
+                <textarea
                     name='description'
                     className={`${emptyFields.includes('description') ? 'error' : ''} issue-form__textarea`}
-                    />
-                </label>
-            
+                />
+            </label>
+
             <div className='issue-form__assignment-container'>
-                
-
-            <label className='issue-form__label'>Assignment</label>
-
+                <label className='issue-form__label'>Assignment</label>
                 <div className='issue-form__driver-container'>
-              
-                   
                     <label className='issue-form__label-secondary' htmlFor={user.name}>{user.name}</label>
                     <input
                         className='issue-form__input'
@@ -142,82 +128,33 @@ const DashIssueForm = () => {
                         value={user.name}
                         defaultChecked
                     />
-               
-                
                 </div>
-                
-
             </div>
-            
-            {/* <div>
-                <label className='issue-form__label' >Route</label>
-                <input className='issue-form__input'
-                type='checkbox'
-                name='route'
-                value="1"/>
-                <label className='issue-form__label' htmlFor='1'>1</label>
 
-                <input className='issue-form__input'
-                type='checkbox'
-                name='route'
-                value="2"/>
-                <label className='issue-form__label' htmlFor='2'>2</label>
-
-                <input className='issue-form__input'
-                type='checkbox'
-                name='route'
-                value="3"/>
-                <label className='issue-form__label' htmlFor='3'>3</label>
-            </div> */}
-            
             <label className='issue-form__label'>
-                    Par Room:
-                    <Select
-                        name='room'
-                        options={parRoomOptions}
-                        value={selectedParRooms}
-                        onChange={handleParRoomChange}
-                        isMulti
-                        className='issue-form__select'
-                    />
-                </label>
-            
+                Par Room:
+                <Select
+                    name='room'
+                    options={parRoomOptions}
+                    value={selectedParRooms}
+                    onChange={handleParRoomChange}
+                    isMulti
+                    className='issue-form__select'
+                />
+            </label>
+
             <div>
                 <label className='issue-form__label'>Priority Status</label>
-                <input className='issue-form__input'
-                type='checkbox'
-                name='priority'
-                value="high"/>
+                <input className='issue-form__input' type='checkbox' name='priority' value="high" />
                 <label className='issue-form__label' htmlFor='high'>High</label>
 
-                <input className='issue-form__input'
-                type='checkbox'
-                name='priority'
-                value="medium"/>
+                <input className='issue-form__input' type='checkbox' name='priority' value="medium" />
                 <label className='issue-form__label' htmlFor='medium'>Medium</label>
 
-                <input className='issue-form__input'
-                type='checkbox'
-                name='priority'
-                value="low"/>
+                <input className='issue-form__input' type='checkbox' name='priority' value="low" />
                 <label className='issue-form__label' htmlFor='low'>Low</label>
             </div>
-            
-            {/* <div>
-                <label className='issue-form__label'>Group assignment</label>
-                <input className='issue-form__input'
-                type='checkbox'
-                name='groupassignment'
-                value='drivers'/>
-                <label className='issue-form__label' htmlFor='drivers'>Drivers</label>
 
-                <input className='issue-form__input'
-                type='checkbox'
-                name='groupassignment'
-                value="warehouse"/>
-                <label className='issue-form__label' htmlFor='warehouse'>Warehouse</label>
-            </div> */}
-            
             <div className='issueForm'>
                 <label className='issue-form__label' htmlFor='category'>What category does this issue fall under</label>
                 <select id="category" name="category">
@@ -225,13 +162,14 @@ const DashIssueForm = () => {
                     <option value="frx">FRX</option>
                     <option value="rx">RX</option>
                     <option value="asc">ASC</option>
-                    {/* need to make a file for pulling data */}
                 </select>
             </div>
 
-            
-            <button className='new-task__button' type='submit'>Submit issue</button>
-            {error && <div className='error'>{error}</div>}
+            <div className='issue-form__button-container'>
+                <button className='new-task__button' type='submit'>Submit issue</button>
+                <button type='button' onClick={onClose} className='new-task__close-button'>Close</button>
+                {error && <div className='error'>{error}</div>}
+            </div>
         </form>
     );
 };
