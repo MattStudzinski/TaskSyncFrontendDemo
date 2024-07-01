@@ -97,20 +97,23 @@ const DashIssueForm = ({ onClose }) => {
         <form className='issue-form' onSubmit={handleSubmit}>
             <div className='issue-form__form-container'>
             <div className='issue-form__title-container'>
-                <label className='issue-form__label'>
-                    Name:
+                <div className='issue-form__input-box'>
                     <input
                         type='text'
                         name='name'
-                        className={`${emptyFields.includes('name') ? 'error' : ''} issue-form__name`} />
-                </label>
-                <label className='issue-form__label'>
-                    Due-Date
+                        id='issue-form_input-name__id'
+                        className={`${emptyFields.includes('name') ? 'error' : ''} issue-form__input`} 
+                        />
+                        <span className='issue-form__title-label'>Name:</span>
+                </div>
+
+                <div className='issue-form__input-box'>
                     <input className='issue-form__input' type='date' name='dueDate' />
-                </label>
+                    <span className='issue-form__title-label'>Due-Date</span>
+                </div>
             </div>
 
-            <label className='issue-form__label'>
+            <label className='issue-form__label-textarea'>
                 Description
                 <textarea
                     name='description'
@@ -144,7 +147,7 @@ const DashIssueForm = ({ onClose }) => {
                 />
             </label>
 
-            <div>
+            <div className='issue-form__priority-container'>
                 <label className='issue-form__label'>Priority Status</label>
                 <input className='issue-form__input' type='checkbox' name='priority' value="high" />
                 <label className='issue-form__label' htmlFor='high'>High</label>

@@ -710,20 +710,6 @@ html {
   font-size: 1.2rem; /* Reduce font size */
   color: rgb(161, 117, 242);
 }
-.form__underline {
-  position: absolute;
-  bottom: 0rem;
-  height: 0.2rem;
-  width: 100%;
-}
-.form__underline:before {
-  position: absolute;
-  content: "";
-  height: 100%;
-  width: 100%;
-  background: red;
-  transform: scaleX(0);
-}
 .form__button-container {
   display: flex;
   justify-content: center; /* Center horizontally */
@@ -795,7 +781,7 @@ html {
   border: none;
   border-radius: 5px;
   height: 75%;
-  width: 50%;
+  width: 70%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
@@ -949,6 +935,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 }
 
 .issue-form {
+  padding: 3rem;
   height: 100%;
   width: 100%;
   display: flex;
@@ -957,23 +944,57 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   background: #e9e9e9;
 }
 .issue-form__form-container {
-  width: 80%;
+  width: 100%;
   align-self: center;
 }
 .issue-form__title-container {
   display: flex;
   justify-content: space-evenly;
-  margin-bottom: 1rem;
 }
-.issue-form__label {
-  color: rgb(0, 0, 0);
+.issue-form .issue-form__input-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 25rem;
+}
+.issue-form__input {
+  width: 80%;
+  padding: 1rem;
+  border: 1px solid white;
+  border-radius: 5px;
+  background: grey;
+  outline: none;
+  color: white;
+  font-size: 1.5rem;
+}
+.issue-form__input:valid ~ .issue-form__title-label, .issue-form__input:focus ~ .issue-form__title-label {
+  color: green;
+  font-size: 1.2rem;
+}
+.issue-form__title-label {
+  position: absolute;
+  left: 0;
+  padding: 1rem;
+  pointer-events: none;
+  font-size: 1.5rem;
+  color: white;
+  text-transform: uppercase;
+}
+.issue-form__label-textarea {
+  margin: 5% 8%;
   display: flex;
   flex-direction: column;
+  font-size: 1.2rem;
 }
 .issue-form__textarea {
-  width: 80%;
-  height: 6rem;
+  width: 100%;
+  height: 7rem;
   resize: none;
+  border: none;
+  font-size: 1.5rem;
+  border: none;
+  border-bottom: solid #dadada 0.2rem;
+  background: none;
 }
 .issue-form__assignment-container {
   display: flex;
@@ -981,6 +1002,10 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 }
 .issue-form__driver-container {
   display: flex;
+}
+.issue-form__priority-container {
+  display: flex;
+  justify-content: space-evenly;
 }
 .issue-form__button-container {
   display: flex;

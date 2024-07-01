@@ -79,22 +79,6 @@
     }
 
 
-    &__underline {
-        position: absolute;
-        bottom: 0rem;
-        height: .2rem;
-        width: 100%;
-
-        &:before{
-            position: absolute;
-            content: '';
-            height:100%;
-            width: 100%;
-            background: red;
-            transform: scaleX(0);
-        }
-
-    }
 
     &__button-container{
         display: flex;
