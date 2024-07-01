@@ -102,24 +102,25 @@ const DashIssueForm = ({ onClose }) => {
                         type='text'
                         name='name'
                         id='issue-form_input-name__id'
+                        required
                         className={`${emptyFields.includes('name') ? 'error' : ''} issue-form__input`} 
                         />
-                        <span className='issue-form__title-label'>Name:</span>
+                        <span className='issue-form__title-label'>Name</span>
                 </div>
 
                 <div className='issue-form__input-box'>
-                    <input className='issue-form__input' type='date' name='dueDate' />
+                    <input className='issue-form__input' type='date' required name='dueDate' />
                     <span className='issue-form__title-label'>Due-Date</span>
                 </div>
             </div>
-
-            <label className='issue-form__label-textarea'>
-                Description
-                <textarea
-                    name='description'
-                    className={`${emptyFields.includes('description') ? 'error' : ''} issue-form__textarea`}
-                />
-            </label>
+            <div className='issue-form__input-box'>
+                    <textarea
+                    required
+                        name='description'
+                        className={`${emptyFields.includes('description') ? 'error' : ''} issue-form__textarea`}
+                    />
+                    <label className='issue-form__title-textarea'>Description</label>
+            </div>
 
             <div className='issue-form__assignment-container'>
                 <label className='issue-form__label'>Assignment</label>
