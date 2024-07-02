@@ -49,12 +49,12 @@ html {
   80% {
     width: 110rem;
     height: 120rem;
-    background: rgb(25, 25, 29);
+    background: #121212;
   }
   100% {
     width: 110rem;
     height: 120rem;
-    background: rgb(25, 25, 29);
+    background: #121212;
   }
 }
 .card-mini__category-container {
@@ -159,13 +159,13 @@ html {
   z-index: 1;
 }
 .analytics__open-issues {
-  background: linear-gradient(135deg, #8e94ad, #727999, #8e94ad, #c1c8d6);
+  background: #181818;
 }
 .analytics__new-issues {
-  background: linear-gradient(135deg, #c68b93, #b06e78, #c68b93, #e6bcc1);
+  background: #1a1a1a;
 }
 .analytics__priority-issues {
-  background: linear-gradient(135deg, #90b8c7, #78a3b8, #90b8c7, #d8e4eb);
+  background: #1c1c1c;
 }
 .analytics__link::after {
   content: "";
@@ -223,7 +223,7 @@ html {
   height: 8.3rem;
   padding: 5px;
   border-radius: 15px;
-  background-color: rgb(32, 31, 40);
+  background-color: #1e1e1e;
   box-shadow: var(--shadow-dark);
   display: flex;
   align-items: center;
@@ -251,10 +251,10 @@ html {
   color: #ffffff;
 }
 .card-mini__description {
-  color: #7a7a7a;
+  color: #b0bec5;
 }
 .card-mini__date {
-  color: #7a7a7a;
+  color: #b0bec5;
   width: 15%;
   margin-left: 1rem;
 }
@@ -310,7 +310,7 @@ html {
   background: linear-gradient(135deg, rgb(7, 30, 34), rgba(43, 79, 86, 0.8), rgb(7, 30, 34));
 }
 .card-mini__completion-input:checked:hover::before {
-  background: linear-gradient(135deg, #90b8c7, #78a3b8, #90b8c7, #d8e4eb);
+  background: #1c1c1c;
 }
 .card-mini__completion-input:checked:hover::after {
   opacity: 1;
@@ -532,7 +532,7 @@ html {
 
 .dash-nav {
   border-radius: 1rem;
-  background-color: rgb(32, 31, 40);
+  background-color: #1e1e1e;
   max-width: 100%;
   height: 100%;
   padding: 1rem;
@@ -735,7 +735,7 @@ html {
   transition-property: box-shadow, transform;
 }
 .form__button:hover, .form__button:focus, .form__button:active {
-  box-shadow: 0 0 20px linear-gradient(135deg, #90b8c7, #78a3b8, #90b8c7, #d8e4eb);
+  box-shadow: 0 0 20px #1c1c1c;
   transform: scale(1.1);
 }
 .form__illistration {
@@ -755,14 +755,14 @@ html {
 }
 
 .calendar {
-  background-color: rgb(32, 31, 40);
+  background-color: #1e1e1e;
   border-radius: 1rem;
   height: 150px;
   max-width: 100%;
 }
 
 .somethingelse {
-  background-color: rgb(32, 31, 40);
+  background-color: #1e1e1e;
   border-radius: 1rem;
   height: 150px;
   max-width: 100%;
@@ -790,7 +790,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 }
 
 .admin-page {
-  background-color: rgb(25, 25, 29);
+  background-color: #121212;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -801,7 +801,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   justify-content: space-between;
   padding: 1.2rem;
   border-radius: 0.8rem;
-  background-color: rgb(32, 31, 40);
+  background-color: #1e1e1e;
   align-items: center;
 }
 .admin-page__category-selectors {
@@ -825,7 +825,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  background: rgb(32, 31, 40);
+  background: #1e1e1e;
   margin-top: 1rem;
   border-radius: 1rem;
 }
@@ -899,7 +899,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   font-size: 0.875rem;
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
-  background: rgb(32, 31, 40);
+  background: #1e1e1e;
   color: #333;
 }
 .modal-card__description {
@@ -941,7 +941,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: #7a7a7a;
+  background: #1e1e1e;
 }
 .issue-form__form-container {
   width: 100%;
@@ -964,7 +964,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   padding: 1rem;
   border: 1px solid rgb(0, 0, 0);
   border-radius: 5px;
-  background: #7a7a7a;
+  background: #1e1e1e;
   outline: none;
   color: white;
   font-size: 1.5rem;
@@ -980,7 +980,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   transition: 0.5s;
   font-size: 1.1rem;
   padding: 0 0.7rem;
-  background: #7a7a7a;
+  background: #1e1e1e;
   border-left: 1px solid #c7ebf0;
   border-right: 1px solid #c7ebf0;
   letter-spacing: 0.1rem;
@@ -1013,12 +1013,12 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   border: none;
   font-size: 1.5rem;
   border: none;
-  border-bottom: solid rgb(25, 25, 29) 0.2rem;
+  border-bottom: solid #1e1e1e 0.2rem;
   background: none;
   padding: 1rem;
   border: 1px solid rgb(0, 0, 0);
   border-radius: 5px;
-  background: #7a7a7a;
+  background: #1e1e1e;
   outline: none;
   color: white;
   font-size: 1.5rem;
@@ -1033,7 +1033,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   transition: 0.5s;
   font-size: 1.1rem;
   padding: 0 0.7rem;
-  background: #7a7a7a;
+  background: #1e1e1e;
   border-left: 1px solid #c7ebf0;
   border-right: 1px solid #c7ebf0;
   letter-spacing: 0.1rem;
@@ -1058,7 +1058,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 }
 
 .results-page {
-  background-color: rgb(25, 25, 29);
+  background-color: #121212;
   padding: 2rem;
   display: flex;
   height: 100%;
@@ -1068,7 +1068,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   border-bottom-right-radius: 10px;
 }
 .results-page__card {
-  background-color: rgb(32, 31, 40);
+  background-color: #1e1e1e;
   border-radius: 1rem;
   width: 100%;
   height: 100%;
@@ -1091,7 +1091,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 .container {
   max-width: 140rem;
   margin: 5rem auto;
-  background-color: rgb(32, 31, 40);
+  background-color: #1e1e1e;
   box-shadow: var(--shadow-dark);
   min-height: 81rem;
   border-radius: 10px;
@@ -1101,8 +1101,8 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 
 header {
   height: 7rem;
-  background-color: rgb(32, 31, 40);
-  border-bottom: 1px solid linear-gradient(135deg, #90b8c7, #78a3b8, #90b8c7, #d8e4eb);
+  background-color: #1e1e1e;
+  border-bottom: 1px solid #1c1c1c;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1113,7 +1113,7 @@ header {
 }
 
 .sidebar {
-  background: rgb(25, 25, 29);
+  background: #121212;
   flex: 0 0 4rem;
   max-width: 20%;
   min-width: 4rem;
@@ -1127,7 +1127,7 @@ header {
 }
 
 .content {
-  background-color: rgb(32, 31, 40);
+  background-color: #1e1e1e;
   display: flex;
   border-bottom-right-radius: 1rem;
   border-bottom-left-radius: 1rem;
@@ -1136,7 +1136,7 @@ header {
 }
 
 .dash-view {
-  background-color: rgb(25, 25, 29);
+  background-color: #121212;
   border-bottom-right-radius: 1rem;
   display: flex;
   justify-content: space-between;
@@ -1165,7 +1165,7 @@ header {
   transition: background-color 0.3s ease;
 }
 .pagination .page-item button {
-  color: #7a7a7a;
+  color: #b0bec5;
   border: none;
   margin-bottom: 0.7rem;
   padding: 0.5rem 0.8rem;
@@ -1174,7 +1174,7 @@ header {
   border-radius: 100px;
 }
 .pagination .page-item button:hover {
-  background: linear-gradient(135deg, #c68b93, #b06e78, #c68b93, #e6bcc1);
+  background: #1a1a1a;
   color: #ffffff;
 }
 .pagination .page-item.active button {
