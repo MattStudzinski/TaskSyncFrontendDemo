@@ -5,7 +5,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
   line-height: 1.6;
-  background: linear-gradient(to right bottom, #d8d8d8, #ebebeb);
+  background: linear-gradient(to right bottom, #9d9d9d, #949494);
   background-size: cover;
   background-repeat: no-repeat;
   width: 90%;
@@ -49,12 +49,12 @@ html {
   80% {
     width: 110rem;
     height: 120rem;
-    background: #dadada;
+    background: rgb(25, 25, 29);
   }
   100% {
     width: 110rem;
     height: 120rem;
-    background: #dadada;
+    background: rgb(25, 25, 29);
   }
 }
 .card-mini__category-container {
@@ -223,7 +223,7 @@ html {
   height: 8.3rem;
   padding: 5px;
   border-radius: 15px;
-  background-color: #e9e9e9;
+  background-color: rgb(32, 31, 40);
   box-shadow: var(--shadow-dark);
   display: flex;
   align-items: center;
@@ -248,7 +248,7 @@ html {
 }
 .card-mini__name {
   font-size: 1.3rem;
-  color: #323031;
+  color: #ffffff;
 }
 .card-mini__description {
   color: #7a7a7a;
@@ -468,8 +468,8 @@ html {
   text-decoration: none;
   text-transform: uppercase;
   height: 4.5rem;
-  fill: #323031;
-  color: #323031;
+  fill: rgb(146, 146, 146);
+  color: #ffffff;
   transition: padding 0.3s;
   padding-left: 1rem;
   position: relative;
@@ -532,7 +532,7 @@ html {
 
 .dash-nav {
   border-radius: 1rem;
-  background-color: #e9e9e9;
+  background-color: rgb(32, 31, 40);
   max-width: 100%;
   height: 100%;
   padding: 1rem;
@@ -544,7 +544,7 @@ html {
   align-items: center;
 }
 .dash-nav__title {
-  color: #323031;
+  color: #ffffff;
   font-size: 1.8rem;
 }
 .dash-nav__filters {
@@ -554,7 +554,7 @@ html {
   align-items: center;
   justify-content: flex-start;
   margin: 1rem;
-  color: #323031;
+  color: #ffffff;
 }
 .dash-nav__filters-selector {
   cursor: pointer;
@@ -565,7 +565,7 @@ html {
 }
 .dash-nav__filters-selector:hover {
   transform: scale(1.1);
-  color: #323031;
+  color: #ffffff;
 }
 .dash-nav__filters-selector:after {
   content: "";
@@ -755,14 +755,14 @@ html {
 }
 
 .calendar {
-  background-color: #e9e9e9;
+  background-color: rgb(32, 31, 40);
   border-radius: 1rem;
   height: 150px;
   max-width: 100%;
 }
 
 .somethingelse {
-  background-color: #e9e9e9;
+  background-color: rgb(32, 31, 40);
   border-radius: 1rem;
   height: 150px;
   max-width: 100%;
@@ -790,7 +790,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 }
 
 .admin-page {
-  background-color: #dadada;
+  background-color: rgb(25, 25, 29);
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -801,7 +801,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   justify-content: space-between;
   padding: 1.2rem;
   border-radius: 0.8rem;
-  background-color: #e9e9e9;
+  background-color: rgb(32, 31, 40);
   align-items: center;
 }
 .admin-page__category-selectors {
@@ -825,7 +825,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  background: #e9e9e9;
+  background: rgb(32, 31, 40);
   margin-top: 1rem;
   border-radius: 1rem;
 }
@@ -844,7 +844,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 }
 .filter__label {
   font-weight: bold;
-  color: #323031;
+  color: #ffffff;
   margin-bottom: 0.5rem;
 }
 .filter .filter__select {
@@ -899,7 +899,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   font-size: 0.875rem;
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
-  background: #e9e9e9;
+  background: rgb(32, 31, 40);
   color: #333;
 }
 .modal-card__description {
@@ -1013,7 +1013,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   border: none;
   font-size: 1.5rem;
   border: none;
-  border-bottom: solid #dadada 0.2rem;
+  border-bottom: solid rgb(25, 25, 29) 0.2rem;
   background: none;
   padding: 1rem;
   border: 1px solid rgb(0, 0, 0);
@@ -1029,7 +1029,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 }
 .issue-form__textarea:valid ~ .issue-form__title-textarea, .issue-form__textarea:focus ~ .issue-form__title-textarea {
   color: #c7ebf0;
-  transform: translateX(1rem) translateY(-3.1rem);
+  transform: translateX(1rem) translateY(-2.9rem);
   transition: 0.5s;
   font-size: 1.1rem;
   padding: 0 0.7rem;
@@ -1043,7 +1043,9 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   flex-direction: column;
 }
 .issue-form__driver-container {
+  justify-content: center;
   display: flex;
+  width: 27%;
 }
 .issue-form__priority-container {
   display: flex;
@@ -1056,7 +1058,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 }
 
 .results-page {
-  background-color: #dadada;
+  background-color: rgb(25, 25, 29);
   padding: 2rem;
   display: flex;
   height: 100%;
@@ -1066,7 +1068,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   border-bottom-right-radius: 10px;
 }
 .results-page__card {
-  background-color: #e9e9e9;
+  background-color: rgb(32, 31, 40);
   border-radius: 1rem;
   width: 100%;
   height: 100%;
@@ -1089,7 +1091,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 .container {
   max-width: 140rem;
   margin: 5rem auto;
-  background-color: #e9e9e9;
+  background-color: rgb(32, 31, 40);
   box-shadow: var(--shadow-dark);
   min-height: 81rem;
   border-radius: 10px;
@@ -1099,7 +1101,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 
 header {
   height: 7rem;
-  background-color: #e9e9e9;
+  background-color: rgb(32, 31, 40);
   border-bottom: 1px solid linear-gradient(135deg, #90b8c7, #78a3b8, #90b8c7, #d8e4eb);
   display: flex;
   justify-content: space-between;
@@ -1111,7 +1113,7 @@ header {
 }
 
 .sidebar {
-  background: linear-gradient(135deg, #90b8c7, #78a3b8, #90b8c7, #d8e4eb);
+  background: rgb(25, 25, 29);
   flex: 0 0 4rem;
   max-width: 20%;
   min-width: 4rem;
@@ -1125,7 +1127,7 @@ header {
 }
 
 .content {
-  background-color: #e9e9e9;
+  background-color: rgb(32, 31, 40);
   display: flex;
   border-bottom-right-radius: 1rem;
   border-bottom-left-radius: 1rem;
@@ -1134,7 +1136,7 @@ header {
 }
 
 .dash-view {
-  background-color: #dadada;
+  background-color: rgb(25, 25, 29);
   border-bottom-right-radius: 1rem;
   display: flex;
   justify-content: space-between;
@@ -1173,11 +1175,11 @@ header {
 }
 .pagination .page-item button:hover {
   background: linear-gradient(135deg, #c68b93, #b06e78, #c68b93, #e6bcc1);
-  color: #323031;
+  color: #ffffff;
 }
 .pagination .page-item.active button {
   background: #c7ebf0;
-  color: #323031;
+  color: #ffffff;
 }
 label, input {
   display: block;

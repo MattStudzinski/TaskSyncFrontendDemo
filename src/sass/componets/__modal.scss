@@ -197,7 +197,7 @@
     &:valid ~ .issue-form__title-textarea,
     &:focus ~ .issue-form__title-textarea {
         color: $color-app-light-green;
-        transform: translateX(1rem) translateY(-3.1rem);
+        transform: translateX(1rem) translateY(-2.9rem);
         transition: 0.5s;
         font-size: 1.1rem;
         padding: 0 .7rem;
@@ -214,7 +214,10 @@
 }
 
 &__driver-container {
+    
+    justify-content: center;
     display: flex;
+    width: 27%
 }
 
 &__select {

@@ -127,7 +127,7 @@ const DashIssueForm = ({ onClose }) => {
                 <div className='issue-form__driver-container'>
                     <label className='issue-form__label-secondary' htmlFor={user.name}>{user.name}</label>
                     <input
-                        className='issue-form__input'
+                        className='issue-form__input-checkbox'
                         type='checkbox'
                         name='drivers'
                         value={user.name}
