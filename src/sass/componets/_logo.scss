@@ -5,10 +5,11 @@
 }
 .sidenav-icon {
     
-    height: 1.75rem;
-    width: 1.75rem;
+    height: 2.5rem;
+    width: 2.5rem;
     flex-shrink: 0;
     transition: margin-right 0.3s;
+    fill: $accent;
 
 }
 
@@ -26,4 +27,5 @@
 .category-icon {
     width: 3rem;
     height: 3rem;
+    fill: $black-text;
 }

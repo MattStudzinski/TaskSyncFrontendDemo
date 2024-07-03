@@ -20,13 +20,13 @@ const Sidebar = () => {
             
                 <li className='side-nav__item'>
                     <Link to="/complete" className='side-nav__link' >
-                        <Completed /> <span className='side-nav__link-title'>Completed tasks </span>
+                        <Completed /> <span className='side-nav__link-title'>Completed </span>
                     </Link>
                 </li>
             
                 <li className='side-nav__item'>
                     <Link to="/priority" className='side-nav__link' >
-                        <Priority /> <span className='side-nav__link-title'>Priority tasks</span>
+                        <Priority /> <span className='side-nav__link-title'>Priority</span>
                     </Link>
                 </li>
             

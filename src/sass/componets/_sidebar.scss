@@ -3,44 +3,33 @@
     list-style: none;
     display: flex;
     flex-direction: column;
+    width: 100%;
+    gap: 1.4rem;
 
     &__item{
-        
-        
+        display: flex;
+        justify-content: center;
         
     }
     &__link:link,
     &__link:visited {
         display: flex;
         align-items: center;
+        justify-content: flex-start;
+        gap: 1.3rem;
+        width: 80%;
         text-decoration: none;
-        text-transform: uppercase;
-        height: 4.5rem;
+        height: 5.5rem;
+        padding-left: 1.8rem;
         fill: rgb(146, 146, 146);
         color: $black-text;
         transition: padding 0.3s; 
-        padding-left: 1rem;
-        position: relative;
-        overflow: hidden;
-        z-index: 1;
-
-        &:after{
-            display: block;
-            position: absolute;
-            margin: 0;
-            top: 50;
-            bottom: 50;
-            left: 0;
-            right: 0;
-            content: '.';
-            color: transparent;
-            width: .1rem;
-            height: .1rem;
-            border-radius: 50%;
-            background: transparent;
-            z-index: -1;
+        border-radius: 10rem;
+        background-color: rgba($secondary , .18);
+        max-width: 18rem;
+        
             
-        }
+        
 
         &:hover:after{
             animation: circle 2s ease-in forwards;
@@ -54,19 +43,15 @@
     &__link-title {
         white-space: nowrap;
         overflow: hidden;
-        font-size: 1.4rem;
-        opacity: 0;
-        margin-left: 0;
-        transition: opacity 0.3s, padding-left 0.3s, transform 0.3s ease;
+        font-size: 1.7rem;
+        opacity: 1;
+        transition: transform 0.3s ease;
+        color: $text;
     }
 
     &__link:hover .side-nav__link-title {
         transform: scale(1.1);
-        padding-left: 1rem;
  }
 
-    .sidebar:hover &__link-title {
-        opacity: 1;
-        margin-left: 1rem;
-    }
+    
 }

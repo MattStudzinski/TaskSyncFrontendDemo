@@ -65,7 +65,7 @@ const IssueInfo = ({issue, onClick}) => {
             : issue.description
             }</p>
             </div>
-            <p className='card-mini__date'><strong>Due:</strong>{formatDate(issue.dueDate)}</p>
+            <p className='card-mini__date'><strong>Due: </strong>{formatDate(issue.dueDate)}</p>
             <ul className='card-mini__driver-list'>
                 {drivers.map((driver, index) => {
                     const driverStatus = completionStatus.find(status => status.driver.toString() === driver._id) || { isComplete: false };

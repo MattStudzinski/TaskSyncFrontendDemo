@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FRXIcon = ({ width = "800px", height = "800px", fill = "#ffffff", stroke = "#ffffff" }) => {
+const FRXIcon = ({ width = "800px", height = "800px", fill = "#081c1a", stroke = "#081c1a" }) => {
     return (
         <svg
             className="category-icon"

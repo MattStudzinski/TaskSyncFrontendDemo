@@ -7,10 +7,10 @@ const RXIcon = () => {
       height="800px"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
-      fill="#000000"
+      fill="#081c1a"
     >
       <defs>
-        <style>{`.cls-1{fill:none;stroke:#ffffff;stroke-miterlimit:10;stroke-width:1.91px;}`}</style>
+        <style>{`.cls-1{fill:none;stroke:#081c1a;stroke-miterlimit:10;stroke-width:1.91px;}`}</style>
       </defs>
       <circle className="cls-1" cx="6.27" cy="17.73" r="0.95" />
       <path

@@ -10,18 +10,18 @@ const CategoryIcon = ({category}) => {
 
     const categoryStyles = {
         frx: {
-            background: "linear-gradient(135deg, rgba(72, 86, 150, 1), rgba(89, 109, 164, 1), rgba(72, 86, 150, 1))"
+            background: "rgb(149, 223, 212)"
         },
         stock: {
            
-            background: "linear-gradient(135deg, #bfd5e2, #a3c4d7, #bfd5e2)"
+            background: "rgb(149, 223, 212)"
         },
         rx: {
-            background: "linear-gradient(135deg, rgba(116, 66, 83, 1), rgba(143, 93, 110, 1), rgba(116, 66, 83, 1))"
+            background: "rgb(149, 223, 212)"
             
         },
         asc: {
-            background: "linear-gradient(135deg, rgba(71, 106, 111, 1), rgba(94, 133, 145, 1), rgba(71, 106, 111, 1))",
+            background: "rgb(149, 223, 212)",
         }
     }
 
