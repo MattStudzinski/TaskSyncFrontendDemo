@@ -6,7 +6,7 @@
         height: 8.3rem;
         padding: 5px;
         border-radius: 15px;
-        background-color: $color-app-primary;
+        background-color: $box-color;
         box-shadow: var(--shadow-dark);
         display: flex;
         align-items: center;
@@ -38,16 +38,16 @@
 
     &__name {
         font-size: 1.3rem;
-        color: $color-app-text-black;
+        color: $text;
     }
 
     &__description {
-        color: $color-app-secondaryfont;
+        color: $accent;
         
     }
 
     &__date {
-        color: $color-app-secondaryfont;
+        color: $text;
         width: 15%;
         margin-left: 1rem;
     }
@@ -91,7 +91,7 @@
         }
     
         &:checked::before {
-            background: $color-app-accent4; // Replace with your accent color
+            background: $secondary; // Replace with your accent color
         }
     
         &:checked::after {
@@ -106,12 +106,12 @@
         }
     
         &:hover::before {
-            background: $color-app-accent5;
+            background: $accent;
             
         }
     
         &:checked:hover::before {
-            background: $color-app-accent1; // Replace with a lighter/darker shade of your accent color
+            background: $accent; // Replace with a lighter/darker shade of your accent color
         }
     
         &:checked:hover::after {

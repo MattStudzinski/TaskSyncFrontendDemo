@@ -5,7 +5,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
   line-height: 1.6;
-  background: linear-gradient(to right bottom, #9d9d9d, #949494);
+  background: rgb(3, 12, 10);
   background-size: cover;
   background-repeat: no-repeat;
   width: 90%;
@@ -49,12 +49,12 @@ html {
   80% {
     width: 110rem;
     height: 120rem;
-    background: #121212;
+    background: rgb(15, 27, 38);
   }
   100% {
     width: 110rem;
     height: 120rem;
-    background: #121212;
+    background: rgb(15, 27, 38);
   }
 }
 .card-mini__category-container {
@@ -159,13 +159,13 @@ html {
   z-index: 1;
 }
 .analytics__open-issues {
-  background: #181818;
+  background: rgba(36, 50, 121, 0.3);
 }
 .analytics__new-issues {
-  background: #1a1a1a;
+  background: rgba(36, 50, 121, 0.3);
 }
 .analytics__priority-issues {
-  background: #1c1c1c;
+  background: rgba(36, 50, 121, 0.3);
 }
 .analytics__link::after {
   content: "";
@@ -192,7 +192,7 @@ html {
 .analytics__header-logo {
   display: flex;
   justify-content: center;
-  background-color: rgba(255, 255, 255, 0.367);
+  background-color: rgb(103, 84, 204);
   border-radius: 1rem;
 }
 .analytics__header-title {
@@ -210,7 +210,7 @@ html {
   font-size: 3rem;
 }
 .analytics__info-string {
-  color: white;
+  color: rgb(103, 84, 204);
   font-size: 1.1rem;
   margin-left: 1rem;
 }
@@ -223,7 +223,7 @@ html {
   height: 8.3rem;
   padding: 5px;
   border-radius: 15px;
-  background-color: #1e1e1e;
+  background-color: rgb(10, 19, 17);
   box-shadow: var(--shadow-dark);
   display: flex;
   align-items: center;
@@ -248,13 +248,13 @@ html {
 }
 .card-mini__name {
   font-size: 1.3rem;
-  color: #ffffff;
+  color: rgb(227, 247, 245);
 }
 .card-mini__description {
-  color: #b0bec5;
+  color: rgb(103, 84, 204);
 }
 .card-mini__date {
-  color: #b0bec5;
+  color: rgb(227, 247, 245);
   width: 15%;
   margin-left: 1rem;
 }
@@ -294,7 +294,7 @@ html {
   transition: background-color 0.2s ease-in-out;
 }
 .card-mini__completion-input:checked::before {
-  background: linear-gradient(135deg, rgb(72, 86, 150), rgba(108, 123, 185, 0.8), rgb(72, 86, 150));
+  background: rgb(36, 50, 121);
 }
 .card-mini__completion-input:checked::after {
   content: "✓";
@@ -307,10 +307,10 @@ html {
   transition: opacity 0.2s ease-in-out;
 }
 .card-mini__completion-input:hover::before {
-  background: linear-gradient(135deg, rgb(7, 30, 34), rgba(43, 79, 86, 0.8), rgb(7, 30, 34));
+  background: rgb(103, 84, 204);
 }
 .card-mini__completion-input:checked:hover::before {
-  background: #1c1c1c;
+  background: rgb(103, 84, 204);
 }
 .card-mini__completion-input:checked:hover::after {
   opacity: 1;
@@ -447,9 +447,10 @@ html {
 .analytics-icon {
   fill: white;
   border-radius: 1.2rem;
-  border: 0.6rem solid rgba(255, 255, 255, 0);
+  border: 0.6rem solid rgb(103, 84, 204);
   height: 95%;
   width: 95%;
+  background-color: rgb(103, 84, 204);
 }
 
 .category-icon {
@@ -469,7 +470,7 @@ html {
   text-transform: uppercase;
   height: 4.5rem;
   fill: rgb(146, 146, 146);
-  color: #ffffff;
+  color: #081C1A;
   transition: padding 0.3s;
   padding-left: 1rem;
   position: relative;
@@ -532,7 +533,7 @@ html {
 
 .dash-nav {
   border-radius: 1rem;
-  background-color: #1e1e1e;
+  background-color: rgb(10, 19, 17);
   max-width: 100%;
   height: 100%;
   padding: 1rem;
@@ -544,7 +545,7 @@ html {
   align-items: center;
 }
 .dash-nav__title {
-  color: #ffffff;
+  color: #081C1A;
   font-size: 1.8rem;
 }
 .dash-nav__filters {
@@ -554,7 +555,7 @@ html {
   align-items: center;
   justify-content: flex-start;
   margin: 1rem;
-  color: #ffffff;
+  color: #081C1A;
 }
 .dash-nav__filters-selector {
   cursor: pointer;
@@ -565,7 +566,7 @@ html {
 }
 .dash-nav__filters-selector:hover {
   transform: scale(1.1);
-  color: #ffffff;
+  color: #081C1A;
 }
 .dash-nav__filters-selector:after {
   content: "";
@@ -574,7 +575,7 @@ html {
   left: 50%;
   width: 0;
   height: 2px;
-  background: linear-gradient(135deg, rgb(7, 30, 34), rgba(43, 79, 86, 0.8), rgb(7, 30, 34));
+  background: rgb(103, 84, 204);
   transition: width 0.3s ease, left 0.3s ease;
 }
 .dash-nav__filters-selector:hover:after {
@@ -592,7 +593,7 @@ html {
   z-index: 0;
   border-radius: 8px;
   border: none;
-  background: linear-gradient(135deg, rgba(0, 123, 255, 0.902), rgba(30, 144, 255, 0.9), rgba(0, 123, 255, 0.9));
+  background: rgb(149, 223, 212);
   font-size: 1.5rem;
   transition: color 0.4s, background-color 0.4s, border-color 0.4s;
 }
@@ -604,7 +605,7 @@ html {
   left: -5px;
   right: -5px;
   bottom: -5px;
-  background: linear-gradient(135deg, rgb(7, 30, 34), rgba(43, 79, 86, 0.8), rgb(7, 30, 34));
+  background: rgb(149, 223, 212);
   z-index: -1;
   border-radius: 8px;
   opacity: 0;
@@ -735,7 +736,7 @@ html {
   transition-property: box-shadow, transform;
 }
 .form__button:hover, .form__button:focus, .form__button:active {
-  box-shadow: 0 0 20px #1c1c1c;
+  box-shadow: 0 0 20px rgb(149, 223, 212);
   transform: scale(1.1);
 }
 .form__illistration {
@@ -755,14 +756,14 @@ html {
 }
 
 .calendar {
-  background-color: #1e1e1e;
+  background-color: rgb(10, 19, 17);
   border-radius: 1rem;
   height: 150px;
   max-width: 100%;
 }
 
 .somethingelse {
-  background-color: #1e1e1e;
+  background-color: rgb(10, 19, 17);
   border-radius: 1rem;
   height: 150px;
   max-width: 100%;
@@ -790,7 +791,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 }
 
 .admin-page {
-  background-color: #121212;
+  background-color: rgb(3, 12, 10);
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -801,7 +802,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   justify-content: space-between;
   padding: 1.2rem;
   border-radius: 0.8rem;
-  background-color: #1e1e1e;
+  background-color: rgb(3, 12, 10);
   align-items: center;
 }
 .admin-page__category-selectors {
@@ -825,7 +826,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  background: #1e1e1e;
+  background: rgb(3, 12, 10);
   margin-top: 1rem;
   border-radius: 1rem;
 }
@@ -844,7 +845,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 }
 .filter__label {
   font-weight: bold;
-  color: #ffffff;
+  color: #081C1A;
   margin-bottom: 0.5rem;
 }
 .filter .filter__select {
@@ -899,7 +900,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   font-size: 0.875rem;
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
-  background: #1e1e1e;
+  background: rgb(10, 19, 17);
   color: #333;
 }
 .modal-card__description {
@@ -941,7 +942,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: #1e1e1e;
+  background: rgb(10, 19, 17);
 }
 .issue-form__form-container {
   width: 100%;
@@ -964,7 +965,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   padding: 1rem;
   border: 1px solid rgb(0, 0, 0);
   border-radius: 5px;
-  background: #1e1e1e;
+  background: rgb(149, 223, 212);
   outline: none;
   color: white;
   font-size: 1.5rem;
@@ -972,17 +973,17 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   transition: 0.5s;
 }
 .issue-form__input:valid, .issue-form__input:focus {
-  border: 1px solid #c7ebf0;
+  border: 1px solid rgb(149, 223, 212);
 }
 .issue-form__input:valid ~ .issue-form__title-label, .issue-form__input:focus ~ .issue-form__title-label {
-  color: #c7ebf0;
+  color: rgb(149, 223, 212);
   transform: translateX(1rem) translateY(-2.07rem);
   transition: 0.5s;
   font-size: 1.1rem;
   padding: 0 0.7rem;
-  background: #1e1e1e;
-  border-left: 1px solid #c7ebf0;
-  border-right: 1px solid #c7ebf0;
+  background: rgb(149, 223, 212);
+  border-left: 1px solid rgb(149, 223, 212);
+  border-right: 1px solid rgb(149, 223, 212);
   letter-spacing: 0.1rem;
 }
 .issue-form__title-label {
@@ -1013,29 +1014,29 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   border: none;
   font-size: 1.5rem;
   border: none;
-  border-bottom: solid #1e1e1e 0.2rem;
+  border-bottom: solid rgb(10, 19, 17) 0.2rem;
   background: none;
   padding: 1rem;
   border: 1px solid rgb(0, 0, 0);
   border-radius: 5px;
-  background: #1e1e1e;
+  background: rgb(10, 19, 17);
   outline: none;
   color: white;
   font-size: 1.5rem;
   transition: 0.5s;
 }
 .issue-form__textarea:valid, .issue-form__textarea:focus {
-  border: 1px solid #c7ebf0;
+  border: 1px solid rgb(149, 223, 212);
 }
 .issue-form__textarea:valid ~ .issue-form__title-textarea, .issue-form__textarea:focus ~ .issue-form__title-textarea {
-  color: #c7ebf0;
+  color: rgb(149, 223, 212);
   transform: translateX(1rem) translateY(-2.9rem);
   transition: 0.5s;
   font-size: 1.1rem;
   padding: 0 0.7rem;
-  background: #1e1e1e;
-  border-left: 1px solid #c7ebf0;
-  border-right: 1px solid #c7ebf0;
+  background: rgb(10, 19, 17);
+  border-left: 1px solid rgb(149, 223, 212);
+  border-right: 1px solid rgb(149, 223, 212);
   letter-spacing: 0.1rem;
 }
 .issue-form__assignment-container {
@@ -1058,7 +1059,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 }
 
 .results-page {
-  background-color: #121212;
+  background-color: rgb(3, 12, 10);
   padding: 2rem;
   display: flex;
   height: 100%;
@@ -1068,7 +1069,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   border-bottom-right-radius: 10px;
 }
 .results-page__card {
-  background-color: #1e1e1e;
+  background-color: rgb(10, 19, 17);
   border-radius: 1rem;
   width: 100%;
   height: 100%;
@@ -1091,7 +1092,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 .container {
   max-width: 140rem;
   margin: 5rem auto;
-  background-color: #1e1e1e;
+  background-color: rgb(3, 12, 10);
   box-shadow: var(--shadow-dark);
   min-height: 81rem;
   border-radius: 10px;
@@ -1101,8 +1102,8 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 
 header {
   height: 7rem;
-  background-color: #1e1e1e;
-  border-bottom: 1px solid #1c1c1c;
+  background-color: rgb(10, 19, 17);
+  border-bottom: 1px solid rgb(149, 223, 212);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1113,7 +1114,7 @@ header {
 }
 
 .sidebar {
-  background: #121212;
+  background: rgb(10, 19, 17);
   flex: 0 0 4rem;
   max-width: 20%;
   min-width: 4rem;
@@ -1127,7 +1128,7 @@ header {
 }
 
 .content {
-  background-color: #1e1e1e;
+  background-color: rgb(3, 12, 10);
   display: flex;
   border-bottom-right-radius: 1rem;
   border-bottom-left-radius: 1rem;
@@ -1136,7 +1137,7 @@ header {
 }
 
 .dash-view {
-  background-color: #121212;
+  background-color: rgb(3, 12, 10);
   border-bottom-right-radius: 1rem;
   display: flex;
   justify-content: space-between;
@@ -1165,7 +1166,7 @@ header {
   transition: background-color 0.3s ease;
 }
 .pagination .page-item button {
-  color: #b0bec5;
+  color: rgb(227, 247, 245);
   border: none;
   margin-bottom: 0.7rem;
   padding: 0.5rem 0.8rem;
@@ -1174,12 +1175,12 @@ header {
   border-radius: 100px;
 }
 .pagination .page-item button:hover {
-  background: #1a1a1a;
-  color: #ffffff;
+  background: rgb(149, 223, 212);
+  color: #081C1A;
 }
 .pagination .page-item.active button {
-  background: #c7ebf0;
-  color: #ffffff;
+  background: rgb(103, 84, 204);
+  color: #081C1A;
 }
 label, input {
   display: block;

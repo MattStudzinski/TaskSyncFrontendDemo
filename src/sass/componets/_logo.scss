@@ -15,9 +15,10 @@
 .analytics-icon {
     fill: white;
     border-radius: 1.2rem;
-    border: .6rem solid rgba(255, 255, 255, 0);
+    border: .6rem solid $accent;
     height: 95%;
     width: 95%;
+    background-color: $accent;
 }
 
 

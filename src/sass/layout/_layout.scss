@@ -1,7 +1,7 @@
 .container {
 max-width: 140rem;
 margin: 5rem auto;
-background-color: $color-app-primary;
+background-color: $background;
 box-shadow: var(--shadow-dark);
 min-height: 81rem;
 border-radius: 10px;
@@ -14,8 +14,8 @@ flex-direction: column;
 
 header{
     height: 7rem;
-    background-color: $color-app-primary;
-    border-bottom: 1px solid $color-app-accent1;
+    background-color: $box-color;
+    border-bottom: 1px solid $primary;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -27,7 +27,7 @@ header{
   
 
   .sidebar{
-    background: $color-app-secondary;
+    background: $box-color;
     flex: 0 0 4rem;
     max-width: 20%;
     min-width: 4rem;
@@ -44,7 +44,7 @@ header{
 
 
   .content {
-    background-color: $color-app-primary;
+    background-color: $background;
     display: flex;
     border-bottom-right-radius: 1rem;
     border-bottom-left-radius: 1rem;
@@ -54,7 +54,7 @@ header{
   }
 
   .dash-view {
-background-color: $color-app-secondary;
+background-color: $background;
 border-bottom-right-radius: 1rem;
 
 display: flex;
@@ -93,7 +93,7 @@ padding: 2rem;
     transition: background-color 0.3s ease;
 
     button {
-      color: $color-app-secondaryfont;
+      color: $text;
       border: none;
       margin-bottom: .7rem;
       padding: .5rem .8rem;
@@ -102,15 +102,15 @@ padding: 2rem;
       border-radius: 100px;
 
       &:hover {
-        background: $color-app-accent2;
-        color: $color-app-text-black;
+        background: $primary;
+        color: $black-text;
 
       }
     }
 
     &.active button {
-      background: $color-app-light-green;
-      color: $color-app-text-black;
+      background: $accent;
+      color: $black-text;
 
       &:hover {
         

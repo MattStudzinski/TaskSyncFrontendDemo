@@ -30,15 +30,16 @@
     }
 
     &__open-issues {
-        background: $color-app-accent3;
+        background: rgba($secondary, .3 );
+        
     }
 
     &__new-issues {
-        background: $color-app-accent2
+        background: rgba($secondary, .3 )
     }
 
     &__priority-issues {
-        background: $color-app-accent1;
+        background: rgba($secondary, .3 );
     }
 
     &__link::after {
@@ -69,7 +70,7 @@
     &__header-logo {
         display: flex;
         justify-content: center;
-        background-color: rgba(255, 255, 255, 0.367);
+        background-color: $accent;
         border-radius: 1rem;
     }
 
@@ -91,7 +92,7 @@
     }
 
     &__info-string {
-        color: white;
+        color: $accent;
         font-size: 1.1rem;
         margin-left: 1rem;
     }

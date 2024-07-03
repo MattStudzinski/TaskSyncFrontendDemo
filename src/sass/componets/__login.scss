@@ -106,7 +106,7 @@
         transition-property: box-shadow, transform;
 
         &:hover, &:focus, &:active {
-            box-shadow: 0 0 20px $color-app-accent1;
+            box-shadow: 0 0 20px $primary;
             transform: scale(1.1);
             
         }

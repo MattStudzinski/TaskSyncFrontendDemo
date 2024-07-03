@@ -6,10 +6,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
     font-weight: 400;
     line-height: 1.6;
-    background: linear-gradient(
-        to right bottom ,
-         rgba($color-gradient1 ,1),
-         rgba($color-gradient2, 1));
+    background: $background;
     background-size: cover;
     background-repeat: no-repeat;
     width: 90%;
