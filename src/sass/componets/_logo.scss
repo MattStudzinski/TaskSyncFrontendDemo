@@ -5,8 +5,8 @@
 }
 .sidenav-icon {
     
-    height: 2.5rem;
-    width: 2.5rem;
+    height: 2rem;
+    width: 2rem;
     flex-shrink: 0;
     transition: margin-right 0.3s;
     fill: $accent;
@@ -29,3 +29,17 @@
     height: 3rem;
     fill: $black-text;
 }
+
+.card-mini__category-container {
+    padding: 10px;
+    border-radius: 5px;
+
+    &.primary-style{
+        background-color: $primary;
+    }
+
+    &.alternate-style {
+        background: $accent; 
+    }
+}
+

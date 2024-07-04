@@ -28,7 +28,7 @@ const UserIssueInfo = ({issue, handleCompletionChange, onClose}) => {
                     })}
                 </ul>
             <p className='modal-card__category'>{issue.category}</p>
-            <button type='button' onClick={onClose} className='task__close-button__issues'>Close</button>
+            <button type='button' onClick={onClose} className='task__close-button__modals'>Close</button>
         </section>
     );
 };

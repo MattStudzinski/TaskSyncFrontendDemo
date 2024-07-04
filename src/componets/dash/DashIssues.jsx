@@ -15,7 +15,7 @@ const DashIssues = () => {
     const [selectedIssue, setSelectedIssue] = useState(null)
     const [animationKey, setAnimationKey] = useState(0);
     const [currentPage, setCurrentPage] = useState(1)
-    const issuesPerPage = 4
+    const issuesPerPage = 5
     const listRef = useRef(null)
 
     console.log(issues)

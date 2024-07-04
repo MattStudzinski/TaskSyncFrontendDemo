@@ -2,7 +2,7 @@
     width: 80%;
 
     &__container{
-        margin: 0 0 1rem 0 ;
+        
         height: 8.3rem;
         padding: 5px;
         border-bottom: solid 1px $accent;
@@ -42,12 +42,12 @@
     }
 
     &__description {
-        color: $accent;
+        color: $grey-text;
         
     }
 
     &__date {
-        color: $text;
+        color: $accent;
         width: 15%;
         margin-left: 1rem;
     }
@@ -131,7 +131,7 @@
         display: flex;
         align-items: center;
         flex-direction: column;
-        color: $text;
+        color: $accent;
     }
     
     &__prioriry-container{

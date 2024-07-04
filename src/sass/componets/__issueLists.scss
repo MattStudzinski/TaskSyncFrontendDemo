@@ -1,0 +1,41 @@
+.issue-form {
+
+    &__title-container {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    &__label {
+        color: red;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__name {
+        
+    }
+
+    &__input {
+
+    }
+
+    &__textarea {
+        width: 80%;
+        height: 6rem;
+        resize: none;
+    }
+
+    &__assignment-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__driver-container {
+        display: flex;
+    }
+    &__button-container{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+}

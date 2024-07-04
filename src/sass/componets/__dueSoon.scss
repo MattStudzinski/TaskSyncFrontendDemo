@@ -1,0 +1,38 @@
+.due-soon{
+    display: flex;
+    background-color: $box-color;
+    border-radius: 1rem;
+    height: 50%;
+    align-items: center;
+
+    &__ul {
+        padding: 2rem 1rem 2rem 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        
+    }
+
+    &__li{
+        height: 8rem;
+    }
+
+    &__card {
+        display: flex;
+    }
+
+
+    &__info-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__name{
+        color: $text;
+        font-size: 1.4rem;
+    }
+
+    &__date {
+        color: $text;
+    }
+}

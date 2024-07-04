@@ -61,8 +61,6 @@ html {
   position: relative;
   overflow: hidden;
   border-radius: 50%;
-  background: rgb(15, 166, 121);
-  background-image: linear-gradient(135deg, rgb(15, 166, 121), rgba(159, 247, 208, 0.8));
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3019607843);
   transition: transform 0.3s ease-in-out;
   cursor: pointer;
@@ -134,6 +132,7 @@ html {
 }
 .analytics {
   margin-bottom: 2rem;
+  height: 18rem;
   display: flex;
   justify-content: space-between;
   max-width: 100%;
@@ -148,7 +147,7 @@ html {
 }
 .analytics__link:hover {
   transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 10px 20px rgb(36, 50, 121);
 }
 .analytics__open-issues, .analytics__new-issues, .analytics__priority-issues {
   padding: 1rem;
@@ -160,12 +159,24 @@ html {
 }
 .analytics__open-issues {
   background: rgba(36, 50, 121, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 .analytics__new-issues {
   background: rgba(36, 50, 121, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 .analytics__priority-issues {
   background: rgba(36, 50, 121, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 .analytics__link::after {
   content: "";
@@ -174,7 +185,7 @@ html {
   left: 0;
   width: 100%;
   height: 50%;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), transparent);
+  background: linear-gradient(0deg, rgba(65, 65, 65, 0.2), transparent);
   opacity: 0;
   transition: opacity 0.3s ease;
   z-index: 2;
@@ -219,7 +230,6 @@ html {
   width: 80%;
 }
 .card-mini__container {
-  margin: 0 0 1rem 0;
   height: 8.3rem;
   padding: 5px;
   border-bottom: solid 1px rgb(103, 84, 204);
@@ -251,10 +261,10 @@ html {
   color: rgb(227, 247, 245);
 }
 .card-mini__description {
-  color: rgb(103, 84, 204);
+  color: rgb(180, 180, 180);
 }
 .card-mini__date {
-  color: rgb(227, 247, 245);
+  color: rgb(103, 84, 204);
   width: 15%;
   margin-left: 1rem;
 }
@@ -325,7 +335,7 @@ html {
   display: flex;
   align-items: center;
   flex-direction: column;
-  color: rgb(227, 247, 245);
+  color: rgb(103, 84, 204);
 }
 .card-mini__prioriry-container {
   display: flex;
@@ -440,8 +450,8 @@ html {
 }
 
 .sidenav-icon {
-  height: 2.5rem;
-  width: 2.5rem;
+  height: 2rem;
+  width: 2rem;
   flex-shrink: 0;
   transition: margin-right 0.3s;
   fill: rgb(103, 84, 204);
@@ -462,6 +472,17 @@ html {
   fill: #081c1a;
 }
 
+.card-mini__category-container {
+  padding: 10px;
+  border-radius: 5px;
+}
+.card-mini__category-container.primary-style {
+  background-color: rgb(149, 223, 212);
+}
+.card-mini__category-container.alternate-style {
+  background: rgb(103, 84, 204);
+}
+
 .side-nav {
   list-style: none;
   display: flex;
@@ -480,7 +501,7 @@ html {
   gap: 1.3rem;
   width: 80%;
   text-decoration: none;
-  height: 5.5rem;
+  height: 4.5rem;
   padding-left: 1.8rem;
   fill: rgb(146, 146, 146);
   color: #081c1a;
@@ -623,7 +644,7 @@ html {
   border-radius: 8px;
 }
 
-.task__close-button__issues {
+.task__close-button__modals {
   width: 6rem;
   height: 2rem;
   color: rgba(0, 123, 255, 0.902);
@@ -770,7 +791,7 @@ html {
 
 .modal-form {
   margin: auto;
-  border: none;
+  border: 1px solid rgb(103, 84, 204);
   border-radius: 5px;
   height: 75%;
   width: 70%;
@@ -943,8 +964,14 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   display: flex;
   justify-content: space-evenly;
 }
+.issue-form__label {
+  color: white;
+}
+.issue-form__label-secondary {
+  color: white;
+}
 .issue-form #issue-form_input-name__id {
-  width: 30rem;
+  width: 55rem;
 }
 .issue-form .issue-form__input-box {
   position: relative;
@@ -954,9 +981,9 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 .issue-form__input {
   width: 100%;
   padding: 1rem;
-  border: 1px solid rgb(0, 0, 0);
+  border: 1px solid rgb(215, 215, 215);
   border-radius: 5px;
-  background: rgb(149, 223, 212);
+  background: rgb(10, 19, 17);
   outline: none;
   color: white;
   font-size: 1.5rem;
@@ -972,7 +999,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   transition: 0.5s;
   font-size: 1.1rem;
   padding: 0 0.7rem;
-  background: rgb(149, 223, 212);
+  background: rgb(10, 19, 17);
   border-left: 1px solid rgb(149, 223, 212);
   border-right: 1px solid rgb(149, 223, 212);
   letter-spacing: 0.1rem;
@@ -984,7 +1011,6 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   pointer-events: none;
   font-size: 1.5rem;
   color: white;
-  text-transform: uppercase;
 }
 .issue-form__title-textarea {
   position: absolute;
@@ -994,7 +1020,6 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   pointer-events: none;
   font-size: 1.5rem;
   color: white;
-  text-transform: uppercase;
   margin-left: 3rem;
 }
 .issue-form__textarea {
@@ -1005,10 +1030,9 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   border: none;
   font-size: 1.5rem;
   border: none;
-  border-bottom: solid rgb(10, 19, 17) 0.2rem;
   background: none;
   padding: 1rem;
-  border: 1px solid rgb(0, 0, 0);
+  border: 1px solid white;
   border-radius: 5px;
   background: rgb(10, 19, 17);
   outline: none;
@@ -1078,6 +1102,37 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   animation: fadeInUp 0.8s ease forwards;
   animation-delay: calc(var(--index) * 0.1s);
   position: relative;
+}
+
+.due-soon {
+  display: flex;
+  background-color: rgb(10, 19, 17);
+  border-radius: 1rem;
+  height: 50%;
+  align-items: center;
+}
+.due-soon__ul {
+  padding: 2rem 1rem 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.due-soon__li {
+  height: 8rem;
+}
+.due-soon__card {
+  display: flex;
+}
+.due-soon__info-container {
+  display: flex;
+  flex-direction: column;
+}
+.due-soon__name {
+  color: rgb(227, 247, 245);
+  font-size: 1.4rem;
+}
+.due-soon__date {
+  color: rgb(227, 247, 245);
 }
 
 .container {

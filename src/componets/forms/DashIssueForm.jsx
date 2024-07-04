@@ -172,7 +172,7 @@ const DashIssueForm = ({ onClose }) => {
         </div>
             <div className='issue-form__button-container'>
                 <button className='new-task__button' type='submit'>Submit issue</button>
-                <button type='button' onClick={onClose} className='task__close-button'>Close</button>
+                <button type='button' onClick={onClose} className='task__close-button__modals'>Close</button>
                 {error && <div className='error'>{error}</div>}
             </div>
         </form>
