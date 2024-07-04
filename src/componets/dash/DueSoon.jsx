@@ -27,8 +27,11 @@ const DueSoon = () => {
     return (
         
             <section className='due-soon'>
+                <h3 className='due-soon__title'>
+                    Due Soon
+                </h3>
                 <ul className='due-soon__ul'>
-                    {filteredAndSortedIssues.slice(0,3).map((issue) => (
+                    {filteredAndSortedIssues.slice(0,4).map((issue) => (
                         <li key={issue.id} className='due-soon__li'>
                             <DueSoonCard key={issue._id} issue={issue} />
                         </li>
