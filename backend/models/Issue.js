@@ -53,6 +53,14 @@ const issueSchema = new Schema({
         type: Schema.Types.ObjectId,
         required: true,
         ref: "User"
+    },
+    recurrenceInterval: {
+        type: String,
+        required: false
+    },
+    recurrenceUnit: {
+        type: String,
+        required: false
     }
     
 }, { timestamps: true })

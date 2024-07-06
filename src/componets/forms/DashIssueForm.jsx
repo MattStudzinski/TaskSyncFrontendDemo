@@ -97,7 +97,7 @@ const DashIssueForm = ({ onClose }) => {
         <form className='issue-form' onSubmit={handleSubmit}>
             <div className='issue-form__form-container'>
             <div className='issue-form__title-container'>
-                <div className='issue-form__input-box'>
+                <div className='issue-form__input-box-name'>
                     <input
                         type='text'
                         name='name'
@@ -122,8 +122,9 @@ const DashIssueForm = ({ onClose }) => {
                     <label className='issue-form__title-textarea'>Description</label>
             </div>
 
-            <div className='issue-form__assignment-container'>
-                <label className='issue-form__label'>Assignment</label>
+            <div className='issue-form__assignment-select-container'>
+                <section className='issue-form__assigned-container'>
+                <label className='issue-form__label'>Assign to:</label>
                 <div className='issue-form__driver-container'>
                     <label className='issue-form__label-secondary' htmlFor={user.name}>{user.name}</label>
                     <input
@@ -134,19 +135,23 @@ const DashIssueForm = ({ onClose }) => {
                         defaultChecked
                     />
                 </div>
+                </section>
+                <section className='issue-form__select-container'>
+                
+                    <Select
+                        name='room'
+                        options={parRoomOptions}
+                        value={selectedParRooms}
+                        onChange={handleParRoomChange}
+                        isMulti
+                        classNamePrefix='react-select'
+                        className='issue-form__select'
+                        placeholder='Par Rooms...'
+                    />
+                
+            </section>
             </div>
-
-            <label className='issue-form__label'>
-                Par Room:
-                <Select
-                    name='room'
-                    options={parRoomOptions}
-                    value={selectedParRooms}
-                    onChange={handleParRoomChange}
-                    isMulti
-                    className='issue-form__select'
-                />
-            </label>
+            
 
             <div className='issue-form__priority-container'>
                 <label className='issue-form__label'>Priority Status</label>

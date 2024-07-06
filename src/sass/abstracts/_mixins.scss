@@ -1,0 +1,51 @@
+.react-select__menu {
+    background-color: rgb(3, 12, 10); // $background color
+    color: rgb(227, 247, 245); // $text color
+}
+
+.react-select__option {
+    background-color: $box-color;
+    color: white;
+
+    &--is-focused {
+        background-color: rgba(15, 27, 38, 255); // $selected-grey color
+    }
+
+    &--is-selected {
+        background-color: $secondary;
+        color: rgb(227, 247, 245); // $text color
+    }
+}
+
+.react-select__multi-value {
+    background-color: $secondary;
+    color: rgb(227, 247, 245); // $text color
+
+    .react-select__multi-value__label {
+        color: rgb(227, 247, 245); // $text color
+    }
+
+    .react-select__multi-value__remove {
+        color: rgb(227, 247, 245); // $text color
+
+        &:hover {
+            background-color: lighten($secondary, 10%); // Lighten background on hover
+            color: rgb(227, 247, 245); // $text color
+        }
+    }
+}
+
+.react-select__menu-list {
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: $box-color; // $box-color
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $accent; // $primary color
+        border-radius: 4px;
+    }
+}

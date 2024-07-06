@@ -29,6 +29,8 @@ app.listen(process.env.PORT, () => {
     console.log("connected to db and listening on port",process.env.PORT)
 })
 
+require('./utility/scheduler')
+
 })
 .catch((error) => {
     console.log(error)
