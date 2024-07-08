@@ -564,20 +564,18 @@ html {
   border-radius: 10rem;
   background-color: rgba(36, 50, 121, 0.18);
   max-width: 18rem;
+  transition: transform 0.3s ease, background-color 1s ease;
 }
-.side-nav__link:link:hover:after, .side-nav__link:visited:hover:after {
-  animation: circle 2s ease-in forwards;
+.side-nav__link:link:hover, .side-nav__link:visited:hover {
+  transform: scale(1.1);
+  background-color: rgb(36, 50, 121);
 }
 .side-nav__link-title {
   white-space: nowrap;
   overflow: hidden;
   font-size: 1.7rem;
   opacity: 1;
-  transition: transform 0.3s ease;
   color: rgb(227, 247, 245);
-}
-.side-nav__link:hover .side-nav__link-title {
-  transform: scale(1.1);
 }
 
 .dash-view__analytics-container {
@@ -1280,43 +1278,42 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   gap: 8rem;
   justify-content: center;
 }
-.issue-form__ .issue-form__button-container {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-.issue-form .__category-selector {
+.issue-form__category-selector {
   display: flex;
   flex-direction: column;
   margin-top: 10px;
 }
-.issue-form .__category-selector__label {
+.issue-form__label-category {
   color: rgb(227, 247, 245);
   font-size: 14px;
   margin-bottom: 5px;
 }
-.issue-form .__category-selector__select {
+.issue-form__select-category {
   width: 100%;
   padding: 8px;
   border: 2px solid rgb(149, 223, 212);
   background-color: rgb(10, 19, 17);
   color: rgb(227, 247, 245);
   border-radius: 4px;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
+  padding: 1rem;
   font-size: 14px;
   cursor: pointer;
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
-.issue-form .__category-selector__select:focus {
+.issue-form__select-category:focus {
   border-color: grey;
   box-shadow: 0 0 0 3px rgba(149, 223, 212, 0.5);
   outline: none;
 }
-.issue-form .__category-selector__select option {
+.issue-form__select option {
   background-color: rgb(10, 19, 17);
   color: rgb(227, 247, 245);
+}
+.issue-form__button-container {
+  display: flex;
+  gap: 5rem;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .results-page {

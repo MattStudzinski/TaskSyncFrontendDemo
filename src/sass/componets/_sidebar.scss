@@ -27,12 +27,14 @@
         border-radius: 10rem;
         background-color: rgba($secondary , .18);
         max-width: 18rem;
+        transition: transform 0.3s ease, background-color 1s ease;
         
             
         
 
-        &:hover:after{
-            animation: circle 2s ease-in forwards;
+        &:hover{
+            transform: scale(1.1);
+            background-color: $secondary;
         }
 
         
@@ -45,13 +47,10 @@
         overflow: hidden;
         font-size: 1.7rem;
         opacity: 1;
-        transition: transform 0.3s ease;
+        
         color: $text;
     }
 
-    &__link:hover .side-nav__link-title {
-        transform: scale(1.1);
- }
 
     
 }

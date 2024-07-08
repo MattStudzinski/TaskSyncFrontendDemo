@@ -429,35 +429,27 @@
     justify-content: center;
 }
 
-&__
 
-&__button-container{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
 
-.__category-selector {
+&__category-selector {
     display: flex;
     flex-direction: column;
     margin-top: 10px;
-
-    &__label {
+}
+    &__label-category {
         color: $text; // Example color for text
         font-size: 14px; // Example font size
         margin-bottom: 5px; // Space between label and select box
     }
 
-    &__select {
+    &__select-category {
         width: 100%;
         padding: 8px;
         border: 2px solid $primary; // Example border color
         background-color: $box-color; // Example background color
         color: $text; // Example text color
         border-radius: 4px;
-        appearance: none;
-        -webkit-appearance: none;
-        -moz-appearance: none;
+        padding: 1rem;
         font-size: 14px; // Example font size
         cursor: pointer;
         transition: border-color 0.2s ease, box-shadow 0.2s ease;
@@ -472,7 +464,15 @@
     &__select option {
         background-color: $box-color; // Example background color
         color: $text; // Example text color
-    }
+    
+}
+
+
+&__button-container{
+    display: flex;
+    gap: 5rem;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 }

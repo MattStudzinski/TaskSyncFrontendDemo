@@ -178,8 +178,8 @@ const DashIssueForm = ({ onClose }) => {
             </section>
 
             <div className='issue-form__category-seletor'>
-                <label className='issue-form__label' htmlFor='category'>What category does this issue fall under</label>
-                <select id="category" name="category" className='issue-form__select'>
+                <label className='issue-form__label-category' htmlFor='category'>What category does this issue fall under</label>
+                <select id="category" name="category" className='issue-form__select-category'>
                     <option value="stock">STOCK</option>
                     <option value="frx">FRX</option>
                     <option value="rx">RX</option>
