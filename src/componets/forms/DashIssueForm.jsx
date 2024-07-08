@@ -108,9 +108,9 @@ const DashIssueForm = ({ onClose }) => {
                         <span className='issue-form__title-label'>Name</span>
                 </div>
 
-                <div className='issue-form__input-box'>
-                    <input className='issue-form__input' type='date' required name='dueDate' />
-                    <span className='issue-form__title-label'>Due-Date</span>
+                <div className='issue-form__input-box-calendar'>
+                    <input className='issue-form__input-calendar' type='date' required name='dueDate' />
+                    <span className='issue-form__title-label-calendar'>Due:</span>
                 </div>
             </div>
             <div className='issue-form__input-box'>
@@ -126,7 +126,7 @@ const DashIssueForm = ({ onClose }) => {
                 <section className='issue-form__assigned-container'>
                 <label className='issue-form__label'>Assign to:</label>
                 <div className='issue-form__driver-container'>
-                    <label className='issue-form__label-secondary' htmlFor={user.name}>{user.name}</label>
+                    <label className='issue-form__label' htmlFor={user.name}>{user.name}
                     <input
                         className='issue-form__input-checkbox'
                         type='checkbox'
@@ -134,6 +134,7 @@ const DashIssueForm = ({ onClose }) => {
                         value={user.name}
                         defaultChecked
                     />
+                    </label>
                 </div>
                 </section>
                 <section className='issue-form__select-container'>
@@ -152,22 +153,33 @@ const DashIssueForm = ({ onClose }) => {
             </section>
             </div>
             
-
-            <div className='issue-form__priority-container'>
+            <section className='issue-form__priority-container'>
                 <label className='issue-form__label'>Priority Status</label>
-                <input className='issue-form__input' type='checkbox' name='priority' value="high" />
-                <label className='issue-form__label' htmlFor='high'>High</label>
 
-                <input className='issue-form__input' type='checkbox' name='priority' value="medium" />
-                <label className='issue-form__label' htmlFor='medium'>Medium</label>
+                <div className='issue-form__priority-selectors'>
 
-                <input className='issue-form__input' type='checkbox' name='priority' value="low" />
-                <label className='issue-form__label' htmlFor='low'>Low</label>
-            </div>
+                <label className='issue-form__label' htmlFor='low'>Low
+                    <input className='issue-form__input-checkbox' type='checkbox' name='priority' value="low" />
+                </label>
 
-            <div className='issueForm'>
+
+                <label className='issue-form__label' htmlFor='medium'>Medium
+                    <input className='issue-form__input-checkbox' type='checkbox' name='priority' value="medium" />
+                </label>
+
+
+                <label className='issue-form__label' htmlFor='high'>
+                    High
+                    <input className='issue-form__input-checkbox' type='checkbox' name='priority' value="high" />
+                </label>
+                </div>
+
+                
+            </section>
+
+            <div className='issue-form__category-seletor'>
                 <label className='issue-form__label' htmlFor='category'>What category does this issue fall under</label>
-                <select id="category" name="category">
+                <select id="category" name="category" className='issue-form__select'>
                     <option value="stock">STOCK</option>
                     <option value="frx">FRX</option>
                     <option value="rx">RX</option>

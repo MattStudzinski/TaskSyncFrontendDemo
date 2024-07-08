@@ -34,7 +34,7 @@ function PrimaryRoutes () {
   const showContainer = location.pathname !== '/login' && location.pathname !== '/signup'
   return (
     <div className={showContainer ? 'container' : ''}>
-    
+    {showHeader && <Header /> }
     
 <div className='main-content-container'>
   {showSidebar && <Sidebar />}

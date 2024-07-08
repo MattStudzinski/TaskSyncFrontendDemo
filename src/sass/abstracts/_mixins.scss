@@ -1,3 +1,19 @@
+
+.react-select__control {
+    background-color: $box-color;
+    color: white; 
+    border-color: white; 
+
+    &:hover {
+        border-color: $primary;
+    }
+
+    &--is-focused {
+        border-color: $primary;
+        box-shadow: 0 0 0 1px $primary;
+    }
+}
+
 .react-select__menu {
     background-color: rgb(3, 12, 10); // $background color
     color: rgb(227, 247, 245); // $text color

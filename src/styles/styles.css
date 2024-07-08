@@ -1,4 +1,17 @@
 @charset "UTF-8";
+.react-select__control {
+  background-color: rgb(10, 19, 17);
+  color: white;
+  border-color: white;
+}
+.react-select__control:hover {
+  border-color: rgb(149, 223, 212);
+}
+.react-select__control--is-focused {
+  border-color: rgb(149, 223, 212);
+  box-shadow: 0 0 0 1px rgb(149, 223, 212);
+}
+
 .react-select__menu {
   background-color: rgb(3, 12, 10);
   color: rgb(227, 247, 245);
@@ -1000,17 +1013,47 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   align-items: center;
   width: 90%;
 }
+.issue-form__input-checkbox {
+  /* Hide the default checkbox */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgb(149, 223, 212);
+  background-color: rgb(10, 19, 17);
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  /* Custom checkmark */
+}
+.issue-form__input-checkbox:checked::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 14px;
+  height: 14px;
+  background-color: white;
+  border-radius: 2px;
+}
+.issue-form__input-checkbox:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(149, 223, 212, 0.5);
+}
 .issue-form__title-container {
   display: flex;
-  justify-content: space-evenly;
+  gap: 1rem;
   width: 100%;
   margin-bottom: 1.2rem;
 }
 .issue-form__label {
   color: white;
-}
-.issue-form__label-secondary {
-  color: white;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
 }
 .issue-form .issue-form__input-box-name {
   position: relative;
@@ -1061,6 +1104,51 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   pointer-events: none;
   font-size: 1.5rem;
   color: white;
+}
+.issue-form .issue-form__input-box-calendar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.issue-form__input-calendar {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid rgb(215, 215, 215);
+  border-radius: 5px;
+  background: rgb(10, 19, 17);
+  outline: none;
+  color: white;
+  font-size: 1.5rem;
+  height: 100%;
+  transition: 0.5s;
+}
+.issue-form__input-calendar:valid, .issue-form__input-calendar:focus {
+  border: 1px solid rgb(149, 223, 212);
+}
+.issue-form__input-calendar:valid ~ .issue-form__title-label-calendar, .issue-form__input-calendar:focus ~ .issue-form__title-label-calendar {
+  color: rgb(149, 223, 212);
+  transition: 0.5s;
+  font-size: 1.1rem;
+  padding: 0 0.7rem;
+  background: rgb(10, 19, 17);
+  border-left: 1px solid rgb(149, 223, 212);
+  border-right: 1px solid rgb(149, 223, 212);
+  letter-spacing: 0.1rem;
+}
+.issue-form__input-calendar::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+}
+.issue-form__title-label-calendar {
+  position: absolute;
+  left: 0;
+  font-size: 1.1rem;
+  padding: 0.2rem 1.1rem;
+  pointer-events: none;
+  color: white;
+  transform: translateX(1rem) translateY(-2.07rem);
+  background: rgb(10, 19, 17);
 }
 .issue-form__title-textarea {
   position: absolute;
@@ -1115,8 +1203,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   width: 50%;
   border: 1px solid white;
   border-radius: 0.5rem;
-  padding-top: 0.2rem;
-  padding-left: 0.5rem;
+  padding: 1rem;
 }
 .issue-form__driver-container {
   justify-content: center;
@@ -1130,6 +1217,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   background-color: rgb(10, 19, 17);
   color: white;
   border-color: white;
+  padding: 1rem;
 }
 .issue-form .react-select__control:hover {
   border-color: rgb(149, 223, 212);
@@ -1179,12 +1267,56 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 }
 .issue-form__priority-container {
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
+  width: 100%;
+  flex: 1;
+  border: 1px solid white;
+  border-radius: 0.5rem;
+  padding: 1rem;
 }
-.issue-form__button-container {
+.issue-form__priority-selectors {
+  display: flex;
+  margin-top: 1rem;
+  gap: 8rem;
+  justify-content: center;
+}
+.issue-form__ .issue-form__button-container {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+}
+.issue-form .__category-selector {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+.issue-form .__category-selector__label {
+  color: rgb(227, 247, 245);
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.issue-form .__category-selector__select {
+  width: 100%;
+  padding: 8px;
+  border: 2px solid rgb(149, 223, 212);
+  background-color: rgb(10, 19, 17);
+  color: rgb(227, 247, 245);
+  border-radius: 4px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  font-size: 14px;
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.issue-form .__category-selector__select:focus {
+  border-color: grey;
+  box-shadow: 0 0 0 3px rgba(149, 223, 212, 0.5);
+  outline: none;
+}
+.issue-form .__category-selector__select option {
+  background-color: rgb(10, 19, 17);
+  color: rgb(227, 247, 245);
 }
 
 .results-page {
