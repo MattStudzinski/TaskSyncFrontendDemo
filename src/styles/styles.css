@@ -1,15 +1,15 @@
 @charset "UTF-8";
 .react-select__control {
-  background-color: rgb(241, 246, 246);
+  background-color: #0a0c0c;
   color: white;
   border-color: white;
 }
 .react-select__control:hover {
-  border-color: #3dc9d2;
+  border-color: #2eb8c2;
 }
 .react-select__control--is-focused {
-  border-color: #3dc9d2;
-  box-shadow: 0 0 0 1px #3dc9d2;
+  border-color: #2eb8c2;
+  box-shadow: 0 0 0 1px #2eb8c2;
 }
 
 .react-select__menu {
@@ -18,19 +18,19 @@
 }
 
 .react-select__option {
-  background-color: rgb(241, 246, 246);
+  background-color: #0a0c0c;
   color: white;
 }
 .react-select__option--is-focused {
   background-color: rgb(15, 27, 38);
 }
 .react-select__option--is-selected {
-  background-color: #8baee4;
+  background-color: #1b3f74;
   color: rgb(227, 247, 245);
 }
 
 .react-select__multi-value {
-  background-color: #8baee4;
+  background-color: #1b3f74;
   color: rgb(227, 247, 245);
 }
 .react-select__multi-value .react-select__multi-value__label {
@@ -40,7 +40,7 @@
   color: rgb(227, 247, 245);
 }
 .react-select__multi-value .react-select__multi-value__remove:hover {
-  background-color: #b4cbee;
+  background-color: #25559d;
   color: rgb(227, 247, 245);
 }
 
@@ -48,10 +48,10 @@
   width: 8px;
 }
 .react-select__menu-list::-webkit-scrollbar-track {
-  background-color: rgb(241, 246, 246);
+  background-color: #0a0c0c;
 }
 .react-select__menu-list::-webkit-scrollbar-thumb {
-  background-color: #5d71d9;
+  background-color: #263aa1;
   border-radius: 4px;
 }
 
@@ -61,7 +61,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
   line-height: 1.6;
-  background: #f9fefe;
+  background: #010404;
   background-size: cover;
   background-repeat: no-repeat;
   width: 90%;
@@ -203,7 +203,7 @@ html {
 }
 .analytics__link:hover {
   transform: scale(1.05);
-  box-shadow: 0 10px 20px #8baee4;
+  box-shadow: 0 10px 20px #1b3f74;
 }
 .analytics__open-issues, .analytics__new-issues, .analytics__priority-issues {
   padding: 1rem;
@@ -214,21 +214,21 @@ html {
   z-index: 1;
 }
 .analytics__open-issues {
-  background: rgba(139, 174, 228, 0.3);
+  background: rgba(27, 63, 116, 0.3);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
 }
 .analytics__new-issues {
-  background: rgba(139, 174, 228, 0.3);
+  background: rgba(27, 63, 116, 0.3);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
 }
 .analytics__priority-issues {
-  background: rgba(139, 174, 228, 0.3);
+  background: rgba(27, 63, 116, 0.3);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -259,7 +259,7 @@ html {
 .analytics__header-logo {
   display: flex;
   justify-content: center;
-  background-color: #5d71d9;
+  background-color: #263aa1;
   border-radius: 1rem;
 }
 .analytics__header-title {
@@ -277,7 +277,7 @@ html {
   font-size: 3rem;
 }
 .analytics__info-string {
-  color: #5d71d9;
+  color: #263aa1;
   font-size: 1.1rem;
   margin-left: 1rem;
 }
@@ -288,8 +288,8 @@ html {
 .card-mini__container {
   height: 8.3rem;
   padding: 5px;
-  border-bottom: solid 1px #5d71d9;
-  background-color: rgb(241, 246, 246);
+  border-bottom: solid 1px #263aa1;
+  background-color: #0a0c0c;
   display: flex;
   align-items: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -306,7 +306,7 @@ html {
   height: 4.5rem;
   justify-content: center;
   align-items: center;
-  background-color: #3dc9d2;
+  background-color: #2eb8c2;
 }
 .card-mini__title-container {
   margin-left: 0.5rem;
@@ -314,13 +314,13 @@ html {
 }
 .card-mini__name {
   font-size: 1.3rem;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
 .card-mini__description {
   color: rgb(180, 180, 180);
 }
 .card-mini__date {
-  color: #5d71d9;
+  color: #263aa1;
   width: 15%;
   margin-left: 1rem;
 }
@@ -345,7 +345,7 @@ html {
   cursor: pointer;
   outline: none;
   border: none;
-  background-color: #8baee4;
+  background-color: #1b3f74;
   border-radius: 4px;
   transition: transform 0.2s ease-in-out;
 }
@@ -361,7 +361,7 @@ html {
   transition: background-color 0.2s ease-in-out;
 }
 .card-mini__completion-input:checked::before {
-  background: #8baee4;
+  background: #1b3f74;
 }
 .card-mini__completion-input:checked::after {
   content: "✓";
@@ -374,10 +374,10 @@ html {
   transition: opacity 0.2s ease-in-out;
 }
 .card-mini__completion-input:hover::before {
-  background: #5d71d9;
+  background: #263aa1;
 }
 .card-mini__completion-input:checked:hover::before {
-  background: #5d71d9;
+  background: #263aa1;
 }
 .card-mini__completion-input:checked:hover::after {
   opacity: 1;
@@ -391,7 +391,7 @@ html {
   display: flex;
   align-items: center;
   flex-direction: column;
-  color: #5d71d9;
+  color: #263aa1;
 }
 .card-mini__prioriry-container {
   display: flex;
@@ -510,22 +510,22 @@ html {
   width: 2rem;
   flex-shrink: 0;
   transition: margin-right 0.3s;
-  fill: #5d71d9;
+  fill: #263aa1;
 }
 
 .analytics-icon {
   fill: white;
   border-radius: 1.2rem;
-  border: 0.6rem solid #5d71d9;
+  border: 0.6rem solid #263aa1;
   height: 95%;
   width: 95%;
-  background-color: #5d71d9;
+  background-color: #263aa1;
 }
 
 .category-icon {
   width: 3rem;
   height: 3rem;
-  fill: #ffffff;
+  fill: #000000;
 }
 
 .card-mini__category-container {
@@ -533,10 +533,10 @@ html {
   border-radius: 5px;
 }
 .card-mini__category-container.primary-style {
-  background-color: #3dc9d2;
+  background-color: #2eb8c2;
 }
 .card-mini__category-container.alternate-style {
-  background: #5d71d9;
+  background: #263aa1;
 }
 
 .side-nav {
@@ -560,23 +560,23 @@ html {
   height: 4.5rem;
   padding-left: 1.8rem;
   fill: rgb(146, 146, 146);
-  color: #ffffff;
+  color: #000000;
   transition: padding 0.3s;
   border-radius: 10rem;
-  background-color: rgba(139, 174, 228, 0.18);
+  background-color: rgba(27, 63, 116, 0.18);
   max-width: 18rem;
   transition: transform 0.3s ease, background-color 1s ease;
 }
 .side-nav__link:link:hover, .side-nav__link:visited:hover {
   transform: scale(1.1);
-  background-color: #8baee4;
+  background-color: #1b3f74;
 }
 .side-nav__link-title {
   white-space: nowrap;
   overflow: hidden;
   font-size: 1.7rem;
   opacity: 1;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
 
 .dash-view__analytics-container {
@@ -598,7 +598,7 @@ html {
 
 .dash-nav {
   border-radius: 1rem;
-  background-color: rgb(241, 246, 246);
+  background-color: #0a0c0c;
   max-width: 100%;
   height: 100%;
   padding: 1rem;
@@ -610,7 +610,7 @@ html {
   align-items: center;
 }
 .dash-nav__title {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   font-size: 1.8rem;
 }
 .dash-nav__filters {
@@ -620,7 +620,7 @@ html {
   align-items: center;
   justify-content: flex-start;
   margin: 1rem;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
 .dash-nav__filters-selector {
   cursor: pointer;
@@ -631,7 +631,7 @@ html {
 }
 .dash-nav__filters-selector:hover {
   transform: scale(1.1);
-  color: #5d71d9;
+  color: #263aa1;
 }
 .dash-nav__filters-selector:after {
   content: "";
@@ -640,7 +640,7 @@ html {
   left: 50%;
   width: 0;
   height: 2px;
-  background: #5d71d9;
+  background: #263aa1;
   transition: width 0.3s ease, left 0.3s ease;
 }
 .dash-nav__filters-selector:hover:after {
@@ -652,13 +652,13 @@ html {
   padding: 5px 10px;
   border: 2px solid transparent;
   outline: none;
-  color: #ffffff;
+  color: #000000;
   cursor: pointer;
   position: relative;
   z-index: 0;
   border-radius: 8px;
   border: none;
-  background: #3dc9d2;
+  background: #2eb8c2;
   font-size: 1.5rem;
   transition: color 0.4s, background-color 0.4s, border-color 0.4s;
 }
@@ -670,7 +670,7 @@ html {
   left: -5px;
   right: -5px;
   bottom: -5px;
-  background: #3dc9d2;
+  background: #2eb8c2;
   z-index: -1;
   border-radius: 8px;
   opacity: 0;
@@ -679,7 +679,7 @@ html {
 }
 
 .new-task__button:hover {
-  color: #ffffff;
+  color: #000000;
   background-color: #fff;
 }
 
@@ -693,15 +693,15 @@ html {
   height: 2rem;
   color: rgba(255, 255, 255, 0.902);
   background-color: rgb(0, 0, 0);
-  border: solid #3dc9d2 0.1rem;
+  border: solid #2eb8c2 0.1rem;
   border-radius: 8px;
 }
 
 .task__close-button__modals {
   padding: 5px 10px;
   color: rgba(255, 255, 255, 0.902);
-  background-color: rgb(241, 246, 246);
-  border: solid #3dc9d2 0.1rem;
+  background-color: #0a0c0c;
+  border: solid #2eb8c2 0.1rem;
   border-radius: 8px;
   transition: transform 0.3s ease;
   max-width: 20rem;
@@ -806,7 +806,7 @@ html {
   transition-property: box-shadow, transform;
 }
 .form__button:hover, .form__button:focus, .form__button:active {
-  box-shadow: 0 0 20px #3dc9d2;
+  box-shadow: 0 0 20px #2eb8c2;
   transform: scale(1.1);
 }
 .form__illistration {
@@ -826,7 +826,7 @@ html {
 }
 
 .calendar {
-  background-color: rgb(241, 246, 246);
+  background-color: #0a0c0c;
   border-radius: 1rem;
   height: 30%;
   max-width: 100%;
@@ -842,7 +842,7 @@ html {
 
 .modal-form {
   margin: auto;
-  border: 1px solid #5d71d9;
+  border: 1px solid #263aa1;
   border-radius: 5px;
   height: 75%;
   width: 70%;
@@ -854,7 +854,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 }
 
 .admin-page {
-  background-color: #f9fefe;
+  background-color: #010404;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -865,7 +865,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   width: 30%;
 }
 .card-mini__delete {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   cursor: pointer;
 }
 .card-mini__drivers-admin-ul {
@@ -880,7 +880,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  background: rgb(241, 246, 246);
+  background: #0a0c0c;
   margin-top: 1rem;
   border-radius: 1rem;
   padding: 1rem;
@@ -888,7 +888,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 .admin-page__navigation {
   display: flex;
   align-items: center;
-  background-color: rgb(241, 246, 246);
+  background-color: #0a0c0c;
   padding: 20px;
   border-radius: 8px;
 }
@@ -910,16 +910,16 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   margin-right: 0;
 }
 .admin-page__navigation .filter-container .filter .filter__label {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   margin-bottom: 5px;
   font-size: 14px;
 }
 .admin-page__navigation .filter-container .filter .filter__select {
   width: 200px;
   padding: 10px;
-  border: 1px solid #3dc9d2;
-  background-color: rgb(241, 246, 246);
-  color: rgb(0, 0, 0);
+  border: 1px solid #2eb8c2;
+  background-color: #0a0c0c;
+  color: rgb(255, 255, 255);
   border-radius: 4px;
   appearance: none;
   -webkit-appearance: none;
@@ -931,8 +931,8 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   background-image: none;
 }
 .admin-page__navigation .filter-container .filter .filter__select:focus {
-  border-color: #5d71d9;
-  box-shadow: 0 0 5px 1px #3dc9d2;
+  border-color: #263aa1;
+  box-shadow: 0 0 5px 1px #2eb8c2;
   outline: none;
 }
 .admin-page__navigation .filter-container .filter .filter__select::after {
@@ -945,12 +945,12 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   pointer-events: none;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-top: 5px solid rgb(0, 0, 0);
+  border-top: 5px solid rgb(255, 255, 255);
   transform: translateY(-50%);
 }
 .admin-page__navigation .filter-container .filter .filter__option {
-  background-color: rgb(241, 246, 246);
-  color: rgb(0, 0, 0);
+  background-color: #0a0c0c;
+  color: rgb(255, 255, 255);
 }
 
 .modal__container {
@@ -958,7 +958,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   flex-direction: column;
   height: 100%;
   justify-content: space-between;
-  background-color: rgb(241, 246, 246);
+  background-color: #0a0c0c;
   align-items: center;
 }
 
@@ -969,7 +969,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: rgb(241, 246, 246);
+  background: #0a0c0c;
   align-items: center;
 }
 .issue-form__form-container {
@@ -986,8 +986,8 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   width: 20px;
   height: 20px;
   margin-right: 2rem;
-  border: 2px solid #3dc9d2;
-  background-color: rgb(241, 246, 246);
+  border: 2px solid #2eb8c2;
+  background-color: #0a0c0c;
   border-radius: 4px;
   position: relative;
   cursor: pointer;
@@ -1007,7 +1007,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 }
 .issue-form__input-checkbox:focus {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(61, 201, 210, 0.5);
+  box-shadow: 0 0 0 3px rgba(46, 184, 194, 0.5);
 }
 .issue-form__title-container {
   display: flex;
@@ -1042,7 +1042,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   padding: 1rem;
   border: 1px solid rgb(215, 215, 215);
   border-radius: 5px;
-  background: rgb(241, 246, 246);
+  background: #0a0c0c;
   outline: none;
   color: white;
   font-size: 1.5rem;
@@ -1050,17 +1050,17 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   transition: 0.5s;
 }
 .issue-form__input:valid, .issue-form__input:focus {
-  border: 1px solid #3dc9d2;
+  border: 1px solid #2eb8c2;
 }
 .issue-form__input:valid ~ .issue-form__title-label, .issue-form__input:focus ~ .issue-form__title-label {
-  color: #3dc9d2;
+  color: #2eb8c2;
   transform: translateX(1rem) translateY(-2.07rem);
   transition: 0.5s;
   font-size: 1.1rem;
   padding: 0 0.7rem;
-  background: rgb(241, 246, 246);
-  border-left: 1px solid #3dc9d2;
-  border-right: 1px solid #3dc9d2;
+  background: #0a0c0c;
+  border-left: 1px solid #2eb8c2;
+  border-right: 1px solid #2eb8c2;
   letter-spacing: 0.1rem;
 }
 .issue-form__title-label {
@@ -1081,7 +1081,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   padding: 1rem;
   border: 1px solid rgb(215, 215, 215);
   border-radius: 5px;
-  background: rgb(241, 246, 246);
+  background: #0a0c0c;
   outline: none;
   color: white;
   font-size: 1.5rem;
@@ -1089,16 +1089,16 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   transition: 0.5s;
 }
 .issue-form__input-calendar:valid, .issue-form__input-calendar:focus {
-  border: 1px solid #3dc9d2;
+  border: 1px solid #2eb8c2;
 }
 .issue-form__input-calendar:valid ~ .issue-form__title-label-calendar, .issue-form__input-calendar:focus ~ .issue-form__title-label-calendar {
-  color: #3dc9d2;
+  color: #2eb8c2;
   transition: 0.5s;
   font-size: 1.1rem;
   padding: 0 0.7rem;
-  background: rgb(241, 246, 246);
-  border-left: 1px solid #3dc9d2;
-  border-right: 1px solid #3dc9d2;
+  background: #0a0c0c;
+  border-left: 1px solid #2eb8c2;
+  border-right: 1px solid #2eb8c2;
   letter-spacing: 0.1rem;
 }
 .issue-form__input-calendar::-webkit-calendar-picker-indicator {
@@ -1113,7 +1113,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   pointer-events: none;
   color: white;
   transform: translateX(1rem) translateY(-2.07rem);
-  background: rgb(241, 246, 246);
+  background: #0a0c0c;
 }
 .issue-form__title-textarea {
   position: absolute;
@@ -1135,24 +1135,24 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   padding: 1rem;
   border: 1px solid white;
   border-radius: 5px;
-  background: rgb(241, 246, 246);
+  background: #0a0c0c;
   outline: none;
   color: white;
   font-size: 1.5rem;
   transition: 0.5s;
 }
 .issue-form__textarea:valid, .issue-form__textarea:focus {
-  border: 1px solid #3dc9d2;
+  border: 1px solid #2eb8c2;
 }
 .issue-form__textarea:valid ~ .issue-form__title-textarea, .issue-form__textarea:focus ~ .issue-form__title-textarea {
-  color: #3dc9d2;
+  color: #2eb8c2;
   transform: translateX(1rem) translateY(-3.3rem);
   transition: 0.5s;
   font-size: 1.1rem;
   padding: 0 0.7rem;
-  background: rgb(241, 246, 246);
-  border-left: 1px solid #3dc9d2;
-  border-right: 1px solid #3dc9d2;
+  background: #0a0c0c;
+  border-left: 1px solid #2eb8c2;
+  border-right: 1px solid #2eb8c2;
   letter-spacing: 0.1rem;
 }
 .issue-form__assignment-select-container {
@@ -1179,35 +1179,35 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   width: 50%;
 }
 .issue-form .react-select__control {
-  background-color: rgb(241, 246, 246);
+  background-color: #0a0c0c;
   color: white;
   border-color: white;
   padding: 1rem;
 }
 .issue-form .react-select__control:hover {
-  border-color: #3dc9d2;
+  border-color: #2eb8c2;
 }
 .issue-form .react-select__control--is-focused {
-  border-color: #3dc9d2;
-  box-shadow: 0 0 0 1px #3dc9d2;
+  border-color: #2eb8c2;
+  box-shadow: 0 0 0 1px #2eb8c2;
 }
 .issue-form .react-select__menu {
   background-color: rgb(3, 12, 10);
   color: rgb(227, 247, 245);
 }
 .issue-form .react-select__option {
-  background-color: rgb(241, 246, 246);
+  background-color: #0a0c0c;
   color: white;
 }
 .issue-form .react-select__option--is-focused {
   background-color: rgb(15, 27, 38);
 }
 .issue-form .react-select__option--is-selected {
-  background-color: #8baee4;
+  background-color: #1b3f74;
   color: rgb(227, 247, 245);
 }
 .issue-form .react-select__multi-value {
-  background-color: #8baee4;
+  background-color: #1b3f74;
   color: rgb(227, 247, 245);
 }
 .issue-form .react-select__multi-value .react-select__multi-value__label {
@@ -1217,17 +1217,17 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   color: rgb(227, 247, 245);
 }
 .issue-form .react-select__multi-value .react-select__multi-value__remove:hover {
-  background-color: #b4cbee;
+  background-color: #25559d;
   color: rgb(227, 247, 245);
 }
 .issue-form .react-select__menu-list::-webkit-scrollbar {
   width: 8px;
 }
 .issue-form .react-select__menu-list::-webkit-scrollbar-track {
-  background-color: rgb(241, 246, 246);
+  background-color: #0a0c0c;
 }
 .issue-form .react-select__menu-list::-webkit-scrollbar-thumb {
-  background-color: #5d71d9;
+  background-color: #263aa1;
   border-radius: 4px;
 }
 .issue-form__priority-container {
@@ -1251,16 +1251,16 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   margin-top: 10px;
 }
 .issue-form__label-category {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   font-size: 14px;
   margin-bottom: 5px;
 }
 .issue-form__select-category {
   width: 100%;
   padding: 8px;
-  border: 2px solid #3dc9d2;
-  background-color: rgb(241, 246, 246);
-  color: rgb(0, 0, 0);
+  border: 2px solid #2eb8c2;
+  background-color: #0a0c0c;
+  color: rgb(255, 255, 255);
   border-radius: 4px;
   padding: 1rem;
   font-size: 14px;
@@ -1269,12 +1269,12 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 }
 .issue-form__select-category:focus {
   border-color: grey;
-  box-shadow: 0 0 0 3px rgba(61, 201, 210, 0.5);
+  box-shadow: 0 0 0 3px rgba(46, 184, 194, 0.5);
   outline: none;
 }
 .issue-form__select option {
-  background-color: rgb(241, 246, 246);
-  color: rgb(0, 0, 0);
+  background-color: #0a0c0c;
+  color: rgb(255, 255, 255);
 }
 .issue-form__button-container {
   display: flex;
@@ -1284,7 +1284,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 }
 
 .results-page {
-  background-color: #f9fefe;
+  background-color: #010404;
   padding: 2rem;
   display: flex;
   height: 100%;
@@ -1294,7 +1294,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   border-bottom-right-radius: 10px;
 }
 .results-page__card {
-  background-color: rgb(241, 246, 246);
+  background-color: #0a0c0c;
   border-radius: 1rem;
   width: 100%;
   height: 100%;
@@ -1317,13 +1317,13 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 .due-soon {
   display: flex;
   flex-direction: column;
-  background-color: rgb(241, 246, 246);
+  background-color: #0a0c0c;
   border-radius: 1rem;
   height: 50%;
   align-items: flex-start;
 }
 .due-soon__title {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   padding: 1.5rem 2rem;
   font-size: 1.6rem;
 }
@@ -1335,7 +1335,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   width: 100%;
 }
 .due-soon__li {
-  border-bottom: 1px solid #8baee4;
+  border-bottom: 1px solid #1b3f74;
 }
 .due-soon__card {
   display: flex;
@@ -1348,33 +1348,33 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   flex-direction: column;
 }
 .due-soon__name {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   font-size: 1.4rem;
 }
 .due-soon__date {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
 
 .modal-card {
   padding: 2rem;
-  background-color: rgb(241, 246, 246);
+  background-color: #0a0c0c;
   border-radius: 8px;
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
-  border: 1px solid #5d71d9;
+  border: 1px solid #263aa1;
   justify-content: space-between;
 }
 .modal-card__title {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   display: flex;
   align-items: center;
   font-size: 1.9rem;
   font-weight: bold;
   justify-content: space-between;
   padding: 0 0 1rem 0;
-  border-bottom: 1px solid #5d71d9;
+  border-bottom: 1px solid #263aa1;
 }
 .modal-card__subtitle-container {
   display: flex;
@@ -1384,32 +1384,32 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   font-size: 1.2rem;
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
-  background: #8baee4;
-  color: rgb(0, 0, 0);
+  background: #1b3f74;
+  color: rgb(255, 255, 255);
 }
 .modal-card__priority {
   font-size: 1.2rem;
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
-  background: #3dc9d2;
+  background: #2eb8c2;
   color: black;
 }
 .modal-card__description {
   margin: 1rem 0 1rem 0;
-  border: 1px solid rgb(0, 0, 0);
+  border: 1px solid rgb(255, 255, 255);
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
   font-size: 1.2rem;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   min-height: 8rem;
 }
 .modal-card__due-date {
   font-size: 1.4rem;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   margin-top: 1rem;
 }
 .modal-card__parroom-title {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   font-size: 1.3rem;
   margin-bottom: 0.2rem;
 }
@@ -1420,12 +1420,12 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 .modal-card__par-li {
   font-size: 1.1rem;
   margin-right: 0.7rem;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
 .modal-card__assigned-title {
   font-size: 1.25rem;
   margin-top: 1.5rem;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
 .modal-card__driver-list {
   list-style: none;
@@ -1434,19 +1434,19 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 }
 .modal-card__driver-item {
   font-size: 1rem;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   padding: 0.25rem 0;
   border-bottom: 1px solid #eee;
 }
 
 .card-mini__drivers-admin-li {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
 
 .container {
   max-width: 140rem;
   margin: 5rem auto;
-  background-color: #f9fefe;
+  background-color: #010404;
   box-shadow: var(--shadow-dark);
   min-height: 81rem;
   border-radius: 10px;
@@ -1456,8 +1456,8 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 
 header {
   height: 7rem;
-  background-color: rgb(241, 246, 246);
-  border-bottom: 1px solid #3dc9d2;
+  background-color: #0a0c0c;
+  border-bottom: 1px solid #2eb8c2;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1468,7 +1468,7 @@ header {
 }
 
 .sidebar {
-  background: rgb(241, 246, 246);
+  background: #0a0c0c;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1478,7 +1478,7 @@ header {
 }
 
 .content {
-  background-color: #f9fefe;
+  background-color: #010404;
   display: flex;
   border-bottom-right-radius: 1rem;
   border-bottom-left-radius: 1rem;
@@ -1487,7 +1487,7 @@ header {
 }
 
 .dash-view {
-  background-color: #f9fefe;
+  background-color: #010404;
   border-bottom-right-radius: 1rem;
   display: flex;
   justify-content: space-between;
@@ -1516,22 +1516,22 @@ header {
   transition: background-color 0.3s ease;
 }
 .pagination .page-item button {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
   border: none;
   margin-bottom: 0.7rem;
   padding: 0.5rem 0.8rem;
-  background-color: rgb(241, 246, 246);
+  background-color: #0a0c0c;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
   border-radius: 100px;
 }
 .pagination .page-item button:hover {
-  background: #8baee4;
-  color: rgb(0, 0, 0);
+  background: #1b3f74;
+  color: rgb(255, 255, 255);
 }
 .pagination .page-item.active button {
-  background: #5d71d9;
-  color: #ffffff;
+  background: #263aa1;
+  color: #000000;
 }
 label, input {
   display: block;
