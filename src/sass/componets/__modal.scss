@@ -65,7 +65,7 @@
     display: flex;
     gap: 1rem;
     width: 100%;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1.7rem;
 }
 
 &__label {
@@ -142,7 +142,7 @@
         position: relative;
         display: flex;
         align-items: center;
-        width: 100%;
+        width: 22%;
     }
     
     
@@ -232,7 +232,7 @@
     &:valid ~ .issue-form__title-textarea,
     &:focus ~ .issue-form__title-textarea {
         color: $primary;
-        transform: translateX(1rem) translateY(-2.9rem);
+        transform: translateX(1rem) translateY(-3.3rem);
         transition: 0.5s;
         font-size: 1.1rem;
         padding: 0 .7rem;

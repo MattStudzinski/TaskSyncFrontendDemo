@@ -41,6 +41,12 @@ const Sidebar = () => {
                         <AddTask/> <span className='side-nav__link-title'>New Task</span>
                     </Link>
                 </li>
+
+                <li className='side-nav__item'>
+                <Link to="/admin" className='side-nav__link'>
+                    <span className='side-nav__link-title'>Admin</span>
+                </Link>
+                </li>
             </ul>
         </nav>
     );

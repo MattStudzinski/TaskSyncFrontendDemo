@@ -56,7 +56,7 @@ const IssueInfo = ({issue, onClick}) => {
         <>
         <div className="card-mini__container" onClick={() => onClick(issue)}>
             <p >
-                <CategoryIcon category={issue.category} className='primary-style'/>
+                <CategoryIcon category={issue.category} className='primary'/>
             </p>
         <div className='card-mini__title-container'>
             <h4 className='card-mini__name'>{issue.name}</h4>

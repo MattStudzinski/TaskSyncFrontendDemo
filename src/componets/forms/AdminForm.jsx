@@ -73,7 +73,7 @@ const IssueForm = ({onClose}) => {
     
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form className='issue-form' onSubmit={handleSubmit}>
             
             <label>
                 Name:

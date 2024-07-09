@@ -36,9 +36,7 @@ const Header = () => {
                     <button className='dropdown-menu__item' onClick={handleClick}>
                         Log out
                     </button>
-                    <Link to="/admin" className='dropdown-menu__item'>
-                        Admin Page
-                    </Link>
+                    
                 </div>
             )}
             </div>
