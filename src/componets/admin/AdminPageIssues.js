@@ -5,7 +5,7 @@ import { useAuthContext } from '../../hooks/useAuthContext';
 import { useIssuesContext } from '../../hooks/useIssuesContext';
 const AdminPageIssues = ({issue, onClick}) => {
     const {dispatch} = useIssuesContext()
-    const { driver = [], route = [], room = [] } = issue
+    const {  room = [] } = issue
     const {user} = useAuthContext()
     const handleClick = async () => {
         if (!user){
@@ -47,6 +47,21 @@ const AdminPageIssues = ({issue, onClick}) => {
 
 
             <p className='card-mini__date'><strong>Due:</strong>{formatDate(issue.dueDate)}</p>
+            
+
+            <ul className='card-mini__parroom-list'>
+            {room.slice(0, 3).map((room, index) => {
+                return (
+                    <li key={index}>
+                        {room}
+                    </li>
+                )
+            })}
+            {room.length > 3 && (
+                <li className='card-mini__ellipsis'>...</li>
+            )}
+            </ul>
+            
             <ul className='card-mini__drivers-admin-ul'>
                 {issue.drivers.map(driver => 
                 

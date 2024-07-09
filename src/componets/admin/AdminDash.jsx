@@ -66,41 +66,40 @@ const AdminDash = () => {
 
             <section className="admin-page">
                 <div className="admin-page__navigation">
-            <div className="filter-container">
+    <div className="filter-container">
+        <div className="filter">
+            <label className="filter__label">User: </label>
+            <select className="filter__select" value={selectedUser} onChange={handleUserChange}>
+                <option className="filter__option" value="">All Users</option>
+                {userOptions.map((option, index) => (
+                    <option key={index} value={option.value}>{option.label}</option>
+                ))}
+            </select>
+        </div>
+        <div className="filter">
+            <label className="filter__label">Category: </label>
+            <select className="filter__select" value={selectedCategory} onChange={handleCategoryChange}>
+                <option className="filter__option" value="">All Categories</option>
+                {categoryOptions.map((option, index) => (
+                    <option key={index} value={option.value}>{option.label}</option>
+                ))}
+            </select>
+        </div>
+        <div className="filter">
+            <label className="filter__label">Priority: </label>
+            <select className="filter__select" value={selectedPriority} onChange={handlePriorityChange}>
+                <option className="filter__option" value="">All Priorities</option>
+                {priorityOptions.map((option, index) => (
+                    <option key={index} value={option.value}>{option.label}</option>
+                ))}
+            </select>
+        </div>
+    </div>
+    <ModalControlAdmin />
+</div>
 
-                <div className="filter">
-                    <label className="filter__label">User: </label>
-                    <select className="filter__select" value={selectedUser} onChange={handleUserChange}>
-                        <option className="filter__option" value="">All Users</option>
-                        {userOptions.map((option, index) => (
-                            <option key={index} value={option.value}>{option.label}</option>
-                        ))}
-                    </select>
-                </div>
 
-                <div className="filter">
-                    <label className="filter__label">Category: </label>
-                    <select className="filter__select" value={selectedCategory} onChange={handleCategoryChange}>
-                        <option className="filter__option" value="">All Categories</option>
-                        {categoryOptions.map((option, index) => (
-                            <option key={index} value={option.value}>{option.label}</option>
-                        ))}
-                    </select>
-                </div>
 
-                <div className="filter">
-                    <label className="filter__label">Priority: </label>
-                    <select className="filter__select" value={selectedPriority} onChange={handlePriorityChange}>
-                        <option className="filter__option" value="">All Priorities</option>
-                        {priorityOptions.map((option, index) => (
-                            <option key={index} value={option.value}>{option.label}</option>
-                        ))}
-                    </select>
-                </div>
-                
-            </div>
-                <ModalControlAdmin />
-            </div>
             <div className="results-page-admin">
                 
                 <section className="results-page-admin__card-admin">

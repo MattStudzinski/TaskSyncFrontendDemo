@@ -32,7 +32,6 @@ const DashIssueForm = ({ onClose }) => {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        console.log('Selected Par Rooms:', selectedParRooms);
         if (!user) {
             setError('You must be logged in');
             return;
