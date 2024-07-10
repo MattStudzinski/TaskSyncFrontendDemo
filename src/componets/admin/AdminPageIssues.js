@@ -7,11 +7,12 @@ const AdminPageIssues = ({issue, onClick}) => {
     const {dispatch} = useIssuesContext()
     const {  room = [] } = issue
     const {user} = useAuthContext()
-    const handleClick = async () => {
+    
+    const handleClick = async (e) => {
         if (!user){
             return
         }
-
+        e.stopPropagation()
         const response = await fetch('/api/issues/' + issue._id, {
             method: "DELETE",
             headers: {

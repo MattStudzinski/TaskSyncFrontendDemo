@@ -16,7 +16,7 @@
 
     &__link:hover {
         transform: scale(1.05);
-        box-shadow: 0 10px 20px $secondary;
+        box-shadow: 0 10px 20px $accent;
     }
 
     &__open-issues,
@@ -31,7 +31,7 @@
     }
 
     &__open-issues {
-        background: rgba($secondary, .3 );
+        background: rgba($secondary, .7 );
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -39,7 +39,7 @@
     }
 
     &__new-issues {
-        background: rgba($secondary, .3 );
+        background: rgba($secondary, .7 );
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -47,7 +47,7 @@
     }
 
     &__priority-issues {
-        background: rgba($secondary, .3 );
+        background: rgba($secondary, .7 );
         display: flex;
         flex-direction: column;
         justify-content: space-between;
