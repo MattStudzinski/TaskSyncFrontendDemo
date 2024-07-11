@@ -22,14 +22,14 @@ app.use('/api/issues', issueRoutes)
 app.use('/api/user', userRoutes)
 
 // connect to db
-mongoose.connect(process.env.MONGO_URI)
+mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
 .then(() => {
     // listening for requests
-app.listen(process.env.PORT, () => {
-    console.log("connected to db and listening on port",process.env.PORT)
-})
+    app.listen(process.env.PORT, () => {
+        console.log("connected to db and listening on port", process.env.PORT)
+    })
 
-require('./utility/scheduler')
+    require('./utility/scheduler')
 
 })
 .catch((error) => {
