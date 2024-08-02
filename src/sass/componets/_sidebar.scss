@@ -54,3 +54,27 @@
 
     
 }
+.logout-button {
+    background: none; 
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.3rem;
+    width: 80%;
+    text-decoration: none;
+    height: 4.5rem;
+    padding-left: 1.8rem;
+    fill: rgb(146, 146, 146);
+    color: #081c1a;
+    border-radius: 10rem;
+    background-color: rgba($secondary , .18);
+    max-width: 18rem;
+    cursor: pointer; 
+    transition: transform 0.3s ease, background-color 1s ease; 
+}
+
+.logout-button:hover {
+    transform: scale(1.1);
+    background-color: $secondary; 
+}
