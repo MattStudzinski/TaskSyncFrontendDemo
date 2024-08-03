@@ -10,6 +10,7 @@
     justify-content: space-between;
     margin-right: 2rem;
     height: 100%;
+    
 }
 
 &__calendar-container{
@@ -41,7 +42,7 @@
 
 
     &__title{
-        color: $text;
+        color: $white-text;
         font-size: 1.8rem;
     }
     &addbutton{
@@ -55,7 +56,7 @@
         align-items: center;
         justify-content: flex-start;
         margin: 1rem;
-        color: $text;
+        color: $white-text;
     }
 
     &__filters-selector {

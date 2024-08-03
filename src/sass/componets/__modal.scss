@@ -29,7 +29,6 @@
 
 &__input-checkbox {
     /* Hide the default checkbox */
-    
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -303,29 +302,29 @@
     color: white;
 
     &--is-focused {
-        background-color: rgba(15, 27, 38, 255); // $selected-grey color
+        background-color: rgba(15, 27, 38, 255); 
     }
 
     &--is-selected {
         background-color: $secondary;
-        color: rgb(227, 247, 245); // $text color
+        color: rgb(227, 247, 245); 
     }
 }
 
 .react-select__multi-value {
     background-color: $secondary;
-    color: rgb(227, 247, 245); // $text color
+    color: rgb(227, 247, 245); 
 
     .react-select__multi-value__label {
-        color: rgb(227, 247, 245); // $text color
+        color: rgb(227, 247, 245); 
     }
 
     .react-select__multi-value__remove {
-        color: rgb(227, 247, 245); // $text color
+        color: rgb(227, 247, 245); 
 
         &:hover {
-            background-color: lighten($secondary, 10%); // Lighten background on hover
-            color: rgb(227, 247, 245); // $text color
+            background-color: lighten($secondary, 10%); 
+            color: rgb(227, 247, 245); 
         }
     }
 }
@@ -336,11 +335,11 @@
     }
 
     &::-webkit-scrollbar-track {
-        background-color: $box-color; // $box-color
+        background-color: $box-color; 
     }
 
     &::-webkit-scrollbar-thumb {
-        background-color: $accent; // $primary color
+        background-color: $accent; 
         border-radius: 4px;
     }
 }
@@ -371,9 +370,9 @@
     margin-top: 10px;
 }
     &__label-category {
-        color: $text; // Example color for text
-        font-size: 14px; // Example font size
-        margin-bottom: 5px; // Space between label and select box
+        color: $white-text; 
+        font-size: 14px; 
+        margin-bottom: 5px; 
     }
 
     &__select-category {
@@ -381,7 +380,7 @@
         padding: 8px;
         border: 2px solid $primary; // Example border color
         background-color: $box-color; // Example background color
-        color: $text; // Example text color
+        color: $white-text; // Example text color
         border-radius: 4px;
         padding: 1rem;
         font-size: 14px; // Example font size
@@ -397,7 +396,7 @@
 
     &__select option {
         background-color: $box-color; // Example background color
-        color: $text; // Example text color
+        color: $white-text; // Example text color
     
 }
 

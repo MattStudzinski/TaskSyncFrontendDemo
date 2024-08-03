@@ -1,6 +1,6 @@
 .container {
-max-width: 140rem;
-margin: 5rem auto;
+width: 100%;
+margin: 0 auto;
 background-color: $background;
 box-shadow: var(--shadow-dark);
 min-height: 81rem;
@@ -27,12 +27,11 @@ header{
   
 
   .sidebar{
-    background: $box-color;
+    background: $primary;
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 17%;
-    border-radius: 1rem;
+    min-width: 19%;
     padding-top: 6rem;
     
     
@@ -58,7 +57,7 @@ border-bottom-right-radius: 1rem;
 display: flex;
 justify-content: space-between;
 flex: 1;
-padding: 0rem 2rem;
+padding: 3rem 2rem;
 
 
   }
@@ -91,7 +90,7 @@ padding: 0rem 2rem;
     transition: background-color 0.3s ease;
 
     button {
-      color: $text;
+      color: $white-text;
       border: none;
       margin-bottom: .7rem;
       padding: .5rem .8rem;
@@ -102,7 +101,7 @@ padding: 0rem 2rem;
 
       &:hover {
         background: $secondary;
-        color: $text;
+        color: $white-text;
 
       }
     }

@@ -17,7 +17,7 @@
 }
 
 &__delete{
-    color: $text;
+    color: $white-text;
     cursor: pointer;
 }
 
@@ -79,7 +79,7 @@
             }
 
             .filter__label {
-                color: $text;
+                color: $white-text;
                 margin-bottom: 5px;
                 font-size: 14px;
             }
@@ -89,7 +89,7 @@
                 padding: 10px;
                 border: 1px solid $primary;
                 background-color: $box-color;
-                color: $text;
+                color: $white-text;
                 border-radius: 4px;
                 appearance: none;
                 -webkit-appearance: none;
@@ -116,14 +116,14 @@
                     pointer-events: none;
                     border-left: 5px solid transparent;
                     border-right: 5px solid transparent;
-                    border-top: 5px solid $text;
+                    border-top: 5px solid $white-text;
                     transform: translateY(-50%);
                 }
             }
 
             .filter__option {
                 background-color: $box-color;
-                color: $text;
+                color: $white-text;
             }
         }
     }

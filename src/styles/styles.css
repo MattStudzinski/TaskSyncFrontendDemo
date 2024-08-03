@@ -1,15 +1,15 @@
 @charset "UTF-8";
 .react-select__control {
-  background-color: rgb(12, 12, 12);
+  background-color: rgb(255, 255, 255);
   color: white;
   border-color: white;
 }
 .react-select__control:hover {
-  border-color: #4baa6e;
+  border-color: rgb(2, 1, 10);
 }
 .react-select__control--is-focused {
-  border-color: #4baa6e;
-  box-shadow: 0 0 0 1px #4baa6e;
+  border-color: rgb(2, 1, 10);
+  box-shadow: 0 0 0 1px rgb(2, 1, 10);
 }
 
 .react-select__menu {
@@ -18,19 +18,19 @@
 }
 
 .react-select__option {
-  background-color: rgb(12, 12, 12);
+  background-color: rgb(255, 255, 255);
   color: white;
 }
 .react-select__option--is-focused {
   background-color: rgb(15, 27, 38);
 }
 .react-select__option--is-selected {
-  background-color: #216338;
+  background-color: rgb(184, 184, 243);
   color: rgb(227, 247, 245);
 }
 
 .react-select__multi-value {
-  background-color: #216338;
+  background-color: rgb(184, 184, 243);
   color: rgb(227, 247, 245);
 }
 .react-select__multi-value .react-select__multi-value__label {
@@ -40,7 +40,7 @@
   color: rgb(227, 247, 245);
 }
 .react-select__multi-value .react-select__multi-value__remove:hover {
-  background-color: #2e894e;
+  background-color: #e4e4fa;
   color: rgb(227, 247, 245);
 }
 
@@ -48,10 +48,10 @@
   width: 8px;
 }
 .react-select__menu-list::-webkit-scrollbar-track {
-  background-color: rgb(12, 12, 12);
+  background-color: rgb(255, 255, 255);
 }
 .react-select__menu-list::-webkit-scrollbar-thumb {
-  background-color: #27a053;
+  background-color: rgb(92, 102, 114);
   border-radius: 4px;
 }
 
@@ -61,10 +61,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
   line-height: 1.6;
-  background: #040605;
+  background: rgb(239, 239, 239);
   background-size: cover;
   background-repeat: no-repeat;
-  width: 90%;
   justify-self: center;
   border-radius: 10px;
   min-height: 100vh;
@@ -92,8 +91,6 @@ code {
 html {
   font-size: 62.5%;
   box-sizing: border-box;
-  display: flex;
-  justify-content: center;
 }
 
 @keyframes circle {
@@ -203,7 +200,7 @@ html {
 }
 .analytics__link:hover {
   transform: scale(1.05);
-  box-shadow: 0 10px 20px #27a053;
+  box-shadow: 0 10px 20px rgb(92, 102, 114);
 }
 .analytics__open-issues, .analytics__new-issues, .analytics__priority-issues {
   padding: 1rem;
@@ -214,21 +211,21 @@ html {
   z-index: 1;
 }
 .analytics__open-issues {
-  background: rgba(33, 99, 56, 0.7);
+  background: rgb(184, 184, 243);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
 }
 .analytics__new-issues {
-  background: rgba(33, 99, 56, 0.7);
+  background: rgb(184, 184, 243);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
 }
 .analytics__priority-issues {
-  background: rgba(33, 99, 56, 0.7);
+  background: rgb(184, 184, 243);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -259,12 +256,12 @@ html {
 .analytics__header-logo {
   display: flex;
   justify-content: center;
-  background-color: #27a053;
+  background-color: rgb(92, 102, 114);
   border-radius: 1rem;
 }
 .analytics__header-title {
   margin-left: 1rem;
-  color: white;
+  color: #000000;
 }
 .analytics__info-box {
   display: flex;
@@ -277,7 +274,7 @@ html {
   font-size: 3rem;
 }
 .analytics__info-string {
-  color: #27a053;
+  color: rgb(92, 102, 114);
   font-size: 1.1rem;
   margin-left: 1rem;
 }
@@ -288,8 +285,8 @@ html {
 .card-mini__container {
   height: 8.3rem;
   padding: 5px;
-  border-bottom: solid 1px #27a053;
-  background-color: rgb(12, 12, 12);
+  border-bottom: solid 1px rgb(92, 102, 114);
+  background-color: rgb(255, 255, 255);
   display: flex;
   align-items: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -306,7 +303,7 @@ html {
   height: 4.5rem;
   justify-content: center;
   align-items: center;
-  background-color: #4baa6e;
+  background-color: rgb(2, 1, 10);
 }
 .card-mini__title-container {
   margin-left: 0.5rem;
@@ -314,13 +311,13 @@ html {
 }
 .card-mini__name {
   font-size: 1.3rem;
-  color: #f0f4f1;
+  color: #ffffff;
 }
 .card-mini__description {
   color: rgb(180, 180, 180);
 }
 .card-mini__date {
-  color: #27a053;
+  color: rgb(92, 102, 114);
   width: 15%;
   margin-left: 1rem;
 }
@@ -345,7 +342,7 @@ html {
   cursor: pointer;
   outline: none;
   border: none;
-  background-color: #216338;
+  background-color: rgb(184, 184, 243);
   border-radius: 4px;
   transition: transform 0.2s ease-in-out;
 }
@@ -361,7 +358,7 @@ html {
   transition: background-color 0.2s ease-in-out;
 }
 .card-mini__completion-input:checked::before {
-  background: #216338;
+  background: rgb(184, 184, 243);
 }
 .card-mini__completion-input:checked::after {
   content: "✓";
@@ -374,10 +371,10 @@ html {
   transition: opacity 0.2s ease-in-out;
 }
 .card-mini__completion-input:hover::before {
-  background: #27a053;
+  background: rgb(92, 102, 114);
 }
 .card-mini__completion-input:checked:hover::before {
-  background: #27a053;
+  background: rgb(92, 102, 114);
 }
 .card-mini__completion-input:checked:hover::after {
   opacity: 1;
@@ -391,7 +388,7 @@ html {
   display: flex;
   align-items: center;
   flex-direction: column;
-  color: #27a053;
+  color: rgb(92, 102, 114);
 }
 .card-mini__prioriry-container {
   display: flex;
@@ -510,22 +507,23 @@ html {
   width: 2rem;
   flex-shrink: 0;
   transition: margin-right 0.3s;
-  fill: #27a053;
+  transition: height 0.3s ease, width 0.3s ease, margin-right 0.3s; /* Smooth transition on regular state */
+  fill: #ffffff;
 }
 
 .analytics-icon {
   fill: white;
   border-radius: 1.2rem;
-  border: 0.6rem solid #27a053;
+  border: 0.6rem solid rgb(92, 102, 114);
   height: 95%;
   width: 95%;
-  background-color: #27a053;
+  background-color: rgb(92, 102, 114);
 }
 
 .category-icon {
   width: 3rem;
   height: 3rem;
-  fill: #000000;
+  fill: #ffffff;
 }
 
 .card-mini__category-container {
@@ -533,10 +531,10 @@ html {
   border-radius: 5px;
 }
 .card-mini__category-container.primary-style {
-  background-color: #4baa6e;
+  background-color: #ffffff;
 }
 .card-mini__category-container.alternate-style {
-  background: #27a053;
+  background: rgb(92, 102, 114);
 }
 
 .side-nav {
@@ -544,39 +542,45 @@ html {
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: 1.4rem;
 }
 .side-nav__item {
   display: flex;
-  justify-content: center;
+  height: 6rem;
 }
 .side-nav__link:link, .side-nav__link:visited {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 1.3rem;
-  width: 80%;
+  width: 100%;
   text-decoration: none;
-  height: 4.5rem;
-  padding-left: 1.8rem;
-  fill: rgb(146, 146, 146);
-  color: #000000;
+  height: 100%;
+  padding-left: 2.8rem;
+  fill: rgb(255, 47, 47);
+  color: #ffffff;
   transition: padding 0.3s;
-  border-radius: 10rem;
-  background-color: rgba(33, 99, 56, 0.18);
-  max-width: 18rem;
-  transition: transform 0.3s ease, background-color 1s ease;
+  transition: font-size 0.3s ease, background-color 1s ease;
 }
 .side-nav__link:link:hover, .side-nav__link:visited:hover {
-  transform: scale(1.1);
-  background-color: #216338;
+  font-size: 1.1rem;
+  background-color: rgb(92, 102, 114);
+}
+.side-nav__link:link:hover .side-nav__link-title, .side-nav__link:visited:hover .side-nav__link-title {
+  font-size: 1.9rem; /* Adjust the font size on hover */
+  transition: font-size 0.3s ease;
+}
+.side-nav__link:link:hover .sidenav-icon, .side-nav__link:visited:hover .sidenav-icon {
+  height: 2.5rem; /* Adjust the size on hover */
+  width: 2.5rem; /* Adjust the size on hover */
+  transition: height 0.3s ease, width 0.3s ease;
 }
 .side-nav__link-title {
   white-space: nowrap;
   overflow: hidden;
   font-size: 1.7rem;
   opacity: 1;
-  color: #f0f4f1;
+  color: #ffffff;
+  transition: font-size 0.3s ease;
 }
 
 .logout-button {
@@ -586,22 +590,28 @@ html {
   align-items: center;
   justify-content: flex-start;
   gap: 1.3rem;
-  width: 80%;
+  height: 100%;
+  width: 100%;
   text-decoration: none;
-  height: 4.5rem;
   padding-left: 1.8rem;
   fill: rgb(146, 146, 146);
-  color: #081c1a;
-  border-radius: 10rem;
-  background-color: rgba(33, 99, 56, 0.18);
-  max-width: 18rem;
+  color: #ffffff;
   cursor: pointer;
-  transition: transform 0.3s ease, background-color 1s ease;
+  transition: font-size 0.3s, background-color 1s ease;
 }
 
 .logout-button:hover {
-  transform: scale(1.1);
-  background-color: #216338;
+  font-size: 1.1rem;
+  background-color: rgb(92, 102, 114);
+}
+.logout-button:hover .side-nav__link-title {
+  font-size: 1.9rem; /* Adjust the font size on hover */
+  transition: font-size 0.3s ease;
+}
+.logout-button:hover .sidenav-icon {
+  height: 2.5rem; /* Adjust the size on hover */
+  width: 2.5rem; /* Adjust the size on hover */
+  transition: height 0.3s ease, width 0.3s ease;
 }
 
 .dash-view__analytics-container {
@@ -623,7 +633,7 @@ html {
 
 .dash-nav {
   border-radius: 1rem;
-  background-color: rgb(12, 12, 12);
+  background-color: rgb(255, 255, 255);
   max-width: 100%;
   height: 100%;
   padding: 1rem;
@@ -635,7 +645,7 @@ html {
   align-items: center;
 }
 .dash-nav__title {
-  color: #f0f4f1;
+  color: #ffffff;
   font-size: 1.8rem;
 }
 .dash-nav__filters {
@@ -645,7 +655,7 @@ html {
   align-items: center;
   justify-content: flex-start;
   margin: 1rem;
-  color: #f0f4f1;
+  color: #ffffff;
 }
 .dash-nav__filters-selector {
   cursor: pointer;
@@ -656,7 +666,7 @@ html {
 }
 .dash-nav__filters-selector:hover {
   transform: scale(1.1);
-  color: #27a053;
+  color: rgb(92, 102, 114);
 }
 .dash-nav__filters-selector:after {
   content: "";
@@ -665,7 +675,7 @@ html {
   left: 50%;
   width: 0;
   height: 2px;
-  background: #27a053;
+  background: rgb(92, 102, 114);
   transition: width 0.3s ease, left 0.3s ease;
 }
 .dash-nav__filters-selector:hover:after {
@@ -683,7 +693,7 @@ html {
   z-index: 0;
   border-radius: 8px;
   border: none;
-  background: #4baa6e;
+  background: rgb(2, 1, 10);
   font-size: 1.5rem;
   transition: color 0.4s, background-color 0.4s, border-color 0.4s;
 }
@@ -695,7 +705,7 @@ html {
   left: -5px;
   right: -5px;
   bottom: -5px;
-  background: #4baa6e;
+  background: rgb(2, 1, 10);
   z-index: -1;
   border-radius: 8px;
   opacity: 0;
@@ -718,15 +728,15 @@ html {
   height: 2rem;
   color: rgba(255, 255, 255, 0.902);
   background-color: rgb(0, 0, 0);
-  border: solid #4baa6e 0.1rem;
+  border: solid rgb(2, 1, 10) 0.1rem;
   border-radius: 8px;
 }
 
 .task__close-button__modals {
   padding: 5px 10px;
   color: rgba(255, 255, 255, 0.902);
-  background-color: rgb(12, 12, 12);
-  border: solid #4baa6e 0.1rem;
+  background-color: rgb(255, 255, 255);
+  border: solid rgb(2, 1, 10) 0.1rem;
   border-radius: 8px;
   transition: transform 0.3s ease;
   max-width: 20rem;
@@ -831,7 +841,7 @@ html {
   transition-property: box-shadow, transform;
 }
 .form__button:hover, .form__button:focus, .form__button:active {
-  box-shadow: 0 0 20px #4baa6e;
+  box-shadow: 0 0 20px rgb(2, 1, 10);
   transform: scale(1.1);
 }
 .form__illistration {
@@ -851,7 +861,7 @@ html {
 }
 
 .calendar {
-  background-color: rgb(12, 12, 12);
+  background-color: rgb(255, 255, 255);
   border-radius: 1rem;
   height: 30%;
   max-width: 100%;
@@ -860,14 +870,14 @@ html {
 .modal {
   margin: auto;
   border: none;
-  border-radius: 5px;
+  border-radius: 0.5rem;
   height: 60%;
   width: 50%;
 }
 
 .modal-form {
   margin: auto;
-  border: 1px solid #27a053;
+  border: 1px solid rgb(92, 102, 114);
   border-radius: 5px;
   height: 75%;
   width: 70%;
@@ -879,7 +889,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 }
 
 .admin-page {
-  background-color: #040605;
+  background-color: rgb(239, 239, 239);
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -890,7 +900,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   width: 30%;
 }
 .card-mini__delete {
-  color: #f0f4f1;
+  color: #ffffff;
   cursor: pointer;
 }
 .card-mini__drivers-admin-ul {
@@ -905,7 +915,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  background: rgb(12, 12, 12);
+  background: rgb(255, 255, 255);
   margin-top: 1rem;
   border-radius: 1rem;
   padding: 1rem;
@@ -913,7 +923,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 .admin-page__navigation {
   display: flex;
   align-items: center;
-  background-color: rgb(12, 12, 12);
+  background-color: rgb(255, 255, 255);
   padding: 20px;
   border-radius: 8px;
 }
@@ -935,16 +945,16 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   margin-right: 0;
 }
 .admin-page__navigation .filter-container .filter .filter__label {
-  color: #f0f4f1;
+  color: #ffffff;
   margin-bottom: 5px;
   font-size: 14px;
 }
 .admin-page__navigation .filter-container .filter .filter__select {
   width: 200px;
   padding: 10px;
-  border: 1px solid #4baa6e;
-  background-color: rgb(12, 12, 12);
-  color: #f0f4f1;
+  border: 1px solid rgb(2, 1, 10);
+  background-color: rgb(255, 255, 255);
+  color: #ffffff;
   border-radius: 4px;
   appearance: none;
   -webkit-appearance: none;
@@ -956,8 +966,8 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   background-image: none;
 }
 .admin-page__navigation .filter-container .filter .filter__select:focus {
-  border-color: #27a053;
-  box-shadow: 0 0 5px 1px #4baa6e;
+  border-color: rgb(92, 102, 114);
+  box-shadow: 0 0 5px 1px rgb(2, 1, 10);
   outline: none;
 }
 .admin-page__navigation .filter-container .filter .filter__select::after {
@@ -970,12 +980,12 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   pointer-events: none;
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
-  border-top: 5px solid #f0f4f1;
+  border-top: 5px solid #ffffff;
   transform: translateY(-50%);
 }
 .admin-page__navigation .filter-container .filter .filter__option {
-  background-color: rgb(12, 12, 12);
-  color: #f0f4f1;
+  background-color: rgb(255, 255, 255);
+  color: #ffffff;
 }
 
 .modal__container {
@@ -983,7 +993,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   flex-direction: column;
   height: 100%;
   justify-content: space-between;
-  background-color: rgb(12, 12, 12);
+  background-color: rgb(255, 255, 255);
   align-items: center;
 }
 
@@ -994,7 +1004,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: rgb(12, 12, 12);
+  background: rgb(255, 255, 255);
   align-items: center;
 }
 .issue-form__form-container {
@@ -1011,8 +1021,8 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   width: 20px;
   height: 20px;
   margin-right: 2rem;
-  border: 2px solid #4baa6e;
-  background-color: rgb(12, 12, 12);
+  border: 2px solid rgb(2, 1, 10);
+  background-color: rgb(255, 255, 255);
   border-radius: 4px;
   position: relative;
   cursor: pointer;
@@ -1032,7 +1042,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 }
 .issue-form__input-checkbox:focus {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(75, 170, 110, 0.5);
+  box-shadow: 0 0 0 3px rgba(2, 1, 10, 0.5);
 }
 .issue-form__title-container {
   display: flex;
@@ -1067,7 +1077,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   padding: 1rem;
   border: 1px solid rgb(215, 215, 215);
   border-radius: 5px;
-  background: rgb(12, 12, 12);
+  background: rgb(255, 255, 255);
   outline: none;
   color: white;
   font-size: 1.5rem;
@@ -1075,17 +1085,17 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   transition: 0.5s;
 }
 .issue-form__input:valid, .issue-form__input:focus {
-  border: 1px solid #4baa6e;
+  border: 1px solid rgb(2, 1, 10);
 }
 .issue-form__input:valid ~ .issue-form__title-label, .issue-form__input:focus ~ .issue-form__title-label {
-  color: #4baa6e;
+  color: rgb(2, 1, 10);
   transform: translateX(1rem) translateY(-2.07rem);
   transition: 0.5s;
   font-size: 1.1rem;
   padding: 0 0.7rem;
-  background: rgb(12, 12, 12);
-  border-left: 1px solid #4baa6e;
-  border-right: 1px solid #4baa6e;
+  background: rgb(255, 255, 255);
+  border-left: 1px solid rgb(2, 1, 10);
+  border-right: 1px solid rgb(2, 1, 10);
   letter-spacing: 0.1rem;
 }
 .issue-form__title-label {
@@ -1106,7 +1116,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   padding: 1rem;
   border: 1px solid rgb(215, 215, 215);
   border-radius: 5px;
-  background: rgb(12, 12, 12);
+  background: rgb(255, 255, 255);
   outline: none;
   color: white;
   font-size: 1.5rem;
@@ -1114,16 +1124,16 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   transition: 0.5s;
 }
 .issue-form__input-calendar:valid, .issue-form__input-calendar:focus {
-  border: 1px solid #4baa6e;
+  border: 1px solid rgb(2, 1, 10);
 }
 .issue-form__input-calendar:valid ~ .issue-form__title-label-calendar, .issue-form__input-calendar:focus ~ .issue-form__title-label-calendar {
-  color: #4baa6e;
+  color: rgb(2, 1, 10);
   transition: 0.5s;
   font-size: 1.1rem;
   padding: 0 0.7rem;
-  background: rgb(12, 12, 12);
-  border-left: 1px solid #4baa6e;
-  border-right: 1px solid #4baa6e;
+  background: rgb(255, 255, 255);
+  border-left: 1px solid rgb(2, 1, 10);
+  border-right: 1px solid rgb(2, 1, 10);
   letter-spacing: 0.1rem;
 }
 .issue-form__input-calendar::-webkit-calendar-picker-indicator {
@@ -1138,7 +1148,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   pointer-events: none;
   color: white;
   transform: translateX(1rem) translateY(-2.07rem);
-  background: rgb(12, 12, 12);
+  background: rgb(255, 255, 255);
 }
 .issue-form__title-textarea {
   position: absolute;
@@ -1160,24 +1170,24 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   padding: 1rem;
   border: 1px solid white;
   border-radius: 5px;
-  background: rgb(12, 12, 12);
+  background: rgb(255, 255, 255);
   outline: none;
   color: white;
   font-size: 1.5rem;
   transition: 0.5s;
 }
 .issue-form__textarea:valid, .issue-form__textarea:focus {
-  border: 1px solid #4baa6e;
+  border: 1px solid rgb(2, 1, 10);
 }
 .issue-form__textarea:valid ~ .issue-form__title-textarea, .issue-form__textarea:focus ~ .issue-form__title-textarea {
-  color: #4baa6e;
+  color: rgb(2, 1, 10);
   transform: translateX(1rem) translateY(-3.3rem);
   transition: 0.5s;
   font-size: 1.1rem;
   padding: 0 0.7rem;
-  background: rgb(12, 12, 12);
-  border-left: 1px solid #4baa6e;
-  border-right: 1px solid #4baa6e;
+  background: rgb(255, 255, 255);
+  border-left: 1px solid rgb(2, 1, 10);
+  border-right: 1px solid rgb(2, 1, 10);
   letter-spacing: 0.1rem;
 }
 .issue-form__assignment-select-container {
@@ -1204,35 +1214,35 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   width: 50%;
 }
 .issue-form .react-select__control {
-  background-color: rgb(12, 12, 12);
+  background-color: rgb(255, 255, 255);
   color: white;
   border-color: white;
   padding: 1rem;
 }
 .issue-form .react-select__control:hover {
-  border-color: #4baa6e;
+  border-color: rgb(2, 1, 10);
 }
 .issue-form .react-select__control--is-focused {
-  border-color: #4baa6e;
-  box-shadow: 0 0 0 1px #4baa6e;
+  border-color: rgb(2, 1, 10);
+  box-shadow: 0 0 0 1px rgb(2, 1, 10);
 }
 .issue-form .react-select__menu {
   background-color: rgb(3, 12, 10);
   color: rgb(227, 247, 245);
 }
 .issue-form .react-select__option {
-  background-color: rgb(12, 12, 12);
+  background-color: rgb(255, 255, 255);
   color: white;
 }
 .issue-form .react-select__option--is-focused {
   background-color: rgb(15, 27, 38);
 }
 .issue-form .react-select__option--is-selected {
-  background-color: #216338;
+  background-color: rgb(184, 184, 243);
   color: rgb(227, 247, 245);
 }
 .issue-form .react-select__multi-value {
-  background-color: #216338;
+  background-color: rgb(184, 184, 243);
   color: rgb(227, 247, 245);
 }
 .issue-form .react-select__multi-value .react-select__multi-value__label {
@@ -1242,17 +1252,17 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   color: rgb(227, 247, 245);
 }
 .issue-form .react-select__multi-value .react-select__multi-value__remove:hover {
-  background-color: #2e894e;
+  background-color: #e4e4fa;
   color: rgb(227, 247, 245);
 }
 .issue-form .react-select__menu-list::-webkit-scrollbar {
   width: 8px;
 }
 .issue-form .react-select__menu-list::-webkit-scrollbar-track {
-  background-color: rgb(12, 12, 12);
+  background-color: rgb(255, 255, 255);
 }
 .issue-form .react-select__menu-list::-webkit-scrollbar-thumb {
-  background-color: #27a053;
+  background-color: rgb(92, 102, 114);
   border-radius: 4px;
 }
 .issue-form__priority-container {
@@ -1276,16 +1286,16 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   margin-top: 10px;
 }
 .issue-form__label-category {
-  color: #f0f4f1;
+  color: #ffffff;
   font-size: 14px;
   margin-bottom: 5px;
 }
 .issue-form__select-category {
   width: 100%;
   padding: 8px;
-  border: 2px solid #4baa6e;
-  background-color: rgb(12, 12, 12);
-  color: #f0f4f1;
+  border: 2px solid rgb(2, 1, 10);
+  background-color: rgb(255, 255, 255);
+  color: #ffffff;
   border-radius: 4px;
   padding: 1rem;
   font-size: 14px;
@@ -1294,12 +1304,12 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 }
 .issue-form__select-category:focus {
   border-color: grey;
-  box-shadow: 0 0 0 3px rgba(75, 170, 110, 0.5);
+  box-shadow: 0 0 0 3px rgba(2, 1, 10, 0.5);
   outline: none;
 }
 .issue-form__select option {
-  background-color: rgb(12, 12, 12);
-  color: #f0f4f1;
+  background-color: rgb(255, 255, 255);
+  color: #ffffff;
 }
 .issue-form__button-container {
   display: flex;
@@ -1309,7 +1319,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 }
 
 .results-page {
-  background-color: #040605;
+  background-color: rgb(239, 239, 239);
   padding: 2rem;
   display: flex;
   height: 100%;
@@ -1319,7 +1329,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   border-bottom-right-radius: 10px;
 }
 .results-page__card {
-  background-color: rgb(12, 12, 12);
+  background-color: rgb(255, 255, 255);
   border-radius: 1rem;
   width: 100%;
   height: 100%;
@@ -1342,13 +1352,13 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 .due-soon {
   display: flex;
   flex-direction: column;
-  background-color: rgb(12, 12, 12);
+  background-color: rgb(255, 255, 255);
   border-radius: 1rem;
   height: 50%;
   align-items: flex-start;
 }
 .due-soon__title {
-  color: #f0f4f1;
+  color: #ffffff;
   padding: 1.5rem 2rem;
   font-size: 1.6rem;
 }
@@ -1360,7 +1370,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   width: 100%;
 }
 .due-soon__li {
-  border-bottom: 1px solid #216338;
+  border-bottom: 1px solid rgb(184, 184, 243);
 }
 .due-soon__card {
   display: flex;
@@ -1373,33 +1383,31 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   flex-direction: column;
 }
 .due-soon__name {
-  color: #f0f4f1;
+  color: #000000;
   font-size: 1.4rem;
 }
 .due-soon__date {
-  color: #f0f4f1;
+  color: rgb(180, 180, 180);
 }
 
 .modal-card {
-  padding: 2rem;
-  background-color: rgb(12, 12, 12);
-  border-radius: 8px;
+  padding: 2rem 0;
+  background-color: rgb(255, 255, 255);
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
-  border: 1px solid #27a053;
   justify-content: space-between;
 }
 .modal-card__title {
-  color: #f0f4f1;
+  color: #000000;
   display: flex;
   align-items: center;
   font-size: 1.9rem;
+  padding: 0 2rem;
   font-weight: bold;
   justify-content: space-between;
-  padding: 0 0 1rem 0;
-  border-bottom: 1px solid #27a053;
+  border-bottom: 1px solid rgb(92, 102, 114);
 }
 .modal-card__subtitle-container {
   display: flex;
@@ -1409,32 +1417,31 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   font-size: 1.2rem;
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
-  background: #216338;
-  color: #f0f4f1;
+  background: rgb(184, 184, 243);
+  color: #000000;
 }
 .modal-card__priority {
   font-size: 1.2rem;
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
-  background: #4baa6e;
-  color: black;
+  background: rgb(2, 1, 10);
+  color: #ffffff;
 }
 .modal-card__description {
   margin: 1rem 0 1rem 0;
-  border: 1px solid #f0f4f1;
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
   font-size: 1.2rem;
-  color: #f0f4f1;
+  color: #000000;
   min-height: 8rem;
 }
 .modal-card__due-date {
   font-size: 1.4rem;
-  color: #f0f4f1;
+  color: #000000;
   margin-top: 1rem;
 }
 .modal-card__parroom-title {
-  color: #f0f4f1;
+  color: #ffffff;
   font-size: 1.3rem;
   margin-bottom: 0.2rem;
 }
@@ -1445,12 +1452,12 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 .modal-card__par-li {
   font-size: 1.1rem;
   margin-right: 0.7rem;
-  color: #f0f4f1;
+  color: #ffffff;
 }
 .modal-card__assigned-title {
   font-size: 1.25rem;
   margin-top: 1.5rem;
-  color: #f0f4f1;
+  color: #ffffff;
 }
 .modal-card__driver-list {
   list-style: none;
@@ -1459,19 +1466,19 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 }
 .modal-card__driver-item {
   font-size: 1rem;
-  color: #f0f4f1;
+  color: #ffffff;
   padding: 0.25rem 0;
   border-bottom: 1px solid #eee;
 }
 
 .card-mini__drivers-admin-li {
-  color: #f0f4f1;
+  color: #ffffff;
 }
 
 .container {
-  max-width: 140rem;
-  margin: 5rem auto;
-  background-color: #040605;
+  width: 100%;
+  margin: 0 auto;
+  background-color: rgb(239, 239, 239);
   box-shadow: var(--shadow-dark);
   min-height: 81rem;
   border-radius: 10px;
@@ -1481,8 +1488,8 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 
 header {
   height: 7rem;
-  background-color: rgb(12, 12, 12);
-  border-bottom: 1px solid #4baa6e;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 1px solid rgb(2, 1, 10);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1493,17 +1500,16 @@ header {
 }
 
 .sidebar {
-  background: rgb(12, 12, 12);
+  background: rgb(2, 1, 10);
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 17%;
-  border-radius: 1rem;
+  min-width: 19%;
   padding-top: 6rem;
 }
 
 .content {
-  background-color: #040605;
+  background-color: rgb(239, 239, 239);
   display: flex;
   border-bottom-right-radius: 1rem;
   border-bottom-left-radius: 1rem;
@@ -1512,12 +1518,12 @@ header {
 }
 
 .dash-view {
-  background-color: #040605;
+  background-color: rgb(239, 239, 239);
   border-bottom-right-radius: 1rem;
   display: flex;
   justify-content: space-between;
   flex: 1;
-  padding: 0rem 2rem;
+  padding: 3rem 2rem;
 }
 
 .main-content-container {
@@ -1541,21 +1547,21 @@ header {
   transition: background-color 0.3s ease;
 }
 .pagination .page-item button {
-  color: #f0f4f1;
+  color: #ffffff;
   border: none;
   margin-bottom: 0.7rem;
   padding: 0.5rem 0.8rem;
-  background-color: rgb(12, 12, 12);
+  background-color: rgb(255, 255, 255);
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
   border-radius: 100px;
 }
 .pagination .page-item button:hover {
-  background: #216338;
-  color: #f0f4f1;
+  background: rgb(184, 184, 243);
+  color: #ffffff;
 }
 .pagination .page-item.active button {
-  background: #27a053;
+  background: rgb(92, 102, 114);
   color: #000000;
 }
 label, input {
@@ -1565,7 +1571,7 @@ label, input {
 form button {
   background: var(--primary);
   border: 0;
-  color: #fff;
+  color: #ffffff;
   cursor: pointer;
 }
 

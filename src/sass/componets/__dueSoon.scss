@@ -7,7 +7,7 @@
     align-items: flex-start;
 
     &__title {
-        color: $text;
+        color: $white-text;
         padding: 1.5rem 2rem;
         font-size: 1.6rem;
     }
@@ -38,11 +38,11 @@
     }
 
     &__name{
-        color: $text;
+        color: $black-text;
         font-size: 1.4rem;
     }
 
     &__date {
-        color: $text;
+        color: $grey-text;
     }
 }

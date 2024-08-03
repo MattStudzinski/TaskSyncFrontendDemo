@@ -4,11 +4,12 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    gap: 1.4rem;
+    
 
     &__item{
         display: flex;
-        justify-content: center;
+        height: 6rem;
+        
         
     }
     &__link:link,
@@ -17,24 +18,32 @@
         align-items: center;
         justify-content: flex-start;
         gap: 1.3rem;
-        width: 80%;
+        width: 100%;
         text-decoration: none;
-        height: 4.5rem;
-        padding-left: 1.8rem;
-        fill: rgb(146, 146, 146);
-        color: $black-text;
+        height: 100%;
+        padding-left: 2.8rem;
+        fill: rgb(255, 47, 47);
+        color: $white-text;
         transition: padding 0.3s; 
-        border-radius: 10rem;
-        background-color: rgba($secondary , .18);
-        max-width: 18rem;
-        transition: transform 0.3s ease, background-color 1s ease;
+        transition: font-size 0.3s ease, background-color 1s ease;
         
             
         
 
         &:hover{
-            transform: scale(1.1);
-            background-color: $secondary;
+            font-size: 1.1rem;
+            background-color: $accent;
+
+            .side-nav__link-title {
+                font-size: 1.9rem; /* Adjust the font size on hover */
+                transition: font-size 0.3s ease;
+            }
+
+            .sidenav-icon {
+                height: 2.5rem; /* Adjust the size on hover */
+                width: 2.5rem;  /* Adjust the size on hover */
+                transition: height 0.3s ease, width 0.3s ease;
+            }
         }
 
         
@@ -47,8 +56,9 @@
         overflow: hidden;
         font-size: 1.7rem;
         opacity: 1;
-        
-        color: $text;
+        color: $white-text;
+        transition: font-size 0.3s ease;
+
     }
 
 
@@ -61,20 +71,29 @@
     align-items: center;
     justify-content: flex-start;
     gap: 1.3rem;
-    width: 80%;
+    height: 100%;
+    width: 100%;
     text-decoration: none;
-    height: 4.5rem;
     padding-left: 1.8rem;
     fill: rgb(146, 146, 146);
-    color: #081c1a;
-    border-radius: 10rem;
-    background-color: rgba($secondary , .18);
-    max-width: 18rem;
+    color: $white-text;
     cursor: pointer; 
-    transition: transform 0.3s ease, background-color 1s ease; 
+    transition: font-size .3s, background-color 1s ease; 
 }
 
 .logout-button:hover {
-    transform: scale(1.1);
-    background-color: $secondary; 
-}
+    font-size: 1.1rem;
+            background-color: $accent;
+
+            .side-nav__link-title {
+                font-size: 1.9rem; /* Adjust the font size on hover */
+                transition: font-size 0.3s ease;
+            }
+
+            .sidenav-icon {
+                height: 2.5rem; /* Adjust the size on hover */
+                width: 2.5rem;  /* Adjust the size on hover */
+                transition: height 0.3s ease, width 0.3s ease;
+            }
+        }
+

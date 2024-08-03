@@ -9,7 +9,8 @@
     width: 2rem;
     flex-shrink: 0;
     transition: margin-right 0.3s;
-    fill: $accent;
+    transition: height 0.3s ease, width 0.3s ease, margin-right 0.3s; /* Smooth transition on regular state */
+    fill: $white-text;
 
 }
 
@@ -27,7 +28,7 @@
 .category-icon {
     width: 3rem;
     height: 3rem;
-    fill: $black-text;
+    fill: $white-text;
 }
 
 .card-mini__category-container {
@@ -35,7 +36,7 @@
     border-radius: 5px;
 
     &.primary-style{
-        background-color: $primary;
+        background-color: $white-text;
     }
 
     &.alternate-style {

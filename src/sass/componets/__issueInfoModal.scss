@@ -1,25 +1,23 @@
 .modal-card {
-    padding: 2rem;
+    padding: 2rem 0;
     background-color: $box-color;
-    border-radius: 8px;
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    border: 1px solid $accent;
     justify-content: space-between;
 
 
     
   
     &__title {
-    color: $text;
+    color: $black-text;
     display: flex;
     align-items: center;
     font-size: 1.9rem;
+    padding: 0 2rem;
     font-weight: bold;
     justify-content: space-between;
-    padding: 0 0 1rem 0;
     border-bottom: 1px solid $accent;
     
     }
@@ -34,7 +32,7 @@
         padding: 0.25rem 0.5rem;
         border-radius: 4px;
         background: $secondary;
-        color: $text;
+        color: $black-text;
         }
 
     &__priority {
@@ -42,29 +40,29 @@
     padding: 0.25rem 0.5rem;
     border-radius: 4px;
     background: $primary;
-    color: black;
+    color: $white-text;
     
     }
 
     &__description {
     margin: 1rem 0 1rem 0;
-    border: 1px solid $text;
+    
     border-radius: .5rem;
     padding: .5rem 1rem;
     font-size: 1.2rem;
-    color: $text;
+    color: $black-text;
     min-height: 8rem;
     }
 
     &__due-date {
     font-size: 1.4rem;
-    color: $text;
+    color: $black-text;
     margin-top: 1rem;
     
     }
 
     &__parroom-title {
-        color: $text;
+        color: $white-text;
         font-size: 1.3rem;
         margin-bottom: .2rem;
     }
@@ -78,13 +76,13 @@
     &__par-li {
         font-size: 1.1rem;
         margin-right: .7rem;
-        color: $text;
+        color: $white-text;
     }
 
     &__assigned-title {
     font-size: 1.25rem;
     margin-top: 1.5rem;
-    color: $text;
+    color: $white-text;
     }
 
     &__driver-list {
@@ -95,7 +93,7 @@
 
     &__driver-item {
     font-size: 1rem;
-    color: $text;
+    color: $white-text;
     padding: 0.25rem 0;
     border-bottom: 1px solid #eee;
     }
