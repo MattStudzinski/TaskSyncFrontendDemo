@@ -4,6 +4,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    margin-top: 4rem;
     
 
     &__item{
@@ -21,7 +22,7 @@
         width: 100%;
         text-decoration: none;
         height: 100%;
-        padding-left: 2.8rem;
+        padding-left: 18%;
         fill: rgb(255, 47, 47);
         color: $white-text;
         transition: padding 0.3s; 
@@ -65,16 +66,17 @@
     
 }
 .logout-button {
+    justify-self: flex-end;
     background: none; 
     border: none;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    
     gap: 1.3rem;
     height: 100%;
     width: 100%;
     text-decoration: none;
-    padding-left: 1.8rem;
+    padding-left: 19%;
     fill: rgb(146, 146, 146);
     color: $white-text;
     cursor: pointer; 

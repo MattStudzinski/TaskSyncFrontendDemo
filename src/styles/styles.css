@@ -542,6 +542,7 @@ html {
   display: flex;
   flex-direction: column;
   width: 100%;
+  margin-top: 4rem;
 }
 .side-nav__item {
   display: flex;
@@ -555,7 +556,7 @@ html {
   width: 100%;
   text-decoration: none;
   height: 100%;
-  padding-left: 2.8rem;
+  padding-left: 18%;
   fill: rgb(255, 47, 47);
   color: #ffffff;
   transition: padding 0.3s;
@@ -584,16 +585,16 @@ html {
 }
 
 .logout-button {
+  justify-self: flex-end;
   background: none;
   border: none;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
   gap: 1.3rem;
   height: 100%;
   width: 100%;
   text-decoration: none;
-  padding-left: 1.8rem;
+  padding-left: 19%;
   fill: rgb(146, 146, 146);
   color: #ffffff;
   cursor: pointer;
@@ -1503,9 +1504,30 @@ header {
   background: rgb(2, 1, 10);
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  min-width: 18%;
+  padding: 3rem 0rem 2rem 0rem;
+}
+.sidebar__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  min-width: 19%;
-  padding-top: 6rem;
+  width: 100%;
+}
+.sidebar__app-name {
+  color: #ffffff;
+  margin-top: 0.5rem;
+  font-size: 2.8rem;
+  letter-spacing: 0.2rem;
+  text-decoration: none;
+}
+.sidebar__app-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
 }
 
 .content {

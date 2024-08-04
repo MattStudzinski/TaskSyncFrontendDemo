@@ -7,6 +7,9 @@ import Stats from '../../svgs/SVG/Stats';
 import AddTask from '../../svgs/SVG/AddTask';
 import { useAuthContext } from '../../hooks/useAuthContext';
 import {useNavigate} from 'react-router-dom'
+import AppIcon from '../../svgs/SVG/AppIcon';
+import AdminIcon from '../../svgs/SVG/AdminIcon';
+import LogoutIcon from '../../svgs/SVG/LogoutIcon';
 
 const Sidebar = () => {
 
@@ -22,6 +25,11 @@ const Sidebar = () => {
 
     return (
         <nav className='sidebar'>
+            <div className='sidebar__container'>
+                <Link to="/" className='sidebar__app-link'>
+                    <AppIcon />
+                    <h1 className='sidebar__app-name'>TaskSync</h1>
+                </Link>
             <ul className='side-nav'>
             
                 <li className='side-nav__item'>
@@ -57,17 +65,18 @@ const Sidebar = () => {
 
                 <li className='side-nav__item'>
                 <Link to="/admin" className='side-nav__link'>
-                    <span className='side-nav__link-title'>Admin</span>
+                    <AdminIcon /><span className='side-nav__link-title'>Admin</span>
                 </Link>
-                </li>
-
-                <li className='side-nav__item'>
-                    <button onClick={handleLogout} className="logout-button">
-                        <span className='side-nav__link-title'>Logout</span>
-                    </button>
                 </li>
                 
             </ul>
+
+            </div>
+            <li className='side-nav__item'>
+                    <button onClick={handleLogout} className="logout-button">
+                        <LogoutIcon /><span className='side-nav__link-title'>Logout</span>
+                    </button>
+                </li>
         </nav>
     );
 };
