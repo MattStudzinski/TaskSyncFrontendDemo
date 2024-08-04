@@ -1057,7 +1057,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   margin-bottom: 1.7rem;
 }
 .issue-form__label {
-  color: white;
+  color: #000000;
   display: flex;
   gap: 1rem;
   align-items: center;
@@ -1081,11 +1081,11 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 .issue-form__input {
   width: 100%;
   padding: 1rem;
-  border: 1px solid rgb(215, 215, 215);
+  border: 1px solid rgb(2, 1, 10);
   border-radius: 5px;
   background: rgb(255, 255, 255);
   outline: none;
-  color: white;
+  color: #000000;
   font-size: 1.5rem;
   height: 100%;
   transition: 0.5s;
@@ -1094,7 +1094,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   border: 1px solid rgb(2, 1, 10);
 }
 .issue-form__input:valid ~ .issue-form__title-label, .issue-form__input:focus ~ .issue-form__title-label {
-  color: rgb(2, 1, 10);
+  color: #000000;
   transform: translateX(1rem) translateY(-2.07rem);
   transition: 0.5s;
   font-size: 1.1rem;
@@ -1110,7 +1110,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   padding: 1rem;
   pointer-events: none;
   font-size: 1.5rem;
-  color: white;
+  color: #000000;
 }
 .issue-form .issue-form__input-box-calendar {
   position: relative;
@@ -1120,11 +1120,11 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 .issue-form__input-calendar {
   width: 100%;
   padding: 1rem;
-  border: 1px solid rgb(215, 215, 215);
+  border: 1px solid rgb(2, 1, 10);
   border-radius: 5px;
   background: rgb(255, 255, 255);
   outline: none;
-  color: white;
+  color: #000000;
   font-size: 1.5rem;
   height: 100%;
   transition: 0.5s;
@@ -1133,7 +1133,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   border: 1px solid rgb(2, 1, 10);
 }
 .issue-form__input-calendar:valid ~ .issue-form__title-label-calendar, .issue-form__input-calendar:focus ~ .issue-form__title-label-calendar {
-  color: rgb(2, 1, 10);
+  color: #000000;
   transition: 0.5s;
   font-size: 1.1rem;
   padding: 0 0.7rem;
@@ -1152,7 +1152,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   font-size: 1.1rem;
   padding: 0.2rem 1.1rem;
   pointer-events: none;
-  color: white;
+  color: #000000;
   transform: translateX(1rem) translateY(-2.07rem);
   background: rgb(255, 255, 255);
 }
@@ -1163,22 +1163,20 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   padding: 1rem;
   pointer-events: none;
   font-size: 1.5rem;
-  color: white;
+  color: #000000;
 }
 .issue-form__textarea {
   width: 100%;
   height: 9rem;
   resize: none;
-  border: none;
   font-size: 1.5rem;
-  border: none;
   background: none;
   padding: 1rem;
-  border: 1px solid white;
+  border: 1px solid rgb(2, 1, 10);
   border-radius: 5px;
   background: rgb(255, 255, 255);
   outline: none;
-  color: white;
+  color: #000000;
   font-size: 1.5rem;
   transition: 0.5s;
 }
@@ -1207,7 +1205,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   display: flex;
   flex-direction: column;
   width: 50%;
-  border: 1px solid white;
+  border: 1px solid rgb(2, 1, 10);
   border-radius: 0.5rem;
   padding: 1rem;
 }
@@ -1221,8 +1219,8 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 }
 .issue-form .react-select__control {
   background-color: rgb(255, 255, 255);
-  color: white;
-  border-color: white;
+  color: #000000;
+  border-color: rgb(2, 1, 10);
   padding: 1rem;
 }
 .issue-form .react-select__control:hover {
@@ -1234,18 +1232,18 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 }
 .issue-form .react-select__menu {
   background-color: rgb(3, 12, 10);
-  color: rgb(227, 247, 245);
+  color: #000000;
 }
 .issue-form .react-select__option {
-  background-color: rgb(255, 255, 255);
-  color: white;
+  background-color: rgb(184, 184, 243);
+  color: #000000;
 }
 .issue-form .react-select__option--is-focused {
-  background-color: rgb(15, 27, 38);
+  background-color: rgb(255, 255, 255);
 }
 .issue-form .react-select__option--is-selected {
   background-color: rgb(184, 184, 243);
-  color: rgb(227, 247, 245);
+  color: rgb(92, 102, 114);
 }
 .issue-form .react-select__multi-value {
   background-color: rgb(184, 184, 243);
@@ -1299,9 +1297,9 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 .issue-form__select-category {
   width: 100%;
   padding: 8px;
-  border: 2px solid rgb(2, 1, 10);
+  border: 1px solid rgb(2, 1, 10);
   background-color: rgb(255, 255, 255);
-  color: #ffffff;
+  color: #000000;
   border-radius: 4px;
   padding: 1rem;
   font-size: 14px;
@@ -1360,11 +1358,11 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   flex-direction: column;
   background-color: rgb(255, 255, 255);
   border-radius: 1rem;
-  height: 50%;
+  height: 52%;
   align-items: flex-start;
 }
 .due-soon__title {
-  color: #ffffff;
+  color: #000000;
   padding: 1.5rem 2rem;
   font-size: 1.6rem;
 }
@@ -1374,6 +1372,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   flex-direction: column;
   justify-content: space-evenly;
   width: 100%;
+  list-style: none;
 }
 .due-soon__li {
   border-bottom: 1px solid rgb(184, 184, 243);

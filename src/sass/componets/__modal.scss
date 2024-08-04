@@ -29,6 +29,7 @@
 
 &__input-checkbox {
     /* Hide the default checkbox */
+    
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -69,7 +70,7 @@
 }
 
 &__label {
-    color: white;
+    color: $black-text;
     display: flex;
     gap: 1rem;
     align-items: center;
@@ -97,11 +98,11 @@
 &__input {
     width: 100%;
     padding: 1rem;
-    border: 1px solid rgb(215, 215, 215);
+    border: 1px solid $primary;
     border-radius: 5px;
     background:$box-color;
     outline: none;
-    color: white;
+    color: $black-text;
     font-size: 1.5rem;
     height: 100%;
     transition: .5s;
@@ -114,7 +115,7 @@
 
     &:valid ~ .issue-form__title-label,
     &:focus ~ .issue-form__title-label {
-        color: $primary;
+        color: $black-text;
         transform: translateX(1rem) translateY(-2.07rem);
         transition: 0.5s;
         font-size: 1.1rem;
@@ -132,7 +133,7 @@
         padding: 1rem;
         pointer-events: none;
         font-size: 1.5rem;
-        color: white;
+        color: $black-text;
         
     }
 
@@ -149,11 +150,11 @@
     &__input-calendar {
         width: 100%;
         padding: 1rem;
-        border: 1px solid rgb(215, 215, 215);
+        border: 1px solid $primary;
         border-radius: 5px;
         background:$box-color;
         outline: none;
-        color: white;
+        color: $black-text;
         font-size: 1.5rem;
         height: 100%;
         transition: .5s;
@@ -166,7 +167,7 @@
     
         &:valid ~ .issue-form__title-label-calendar,
         &:focus ~ .issue-form__title-label-calendar {
-            color: $primary;
+            color: $black-text;
             
             transition: 0.5s;
             font-size: 1.1rem;
@@ -189,7 +190,7 @@
     font-size: 1.1rem;
     padding: .2rem 1.1rem;
     pointer-events: none;
-    color: white;
+    color: $black-text;
     transform: translateX(1rem) translateY(-2.07rem);
     background: $box-color;
 }
@@ -203,23 +204,23 @@
     padding: 1rem;
     pointer-events: none;
     font-size: 1.5rem;
-    color: white;
+    color: $black-text;
 }
 
 &__textarea {
     width: 100%;
     height: 9rem;
     resize: none;
-    border: none;
+    
     font-size: 1.5rem;
-    border: none;
+    
     background: none;
     padding: 1rem;
-    border: 1px solid white;
+    border: 1px solid $primary;
     border-radius: 5px;
     background:$box-color;
     outline: none;
-    color: white;
+    color: $black-text;
     font-size: 1.5rem;
     transition: .5s;
 
@@ -255,7 +256,7 @@
     display: flex;
     flex-direction: column;
     width: 50%;
-    border: 1px solid white;
+    border: 1px solid $primary;
     border-radius: .5rem;
     padding:1rem;
 
@@ -278,8 +279,8 @@
 // selector for par rooms
 .react-select__control {
     background-color: $box-color;
-    color: white; 
-    border-color: white; 
+    color: $black-text; 
+    border-color: $primary; 
     padding: 1rem;
 
     &:hover {
@@ -294,20 +295,20 @@
 
 .react-select__menu {
     background-color: rgb(3, 12, 10); // $background color
-    color: rgb(227, 247, 245); // $text color
+    color: $black-text; // $text color
 }
 
 .react-select__option {
-    background-color: $box-color;
-    color: white;
+    background-color: $secondary;
+    color: $black-text;
 
     &--is-focused {
-        background-color: rgba(15, 27, 38, 255); 
+        background-color: $box-color; 
     }
 
     &--is-selected {
         background-color: $secondary;
-        color: rgb(227, 247, 245); 
+        color: $accent; 
     }
 }
 
@@ -378,9 +379,9 @@
     &__select-category {
         width: 100%;
         padding: 8px;
-        border: 2px solid $primary; // Example border color
+        border: 1px solid $primary; // Example border color
         background-color: $box-color; // Example background color
-        color: $white-text; // Example text color
+        color: $black-text; // Example text color
         border-radius: 4px;
         padding: 1rem;
         font-size: 14px; // Example font size
