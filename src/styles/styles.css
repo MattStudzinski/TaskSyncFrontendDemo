@@ -256,7 +256,6 @@ html {
 .analytics__header-logo {
   display: flex;
   justify-content: center;
-  background-color: rgb(92, 102, 114);
   border-radius: 1rem;
 }
 .analytics__header-title {
@@ -270,12 +269,12 @@ html {
   margin-top: 1rem;
 }
 .analytics__info {
-  color: white;
+  color: #000000;
   font-size: 3rem;
 }
 .analytics__info-string {
-  color: rgb(92, 102, 114);
-  font-size: 1.1rem;
+  color: #000000;
+  font-size: 1.3rem;
   margin-left: 1rem;
 }
 
@@ -289,11 +288,14 @@ html {
   background-color: rgb(255, 255, 255);
   display: flex;
   align-items: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
 .card-mini__container:hover {
   transform: scale(1.01);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  background-color: rgba(2, 1, 10, 0.1);
+}
+.card-mini__container:hover .card-mini__description {
+  color: #000000;
 }
 .card-mini__category-container {
   display: flex;
@@ -311,13 +313,14 @@ html {
 }
 .card-mini__name {
   font-size: 1.3rem;
-  color: #ffffff;
+  color: #000000;
 }
 .card-mini__description {
   color: rgb(180, 180, 180);
+  transition: color 0.3s ease;
 }
 .card-mini__date {
-  color: rgb(92, 102, 114);
+  color: #000000;
   width: 15%;
   margin-left: 1rem;
 }
@@ -388,7 +391,7 @@ html {
   display: flex;
   align-items: center;
   flex-direction: column;
-  color: rgb(92, 102, 114);
+  color: #000000;
 }
 .card-mini__prioriry-container {
   display: flex;
@@ -514,10 +517,10 @@ html {
 .analytics-icon {
   fill: white;
   border-radius: 1.2rem;
-  border: 0.6rem solid rgb(92, 102, 114);
+  border: 0.8rem solid rgba(92, 102, 114, 0.1);
   height: 95%;
   width: 95%;
-  background-color: rgb(92, 102, 114);
+  background-color: rgba(92, 102, 114, 0.5);
 }
 
 .category-icon {
@@ -646,8 +649,8 @@ html {
   align-items: center;
 }
 .dash-nav__title {
-  color: #ffffff;
-  font-size: 1.8rem;
+  color: #000000;
+  font-size: 2rem;
 }
 .dash-nav__filters {
   width: 100%;
@@ -656,18 +659,20 @@ html {
   align-items: center;
   justify-content: flex-start;
   margin: 1rem;
-  color: #ffffff;
+  color: #000000;
+  font-size: 1.2rem;
 }
 .dash-nav__filters-selector {
   cursor: pointer;
   margin-left: 1.5rem;
   position: relative;
   padding-bottom: 0.3rem;
+  color: rgb(180, 180, 180);
   transition: transform 0.4s ease, color 0.3s ease;
 }
 .dash-nav__filters-selector:hover {
   transform: scale(1.1);
-  color: rgb(92, 102, 114);
+  color: #000000;
 }
 .dash-nav__filters-selector:after {
   content: "";
@@ -676,7 +681,7 @@ html {
   left: 50%;
   width: 0;
   height: 2px;
-  background: rgb(92, 102, 114);
+  background: rgb(184, 184, 243);
   transition: width 0.3s ease, left 0.3s ease;
 }
 .dash-nav__filters-selector:hover:after {
@@ -688,13 +693,13 @@ html {
   padding: 5px 10px;
   border: 2px solid transparent;
   outline: none;
-  color: #000000;
+  color: #ffffff;
   cursor: pointer;
   position: relative;
   z-index: 0;
   border-radius: 8px;
   border: none;
-  background: rgb(2, 1, 10);
+  background: rgb(92, 102, 114);
   font-size: 1.5rem;
   transition: color 0.4s, background-color 0.4s, border-color 0.4s;
 }
@@ -706,7 +711,7 @@ html {
   left: -5px;
   right: -5px;
   bottom: -5px;
-  background: rgb(2, 1, 10);
+  background: rgb(184, 184, 243);
   z-index: -1;
   border-radius: 8px;
   opacity: 0;
@@ -716,7 +721,7 @@ html {
 
 .new-task__button:hover {
   color: #000000;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 .new-task__button:hover::before {

@@ -82,7 +82,7 @@
     &__header-logo {
         display: flex;
         justify-content: center;
-        background-color: $accent;
+
         border-radius: 1rem;
     }
 
@@ -99,13 +99,13 @@
     }
 
     &__info {
-        color: white;
+        color: $black-text;
         font-size: 3rem;
     }
 
     &__info-string {
-        color: $accent;
-        font-size: 1.1rem;
+        color: $black-text;
+        font-size: 1.3rem;
         margin-left: 1rem;
     }
 }
