@@ -29,7 +29,6 @@ const UserIssueInfo = ({issue, handleCompletionChange, onClose}) => {
                 <p className='modal-card__description'>{issue.description}</p>
             </div>
 
-            <h4 className='modal-card__parroom-title'>Rooms Affected:</h4>
             <ul className='modal-card__par-rooms'>
                 {room.map((room, index) => {
                     return (
@@ -40,7 +39,7 @@ const UserIssueInfo = ({issue, handleCompletionChange, onClose}) => {
                 })}
             </ul>
             
-            <h4 className='modal-card__assigned-title'>Assigned To:</h4>
+            
             <ul className='modal-card__driver-list'>
                     {drivers.map((driver) => {
                         const driverStatus = completionStatus.find(status => status.driver.toString() === driver._id) || { isComplete: false };

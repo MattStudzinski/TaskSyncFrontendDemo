@@ -1,5 +1,5 @@
 .modal-card {
-    padding: 2rem 0 2rem 31%;
+    padding: 9% 0 2rem 31%;
     
     background-color: $box-color;
     width: 100%;
@@ -71,13 +71,7 @@
     font-size: 1.4rem;
     color: $black-text;
     margin-top: 1rem;
-    
-    }
 
-    &__parroom-title {
-        color: $black-text;
-        font-size: 1.3rem;
-        margin-bottom: .2rem;
     }
 
     &__par-rooms {
@@ -89,14 +83,12 @@
     &__par-li {
         font-size: 1.1rem;
         margin-right: .7rem;
-        color: $black-text;
+        color: $white-text;
+        background-color: $accent;
+        padding: .7rem;
+        border-radius: 1.5rem;
     }
 
-    &__assigned-title {
-    font-size: 1.25rem;
-    margin-top: 1.5rem;
-    color: $black-text;
-    }
 
     &__driver-list {
     list-style: none;
