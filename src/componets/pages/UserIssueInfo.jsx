@@ -1,5 +1,8 @@
 import React from 'react';
 import { useAuthContext } from '../../hooks/useAuthContext';
+import CategoryIcon from '../ui/CategoryIcon';
+import Cardicon from '../ui/Cardicon';
+import CalendarIcon from '../../svgs/CalendarIcon';
 
 
 const UserIssueInfo = ({issue, handleCompletionChange, onClose}) => {
@@ -10,6 +13,9 @@ const UserIssueInfo = ({issue, handleCompletionChange, onClose}) => {
     
     return (
         <section className='modal-card'>
+            <div className='modal-card__secondary-box'>
+                <Cardicon category={issue.category} className='primary'/>
+            </div>
             <section className='modal-card__card-info'>
             <div className='modal-card__title-container'>
                 <h2 className='modal-card__title'>{issue.name}
@@ -19,7 +25,7 @@ const UserIssueInfo = ({issue, handleCompletionChange, onClose}) => {
                     </div>
                 </h2>
                 
-                <p className='modal-card__due-date'>Due: {new Date(issue.dueDate).toLocaleDateString()}</p>
+                <p className='modal-card__due-date'><CalendarIcon /> {new Date(issue.dueDate).toLocaleDateString()}</p>
                 <p className='modal-card__description'>{issue.description}</p>
             </div>
 

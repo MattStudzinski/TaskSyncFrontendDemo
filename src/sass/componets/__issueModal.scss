@@ -2,15 +2,17 @@
     margin: auto;
     border: none;
     border-radius: .5rem;
-    height: 60%;
-    width: 50%;
+    height: 50%;
+    width: 60%;
+    overflow: visible;
+    background: none;
 }
 .modal-form {
     margin: auto;
     border: 1px solid $accent;
     border-radius: 5px;
-    height: 75%;
-    width: 70%;
+    height: 70%;
+    width: 50%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 

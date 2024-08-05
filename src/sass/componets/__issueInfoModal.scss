@@ -1,15 +1,28 @@
 .modal-card {
-    padding: 2rem 0;
+    padding: 2rem 0 2rem 31%;
+    
     background-color: $box-color;
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: relative;
+    border-radius: 2rem;
 
-
-    
-  
+    &__secondary-box {
+        position: absolute;
+        width: 35%;
+        height: 75%;
+        background: rgb(92,102,114);
+        background: linear-gradient(133deg, rgba(92,102,114,1) 0%, rgba(117,121,153,1) 24%, rgba(133,133,178,1) 36%, rgba(141,141,188,1) 44%, rgba(172,172,227,1) 61%, rgba(172,172,227,1) 74%, rgba(180,180,237,1) 83%, rgba(184,184,243,1) 92%);
+        top: 50%; 
+        left: -6%; 
+        border-radius: 2rem;
+        transform: translateY(-50%); 
+        
+        
+    }
     &__title {
     color: $black-text;
     display: flex;
@@ -62,7 +75,7 @@
     }
 
     &__parroom-title {
-        color: $white-text;
+        color: $black-text;
         font-size: 1.3rem;
         margin-bottom: .2rem;
     }
@@ -76,13 +89,13 @@
     &__par-li {
         font-size: 1.1rem;
         margin-right: .7rem;
-        color: $white-text;
+        color: $black-text;
     }
 
     &__assigned-title {
     font-size: 1.25rem;
     margin-top: 1.5rem;
-    color: $white-text;
+    color: $black-text;
     }
 
     &__driver-list {
@@ -93,9 +106,9 @@
 
     &__driver-item {
     font-size: 1rem;
-    color: $white-text;
+    color: $black-text;
     padding: 0.25rem 0;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #000000;
     }
 
     

@@ -529,6 +529,33 @@ html {
   fill: #ffffff;
 }
 
+.info-card__category-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-icon {
+  width: 100%;
+  height: 100%;
+  fill: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-icon-svg {
+  width: 90%;
+  height: 90%;
+}
+
+.calendar-icon {
+  width: 3rem;
+  height: 3rem;
+}
+
 .card-mini__category-container {
   padding: 10px;
   border-radius: 5px;
@@ -877,16 +904,18 @@ html {
   margin: auto;
   border: none;
   border-radius: 0.5rem;
-  height: 60%;
-  width: 50%;
+  height: 50%;
+  width: 60%;
+  overflow: visible;
+  background: none;
 }
 
 .modal-form {
   margin: auto;
   border: 1px solid rgb(92, 102, 114);
   border-radius: 5px;
-  height: 75%;
-  width: 70%;
+  height: 70%;
+  width: 50%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
@@ -999,7 +1028,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   flex-direction: column;
   height: 100%;
   justify-content: space-between;
-  background-color: rgb(255, 255, 255);
+  background: none;
   align-items: center;
 }
 
@@ -1396,13 +1425,26 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 }
 
 .modal-card {
-  padding: 2rem 0;
+  padding: 2rem 0 2rem 31%;
   background-color: rgb(255, 255, 255);
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
+  border-radius: 2rem;
+}
+.modal-card__secondary-box {
+  position: absolute;
+  width: 35%;
+  height: 75%;
+  background: rgb(92, 102, 114);
+  background: linear-gradient(133deg, rgb(92, 102, 114) 0%, rgb(117, 121, 153) 24%, rgb(133, 133, 178) 36%, rgb(141, 141, 188) 44%, rgb(172, 172, 227) 61%, rgb(172, 172, 227) 74%, rgb(180, 180, 237) 83%, rgb(184, 184, 243) 92%);
+  top: 50%;
+  left: -6%;
+  border-radius: 2rem;
+  transform: translateY(-50%);
 }
 .modal-card__title {
   color: #000000;
@@ -1446,7 +1488,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   margin-top: 1rem;
 }
 .modal-card__parroom-title {
-  color: #ffffff;
+  color: #000000;
   font-size: 1.3rem;
   margin-bottom: 0.2rem;
 }
@@ -1457,12 +1499,12 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 .modal-card__par-li {
   font-size: 1.1rem;
   margin-right: 0.7rem;
-  color: #ffffff;
+  color: #000000;
 }
 .modal-card__assigned-title {
   font-size: 1.25rem;
   margin-top: 1.5rem;
-  color: #ffffff;
+  color: #000000;
 }
 .modal-card__driver-list {
   list-style: none;
@@ -1471,9 +1513,9 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 }
 .modal-card__driver-item {
   font-size: 1rem;
-  color: #ffffff;
+  color: #000000;
   padding: 0.25rem 0;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #000000;
 }
 
 .card-mini__drivers-admin-li {

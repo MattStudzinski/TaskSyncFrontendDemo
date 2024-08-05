@@ -2,7 +2,6 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import './styles/styles.css'
 import { useAuthContext } from './hooks/useAuthContext';
 import Dashboard from './componets/dash/Dashboard';
-import Header from './componets/ui/Header';
 import Sidebar from './componets/ui/Sidebar'
 import LoginForm from './componets/forms/LoginForm';
 import Signup from './componets/forms/Signup';
