@@ -29,17 +29,6 @@ const UserIssueInfo = ({issue, handleCompletionChange, onClose}) => {
                 <p className='modal-card__description'>{issue.description}</p>
             </div>
 
-            <ul className='modal-card__par-rooms'>
-                {room.map((room, index) => {
-                    return (
-                        <li className='modal-card__par-li' key={index}>
-                            {room}
-                        </li>
-                    )
-                })}
-            </ul>
-            
-            
             <ul className='modal-card__driver-list'>
                     {drivers.map((driver) => {
                         const driverStatus = completionStatus.find(status => status.driver.toString() === driver._id) || { isComplete: false };
@@ -51,6 +40,19 @@ const UserIssueInfo = ({issue, handleCompletionChange, onClose}) => {
                         );
                     })}
                 </ul>
+
+            <ul className='modal-card__par-rooms'>
+                {room.map((room, index) => {
+                    return (
+                        <li className='modal-card__par-li' key={index}>
+                            {room}
+                        </li>
+                    )
+                })}
+            </ul>
+            
+            
+            
             
             </section>
             <button type='button' onClick={onClose} className='task__close-button__modals'>Close</button>

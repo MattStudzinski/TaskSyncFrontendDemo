@@ -1452,7 +1452,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   display: flex;
   align-items: center;
   font-size: 1.9rem;
-  padding: 0 2rem;
+  padding: 0 3% 0 0;
   font-weight: bold;
   justify-content: space-between;
   border-bottom: 1px solid rgb(92, 102, 114);
@@ -1487,6 +1487,9 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   font-size: 1.4rem;
   color: #000000;
   margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  padding: 0 0 0 1rem;
 }
 .modal-card__par-rooms {
   list-style: none;
@@ -1509,7 +1512,6 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   font-size: 1rem;
   color: #000000;
   padding: 0.25rem 0;
-  border-bottom: 1px solid #000000;
 }
 
 .card-mini__drivers-admin-li {
