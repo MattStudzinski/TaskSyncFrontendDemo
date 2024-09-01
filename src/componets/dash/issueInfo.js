@@ -1,5 +1,4 @@
 import React from 'react';
-import { useState } from 'react';
 import { useAuthContext } from '../../hooks/useAuthContext';
 import { useIssuesContext } from '../../hooks/useIssuesContext';
 import CategoryIcon from '../ui/CategoryIcon';
@@ -8,7 +7,7 @@ import PriorityIcons from '../ui/PriorityIcons';
 
 
 const IssueInfo = ({issue, onClick}) => {
-    const {issues,dispatch} = useIssuesContext()
+    const {dispatch} = useIssuesContext()
     const { drivers = [], completionStatus = [], room = [] } = issue
     const {user} = useAuthContext()
     

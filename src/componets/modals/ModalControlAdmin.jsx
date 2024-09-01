@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Modal from '../ui/Modal';
 import AdminForm from '../forms/AdminForm'
 
-const ModalControlAdmin = ({issue, isOpen, onClose}) => {
+const ModalControlAdmin = () => {
 
     const [isModalOpen, setIsModalOpen] = useState(false)
 

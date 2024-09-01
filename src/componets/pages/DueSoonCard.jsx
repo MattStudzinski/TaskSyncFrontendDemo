@@ -1,5 +1,4 @@
 import React from 'react';
-import { useIssuesContext } from '../../hooks/useIssuesContext';
 import CategoryIcon from '../ui/CategoryIcon';
 
 const DueSoonCard = ({issue}) => {
