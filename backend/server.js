@@ -3,6 +3,7 @@ require('dotenv').config()
 
 const express = require('express')
 const mongoose = require("mongoose")
+const path = require('path')
 
 const issueRoutes = require("./routes/Issues")
 const userRoutes = require('./routes/user')
@@ -21,6 +22,9 @@ app.use((req, res, next) => {
 app.use('/api/issues', issueRoutes)
 app.use('/api/user', userRoutes)
 
+
+app.use(express.static(path.join(__dirname, 'build')))
+
 // connect to db
 mongoose.connect(process.env.MONGO_URI)
 .then(() => {
@@ -36,4 +40,6 @@ require('./utility/scheduler')
     console.log(error)
 })
 
-
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'))
+})
