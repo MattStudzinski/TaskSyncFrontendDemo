@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { useIssuesContext } from '../../hooks/useIssuesContext';
 import DueSoonCard from '../pages/DueSoonCard';
 

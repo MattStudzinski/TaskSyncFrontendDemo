@@ -1,5 +1,4 @@
 import React from 'react';
-import { useAuthContext } from '../../hooks/useAuthContext';
 import Cardicon from '../ui/Cardicon';
 import CalendarIcon from '../../svgs/CalendarIcon';
 
