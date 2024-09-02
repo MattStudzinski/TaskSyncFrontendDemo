@@ -25,7 +25,7 @@ const Modal = ({children, open, onClose, className = ''}) => {
 
     const handleOutClick = (e) => {
         console.log(e.target)
-        if(e.target == dialog.current) {
+        if(e.target === dialog.current) {
             
             onClose()
         }

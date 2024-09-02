@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import UserIssueInfo from '../pages/UserIssueInfo';
 import Modal from '../ui/Modal';
 

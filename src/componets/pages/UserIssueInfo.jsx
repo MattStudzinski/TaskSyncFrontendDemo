@@ -1,12 +1,10 @@
 import React from 'react';
 import { useAuthContext } from '../../hooks/useAuthContext';
-import CategoryIcon from '../ui/CategoryIcon';
 import Cardicon from '../ui/Cardicon';
 import CalendarIcon from '../../svgs/CalendarIcon';
 
 
-const UserIssueInfo = ({issue, handleCompletionChange, onClose}) => {
-    const {user} = useAuthContext()
+const UserIssueInfo = ({issue, onClose}) => {
 
     if(!issue) return null
     const { drivers = [], completionStatus = [], room = [] } = issue;

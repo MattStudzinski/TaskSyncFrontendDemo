@@ -26,7 +26,6 @@ const DashIssues = () => {
     }, [dispatch, user])
 
     useEffect(() => {
-        const newFilteredIssues = filterIssues(issues)
         setAnimationKey(prevKey => prevKey + 1)
     }, [issues, filter]);
 

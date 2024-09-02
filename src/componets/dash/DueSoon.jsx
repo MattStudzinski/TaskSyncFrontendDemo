@@ -1,11 +1,11 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import { useIssuesContext } from '../../hooks/useIssuesContext';
 import DueSoonCard from '../pages/DueSoonCard';
 
 const DueSoon = () => {
 
     const {issues} = useIssuesContext()
-    const [selectedIssue, setSelectedIssue] =useState(null)
+    
     
 
     const filterIssues = (issues) => {

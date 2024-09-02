@@ -10,7 +10,6 @@ const HighPriority = () => {
     const {issues} = useIssuesContext()
     const [selectedIssue, setSelectedIssue] = useState(null)
     const [currentPage, setCurrentPage] = useState(1)
-    const [animate, setAnimate] = useState(false)
     const issuesPerPage = 7
 
     const listRef = useRef(null)

@@ -28,7 +28,6 @@ function PrimaryRoutes () {
   const {user} = useAuthContext()
   const location = useLocation()
 
-  const showHeader = location.pathname !== '/login' && location.pathname !== '/signup'
   const showSidebar = location.pathname !== '/login' && location.pathname !== '/signup'
   const showContainer = location.pathname !== '/login' && location.pathname !== '/signup'
   return (
