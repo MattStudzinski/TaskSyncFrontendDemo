@@ -49,7 +49,7 @@ const IssueForm = ({onClose}) => {
 
         console.log(emptyFields, 'empty')
         try {
-            const response = await fetch('/api/issues', {
+            const response = await fetch('https://tasksyncbackend-01eb2bc18fab.herokuapp.com/api/issues', {
                 method: 'POST',
                 body: JSON.stringify(data),
                 headers: {

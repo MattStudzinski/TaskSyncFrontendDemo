@@ -13,7 +13,7 @@ const AdminPageIssues = ({issue, onClick}) => {
             return
         }
         e.stopPropagation()
-        const response = await fetch('/api/issues/' + issue._id, {
+        const response = await fetch('https://tasksyncbackend-01eb2bc18fab.herokuapp.com/api/issues/' + issue._id, {
             method: "DELETE",
             headers: {
                 'Authorization': `Bearer ${user.token}`
