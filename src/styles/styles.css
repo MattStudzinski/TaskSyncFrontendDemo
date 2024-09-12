@@ -727,7 +727,7 @@ html {
   z-index: 0;
   border-radius: 8px;
   border: none;
-  background: rgb(92, 102, 114);
+  background: rgb(2, 1, 10);
   font-size: 1.5rem;
   transition: color 0.4s, background-color 0.4s, border-color 0.4s;
 }
@@ -769,7 +769,7 @@ html {
 .task__close-button__modals {
   padding: 5px 10px;
   color: rgba(255, 255, 255, 0.902);
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(92, 102, 114);
   border: solid rgb(2, 1, 10) 0.1rem;
   border-radius: 8px;
   transition: transform 0.3s ease;
@@ -1073,7 +1073,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   left: 1px;
   width: 14px;
   height: 14px;
-  background-color: white;
+  background-color: rgb(2, 1, 10);
   border-radius: 2px;
 }
 .issue-form__input-checkbox:focus {
@@ -1173,7 +1173,6 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   letter-spacing: 0.1rem;
 }
 .issue-form__input-calendar::-webkit-calendar-picker-indicator {
-  filter: invert(1);
   cursor: pointer;
 }
 .issue-form__title-label-calendar {

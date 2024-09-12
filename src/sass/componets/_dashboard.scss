@@ -99,7 +99,7 @@
     z-index: 0;
     border-radius: 8px;
     border: none;
-    background: $accent;
+    background: $primary;
     font-size: 1.5rem;
     transition: color 0.4s, background-color 0.4s, border-color 0.4s;
 }
@@ -141,7 +141,7 @@
 .task__close-button__modals {
     padding: 5px 10px;
     color: rgba(255, 255, 255, 0.902);
-    background-color: $box-color;
+    background-color: $accent;
     border: solid $primary .1rem;
     border-radius: 8px;
     transition: transform 0.3s ease;
