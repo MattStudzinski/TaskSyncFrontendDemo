@@ -12,7 +12,7 @@ export const useSignup = () => {
         setIsLoading(true)
         setError(null)
 
-        const response = await fetch('https://tasksyncbackend-01eb2bc18fab.herokuapp.com/api/user/signup', {
+        const response = await fetch('https://task-sync-backend-demo-a723755d492a.herokuapp.com/api/user/signup', {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({name, password})
