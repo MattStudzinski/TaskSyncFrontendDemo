@@ -45,6 +45,11 @@ await login(name, password)
                 
                 <label className='form__label'>Password</label>
                 </div>
+                <div className='form__demo-container'>
+                    <h3 className='form__demo-title'>Demo Login:</h3>
+                    <p className='form__demo-login'>Name: Demo</p>
+                    <p className='form__demo-login'>Passowrd: Demo123!</p>
+                </div>
                 
                 <div className='form__button-container'>
                 {error && <div className='form__error'>{error}</div>}
