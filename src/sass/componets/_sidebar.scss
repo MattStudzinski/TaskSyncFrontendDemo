@@ -28,7 +28,10 @@
         transition: padding 0.3s; 
         transition: font-size 0.3s ease, background-color 1s ease;
         
-            
+            @media (max-width: 450px) {
+                justify-content: center;
+                padding: 0;
+            }
         
 
         &:hover{
@@ -60,6 +63,9 @@
         color: $white-text;
         transition: font-size 0.3s ease;
 
+        @media (max-width: 450px) {
+            display: none;
+        }
     }
 
 
