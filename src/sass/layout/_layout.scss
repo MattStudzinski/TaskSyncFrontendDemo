@@ -35,8 +35,7 @@ header{
     padding: 3rem 0rem 2rem 0rem;
 
     @media (max-width: 450px) {
-      max-width: 13%;
-      min-width: 0%;
+      display: none;
     }
 
     &__container {
