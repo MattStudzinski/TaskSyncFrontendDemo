@@ -11,22 +11,35 @@ import HighPriority from './componets/pages/HighPriority';
 import NewIssues from './componets/pages/NewIssues';
 import OpenIssues from './componets/pages/OpenIssues';
 import Complete from './componets/pages/Complete';
+import useMobileDetection from './hooks/useMobileDetection';
+import MobileLogin from './componets/forms/MobileLogin';
+
+class LoginManager {
+  constructor(isMobile) {
+    this.isMobile = isMobile
+  }
+
+  getLoginComponent() {
+    return this.isMobile ?<MobileLogin /> : <LoginForm />
+  }
+}
 
 function App() {
 
 
   return (
-    
     <BrowserRouter>
     <PrimaryRoutes />
     </BrowserRouter>
-    
   );
 }
 
 function PrimaryRoutes () {
   const {user} = useAuthContext()
   const location = useLocation()
+  const isMobile = useMobileDetection()
+
+  const LoginManagerInstance = new LoginManager(isMobile)
 
   const showSidebar = location.pathname !== '/login' && location.pathname !== '/signup'
   const showContainer = location.pathname !== '/login' && location.pathname !== '/signup'
@@ -60,7 +73,7 @@ function PrimaryRoutes () {
     />
     <Route
     path="/login"
-    element={!user ? <LoginForm /> : <Navigate to="/"/>}
+    element={!user ? LoginManagerInstance.getLoginComponent() : <Navigate to="/"/>}
     />
     <Route
     path="/signup"

@@ -6,6 +6,7 @@ import Calendar from './Calendar';
 import { IssueFilterContext } from '../context/FilterContext';
 import ModalControllerDash from '../modals/ModalControllerDash';
 import DueSoon from './DueSoon';
+import MobileHeader from './MobileHeader';
 
 
 const Dashboard = () => {
@@ -15,6 +16,7 @@ const Dashboard = () => {
         <div className='content'>
             
         <main className='dash-view'>
+            <MobileHeader />
             <div className='dash-view__analytics-container'>
             <Analytics />
             <div className='dash-nav'>
