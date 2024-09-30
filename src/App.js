@@ -14,7 +14,7 @@ import Complete from './componets/pages/Complete';
 import useMobileDetection from './hooks/useMobileDetection';
 import MobileLogin from './componets/forms/MobileLogin';
 
-class LoginManager {
+class SizeManager {
   constructor(isMobile) {
     this.isMobile = isMobile
   }
@@ -39,7 +39,7 @@ function PrimaryRoutes () {
   const location = useLocation()
   const isMobile = useMobileDetection()
 
-  const LoginManagerInstance = new LoginManager(isMobile)
+  const LoginManagerInstance = new SizeManager(isMobile)
 
   const showSidebar = location.pathname !== '/login' && location.pathname !== '/signup'
   const showContainer = location.pathname !== '/login' && location.pathname !== '/signup'

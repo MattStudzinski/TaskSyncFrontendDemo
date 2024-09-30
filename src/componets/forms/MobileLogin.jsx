@@ -20,17 +20,17 @@ await login(name, password)
         <div className='mobileform'>
             <form className='mobileform__form' onSubmit={handleSubmit}>
                 <div className='mobileform__input-container'>
-                <h3 className='mobileform__title'>Login</h3>
-                <p className='mobileform__question'>Don't have an account yet? <Link className='login-form__link' to='/signup'>Sign Up</Link></p>
+                <h3 className='mobileform__title'>Welcome Back</h3>
+                <p className='mobileform__question'>Login to your account</p>
                 
                 <div className='mobileform__input-group'>
                 <input  className='mobileform__input'
                 type='name' 
                 onChange={(e) => setName(e.target.value)}
                 value={name}
-                placeholder=' '
+                placeholder=''
                 />
-
+                <div className='mobileform__icon'>head</div>
                 <label className='mobileform__label'>Name</label>
                 </div>
 
@@ -40,9 +40,9 @@ await login(name, password)
                 type='password' 
                 onChange={(e) => setPassword(e.target.value)}
                 value={password}
-                placeholder=' '
+                placeholder=''
                 />
-                
+                <div className='mobileform__icon'>lock</div>
                 <label className='mobileform__label'>Password</label>
                 </div>
                 <div className='mobileform__demo-container'>
@@ -58,6 +58,7 @@ await login(name, password)
                 className='mobileform__button'
                 disabled={isLoading}
                 >Login</button>
+                <p className='mobileform__newAccount'>Don't have an account? <Link className='login-form__link' to='/signup'>Sign up</Link></p>
                 </div>
                 </div>
                 

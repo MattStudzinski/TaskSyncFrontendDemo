@@ -1726,6 +1726,82 @@ header {
   background: rgb(92, 102, 114);
   color: #000000;
 }
+.mobileform {
+  background-color: rgb(184, 184, 243);
+  height: 100vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+}
+.mobileform::before {
+  content: "";
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 110vw;
+  height: 25vh;
+  background-color: rgb(255, 255, 255);
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  z-index: 1;
+  box-shadow: 0px 3px 10px black;
+}
+.mobileform__form {
+  display: flex;
+  color: white;
+  background-color: rgb(184, 184, 243);
+  width: 100%;
+  justify-content: center;
+  height: 72%;
+  position: relative;
+  z-index: 2;
+}
+.mobileform__input-container {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  align-items: center;
+}
+.mobileform__title {
+  margin-top: 1rem;
+  font-size: 3.5rem;
+}
+.mobileform__question {
+  margin-bottom: 2rem;
+}
+.mobileform__input-group {
+  position: relative;
+  width: 95%;
+}
+.mobileform__input {
+  background-color: rgb(152, 152, 152);
+  width: 100%;
+  border: none;
+  height: 5rem;
+  margin-top: 1rem;
+  border-radius: 1rem;
+}
+.mobileform__label {
+  position: absolute;
+  font-size: 1.3rem;
+  top: 2.6rem; /* Adjust as necessary */
+  left: 7rem; /* Adjust as necessary */
+  color: grey;
+  pointer-events: none;
+  transition: transform 0.3s, font-size 0.3s; /* Smooth transition */
+}
+.mobileform__icon {
+  position: absolute;
+  font-size: 1.3rem;
+  top: 2.6rem; /* Adjust as necessary */
+  left: 2rem; /* Adjust as necessary */
+  color: grey;
+  pointer-events: none;
+  transition: transform 0.3s, font-size 0.3s; /* Smooth transition */
+}
+
 label, input {
   display: block;
 }

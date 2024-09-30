@@ -1,0 +1,143 @@
+.mobileform {
+    background-color: $secondary;
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;  // Make the container relative for absolute positioning
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0%; // Move the moon shape up
+        left: 50%;
+        transform: translateX(-50%);
+        width: 110vw; // Adjust width as needed
+        height: 25vh; // Adjust height as needed
+        background-color: rgb(255, 255, 255); // Match the form's background
+        border-bottom-left-radius: 50%; // Create the concave shape
+        border-bottom-right-radius: 50%;
+        z-index: 1; // Ensure it's behind the form
+        box-shadow: 0px 3px 10px black; 
+        
+    }
+
+    &__form {
+        display: flex;
+        color: white;
+        background-color: $secondary;
+        width: 100%;
+        justify-content: center;
+        height: 72%;
+        position: relative; // Ensure the form is in front of the half-moon
+        z-index: 2; // Layer the form above the concave shape
+    }
+
+    &__input-container {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        align-items: center;
+        
+    }
+
+    &__title {
+        margin-top: 1rem;
+        font-size: 3.5rem;
+        
+    }
+
+    &__question {
+        margin-bottom: 2rem;
+    }
+
+    &__input-group {
+        position: relative;
+        width: 95%;
+        
+        
+    }
+
+    &__input {
+        background-color: rgb(152, 152, 152);
+        width: 100%;
+        border: none;
+        height: 5rem;
+        margin-top: 1rem;
+        border-radius: 1rem;
+    }
+
+    &__label {
+        position: absolute;
+        font-size: 1.3rem;
+        top: 2.6rem; /* Adjust as necessary */
+        left: 7rem; /* Adjust as necessary */
+        color: grey;
+        pointer-events: none;
+        transition: transform 0.3s, font-size 0.3s; /* Smooth transition */
+    }
+
+    &__icon {
+        position: absolute;
+        font-size: 1.3rem;
+        top: 2.6rem; /* Adjust as necessary */
+        left: 2rem; /* Adjust as necessary */
+        color: grey;
+        pointer-events: none;
+        transition: transform 0.3s, font-size 0.3s; /* Smooth transition */
+    }
+
+}
+
+
+
+
+// return (
+//        
+//                
+//                
+                
+//                 <div className='mobileform__input-group'>
+//                 <input  className='mobileform__input'
+//                 type='name' 
+//                 onChange={(e) => setName(e.target.value)}
+//                 value={name}
+//                 placeholder=' '
+//                 />
+
+//                 <label className='mobileform__label'>Name</label>
+//                 </div>
+
+//                 <div className='mobileform__input-group'>
+//                 <input 
+//                 className='mobileform__input'
+//                 type='password' 
+//                 onChange={(e) => setPassword(e.target.value)}
+//                 value={password}
+//                 placeholder=' '
+//                 />
+                
+//                 <label className='mobileform__label'>Password</label>
+//                 </div>
+//                 <div className='mobileform__demo-container'>
+//                     <h3 className='mobileform__demo-title'>Demo Login:</h3>
+//                     <p className='mobileform__demo-login'>Name: Demo</p>
+//                     <p className='mobileform__demo-login'>Passowrd: Demo123!</p>
+//                 </div>
+                
+//                 <div className='mobileform__button-container'>
+//                 {error && <div className='mobileform__error'>{error}</div>}
+                
+//                 <button 
+//                 className='mobileform__button'
+//                 disabled={isLoading}
+//                 >Login</button>
+//                 </div>
+//                 </div>
+                
+//             </form>
+//         </div>
+//     );
+// };
+
+// export default MobileLogin;
