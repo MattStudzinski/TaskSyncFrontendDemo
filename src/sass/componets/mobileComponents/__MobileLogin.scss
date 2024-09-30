@@ -62,15 +62,15 @@
         background-color: rgb(152, 152, 152);
         width: 100%;
         border: none;
-        height: 5rem;
+        height: 7rem;
         margin-top: 1rem;
         border-radius: 1rem;
     }
 
     &__label {
         position: absolute;
-        font-size: 1.3rem;
-        top: 2.6rem; /* Adjust as necessary */
+        font-size: 1.5rem;
+        top: 3.6rem; /* Adjust as necessary */
         left: 7rem; /* Adjust as necessary */
         color: grey;
         pointer-events: none;
@@ -79,51 +79,49 @@
 
     &__icon {
         position: absolute;
-        font-size: 1.3rem;
-        top: 2.6rem; /* Adjust as necessary */
+        font-size: 1.5rem;
+        top: 3.6rem; /* Adjust as necessary */
         left: 2rem; /* Adjust as necessary */
         color: grey;
         pointer-events: none;
         transition: transform 0.3s, font-size 0.3s; /* Smooth transition */
     }
 
+    &__demo-title {
+        margin-top: 1rem;
+        font-size: 1.3rem;
+    }
+
+    &__demo-container {
+        display: flex;
+        gap: 2rem;
+    }
+
+    &__demo-login {
+        font-size: 1.2rem;
+    }
+
+    &__button-container {
+        display: flex;
+        justify-content: center;
+        width: 80%;
+        align-items: flex-end;
+        height: 42%;
+    }
+
+    &__button {
+        background-color: yellow;
+        height: 5rem;
+        margin-bottom: 2rem;
+        width: 100%;
+        border-radius: 3rem;
+    }
 }
 
 
 
 
-// return (
-//        
-//                
-//                
-                
-//                 <div className='mobileform__input-group'>
-//                 <input  className='mobileform__input'
-//                 type='name' 
-//                 onChange={(e) => setName(e.target.value)}
-//                 value={name}
-//                 placeholder=' '
-//                 />
 
-//                 <label className='mobileform__label'>Name</label>
-//                 </div>
-
-//                 <div className='mobileform__input-group'>
-//                 <input 
-//                 className='mobileform__input'
-//                 type='password' 
-//                 onChange={(e) => setPassword(e.target.value)}
-//                 value={password}
-//                 placeholder=' '
-//                 />
-                
-//                 <label className='mobileform__label'>Password</label>
-//                 </div>
-//                 <div className='mobileform__demo-container'>
-//                     <h3 className='mobileform__demo-title'>Demo Login:</h3>
-//                     <p className='mobileform__demo-login'>Name: Demo</p>
-//                     <p className='mobileform__demo-login'>Passowrd: Demo123!</p>
-//                 </div>
                 
 //                 <div className='mobileform__button-container'>
 //                 {error && <div className='mobileform__error'>{error}</div>}

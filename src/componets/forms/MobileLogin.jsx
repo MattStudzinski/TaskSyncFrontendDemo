@@ -45,8 +45,9 @@ await login(name, password)
                 <div className='mobileform__icon'>lock</div>
                 <label className='mobileform__label'>Password</label>
                 </div>
-                <div className='mobileform__demo-container'>
+                
                     <h3 className='mobileform__demo-title'>Demo Login:</h3>
+                    <div className='mobileform__demo-container'>
                     <p className='mobileform__demo-login'>Name: Demo</p>
                     <p className='mobileform__demo-login'>Passowrd: Demo123!</p>
                 </div>
@@ -58,8 +59,8 @@ await login(name, password)
                 className='mobileform__button'
                 disabled={isLoading}
                 >Login</button>
-                <p className='mobileform__newAccount'>Don't have an account? <Link className='login-form__link' to='/signup'>Sign up</Link></p>
                 </div>
+                <p className='mobileform__newAccount'>Don't have an account? <Link className='login-form__link' to='/signup'>Sign up</Link></p>
                 </div>
                 
             </form>
