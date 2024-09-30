@@ -70,7 +70,7 @@
     &__label {
         position: absolute;
         font-size: 1.5rem;
-        top: 3.6rem; /* Adjust as necessary */
+        top: 3.2rem; /* Adjust as necessary */
         left: 7rem; /* Adjust as necessary */
         color: grey;
         pointer-events: none;
@@ -80,7 +80,7 @@
     &__icon {
         position: absolute;
         font-size: 1.5rem;
-        top: 3.6rem; /* Adjust as necessary */
+        top: 3.2rem; /* Adjust as necessary */
         left: 2rem; /* Adjust as necessary */
         color: grey;
         pointer-events: none;
@@ -110,7 +110,7 @@
     }
 
     &__button {
-        background-color: yellow;
+        background-color: rgba(86, 72, 248, 0.349);
         height: 5rem;
         margin-bottom: 2rem;
         width: 100%;
