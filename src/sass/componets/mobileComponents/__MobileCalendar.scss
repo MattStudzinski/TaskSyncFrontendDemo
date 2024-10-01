@@ -1,0 +1,17 @@
+.mobilecalendar {
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+
+
+
+    &__container {
+        background-color: rgb(216, 216, 216);
+        width: 95%;
+        border-radius: 3.5rem;
+        height: 15rem;
+        z-index: 2;
+    }
+}

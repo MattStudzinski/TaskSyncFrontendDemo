@@ -1,0 +1,30 @@
+.mobileanalytics {
+    width: 100%;
+    margin-top: 5rem;
+    display: flex;
+    justify-content: center;
+    height: 19rem;
+    z-index: 2;
+
+    &__container {
+        display: flex;
+        width: 90%;
+        justify-content: space-between;
+        
+
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 1.5rem;
+        width: 10.6rem;
+        background-color: rgb(128, 128, 128);
+        border-top-left-radius: 5rem;
+        border-top-right-radius: 5rem;
+        position: relative; /* Allow it to overlap */
+        top: 2rem; /* Push it down to overlap with the calendar */
+        
+    }
+}

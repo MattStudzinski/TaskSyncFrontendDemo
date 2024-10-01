@@ -1855,6 +1855,59 @@ header {
   margin-bottom: 3rem;
 }
 
+.header {
+  display: flex;
+  width: 95%;
+  background-color: rgb(87, 108, 214);
+  box-sizing: border-box;
+  padding-left: 4rem;
+  height: 5.5rem;
+  align-items: center;
+  border-bottom-right-radius: 3rem;
+}
+.header__title {
+  font-size: 1.6rem;
+}
+
+.mobileanalytics {
+  width: 100%;
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  height: 19rem;
+  z-index: 2;
+}
+.mobileanalytics__container {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+}
+.mobileanalytics__link {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 1.5rem;
+  width: 10.6rem;
+  background-color: rgb(128, 128, 128);
+  border-top-left-radius: 5rem;
+  border-top-right-radius: 5rem;
+  position: relative; /* Allow it to overlap */
+  top: 2rem; /* Push it down to overlap with the calendar */
+}
+
+.mobilecalendar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.mobilecalendar__container {
+  background-color: rgb(216, 216, 216);
+  width: 95%;
+  border-radius: 3.5rem;
+  height: 15rem;
+  z-index: 2;
+}
+
 label, input {
   display: block;
 }

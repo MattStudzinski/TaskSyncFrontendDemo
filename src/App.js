@@ -13,6 +13,7 @@ import OpenIssues from './componets/pages/OpenIssues';
 import Complete from './componets/pages/Complete';
 import useMobileDetection from './hooks/useMobileDetection';
 import MobileLogin from './componets/forms/MobileLogin';
+import MobDashboard from './componets/dash/MobileDash/MobDashboard';
 
 class SizeManager {
   constructor(isMobile) {
@@ -21,6 +22,10 @@ class SizeManager {
 
   getLoginComponent() {
     return this.isMobile ?<MobileLogin /> : <LoginForm />
+  }
+
+  getDashboardComponent() {
+    return this.isMobile ? <MobDashboard /> : <Dashboard />
   }
 }
 
@@ -53,7 +58,7 @@ function PrimaryRoutes () {
   <Routes>
     <Route
     path="/"
-    element={user ? <Dashboard /> : <Navigate to="/login"/>}
+    element={user ? LoginManagerInstance.getDashboardComponent() : <Navigate to="/login"/>}
     />
     <Route
     path="/allissues"
