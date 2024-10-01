@@ -4,13 +4,13 @@ const MobAnalytics = () => {
     return (
         <section className='mobileanalytics'>
             <div className='mobileanalytics__container'>
-                <div className='mobileanalytics__link' to= {'/allissues'}>
+                <div className='mobileanalytics__link1' to= {'/allissues'}>
                 all issues
                 </div>
-                <div className='mobileanalytics__link' to= {'/new'}>
+                <div className='mobileanalytics__link2' to= {'/new'}>
                     new
                 </div>
-                <div className='mobileanalytics__link' to= {'/priority'}>
+                <div className='mobileanalytics__link3' to= {'/priority'}>
                     priority
                 </div>
             </div>

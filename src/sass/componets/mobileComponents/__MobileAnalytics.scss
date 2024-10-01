@@ -1,6 +1,5 @@
 .mobileanalytics {
     width: 100%;
-    margin-top: 5rem;
     display: flex;
     justify-content: center;
     height: 19rem;
@@ -8,13 +7,13 @@
 
     &__container {
         display: flex;
-        width: 90%;
+        width: 89%;
         justify-content: space-between;
         
 
     }
 
-    &__link {
+    &__link1, &__link2, &__link3 {
         display: flex;
         align-items: center;
         flex-direction: column;
@@ -26,5 +25,15 @@
         position: relative; /* Allow it to overlap */
         top: 2rem; /* Push it down to overlap with the calendar */
         
+    }
+
+    &__link1 {
+        background-color: rgb(115, 188, 115);
+    }
+    &__link2 {
+        background-color: rgb(161, 161, 56);
+    }
+    &__link3 {
+        background-color: rgb(136, 136, 227);
     }
 }

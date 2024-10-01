@@ -61,7 +61,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
   line-height: 1.6;
-  background: rgb(239, 239, 239);
+  background: rgb(214, 214, 214);
   background-size: cover;
   background-repeat: no-repeat;
   justify-self: center;
@@ -1014,7 +1014,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 }
 
 .admin-page {
-  background-color: rgb(239, 239, 239);
+  background-color: rgb(214, 214, 214);
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -1441,7 +1441,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 }
 
 .results-page {
-  background-color: rgb(239, 239, 239);
+  background-color: rgb(214, 214, 214);
   padding: 2rem;
   display: flex;
   height: 100%;
@@ -1609,7 +1609,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 .container {
   width: 100%;
   margin: 0 auto;
-  background-color: rgb(239, 239, 239);
+  background-color: rgb(214, 214, 214);
   box-shadow: var(--shadow-dark);
   min-height: 100vh;
   border-radius: 10px;
@@ -1666,7 +1666,7 @@ header {
 }
 
 .content {
-  background-color: rgb(239, 239, 239);
+  background-color: rgb(214, 214, 214);
   display: flex;
   border-bottom-right-radius: 1rem;
   border-bottom-left-radius: 1rem;
@@ -1675,7 +1675,7 @@ header {
 }
 
 .dash-view {
-  background-color: rgb(239, 239, 239);
+  background-color: rgb(214, 214, 214);
   border-bottom-right-radius: 1rem;
   display: flex;
   justify-content: space-between;
@@ -1858,7 +1858,6 @@ header {
 .header {
   display: flex;
   width: 95%;
-  background-color: rgb(87, 108, 214);
   box-sizing: border-box;
   padding-left: 4rem;
   height: 5.5rem;
@@ -1871,7 +1870,6 @@ header {
 
 .mobileanalytics {
   width: 100%;
-  margin-top: 5rem;
   display: flex;
   justify-content: center;
   height: 19rem;
@@ -1879,10 +1877,10 @@ header {
 }
 .mobileanalytics__container {
   display: flex;
-  width: 90%;
+  width: 89%;
   justify-content: space-between;
 }
-.mobileanalytics__link {
+.mobileanalytics__link1, .mobileanalytics__link2, .mobileanalytics__link3 {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -1894,6 +1892,15 @@ header {
   position: relative; /* Allow it to overlap */
   top: 2rem; /* Push it down to overlap with the calendar */
 }
+.mobileanalytics__link1 {
+  background-color: rgb(115, 188, 115);
+}
+.mobileanalytics__link2 {
+  background-color: rgb(161, 161, 56);
+}
+.mobileanalytics__link3 {
+  background-color: rgb(136, 136, 227);
+}
 
 .mobilecalendar {
   width: 100%;
@@ -1901,7 +1908,7 @@ header {
   justify-content: center;
 }
 .mobilecalendar__container {
-  background-color: rgb(216, 216, 216);
+  background-color: rgb(247, 247, 247);
   width: 95%;
   border-radius: 3.5rem;
   height: 15rem;
