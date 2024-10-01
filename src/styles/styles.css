@@ -1727,7 +1727,7 @@ header {
   color: #000000;
 }
 .mobileform {
-  background-color: rgb(184, 184, 243);
+  background-color: rgb(87, 108, 214);
   height: 100vh;
   display: flex;
   align-items: flex-end;
@@ -1746,12 +1746,20 @@ header {
   border-bottom-left-radius: 50%;
   border-bottom-right-radius: 50%;
   z-index: 1;
-  box-shadow: 0px 3px 10px black;
+  box-shadow: 0px 3px 10px rgb(66, 66, 66);
+}
+.mobileform__img {
+  position: absolute;
+  top: 1%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 28%;
+  z-index: 2;
 }
 .mobileform__form {
   display: flex;
   color: white;
-  background-color: rgb(184, 184, 243);
+  background-color: rgb(87, 108, 214);
   width: 100%;
   justify-content: center;
   height: 72%;
@@ -1779,24 +1787,36 @@ header {
   background-color: rgb(152, 152, 152);
   width: 100%;
   border: none;
-  height: 7rem;
+  height: 5rem;
   margin-top: 1rem;
   border-radius: 1rem;
+  box-sizing: border-box;
+  padding-left: 7rem;
+  font-size: 1.6rem;
+  color: white;
+}
+.mobileform__input:focus {
+  outline: none; /* Remove default outline */
+}
+.mobileform__input:focus + .mobileform__label, .mobileform__input:not(:placeholder-shown) + .mobileform__label {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 .mobileform__label {
   position: absolute;
   font-size: 1.5rem;
-  top: 3.2rem; /* Adjust as necessary */
-  left: 7rem; /* Adjust as necessary */
-  color: grey;
+  top: 2.2rem; /* Adjust as necessary */
+  left: 7.02rem; /* Adjust as necessary */
+  color: rgb(255, 255, 255);
   pointer-events: none;
   transition: transform 0.3s, font-size 0.3s; /* Smooth transition */
 }
 .mobileform__icon {
   position: absolute;
   font-size: 1.5rem;
-  top: 3.2rem; /* Adjust as necessary */
-  left: 2rem; /* Adjust as necessary */
+  top: 1.9rem; /* Adjust as necessary */
+  left: 1.5rem; /* Adjust as necessary */
   color: grey;
   pointer-events: none;
   transition: transform 0.3s, font-size 0.3s; /* Smooth transition */
@@ -1814,17 +1834,25 @@ header {
 }
 .mobileform__button-container {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   width: 80%;
-  align-items: flex-end;
+  justify-content: flex-end;
   height: 42%;
 }
+.mobileform__error {
+  align-self: center;
+  margin-bottom: 1rem;
+}
 .mobileform__button {
-  background-color: rgba(86, 72, 248, 0.349);
+  background-color: #283956;
   height: 5rem;
   margin-bottom: 2rem;
   width: 100%;
   border-radius: 3rem;
+}
+.mobileform__newAccount {
+  margin-bottom: 3rem;
 }
 
 label, input {

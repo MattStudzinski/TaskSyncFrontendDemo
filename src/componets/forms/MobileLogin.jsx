@@ -2,6 +2,9 @@ import React from 'react';
 import { useState } from 'react';
 import { useLogin } from '../../hooks/useLogin'
 import { Link } from 'react-router-dom';
+import LoginPassword from '../../svgs/SVG/LoginPassword';
+import LoginUsername from '../../svgs/SVG/LoginUsername';
+import WavingRobot from '../../png/WavingRobot.png'
 
 const MobileLogin = () => {
 const [name, setName] = useState('')
@@ -17,6 +20,7 @@ await login(name, password)
 
     return (
         <div className='mobileform'>
+            <img src={WavingRobot} alt='greeting' className='mobileform__img' />
             <form className='mobileform__form' onSubmit={handleSubmit}>
                 <div className='mobileform__input-container'>
                 <h3 className='mobileform__title'>Welcome Back</h3>
@@ -29,8 +33,8 @@ await login(name, password)
                 value={name}
                 placeholder=''
                 />
-                <div className='mobileform__icon'>head</div>
                 <label className='mobileform__label'>Name</label>
+                <div className='mobileform__icon'><LoginUsername /></div>
                 </div>
 
                 <div className='mobileform__input-group'>
@@ -41,8 +45,8 @@ await login(name, password)
                 value={password}
                 placeholder=''
                 />
-                <div className='mobileform__icon'>lock</div>
                 <label className='mobileform__label'>Password</label>
+                <div className='mobileform__icon'><LoginPassword /></div>
                 </div>
                 
                     <h3 className='mobileform__demo-title'>Demo Login:</h3>
