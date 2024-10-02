@@ -1,17 +1,14 @@
-.mobilecalendar {
-
+.mobileissues {
     width: 100%;
     display: flex;
+    margin-top: 1rem;
     justify-content: center;
-    
-
-
 
     &__container {
         background-color: rgb(247, 247, 247);
         width: 93%;
+        height: 28rem;
         border-radius: 2.5rem;
-        height: 15rem;
-        z-index: 2;
+        margin-bottom: 6rem;
     }
 }

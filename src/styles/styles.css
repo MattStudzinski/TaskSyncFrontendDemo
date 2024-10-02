@@ -1798,11 +1798,6 @@ header {
 .mobileform__input:focus {
   outline: none; /* Remove default outline */
 }
-.mobileform__input:focus + .mobileform__label, .mobileform__input:not(:placeholder-shown) + .mobileform__label {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-}
 .mobileform__label {
   position: absolute;
   font-size: 1.5rem;
@@ -1811,6 +1806,7 @@ header {
   color: rgb(255, 255, 255);
   pointer-events: none;
   transition: transform 0.3s, font-size 0.3s; /* Smooth transition */
+  z-index: 1;
 }
 .mobileform__icon {
   position: absolute;
@@ -1855,6 +1851,13 @@ header {
   margin-bottom: 3rem;
 }
 
+.mobileform__input:focus + .mobileform__label,
+.mobileform__input:not(:placeholder-shown) + .mobileform__label {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
 .header {
   display: flex;
   width: 95%;
@@ -1893,13 +1896,13 @@ header {
   top: 2rem; /* Push it down to overlap with the calendar */
 }
 .mobileanalytics__link1 {
-  background-color: rgb(115, 188, 115);
+  background-color: rgb(92, 155, 92);
 }
 .mobileanalytics__link2 {
-  background-color: rgb(161, 161, 56);
+  background-color: rgb(199, 199, 102);
 }
 .mobileanalytics__link3 {
-  background-color: rgb(136, 136, 227);
+  background-color: rgb(106, 106, 183);
 }
 
 .mobilecalendar {
@@ -1909,10 +1912,43 @@ header {
 }
 .mobilecalendar__container {
   background-color: rgb(247, 247, 247);
-  width: 95%;
-  border-radius: 3.5rem;
+  width: 93%;
+  border-radius: 2.5rem;
   height: 15rem;
   z-index: 2;
+}
+
+.mobileissues {
+  width: 100%;
+  display: flex;
+  margin-top: 1rem;
+  justify-content: center;
+}
+.mobileissues__container {
+  background-color: rgb(247, 247, 247);
+  width: 93%;
+  height: 28rem;
+  border-radius: 2.5rem;
+  margin-bottom: 6rem;
+}
+
+.mobilenav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  background-color: rgb(247, 247, 247);
+  color: rgb(48, 48, 48);
+  z-index: 1000;
+  height: 5rem;
+}
+.mobilenav__container {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1rem;
+  font-size: 1.5rem;
 }
 
 label, input {

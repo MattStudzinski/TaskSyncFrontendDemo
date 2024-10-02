@@ -31,7 +31,7 @@ await login(name, password)
                 type='name' 
                 onChange={(e) => setName(e.target.value)}
                 value={name}
-                placeholder=''
+                placeholder=' '
                 />
                 <label className='mobileform__label'>Name</label>
                 <div className='mobileform__icon'><LoginUsername /></div>
@@ -43,7 +43,7 @@ await login(name, password)
                 type='password' 
                 onChange={(e) => setPassword(e.target.value)}
                 value={password}
-                placeholder=''
+                placeholder=' '
                 />
                 <label className='mobileform__label'>Password</label>
                 <div className='mobileform__icon'><LoginPassword /></div>

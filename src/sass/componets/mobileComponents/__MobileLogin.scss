@@ -85,12 +85,6 @@
             
         }
 
-        &:focus + .mobileform__label,
-        &:not(:placeholder-shown) + .mobileform__label {
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s ease, visibility 0.3s ease;
-        }
     }
 
     &__label {
@@ -101,6 +95,7 @@
         color: rgb(255, 255, 255);
         pointer-events: none;
         transition: transform 0.3s, font-size 0.3s; /* Smooth transition */
+        z-index: 1;
     }
 
     &__icon {
@@ -155,7 +150,12 @@
 }
 
 
-
+.mobileform__input:focus + .mobileform__label,
+.mobileform__input:not(:placeholder-shown) + .mobileform__label {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
 
 
                 
