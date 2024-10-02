@@ -1,5 +1,5 @@
 .mobileform {
-    background-color: rgba(87,108,214,255);
+    background-color: $primary;
     height: 100vh;
     display: flex;
     align-items: flex-end;
@@ -34,7 +34,7 @@
     &__form {
         display: flex;
         color: white;
-        background-color: rgba(87,108,214,255);
+        background-color: $primary;
         width: 100%;
         justify-content: center;
         height: 72%;
@@ -68,7 +68,7 @@
     }
 
     &__input {
-        background-color: rgb(152, 152, 152);
+        background-color: rgb(233, 233, 233);
         width: 100%;
         border: none;
         height: 5rem;
@@ -77,7 +77,7 @@
         box-sizing: border-box;
         padding-left: 7rem;
         font-size: 1.6rem;
-        color: white;
+        color: $secondary;
 
         &:focus {
             outline: none; /* Remove default outline */
@@ -92,7 +92,7 @@
         font-size: 1.5rem;
         top: 2.2rem; /* Adjust as necessary */
         left: 7.02rem; /* Adjust as necessary */
-        color: rgb(255, 255, 255);
+        color: rgb(128, 128, 128);
         pointer-events: none;
         transition: transform 0.3s, font-size 0.3s; /* Smooth transition */
         z-index: 1;
@@ -103,7 +103,7 @@
         font-size: 1.5rem;
         top: 1.9rem; /* Adjust as necessary */
         left: 1.5rem; /* Adjust as necessary */
-        color: grey;
+        
         pointer-events: none;
         transition: transform 0.3s, font-size 0.3s; /* Smooth transition */
     }
@@ -137,7 +137,7 @@
     }
 
     &__button {
-        background-color: #283956;
+        background-color: $secondary;
         height: 5rem;
         margin-bottom: 2rem;
         width: 100%;

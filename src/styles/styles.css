@@ -5,11 +5,11 @@
   border-color: white;
 }
 .react-select__control:hover {
-  border-color: rgb(2, 1, 10);
+  border-color: #37897b;
 }
 .react-select__control--is-focused {
-  border-color: rgb(2, 1, 10);
-  box-shadow: 0 0 0 1px rgb(2, 1, 10);
+  border-color: #37897b;
+  box-shadow: 0 0 0 1px #37897b;
 }
 
 .react-select__menu {
@@ -25,12 +25,12 @@
   background-color: rgb(15, 27, 38);
 }
 .react-select__option--is-selected {
-  background-color: rgb(184, 184, 243);
+  background-color: #999999;
   color: rgb(227, 247, 245);
 }
 
 .react-select__multi-value {
-  background-color: rgb(184, 184, 243);
+  background-color: #999999;
   color: rgb(227, 247, 245);
 }
 .react-select__multi-value .react-select__multi-value__label {
@@ -40,7 +40,7 @@
   color: rgb(227, 247, 245);
 }
 .react-select__multi-value .react-select__multi-value__remove:hover {
-  background-color: #e4e4fa;
+  background-color: #b3b3b3;
   color: rgb(227, 247, 245);
 }
 
@@ -51,7 +51,7 @@
   background-color: rgb(255, 255, 255);
 }
 .react-select__menu-list::-webkit-scrollbar-thumb {
-  background-color: rgb(92, 102, 114);
+  background-color: #60dcc9;
   border-radius: 4px;
 }
 
@@ -218,7 +218,7 @@ body {
 }
 .analytics__link:hover {
   transform: scale(1.05);
-  box-shadow: 0 10px 20px rgb(92, 102, 114);
+  box-shadow: 0 10px 20px #60dcc9;
 }
 .analytics__open-issues, .analytics__new-issues, .analytics__priority-issues {
   padding: 1rem;
@@ -235,7 +235,7 @@ body {
   }
 }
 .analytics__open-issues {
-  background: rgb(184, 184, 243);
+  background: #999999;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -248,7 +248,7 @@ body {
   }
 }
 .analytics__new-issues {
-  background: rgb(184, 184, 243);
+  background: #999999;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -262,7 +262,7 @@ body {
   }
 }
 .analytics__priority-issues {
-  background: rgb(184, 184, 243);
+  background: #999999;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -338,7 +338,7 @@ body {
 .card-mini__container {
   height: 8.3rem;
   padding: 5px;
-  border-bottom: solid 1px rgb(92, 102, 114);
+  border-bottom: solid 1px #60dcc9;
   background-color: rgb(255, 255, 255);
   display: flex;
   align-items: center;
@@ -346,7 +346,7 @@ body {
 }
 .card-mini__container:hover {
   transform: scale(1.01);
-  background-color: rgba(2, 1, 10, 0.1);
+  background-color: rgba(55, 137, 123, 0.1);
 }
 .card-mini__container:hover .card-mini__description {
   color: #000000;
@@ -359,7 +359,7 @@ body {
   height: 4.5rem;
   justify-content: center;
   align-items: center;
-  background-color: rgb(2, 1, 10);
+  background-color: #37897b;
 }
 .card-mini__title-container {
   margin-left: 0.5rem;
@@ -399,7 +399,7 @@ body {
   cursor: pointer;
   outline: none;
   border: none;
-  background-color: rgb(184, 184, 243);
+  background-color: #999999;
   border-radius: 4px;
   transition: transform 0.2s ease-in-out;
 }
@@ -415,7 +415,7 @@ body {
   transition: background-color 0.2s ease-in-out;
 }
 .card-mini__completion-input:checked::before {
-  background: rgb(184, 184, 243);
+  background: #999999;
 }
 .card-mini__completion-input:checked::after {
   content: "✓";
@@ -428,10 +428,10 @@ body {
   transition: opacity 0.2s ease-in-out;
 }
 .card-mini__completion-input:hover::before {
-  background: rgb(92, 102, 114);
+  background: #60dcc9;
 }
 .card-mini__completion-input:checked:hover::before {
-  background: rgb(92, 102, 114);
+  background: #60dcc9;
 }
 .card-mini__completion-input:checked:hover::after {
   opacity: 1;
@@ -571,10 +571,10 @@ body {
 .analytics-icon {
   fill: white;
   border-radius: 1.2rem;
-  border: 0.8rem solid rgba(92, 102, 114, 0.1);
+  border: 0.8rem solid rgba(96, 220, 201, 0.1);
   height: 95%;
   width: 95%;
-  background-color: rgba(92, 102, 114, 0.5);
+  background-color: rgba(96, 220, 201, 0.5);
 }
 
 .category-icon {
@@ -619,7 +619,7 @@ body {
   background-color: #ffffff;
 }
 .card-mini__category-container.alternate-style {
-  background: rgb(92, 102, 114);
+  background: #60dcc9;
 }
 
 .side-nav {
@@ -655,7 +655,7 @@ body {
 }
 .side-nav__link:link:hover, .side-nav__link:visited:hover {
   font-size: 1.1rem;
-  background-color: rgb(92, 102, 114);
+  background-color: #60dcc9;
 }
 .side-nav__link:link:hover .side-nav__link-title, .side-nav__link:visited:hover .side-nav__link-title {
   font-size: 1.9rem; /* Adjust the font size on hover */
@@ -699,7 +699,7 @@ body {
 
 .logout-button:hover {
   font-size: 1.1rem;
-  background-color: rgb(92, 102, 114);
+  background-color: #60dcc9;
 }
 .logout-button:hover .side-nav__link-title {
   font-size: 1.9rem; /* Adjust the font size on hover */
@@ -780,7 +780,7 @@ body {
   left: 50%;
   width: 0;
   height: 2px;
-  background: rgb(184, 184, 243);
+  background: #999999;
   transition: width 0.3s ease, left 0.3s ease;
 }
 .dash-nav__filters-selector:hover:after {
@@ -798,7 +798,7 @@ body {
   z-index: 0;
   border-radius: 8px;
   border: none;
-  background: rgb(2, 1, 10);
+  background: #37897b;
   font-size: 1.5rem;
   transition: color 0.4s, background-color 0.4s, border-color 0.4s;
 }
@@ -810,7 +810,7 @@ body {
   left: -5px;
   right: -5px;
   bottom: -5px;
-  background: rgb(184, 184, 243);
+  background: #999999;
   z-index: -1;
   border-radius: 8px;
   opacity: 0;
@@ -833,15 +833,15 @@ body {
   height: 2rem;
   color: rgba(255, 255, 255, 0.902);
   background-color: rgb(0, 0, 0);
-  border: solid rgb(2, 1, 10) 0.1rem;
+  border: solid #37897b 0.1rem;
   border-radius: 8px;
 }
 
 .task__close-button__modals {
   padding: 5px 10px;
   color: rgba(255, 255, 255, 0.902);
-  background-color: rgb(92, 102, 114);
-  border: solid rgb(2, 1, 10) 0.1rem;
+  background-color: #60dcc9;
+  border: solid #37897b 0.1rem;
   border-radius: 8px;
   transition: transform 0.3s ease;
   max-width: 20rem;
@@ -964,7 +964,7 @@ body {
   transition-property: box-shadow, transform;
 }
 .form__button:hover, .form__button:focus, .form__button:active {
-  box-shadow: 0 0 20px rgb(2, 1, 10);
+  box-shadow: 0 0 20px #37897b;
   transform: scale(1.1);
 }
 .form__illistration {
@@ -1002,7 +1002,7 @@ body {
 
 .modal-form {
   margin: auto;
-  border: 1px solid rgb(92, 102, 114);
+  border: 1px solid #60dcc9;
   border-radius: 5px;
   height: 70%;
   width: 50%;
@@ -1077,7 +1077,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 .admin-page__navigation .filter-container .filter .filter__select {
   width: 200px;
   padding: 10px;
-  border: 1px solid rgb(2, 1, 10);
+  border: 1px solid #37897b;
   background-color: rgb(255, 255, 255);
   color: #ffffff;
   border-radius: 4px;
@@ -1091,8 +1091,8 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   background-image: none;
 }
 .admin-page__navigation .filter-container .filter .filter__select:focus {
-  border-color: rgb(92, 102, 114);
-  box-shadow: 0 0 5px 1px rgb(2, 1, 10);
+  border-color: #60dcc9;
+  box-shadow: 0 0 5px 1px #37897b;
   outline: none;
 }
 .admin-page__navigation .filter-container .filter .filter__select::after {
@@ -1146,7 +1146,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   width: 20px;
   height: 20px;
   margin-right: 2rem;
-  border: 2px solid rgb(2, 1, 10);
+  border: 2px solid #37897b;
   background-color: rgb(255, 255, 255);
   border-radius: 4px;
   position: relative;
@@ -1162,12 +1162,12 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   left: 1px;
   width: 14px;
   height: 14px;
-  background-color: rgb(2, 1, 10);
+  background-color: #37897b;
   border-radius: 2px;
 }
 .issue-form__input-checkbox:focus {
   outline: none;
-  box-shadow: 0 0 0 3px rgba(2, 1, 10, 0.5);
+  box-shadow: 0 0 0 3px rgba(55, 137, 123, 0.5);
 }
 .issue-form__title-container {
   display: flex;
@@ -1200,7 +1200,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 .issue-form__input {
   width: 100%;
   padding: 1rem;
-  border: 1px solid rgb(2, 1, 10);
+  border: 1px solid #37897b;
   border-radius: 5px;
   background: rgb(255, 255, 255);
   outline: none;
@@ -1210,7 +1210,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   transition: 0.5s;
 }
 .issue-form__input:valid, .issue-form__input:focus {
-  border: 1px solid rgb(2, 1, 10);
+  border: 1px solid #37897b;
 }
 .issue-form__input:valid ~ .issue-form__title-label, .issue-form__input:focus ~ .issue-form__title-label {
   color: #000000;
@@ -1219,8 +1219,8 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   font-size: 1.1rem;
   padding: 0 0.7rem;
   background: rgb(255, 255, 255);
-  border-left: 1px solid rgb(2, 1, 10);
-  border-right: 1px solid rgb(2, 1, 10);
+  border-left: 1px solid #37897b;
+  border-right: 1px solid #37897b;
   letter-spacing: 0.1rem;
 }
 .issue-form__title-label {
@@ -1239,7 +1239,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 .issue-form__input-calendar {
   width: 100%;
   padding: 1rem;
-  border: 1px solid rgb(2, 1, 10);
+  border: 1px solid #37897b;
   border-radius: 5px;
   background: rgb(255, 255, 255);
   outline: none;
@@ -1249,7 +1249,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   transition: 0.5s;
 }
 .issue-form__input-calendar:valid, .issue-form__input-calendar:focus {
-  border: 1px solid rgb(2, 1, 10);
+  border: 1px solid #37897b;
 }
 .issue-form__input-calendar:valid ~ .issue-form__title-label-calendar, .issue-form__input-calendar:focus ~ .issue-form__title-label-calendar {
   color: #000000;
@@ -1257,8 +1257,8 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   font-size: 1.1rem;
   padding: 0 0.7rem;
   background: rgb(255, 255, 255);
-  border-left: 1px solid rgb(2, 1, 10);
-  border-right: 1px solid rgb(2, 1, 10);
+  border-left: 1px solid #37897b;
+  border-right: 1px solid #37897b;
   letter-spacing: 0.1rem;
 }
 .issue-form__input-calendar::-webkit-calendar-picker-indicator {
@@ -1290,7 +1290,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   font-size: 1.5rem;
   background: none;
   padding: 1rem;
-  border: 1px solid rgb(2, 1, 10);
+  border: 1px solid #37897b;
   border-radius: 5px;
   background: rgb(255, 255, 255);
   outline: none;
@@ -1299,17 +1299,17 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   transition: 0.5s;
 }
 .issue-form__textarea:valid, .issue-form__textarea:focus {
-  border: 1px solid rgb(2, 1, 10);
+  border: 1px solid #37897b;
 }
 .issue-form__textarea:valid ~ .issue-form__title-textarea, .issue-form__textarea:focus ~ .issue-form__title-textarea {
-  color: rgb(2, 1, 10);
+  color: #37897b;
   transform: translateX(1rem) translateY(-3.3rem);
   transition: 0.5s;
   font-size: 1.1rem;
   padding: 0 0.7rem;
   background: rgb(255, 255, 255);
-  border-left: 1px solid rgb(2, 1, 10);
-  border-right: 1px solid rgb(2, 1, 10);
+  border-left: 1px solid #37897b;
+  border-right: 1px solid #37897b;
   letter-spacing: 0.1rem;
 }
 .issue-form__assignment-select-container {
@@ -1323,7 +1323,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   display: flex;
   flex-direction: column;
   width: 50%;
-  border: 1px solid rgb(2, 1, 10);
+  border: 1px solid #37897b;
   border-radius: 0.5rem;
   padding: 1rem;
 }
@@ -1338,33 +1338,33 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 .issue-form .react-select__control {
   background-color: rgb(255, 255, 255);
   color: #000000;
-  border-color: rgb(2, 1, 10);
+  border-color: #37897b;
   padding: 1rem;
 }
 .issue-form .react-select__control:hover {
-  border-color: rgb(2, 1, 10);
+  border-color: #37897b;
 }
 .issue-form .react-select__control--is-focused {
-  border-color: rgb(2, 1, 10);
-  box-shadow: 0 0 0 1px rgb(2, 1, 10);
+  border-color: #37897b;
+  box-shadow: 0 0 0 1px #37897b;
 }
 .issue-form .react-select__menu {
   background-color: rgb(3, 12, 10);
   color: #000000;
 }
 .issue-form .react-select__option {
-  background-color: rgb(184, 184, 243);
+  background-color: #999999;
   color: #000000;
 }
 .issue-form .react-select__option--is-focused {
   background-color: rgb(255, 255, 255);
 }
 .issue-form .react-select__option--is-selected {
-  background-color: rgb(184, 184, 243);
-  color: rgb(92, 102, 114);
+  background-color: #999999;
+  color: #60dcc9;
 }
 .issue-form .react-select__multi-value {
-  background-color: rgb(184, 184, 243);
+  background-color: #999999;
   color: rgb(227, 247, 245);
 }
 .issue-form .react-select__multi-value .react-select__multi-value__label {
@@ -1374,7 +1374,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   color: rgb(227, 247, 245);
 }
 .issue-form .react-select__multi-value .react-select__multi-value__remove:hover {
-  background-color: #e4e4fa;
+  background-color: #b3b3b3;
   color: rgb(227, 247, 245);
 }
 .issue-form .react-select__menu-list::-webkit-scrollbar {
@@ -1384,7 +1384,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   background-color: rgb(255, 255, 255);
 }
 .issue-form .react-select__menu-list::-webkit-scrollbar-thumb {
-  background-color: rgb(92, 102, 114);
+  background-color: #60dcc9;
   border-radius: 4px;
 }
 .issue-form__priority-container {
@@ -1415,7 +1415,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 .issue-form__select-category {
   width: 100%;
   padding: 8px;
-  border: 1px solid rgb(2, 1, 10);
+  border: 1px solid #37897b;
   background-color: rgb(255, 255, 255);
   color: #000000;
   border-radius: 4px;
@@ -1426,7 +1426,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 }
 .issue-form__select-category:focus {
   border-color: grey;
-  box-shadow: 0 0 0 3px rgba(2, 1, 10, 0.5);
+  box-shadow: 0 0 0 3px rgba(55, 137, 123, 0.5);
   outline: none;
 }
 .issue-form__select option {
@@ -1493,7 +1493,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   list-style: none;
 }
 .due-soon__li {
-  border-bottom: 1px solid rgb(184, 184, 243);
+  border-bottom: 1px solid #999999;
 }
 .due-soon__card {
   display: flex;
@@ -1543,7 +1543,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   padding: 0 3% 0 0;
   font-weight: bold;
   justify-content: space-between;
-  border-bottom: 1px solid rgb(92, 102, 114);
+  border-bottom: 1px solid #60dcc9;
 }
 .modal-card__subtitle-container {
   display: flex;
@@ -1553,14 +1553,14 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   font-size: 1.2rem;
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
-  background: rgb(184, 184, 243);
+  background: #999999;
   color: #000000;
 }
 .modal-card__priority {
   font-size: 1.2rem;
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
-  background: rgb(2, 1, 10);
+  background: #37897b;
   color: #ffffff;
 }
 .modal-card__description {
@@ -1587,7 +1587,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   font-size: 1.1rem;
   margin-right: 0.7rem;
   color: #ffffff;
-  background-color: rgb(92, 102, 114);
+  background-color: #60dcc9;
   padding: 0.7rem;
   border-radius: 1.5rem;
 }
@@ -1620,7 +1620,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 header {
   height: 7rem;
   background-color: rgb(255, 255, 255);
-  border-bottom: 1px solid rgb(2, 1, 10);
+  border-bottom: 1px solid #37897b;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1631,7 +1631,7 @@ header {
 }
 
 .sidebar {
-  background: rgb(2, 1, 10);
+  background: #37897b;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1719,15 +1719,15 @@ header {
   border-radius: 100px;
 }
 .pagination .page-item button:hover {
-  background: rgb(184, 184, 243);
+  background: #999999;
   color: #ffffff;
 }
 .pagination .page-item.active button {
-  background: rgb(92, 102, 114);
+  background: #60dcc9;
   color: #000000;
 }
 .mobileform {
-  background-color: rgb(87, 108, 214);
+  background-color: #37897b;
   height: 100vh;
   display: flex;
   align-items: flex-end;
@@ -1759,7 +1759,7 @@ header {
 .mobileform__form {
   display: flex;
   color: white;
-  background-color: rgb(87, 108, 214);
+  background-color: #37897b;
   width: 100%;
   justify-content: center;
   height: 72%;
@@ -1784,7 +1784,7 @@ header {
   width: 95%;
 }
 .mobileform__input {
-  background-color: rgb(152, 152, 152);
+  background-color: rgb(233, 233, 233);
   width: 100%;
   border: none;
   height: 5rem;
@@ -1793,7 +1793,7 @@ header {
   box-sizing: border-box;
   padding-left: 7rem;
   font-size: 1.6rem;
-  color: white;
+  color: #999999;
 }
 .mobileform__input:focus {
   outline: none; /* Remove default outline */
@@ -1803,7 +1803,7 @@ header {
   font-size: 1.5rem;
   top: 2.2rem; /* Adjust as necessary */
   left: 7.02rem; /* Adjust as necessary */
-  color: rgb(255, 255, 255);
+  color: rgb(128, 128, 128);
   pointer-events: none;
   transition: transform 0.3s, font-size 0.3s; /* Smooth transition */
   z-index: 1;
@@ -1813,7 +1813,6 @@ header {
   font-size: 1.5rem;
   top: 1.9rem; /* Adjust as necessary */
   left: 1.5rem; /* Adjust as necessary */
-  color: grey;
   pointer-events: none;
   transition: transform 0.3s, font-size 0.3s; /* Smooth transition */
 }
@@ -1841,7 +1840,7 @@ header {
   margin-bottom: 1rem;
 }
 .mobileform__button {
-  background-color: #283956;
+  background-color: #999999;
   height: 5rem;
   margin-bottom: 2rem;
   width: 100%;
