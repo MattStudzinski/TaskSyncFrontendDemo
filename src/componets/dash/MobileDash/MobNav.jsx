@@ -9,21 +9,21 @@ const MobNav = () => {
     return (
         <section className='mobilenav'>
             <div className='mobilenav__container'>
-                <div className='mobilenav__selector'>
+                
                     <Link className='mobilenav__link' to={"/"}><Home fill='black' width='35' height='35' />
                     </Link>
-                </div>
-                <div className='mobilenav__selector'>
+                
+                
                     <Link className='mobilenav__link' to={"/"}><New fill='black' width='35' height='35' />
                     </Link>
-                </div>
-                <div className='mobilenav__selector'>
+                
+                
                     <Link className='mobilenav__link' to={"/priority"}><Priority fill= "black" width='35' height='35' />
                     </Link>
-                </div>
-                <div className='mobilenav__selector'>
+                
+                
                     <Link className='mobilenav__link' to={"complete"}><Complete fill="black" width='35' height='35' /></Link>
-                </div>
+                
             </div>
         </section>
     );
