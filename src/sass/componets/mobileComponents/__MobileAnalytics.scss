@@ -27,13 +27,81 @@
         
     }
 
+
+
     &__link1 {
         background-color: rgb(92, 155, 92);
+        color: $black-text;
+        text-decoration: none;
+        
     }
+
+    &__open-issues {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
     &__link2 {
         background-color: rgb(199, 199, 102);
+        text-decoration: none;
+        color: $black-text;
     }
+
+    &__new-issues {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     &__link3 {
         background-color: rgb(106, 106, 183);
+        text-decoration: none;
+        color: $black-text;
+    }
+
+    &__priority-issues {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__header-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+    }
+
+    &__header-logo {
+        height: 4rem;
+        width: 4rem;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50rem;
+    }
+
+    &__header-title {
+        font-size: 1.05rem;
+        margin-top: .5rem;
+        text-decoration: none;
+        width: 100%;
+    }
+
+    &__info-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__info {
+        font-size: 3rem;
+    }
+
+    &__info-string {
+
     }
 }
