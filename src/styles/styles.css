@@ -1943,8 +1943,6 @@ header {
 .mobileanalytics__header-title {
   font-size: 1.05rem;
   margin-top: 0.5rem;
-  text-decoration: none;
-  width: 100%;
 }
 .mobileanalytics__info-box {
   display: flex;

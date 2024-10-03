@@ -90,7 +90,7 @@ const MobAnalytics = () => {
                         {highPriority}
                     </p>
                     <p className='mobileanalytics__info-string'>
-                        High Priority Issues
+                        High Priority
                     </p>
                 </div>
             </article>
