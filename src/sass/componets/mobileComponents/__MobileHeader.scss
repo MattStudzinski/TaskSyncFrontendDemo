@@ -1,14 +1,22 @@
 .header {
     display: flex;
-    width: 95%;
+    width: 100%;
     box-sizing: border-box;
     padding-left: 4rem;
     height: 5.5rem;
     align-items: center;
     border-bottom-right-radius: 3rem;
+    justify-content: space-between;
 
 
     &__title {
         font-size: 1.6rem;
+    }
+
+    &__hamburger {
+        width: 25%;
+        background-color: $accent;
+        height: 100%;
+        border-bottom-left-radius: 2rem;
     }
 }

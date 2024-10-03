@@ -49,7 +49,7 @@ const MobAnalytics = () => {
                 <article className='mobileanalytics__open-issues'>
                     <div className= 'mobileanalytics__header-container'>
                         <div className='mobileanalytics__header-logo'>
-                            <InProgress />
+                            <InProgress fill='white' />
                         </div>
                         <h2 className='mobileanalytics__header-title'>In Progress</h2>
                     </div>
@@ -65,7 +65,7 @@ const MobAnalytics = () => {
                 <article className='mobileanalytics__new-issues'>
                     <div className='mobileanalytics__header-container'>
                         <div className='mobileanalytics__header-logo'>
-                            <New />
+                            <New fill='white' />
                         </div>
                         <h2 className='mobileanalytics__header-title'>New</h2>
                     </div>
@@ -81,7 +81,7 @@ const MobAnalytics = () => {
                 <article className='mobileanalytics__priority-issues'>
                 <div className='mobileanalytics__header-container'>
                     <div className='mobileanalytics__header-logo'>
-                        <Priority />
+                        <Priority fill='white' />
                     </div>
                     <h2 className='mobileanalytics__header-title'>Priority</h2>
                 </div>

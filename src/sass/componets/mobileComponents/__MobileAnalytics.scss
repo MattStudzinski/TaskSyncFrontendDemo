@@ -18,8 +18,8 @@
         align-items: center;
         flex-direction: column;
         padding-top: 1.5rem;
-        width: 10.6rem;
-        background-color: rgb(128, 128, 128);
+        width: 32%;
+        background-color: $primary;
         border-top-left-radius: 5rem;
         border-top-right-radius: 5rem;
         position: relative; /* Allow it to overlap */
@@ -30,7 +30,7 @@
 
 
     &__link1 {
-        background-color: rgb(92, 155, 92);
+        
         color: $black-text;
         text-decoration: none;
         
@@ -40,11 +40,13 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: space-between;
+        height: 83%;
         width: 100%;
     }
 
     &__link2 {
-        background-color: rgb(199, 199, 102);
+        background-color: $secondary;
         text-decoration: none;
         color: $black-text;
     }
@@ -53,10 +55,12 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: space-between;
+        height: 83%;
+        width: 100%;
     }
 
     &__link3 {
-        background-color: rgb(106, 106, 183);
         text-decoration: none;
         color: $black-text;
     }
@@ -65,6 +69,9 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: space-between;
+        height: 83%;
+        width: 100%;
     }
 
     &__header-container {
@@ -101,6 +108,6 @@
     }
 
     &__info-string {
-
+        color: $grey-text;
     }
 }

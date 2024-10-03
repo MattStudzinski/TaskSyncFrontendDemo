@@ -1,6 +1,6 @@
 @charset "UTF-8";
 .react-select__control {
-  background-color: rgb(255, 255, 255);
+  background-color: #fefffe;
   color: white;
   border-color: white;
 }
@@ -18,7 +18,7 @@
 }
 
 .react-select__option {
-  background-color: rgb(255, 255, 255);
+  background-color: #fefffe;
   color: white;
 }
 .react-select__option--is-focused {
@@ -48,7 +48,7 @@
   width: 8px;
 }
 .react-select__menu-list::-webkit-scrollbar-track {
-  background-color: rgb(255, 255, 255);
+  background-color: #fefffe;
 }
 .react-select__menu-list::-webkit-scrollbar-thumb {
   background-color: #60dcc9;
@@ -61,7 +61,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-weight: 400;
   line-height: 1.6;
-  background: rgb(214, 214, 214);
+  background: #efeff7;
   background-size: cover;
   background-repeat: no-repeat;
   justify-self: center;
@@ -339,7 +339,7 @@ body {
   height: 8.3rem;
   padding: 5px;
   border-bottom: solid 1px #60dcc9;
-  background-color: rgb(255, 255, 255);
+  background-color: #fefffe;
   display: flex;
   align-items: center;
   transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
@@ -370,7 +370,7 @@ body {
   color: #000000;
 }
 .card-mini__description {
-  color: rgb(180, 180, 180);
+  color: rgb(233, 233, 233);
   transition: color 0.3s ease;
 }
 .card-mini__date {
@@ -736,7 +736,7 @@ body {
 
 .dash-nav {
   border-radius: 1rem;
-  background-color: rgb(255, 255, 255);
+  background-color: #fefffe;
   max-width: 100%;
   height: 100%;
   padding: 1rem;
@@ -766,7 +766,7 @@ body {
   margin-left: 1.5rem;
   position: relative;
   padding-bottom: 0.3rem;
-  color: rgb(180, 180, 180);
+  color: rgb(233, 233, 233);
   transition: transform 0.4s ease, color 0.3s ease;
 }
 .dash-nav__filters-selector:hover {
@@ -984,7 +984,7 @@ body {
 }
 
 .calendar {
-  background-color: rgb(255, 255, 255);
+  background-color: #fefffe;
   border-radius: 1rem;
   height: 30%;
   max-width: 100%;
@@ -1014,7 +1014,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 }
 
 .admin-page {
-  background-color: rgb(214, 214, 214);
+  background-color: #efeff7;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -1040,7 +1040,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  background: rgb(255, 255, 255);
+  background: #fefffe;
   margin-top: 1rem;
   border-radius: 1rem;
   padding: 1rem;
@@ -1048,7 +1048,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 .admin-page__navigation {
   display: flex;
   align-items: center;
-  background-color: rgb(255, 255, 255);
+  background-color: #fefffe;
   padding: 20px;
   border-radius: 8px;
 }
@@ -1078,7 +1078,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   width: 200px;
   padding: 10px;
   border: 1px solid #37897b;
-  background-color: rgb(255, 255, 255);
+  background-color: #fefffe;
   color: #ffffff;
   border-radius: 4px;
   appearance: none;
@@ -1109,7 +1109,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   transform: translateY(-50%);
 }
 .admin-page__navigation .filter-container .filter .filter__option {
-  background-color: rgb(255, 255, 255);
+  background-color: #fefffe;
   color: #ffffff;
 }
 
@@ -1129,7 +1129,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background: rgb(255, 255, 255);
+  background: #fefffe;
   align-items: center;
 }
 .issue-form__form-container {
@@ -1147,7 +1147,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   height: 20px;
   margin-right: 2rem;
   border: 2px solid #37897b;
-  background-color: rgb(255, 255, 255);
+  background-color: #fefffe;
   border-radius: 4px;
   position: relative;
   cursor: pointer;
@@ -1202,7 +1202,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   padding: 1rem;
   border: 1px solid #37897b;
   border-radius: 5px;
-  background: rgb(255, 255, 255);
+  background: #fefffe;
   outline: none;
   color: #000000;
   font-size: 1.5rem;
@@ -1218,7 +1218,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   transition: 0.5s;
   font-size: 1.1rem;
   padding: 0 0.7rem;
-  background: rgb(255, 255, 255);
+  background: #fefffe;
   border-left: 1px solid #37897b;
   border-right: 1px solid #37897b;
   letter-spacing: 0.1rem;
@@ -1241,7 +1241,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   padding: 1rem;
   border: 1px solid #37897b;
   border-radius: 5px;
-  background: rgb(255, 255, 255);
+  background: #fefffe;
   outline: none;
   color: #000000;
   font-size: 1.5rem;
@@ -1256,7 +1256,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   transition: 0.5s;
   font-size: 1.1rem;
   padding: 0 0.7rem;
-  background: rgb(255, 255, 255);
+  background: #fefffe;
   border-left: 1px solid #37897b;
   border-right: 1px solid #37897b;
   letter-spacing: 0.1rem;
@@ -1272,7 +1272,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   pointer-events: none;
   color: #000000;
   transform: translateX(1rem) translateY(-2.07rem);
-  background: rgb(255, 255, 255);
+  background: #fefffe;
 }
 .issue-form__title-textarea {
   position: absolute;
@@ -1292,7 +1292,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   padding: 1rem;
   border: 1px solid #37897b;
   border-radius: 5px;
-  background: rgb(255, 255, 255);
+  background: #fefffe;
   outline: none;
   color: #000000;
   font-size: 1.5rem;
@@ -1307,7 +1307,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   transition: 0.5s;
   font-size: 1.1rem;
   padding: 0 0.7rem;
-  background: rgb(255, 255, 255);
+  background: #fefffe;
   border-left: 1px solid #37897b;
   border-right: 1px solid #37897b;
   letter-spacing: 0.1rem;
@@ -1336,7 +1336,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   width: 50%;
 }
 .issue-form .react-select__control {
-  background-color: rgb(255, 255, 255);
+  background-color: #fefffe;
   color: #000000;
   border-color: #37897b;
   padding: 1rem;
@@ -1357,7 +1357,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   color: #000000;
 }
 .issue-form .react-select__option--is-focused {
-  background-color: rgb(255, 255, 255);
+  background-color: #fefffe;
 }
 .issue-form .react-select__option--is-selected {
   background-color: #999999;
@@ -1381,7 +1381,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   width: 8px;
 }
 .issue-form .react-select__menu-list::-webkit-scrollbar-track {
-  background-color: rgb(255, 255, 255);
+  background-color: #fefffe;
 }
 .issue-form .react-select__menu-list::-webkit-scrollbar-thumb {
   background-color: #60dcc9;
@@ -1416,7 +1416,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   width: 100%;
   padding: 8px;
   border: 1px solid #37897b;
-  background-color: rgb(255, 255, 255);
+  background-color: #fefffe;
   color: #000000;
   border-radius: 4px;
   padding: 1rem;
@@ -1430,7 +1430,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   outline: none;
 }
 .issue-form__select option {
-  background-color: rgb(255, 255, 255);
+  background-color: #fefffe;
   color: #ffffff;
 }
 .issue-form__button-container {
@@ -1441,7 +1441,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 }
 
 .results-page {
-  background-color: rgb(214, 214, 214);
+  background-color: #efeff7;
   padding: 2rem;
   display: flex;
   height: 100%;
@@ -1451,7 +1451,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   border-bottom-right-radius: 10px;
 }
 .results-page__card {
-  background-color: rgb(255, 255, 255);
+  background-color: #fefffe;
   border-radius: 1rem;
   width: 100%;
   height: 100%;
@@ -1474,7 +1474,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 .due-soon {
   display: flex;
   flex-direction: column;
-  background-color: rgb(255, 255, 255);
+  background-color: #fefffe;
   border-radius: 1rem;
   height: 52%;
   align-items: flex-start;
@@ -1510,12 +1510,12 @@ dialog:-internal-dialog-in-top-layer::backdrop {
   font-size: 1.4rem;
 }
 .due-soon__date {
-  color: rgb(180, 180, 180);
+  color: rgb(233, 233, 233);
 }
 
 .modal-card {
   padding: 9% 0 2rem 31%;
-  background-color: rgb(255, 255, 255);
+  background-color: #fefffe;
   width: 100%;
   height: 100%;
   display: flex;
@@ -1609,7 +1609,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 .container {
   width: 100%;
   margin: 0 auto;
-  background-color: rgb(214, 214, 214);
+  background-color: #efeff7;
   box-shadow: var(--shadow-dark);
   min-height: 100vh;
   border-radius: 10px;
@@ -1619,7 +1619,7 @@ dialog:-internal-dialog-in-top-layer::backdrop {
 
 header {
   height: 7rem;
-  background-color: rgb(255, 255, 255);
+  background-color: #fefffe;
   border-bottom: 1px solid #37897b;
   display: flex;
   justify-content: space-between;
@@ -1666,7 +1666,7 @@ header {
 }
 
 .content {
-  background-color: rgb(214, 214, 214);
+  background-color: #efeff7;
   display: flex;
   border-bottom-right-radius: 1rem;
   border-bottom-left-radius: 1rem;
@@ -1675,7 +1675,7 @@ header {
 }
 
 .dash-view {
-  background-color: rgb(214, 214, 214);
+  background-color: #efeff7;
   border-bottom-right-radius: 1rem;
   display: flex;
   justify-content: space-between;
@@ -1713,7 +1713,7 @@ header {
   border: none;
   margin-bottom: 0.7rem;
   padding: 0.5rem 0.8rem;
-  background-color: rgb(255, 255, 255);
+  background-color: #fefffe;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
   border-radius: 100px;
@@ -1859,15 +1859,22 @@ header {
 
 .header {
   display: flex;
-  width: 95%;
+  width: 100%;
   box-sizing: border-box;
   padding-left: 4rem;
   height: 5.5rem;
   align-items: center;
   border-bottom-right-radius: 3rem;
+  justify-content: space-between;
 }
 .header__title {
   font-size: 1.6rem;
+}
+.header__hamburger {
+  width: 25%;
+  background-color: #60dcc9;
+  height: 100%;
+  border-bottom-left-radius: 2rem;
 }
 
 .mobileanalytics {
@@ -1887,15 +1894,14 @@ header {
   align-items: center;
   flex-direction: column;
   padding-top: 1.5rem;
-  width: 10.6rem;
-  background-color: rgb(128, 128, 128);
+  width: 32%;
+  background-color: #37897b;
   border-top-left-radius: 5rem;
   border-top-right-radius: 5rem;
   position: relative; /* Allow it to overlap */
   top: 2rem; /* Push it down to overlap with the calendar */
 }
 .mobileanalytics__link1 {
-  background-color: rgb(92, 155, 92);
   color: #000000;
   text-decoration: none;
 }
@@ -1903,10 +1909,12 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+  height: 83%;
   width: 100%;
 }
 .mobileanalytics__link2 {
-  background-color: rgb(199, 199, 102);
+  background-color: #999999;
   text-decoration: none;
   color: #000000;
 }
@@ -1914,9 +1922,11 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+  height: 83%;
+  width: 100%;
 }
 .mobileanalytics__link3 {
-  background-color: rgb(106, 106, 183);
   text-decoration: none;
   color: #000000;
 }
@@ -1924,6 +1934,9 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
+  height: 83%;
+  width: 100%;
 }
 .mobileanalytics__header-container {
   display: flex;
@@ -1952,13 +1965,17 @@ header {
 .mobileanalytics__info {
   font-size: 3rem;
 }
+.mobileanalytics__info-string {
+  color: rgb(233, 233, 233);
+}
+
 .mobilecalendar {
   width: 100%;
   display: flex;
   justify-content: center;
 }
 .mobilecalendar__container {
-  background-color: rgb(247, 247, 247);
+  background-color: #fefffe;
   width: 93%;
   border-radius: 2.5rem;
   height: 15rem;
@@ -1972,7 +1989,7 @@ header {
   justify-content: center;
 }
 .mobileissues__container {
-  background-color: rgb(247, 247, 247);
+  background-color: #fefffe;
   width: 93%;
   height: 28rem;
   border-radius: 2.5rem;
@@ -1984,10 +2001,11 @@ header {
   bottom: 0;
   width: 100%;
   display: flex;
-  background-color: rgb(247, 247, 247);
+  background-color: #fefffe;
   color: rgb(48, 48, 48);
   z-index: 1000;
   height: 5rem;
+  box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1);
 }
 .mobilenav__container {
   width: 100%;
